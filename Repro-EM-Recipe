@@ -1,0 +1,132 @@
+{
+    "version": "59.0",
+    "nodes": {
+        "LOAD_DATASET4": {
+            "action": "load",
+            "parameters": {
+                "dataset": {
+                    "label": "LightningInteractionWithUsers",
+                    "name": "LightningInteractionWithUsers",
+                    "type": "analyticsDataset"
+                },
+                "fields": [
+                    "CLIENT_IP",
+                    "PARENT_UI_ELEMENT",
+                    "CONNECTION_TYPE",
+                    "User.Country",
+                    "EVENT_TYPE",
+                    "APP_NAME",
+                    "USER_ID",
+                    "User.Sector__c",
+                    "UI_EVENT_TYPE",
+                    "OS_NAME",
+                    "CLIENT_GEO",
+                    "ORGANIZATION_ID",
+                    "User.Title1__c",
+                    "PAGE_APP_NAME",
+                    "User.Department",
+                    "User.Username",
+                    "CLIENT_ID",
+                    "BROWSER_VERSION",
+                    "DEVICE_PLATFORM",
+                    "SDK_VERSION",
+                    "TIMESTAMP",
+                    "RECORD_ID",
+                    "DEVICE_MODEL",
+                    "USER_AGENT",
+                    "User.Name",
+                    "PAGE_CONTEXT",
+                    "User.User.Sector__c",
+                    "TARGET_UI_ELEMENT",
+                    "TIMESTAMP_DERIVED",
+                    "UI_EVENT_ID",
+                    "USER_TYPE",
+                    "BROWSER_NAME",
+                    "User.Sub_Sector__c",
+                    "User.User.Title1__c",
+                    "DEVICE_ID",
+                    "User.TimeZoneSidKey",
+                    "User.User.BusinessLine3__c",
+                    "SDK_APP_VERSION",
+                    "UI_EVENT_SOURCE",
+                    "RELATED_LIST",
+                    "GRANDPARENT_UI_ELEMENT",
+                    "User.User.Sub_Sector__c",
+                    "User.City",
+                    "REQUEST_ID",
+                    "User.ProfileName__c",
+                    "User.Division",
+                    "User.IsActive",
+                    "User.Profile.Name",
+                    "USER_ID_DERIVED",
+                    "COMPONENT_NAME",
+                    "PAGE_ENTITY_TYPE",
+                    "User.BusinessLine3__c",
+                    "SESSION_KEY",
+                    "DEVICE_SESSION_ID",
+                    "PAGE_URL",
+                    "User.User.ProfileName__c",
+                    "User.User.Role.Name",
+                    "PAGE_ENTITY_ID",
+                    "RECORD_TYPE",
+                    "OS_VERSION",
+                    "LOGIN_KEY",
+                    "SDK_APP_TYPE",
+                    "User.User.TimeZoneSidKey",
+                    "UI_EVENT_TIMESTAMP",
+                    "PAGE_START_TIME",
+                    "UI_EVENT_SEQUENCE_NUM",
+                    "DURATION"
+                ],
+                "sampleDetails": {
+                    "sortBy": [],
+                    "type": "TopN"
+                }
+            },
+            "sources": []
+        },
+        "OUTPUT2": {
+            "action": "save",
+            "parameters": {
+                "dataset": {
+                    "folderName": "EM_Dev_WorkItems",
+                    "label": "Test_LightningInteractionWithUsers",
+                    "name": "Test_LightningInteractionWithUsers",
+                    "type": "analyticsDataset"
+                },
+                "fields": [],
+                "measuresToCurrencies": []
+            },
+            "sources": [
+                "LOAD_DATASET4"
+            ]
+        }
+    },
+    "ui": {
+        "nodes": {
+            "LOAD_DATASET4": {
+                "label": "LightningInteractionWithUsers",
+                "type": "LOAD_DATASET",
+                "top": 112,
+                "left": 112,
+                "parameters": {
+                    "sampleSize": 2000
+                }
+            },
+            "OUTPUT2": {
+                "label": "Test_LightningInteractionWithUsers",
+                "description": "",
+                "type": "OUTPUT",
+                "top": 112,
+                "left": 252
+            }
+        },
+        "connectors": [
+            {
+                "source": "LOAD_DATASET4",
+                "target": "OUTPUT2"
+            }
+        ],
+        "hiddenColumns": []
+    }
+}
