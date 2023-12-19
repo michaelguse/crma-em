@@ -7,7 +7,21 @@
             "excludeRelationships": [],
             "links": []
         },
-        "filters": [],
+        "filters": [
+            {
+                "dataset": {
+                    "id": "0Fb3l000000U7ZYCA0",
+                    "name": "LightningInteraction",
+                    "url": "/services/data/v59.0/wave/datasets/0Fb3l000000U7ZYCA0"
+                },
+                "dependent": true,
+                "fields": [
+                    "PAGE_ENTITY_TYPE"
+                ],
+                "locked": false,
+                "operator": "in"
+            }
+        ],
         "gridLayouts": [
             {
                 "name": "Default",
@@ -20,7 +34,7 @@
                         "widgets": [
                             {
                                 "colspan": 6,
-                                "column": 3,
+                                "column": 5,
                                 "name": "pillbox_1",
                                 "row": 0,
                                 "rowspan": 1,
@@ -38,12 +52,52 @@
                                 }
                             },
                             {
-                                "colspan": 10,
-                                "column": 1,
+                                "colspan": 8,
+                                "column": 4,
                                 "name": "chart_1",
                                 "row": 1,
-                                "rowspan": 15,
-                                "widgetStyle": {}
+                                "rowspan": 9,
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
+                            },
+                            {
+                                "colspan": 12,
+                                "column": 0,
+                                "name": "container_2",
+                                "row": 0,
+                                "rowspan": 11,
+                                "widgetStyle": {
+                                    "backgroundColor": "#0D33B6",
+                                    "borderColor": "#747474",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 1,
+                                "name": "filterpanel_1",
+                                "row": 0,
+                                "rowspan": 1,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#747474",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 4,
+                                "column": 0,
+                                "name": "chart_2",
+                                "row": 3,
+                                "rowspan": 7,
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             }
                         ]
                     }
@@ -119,16 +173,181 @@
                         "saql_foreach": "q.'TIMESTAMP_DERIVED_Year' + \"~~~\" + q.'TIMESTAMP_DERIVED_Month' + \"~~~\" + q.'TIMESTAMP_DERIVED_Day' + \"~~~\" + q.'TIMESTAMP_DERIVED_Hour' + \"~~~\" + q.'TIMESTAMP_DERIVED_Minute' + \"~~~\" + 'TIMESTAMP_DERIVED_Second' as 'TIMESTAMP_DERIVED_Year~~~TIMESTAMP_DERIVED_Month~~~TIMESTAMP_DERIVED_Day~~~TIMESTAMP_DERIVED_Hour~~~TIMESTAMP_DERIVED_Minute~~~TIMESTAMP_DERIVED_Second'",
                         "saql_order": "'TIMESTAMP_DERIVED_Year~~~TIMESTAMP_DERIVED_Month~~~TIMESTAMP_DERIVED_Day~~~TIMESTAMP_DERIVED_Hour~~~TIMESTAMP_DERIVED_Minute~~~TIMESTAMP_DERIVED_Second'"
                     }
+                ]
+            },
+            "lens_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb3l000000U7ZYCA0",
+                        "label": "LightningInteraction",
+                        "name": "LightningInteraction",
+                        "url": "/services/data/v59.0/wave/datasets/0Fb3l000000U7ZYCA0"
+                    }
                 ],
-                "numbers": [],
-                "strings": [],
-                "groups": []
+                "isGlobal": false,
+                "query": {
+                    "aggregateFilters": [],
+                    "columnGroups": [],
+                    "columnTotals": [],
+                    "limit": 2000,
+                    "orders": [
+                        {
+                            "name": "A",
+                            "filters": [],
+                            "ascending": false
+                        }
+                    ],
+                    "rowTotals": [],
+                    "sourceFilters": {},
+                    "sources": [
+                        {
+                            "columns": [
+                                {
+                                    "field": [
+                                        "count",
+                                        "*"
+                                    ],
+                                    "name": "A"
+                                }
+                            ],
+                            "filters": [],
+                            "groups": [
+                                "PAGE_ENTITY_TYPE"
+                            ],
+                            "joins": [],
+                            "name": "LightningInteraction"
+                        }
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "sync",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "PAGE_ENTITY_TYPE"
+                            ],
+                            "plots": [
+                                "A"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart"
+                }
             },
             "lens_2": {
                 "broadcastFacet": true,
                 "groups": [],
                 "numbers": [],
-                "query": "q = load \"Daily_LightningInteractionWithUsers\";\nq = group q by ('PAGE_ENTITY_TYPE', {{cell(timeFilter_1.selection, 0, \"saql_group\").asString()}});\nq = foreach q generate q.'PAGE_ENTITY_TYPE' as 'PAGE_ENTITY_TYPE', {{cell(timeFilter_1.selection, 0, \"saql_foreach\").asString()}}, count(q) as 'A';\nq = order q by ('PAGE_ENTITY_TYPE' asc, {{cell(timeFilter_1.selection, 0, \"saql_order\").asString()}} asc);\nq = limit q 20000;",
+                "query": "q = load \"LightningInteraction\";\nq = group q by ('PAGE_ENTITY_TYPE', {{cell(timeFilter_1.selection, 0, \"saql_group\").asString()}});\nq = foreach q generate q.'PAGE_ENTITY_TYPE' as 'PAGE_ENTITY_TYPE', {{cell(timeFilter_1.selection, 0, \"saql_foreach\").asString()}}, count(q) as 'A';\nq = order q by ('PAGE_ENTITY_TYPE' asc, {{cell(timeFilter_1.selection, 0, \"saql_order\").asString()}} asc);\nq = limit q 20000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -220,6 +439,15 @@
             "borderWidth": 1
         },
         "widgets": {
+            "container_2": {
+                "parameters": {
+                    "alignmentX": "left",
+                    "alignmentY": "top",
+                    "fit": "original",
+                    "interactions": []
+                },
+                "type": "container"
+            },
             "pillbox_1": {
                 "parameters": {
                     "compact": false,
@@ -239,6 +467,149 @@
                     "textColor": "#FFFFFF"
                 },
                 "type": "pillbox"
+            },
+            "filterpanel_1": {
+                "parameters": {
+                    "filterItemOptions": {
+                        "backgroundColor": "#FFFFFF",
+                        "borderColor": "#747474",
+                        "borderRadius": 4,
+                        "borderWidth": 1,
+                        "propertyColor": "#54698D",
+                        "valueColor": "#16325C"
+                    },
+                    "filters": [],
+                    "itemsPerRow": 1,
+                    "showAllFilters": true,
+                    "title": {
+                        "separatorColor": "#E6ECF2",
+                        "text": {
+                            "align": "left",
+                            "color": "#091A3E",
+                            "fontSize": 16,
+                            "label": "Filters"
+                        },
+                        "visible": false
+                    }
+                },
+                "type": "filterpanel"
+            },
+            "chart_2": {
+                "parameters": {
+                    "autoFitMode": "keepLabels",
+                    "bins": {
+                        "breakpoints": {
+                            "high": 100,
+                            "low": 0
+                        },
+                        "bands": {
+                            "high": {
+                                "color": "#008000",
+                                "label": ""
+                            },
+                            "low": {
+                                "color": "#B22222",
+                                "label": ""
+                            },
+                            "medium": {
+                                "color": "#ffa500",
+                                "label": ""
+                            }
+                        }
+                    },
+                    "legend": {
+                        "descOrder": false,
+                        "showHeader": true,
+                        "show": false,
+                        "customSize": "auto",
+                        "position": "right-top",
+                        "inside": false
+                    },
+                    "axisMode": "sync",
+                    "tooltip": {
+                        "content": {
+                            "legend": {
+                                "showBinLabel": true,
+                                "measures": [],
+                                "showNullValues": true,
+                                "customizeLegend": false,
+                                "showPercentage": true,
+                                "showDimensions": true,
+                                "showMeasures": true,
+                                "dimensions": []
+                            }
+                        }
+                    },
+                    "visualizationType": "hbar",
+                    "exploreLink": true,
+                    "title": {
+                        "fontSize": 14,
+                        "subtitleFontSize": 11,
+                        "label": "Entity Count",
+                        "align": "center",
+                        "subtitleLabel": ""
+                    },
+                    "binValues": false,
+                    "trellis": {
+                        "flipLabels": false,
+                        "showGridLines": true,
+                        "size": [
+                            100,
+                            100
+                        ],
+                        "enable": false,
+                        "type": "x",
+                        "chartsPerLine": 4
+                    },
+                    "columnMap": {
+                        "trellis": [],
+                        "dimensionAxis": [
+                            "PAGE_ENTITY_TYPE"
+                        ],
+                        "plots": [
+                            "A"
+                        ]
+                    },
+                    "showActionMenu": true,
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "valueType": "compactNumber",
+                    "measureAxis1": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": false,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "theme": "wave",
+                    "step": "lens_1",
+                    "compactDecimalDigits": -1,
+                    "dimensionAxis": {
+                        "showTitle": false,
+                        "customSize": "auto",
+                        "showAxis": true,
+                        "title": "",
+                        "icons": {
+                            "useIcons": false,
+                            "iconProps": {
+                                "fit": "cover",
+                                "column": "",
+                                "type": "round"
+                            }
+                        }
+                    },
+                    "applyConditionalFormatting": true
+                },
+                "type": "chart"
             },
             "chart_1": {
                 "parameters": {
@@ -359,15 +730,14 @@
                 },
                 "type": "chart"
             }
-        },
-        "parameters": []
+        }
     },
     "datasets": [
         {
-            "id": "0FbP0000000INBJKA4",
-            "label": "Daily_LightningInteractionWithUsers",
-            "name": "Daily_LightningInteractionWithUsers",
-            "url": "/services/data/v59.0/wave/datasets/0FbP0000000INBJKA4"
+            "id": "0Fb3l000000U7ZYCA0",
+            "label": "LightningInteraction",
+            "name": "LightningInteraction",
+            "url": "/services/data/v59.0/wave/datasets/0Fb3l000000U7ZYCA0"
         }
     ]
 }
