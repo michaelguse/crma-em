@@ -1,0 +1,373 @@
+{
+    "label": "Working Heatmap Toggle via SAQL",
+    "mobileDisabled": false,
+    "state": {
+        "dataSourceLinksInfo": {
+            "enableAutomaticLinking": true,
+            "excludeRelationships": [],
+            "links": []
+        },
+        "filters": [],
+        "gridLayouts": [
+            {
+                "name": "Default",
+                "numColumns": 12,
+                "pages": [
+                    {
+                        "label": "Untitled",
+                        "name": "fe17f1a1-602a-4ac5-b4d0-a363f1312473",
+                        "navigationHidden": false,
+                        "widgets": [
+                            {
+                                "colspan": 6,
+                                "column": 3,
+                                "name": "pillbox_1",
+                                "row": 0,
+                                "rowspan": 1,
+                                "widgetStyle": {
+                                    "backgroundColor": "#98B1FF",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [
+                                        "left",
+                                        "right",
+                                        "top",
+                                        "bottom"
+                                    ],
+                                    "borderRadius": 0,
+                                    "borderWidth": 4
+                                }
+                            },
+                            {
+                                "colspan": 10,
+                                "column": 1,
+                                "name": "chart_1",
+                                "row": 1,
+                                "rowspan": 15,
+                                "widgetStyle": {}
+                            }
+                        ]
+                    }
+                ],
+                "rowHeight": "normal",
+                "selectors": [],
+                "style": {
+                    "alignmentX": "left",
+                    "alignmentY": "top",
+                    "backgroundColor": "#F2F6FA",
+                    "cellSpacingX": 8,
+                    "cellSpacingY": 8,
+                    "fit": "original",
+                    "gutterColor": "#C5D3E0"
+                },
+                "version": 1
+            }
+        ],
+        "layouts": [],
+        "steps": {
+            "timeFilter_1": {
+                "broadcastFacet": true,
+                "columns": {
+                    "saql_group": {
+                        "type": "string"
+                    },
+                    "saql_order": {
+                        "type": "string"
+                    },
+                    "saql_foreach": {
+                        "type": "string"
+                    },
+                    "Display": {
+                        "type": "string"
+                    }
+                },
+                "label": "timeFilter",
+                "selectMode": "single",
+                "start": {
+                    "Display": [
+                        "Hour"
+                    ]
+                },
+                "type": "staticflex",
+                "values": [
+                    {
+                        "Display": "Month",
+                        "saql_group": "'TIMESTAMP_DERIVED_Year', 'TIMESTAMP_DERIVED_Month'",
+                        "saql_foreach": "q.'TIMESTAMP_DERIVED_Year' + \"~~~\" + q.'TIMESTAMP_DERIVED_Month' as 'TIMESTAMP_DERIVED_Year~~~TIMESTAMP_DERIVED_Month'",
+                        "saql_order": "'TIMESTAMP_DERIVED_Year~~~TIMESTAMP_DERIVED_Month'"
+                    },
+                    {
+                        "Display": "Day",
+                        "saql_group": "'TIMESTAMP_DERIVED_Year', 'TIMESTAMP_DERIVED_Month', 'TIMESTAMP_DERIVED_Day'",
+                        "saql_foreach": "q.'TIMESTAMP_DERIVED_Year' + \"~~~\" + q.'TIMESTAMP_DERIVED_Month' + \"~~~\" + q.'TIMESTAMP_DERIVED_Day' as 'TIMESTAMP_DERIVED_Year~~~TIMESTAMP_DERIVED_Month~~~TIMESTAMP_DERIVED_Day'",
+                        "saql_order": "'TIMESTAMP_DERIVED_Year~~~TIMESTAMP_DERIVED_Month~~~TIMESTAMP_DERIVED_Day'"
+                    },
+                    {
+                        "Display": "Hour",
+                        "saql_group": "'TIMESTAMP_DERIVED_Year', 'TIMESTAMP_DERIVED_Month', 'TIMESTAMP_DERIVED_Day', 'TIMESTAMP_DERIVED_Hour'",
+                        "saql_foreach": "q.'TIMESTAMP_DERIVED_Year' + \"~~~\" + q.'TIMESTAMP_DERIVED_Month' + \"~~~\" + q.'TIMESTAMP_DERIVED_Day' + \"~~~\" + q.'TIMESTAMP_DERIVED_Hour' as 'TIMESTAMP_DERIVED_Year~~~TIMESTAMP_DERIVED_Month~~~TIMESTAMP_DERIVED_Day~~~TIMESTAMP_DERIVED_Hour'",
+                        "saql_order": "'TIMESTAMP_DERIVED_Year~~~TIMESTAMP_DERIVED_Month~~~TIMESTAMP_DERIVED_Day~~~TIMESTAMP_DERIVED_Hour'"
+                    },
+                    {
+                        "Display": "Minute",
+                        "saql_group": "'TIMESTAMP_DERIVED_Year', 'TIMESTAMP_DERIVED_Month', 'TIMESTAMP_DERIVED_Day', 'TIMESTAMP_DERIVED_Hour', 'TIMESTAMP_DERIVED_Minute'",
+                        "saql_foreach": "q.'TIMESTAMP_DERIVED_Year' + \"~~~\" + q.'TIMESTAMP_DERIVED_Month' + \"~~~\" + q.'TIMESTAMP_DERIVED_Day' + \"~~~\" + q.'TIMESTAMP_DERIVED_Hour' + \"~~~\" + q.'TIMESTAMP_DERIVED_Minute' as 'TIMESTAMP_DERIVED_Year~~~TIMESTAMP_DERIVED_Month~~~TIMESTAMP_DERIVED_Day~~~TIMESTAMP_DERIVED_Hour~~~TIMESTAMP_DERIVED_Minute'",
+                        "saql_order": "'TIMESTAMP_DERIVED_Year~~~TIMESTAMP_DERIVED_Month~~~TIMESTAMP_DERIVED_Day~~~TIMESTAMP_DERIVED_Hour~~~TIMESTAMP_DERIVED_Minute'"
+                    },
+                    {
+                        "Display": "Second",
+                        "saql_group": "'TIMESTAMP_DERIVED_Year', 'TIMESTAMP_DERIVED_Month', 'TIMESTAMP_DERIVED_Day', 'TIMESTAMP_DERIVED_Hour', 'TIMESTAMP_DERIVED_Minute', 'TIMESTAMP_DERIVED_Second'",
+                        "saql_foreach": "q.'TIMESTAMP_DERIVED_Year' + \"~~~\" + q.'TIMESTAMP_DERIVED_Month' + \"~~~\" + q.'TIMESTAMP_DERIVED_Day' + \"~~~\" + q.'TIMESTAMP_DERIVED_Hour' + \"~~~\" + q.'TIMESTAMP_DERIVED_Minute' + \"~~~\" + 'TIMESTAMP_DERIVED_Second' as 'TIMESTAMP_DERIVED_Year~~~TIMESTAMP_DERIVED_Month~~~TIMESTAMP_DERIVED_Day~~~TIMESTAMP_DERIVED_Hour~~~TIMESTAMP_DERIVED_Minute~~~TIMESTAMP_DERIVED_Second'",
+                        "saql_order": "'TIMESTAMP_DERIVED_Year~~~TIMESTAMP_DERIVED_Month~~~TIMESTAMP_DERIVED_Day~~~TIMESTAMP_DERIVED_Hour~~~TIMESTAMP_DERIVED_Minute~~~TIMESTAMP_DERIVED_Second'"
+                    }
+                ],
+                "numbers": [],
+                "strings": [],
+                "groups": []
+            },
+            "lens_2": {
+                "broadcastFacet": true,
+                "groups": [],
+                "numbers": [],
+                "query": "q = load \"Daily_LightningInteractionWithUsers\";\nq = group q by ('PAGE_ENTITY_TYPE', {{cell(timeFilter_1.selection, 0, \"saql_group\").asString()}});\nq = foreach q generate q.'PAGE_ENTITY_TYPE' as 'PAGE_ENTITY_TYPE', {{cell(timeFilter_1.selection, 0, \"saql_foreach\").asString()}}, count(q) as 'A';\nq = order q by ('PAGE_ENTITY_TYPE' asc, {{cell(timeFilter_1.selection, 0, \"saql_order\").asString()}} asc);\nq = limit q 20000;",
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "start": [],
+                "strings": [],
+                "type": "saql",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "highColor": "#009DDF",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "lowColor": "#E2F4FC",
+                        "visualizationType": "heatmap",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "showActionMenu": true,
+                        "x": {
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": ""
+                        },
+                        "y": {
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": ""
+                        },
+                        "theme": "wave",
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart"
+                }
+            }
+        },
+        "widgetStyle": {
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#747474",
+            "borderEdges": [],
+            "borderRadius": 0,
+            "borderWidth": 1
+        },
+        "widgets": {
+            "pillbox_1": {
+                "parameters": {
+                    "compact": false,
+                    "exploreLink": false,
+                    "fontSize": 16,
+                    "selectedTab": {
+                        "backgroundColor": "#95FFAF",
+                        "borderColor": "#C6D3E1",
+                        "borderEdges": [
+                            "all"
+                        ],
+                        "borderWidth": 1,
+                        "textColor": "#4269E8"
+                    },
+                    "showActionMenu": true,
+                    "step": "timeFilter_1",
+                    "textColor": "#FFFFFF"
+                },
+                "type": "pillbox"
+            },
+            "chart_1": {
+                "parameters": {
+                    "autoFitMode": "keepLabels",
+                    "bins": {
+                        "breakpoints": {
+                            "high": 100,
+                            "low": 0
+                        },
+                        "bands": {
+                            "high": {
+                                "color": "#008000",
+                                "label": ""
+                            },
+                            "low": {
+                                "color": "#B22222",
+                                "label": ""
+                            },
+                            "medium": {
+                                "color": "#ffa500",
+                                "label": ""
+                            }
+                        }
+                    },
+                    "legend": {
+                        "descOrder": false,
+                        "showHeader": true,
+                        "show": true,
+                        "customSize": "auto",
+                        "position": "right-top",
+                        "inside": false
+                    },
+                    "axisMode": "sync",
+                    "highColor": "#009DDF",
+                    "tooltip": {
+                        "content": {
+                            "legend": {
+                                "showBinLabel": true,
+                                "measures": [],
+                                "showNullValues": true,
+                                "customizeLegend": false,
+                                "showPercentage": true,
+                                "showDimensions": true,
+                                "showMeasures": true,
+                                "dimensions": []
+                            }
+                        }
+                    },
+                    "lowColor": "#E2F4FC",
+                    "visualizationType": "heatmap",
+                    "exploreLink": true,
+                    "title": {
+                        "fontSize": 14,
+                        "subtitleFontSize": 11,
+                        "label": "",
+                        "align": "center",
+                        "subtitleLabel": ""
+                    },
+                    "binValues": false,
+                    "trellis": {
+                        "flipLabels": false,
+                        "showGridLines": true,
+                        "size": [
+                            100,
+                            100
+                        ],
+                        "enable": false,
+                        "type": "x",
+                        "chartsPerLine": 4
+                    },
+                    "showActionMenu": true,
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "measureAxis1": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "x": {
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": ""
+                    },
+                    "y": {
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": ""
+                    },
+                    "theme": "wave",
+                    "step": "lens_2",
+                    "compactDecimalDigits": -1,
+                    "dimensionAxis": {
+                        "showTitle": true,
+                        "customSize": "auto",
+                        "showAxis": true,
+                        "title": "",
+                        "icons": {
+                            "useIcons": false,
+                            "iconProps": {
+                                "fit": "cover",
+                                "column": "",
+                                "type": "round"
+                            }
+                        }
+                    },
+                    "applyConditionalFormatting": true
+                },
+                "type": "chart"
+            }
+        },
+        "parameters": []
+    },
+    "datasets": [
+        {
+            "id": "0FbP0000000INBJKA4",
+            "label": "Daily_LightningInteractionWithUsers",
+            "name": "Daily_LightningInteractionWithUsers",
+            "url": "/services/data/v59.0/wave/datasets/0FbP0000000INBJKA4"
+        }
+    ]
+}
