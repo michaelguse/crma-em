@@ -56,7 +56,7 @@
                                 "column": 4,
                                 "name": "chart_1",
                                 "row": 1,
-                                "rowspan": 9,
+                                "rowspan": 7,
                                 "widgetStyle": {
                                     "borderEdges": []
                                 }
@@ -66,7 +66,7 @@
                                 "column": 0,
                                 "name": "container_2",
                                 "row": 0,
-                                "rowspan": 11,
+                                "rowspan": 17,
                                 "widgetStyle": {
                                     "backgroundColor": "#0D33B6",
                                     "borderColor": "#747474",
@@ -93,8 +93,18 @@
                                 "colspan": 4,
                                 "column": 0,
                                 "name": "chart_2",
-                                "row": 3,
+                                "row": 1,
                                 "rowspan": 7,
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
+                            },
+                            {
+                                "colspan": 11,
+                                "column": 1,
+                                "name": "chart_3",
+                                "row": 8,
+                                "rowspan": 9,
                                 "widgetStyle": {
                                     "borderEdges": []
                                 }
@@ -174,6 +184,130 @@
                         "saql_order": "'TIMESTAMP_DERIVED_Year~~~TIMESTAMP_DERIVED_Month~~~TIMESTAMP_DERIVED_Day~~~TIMESTAMP_DERIVED_Hour~~~TIMESTAMP_DERIVED_Minute~~~TIMESTAMP_DERIVED_Second'"
                     }
                 ]
+            },
+            "lens_3": {
+                "broadcastFacet": true,
+                "groups": [],
+                "label": "lens_3",
+                "numbers": [],
+                "query": "q = load \"LightningInteraction\";\nq = group q by ({{cell(timeFilter_1.selection, 0, \"saql_group\").asString()}}, 'PAGE_ENTITY_TYPE');\nq = foreach q generate {{cell(timeFilter_1.selection, 0, \"saql_foreach\").asString()}}, q.'PAGE_ENTITY_TYPE' as 'PAGE_ENTITY_TYPE', count(q) as 'A';\nq = order q by ({{cell(timeFilter_1.selection, 0, \"saql_order\").asString()}} asc, 'PAGE_ENTITY_TYPE' asc);\nq = limit q 20000;",
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "strings": [],
+                "type": "saql",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "showPoints": false,
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "left-top",
+                            "inside": false
+                        },
+                        "axisMode": "sync",
+                        "highColor": "#009DDF",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "lowColor": "#E2F4FC",
+                        "visualizationType": "line",
+                        "dashLine": {
+                            "measures": "",
+                            "showDashLine": false
+                        },
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "fillArea": true,
+                        "showActionMenu": true,
+                        "showZero": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "none",
+                        "measureAxis1": {
+                            "sqrtScale": true,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "x": {
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": ""
+                        },
+                        "y": {
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": ""
+                        },
+                        "theme": "wave",
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true,
+                        "drawArea": {
+                            "measure": "",
+                            "showDrawArea": false,
+                            "bounding1": "",
+                            "bounding2": ""
+                        }
+                    },
+                    "type": "chart"
+                }
             },
             "lens_1": {
                 "broadcastFacet": true,
@@ -292,15 +426,6 @@
                             "enable": false,
                             "type": "x",
                             "chartsPerLine": 4
-                        },
-                        "columnMap": {
-                            "trellis": [],
-                            "dimensionAxis": [
-                                "PAGE_ENTITY_TYPE"
-                            ],
-                            "plots": [
-                                "A"
-                            ]
                         },
                         "showActionMenu": true,
                         "measureAxis2": {
@@ -561,15 +686,6 @@
                         "type": "x",
                         "chartsPerLine": 4
                     },
-                    "columnMap": {
-                        "trellis": [],
-                        "dimensionAxis": [
-                            "PAGE_ENTITY_TYPE"
-                        ],
-                        "plots": [
-                            "A"
-                        ]
-                    },
                     "showActionMenu": true,
                     "measureAxis2": {
                         "sqrtScale": false,
@@ -727,6 +843,117 @@
                         }
                     },
                     "applyConditionalFormatting": true
+                },
+                "type": "chart"
+            },
+            "chart_3": {
+                "parameters": {
+                    "showPoints": false,
+                    "legend": {
+                        "descOrder": false,
+                        "showHeader": true,
+                        "show": true,
+                        "customSize": "auto",
+                        "position": "left-top",
+                        "inside": false
+                    },
+                    "axisMode": "sync",
+                    "highColor": "#009DDF",
+                    "tooltip": {
+                        "content": {
+                            "legend": {
+                                "showBinLabel": true,
+                                "measures": [],
+                                "showNullValues": true,
+                                "customizeLegend": false,
+                                "showPercentage": true,
+                                "showDimensions": true,
+                                "showMeasures": true,
+                                "dimensions": []
+                            }
+                        }
+                    },
+                    "visualizationType": "line",
+                    "exploreLink": true,
+                    "title": {
+                        "fontSize": 14,
+                        "subtitleFontSize": 11,
+                        "label": "",
+                        "align": "center",
+                        "subtitleLabel": ""
+                    },
+                    "trellis": {
+                        "flipLabels": false,
+                        "showGridLines": true,
+                        "size": [
+                            100,
+                            100
+                        ],
+                        "enable": false,
+                        "type": "x",
+                        "chartsPerLine": 4
+                    },
+                    "showZero": true,
+                    "valueType": "none",
+                    "theme": "wave",
+                    "dimensionAxis": {
+                        "showTitle": true,
+                        "customSize": "auto",
+                        "showAxis": true,
+                        "title": "",
+                        "icons": {
+                            "useIcons": false,
+                            "iconProps": {
+                                "fit": "cover",
+                                "column": "",
+                                "type": "round"
+                            }
+                        }
+                    },
+                    "applyConditionalFormatting": true,
+                    "drawArea": {
+                        "measure": "",
+                        "showDrawArea": false,
+                        "bounding1": "",
+                        "bounding2": ""
+                    },
+                    "autoFitMode": "keepLabels",
+                    "lowColor": "#E2F4FC",
+                    "dashLine": {
+                        "measures": "",
+                        "showDashLine": false
+                    },
+                    "fillArea": true,
+                    "showActionMenu": true,
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "measureAxis1": {
+                        "sqrtScale": true,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "x": {
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": ""
+                    },
+                    "y": {
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": ""
+                    },
+                    "step": "lens_3"
                 },
                 "type": "chart"
             }
