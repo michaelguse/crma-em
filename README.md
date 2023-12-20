@@ -10,7 +10,7 @@ This asset provides the user with a dashboard that contains a toggle (pillbox wi
 
 Additionally it displays the count for the entity type on the left-hand side and it provides a filter by ENTITY_TYPE at the top of the page.
 
-## Pre-Requisites
+### Pre-Requisites
 
 To deploy this dashboard into your CRMA environment it is expected that you have Event Monitoring licensed and that the OOTB  Event Monitoring app is installed. At a minimum this asset requires the Lightning Interaction event log file to be available from the Event Monitoring app. This file is typically part of a standard install.
 
