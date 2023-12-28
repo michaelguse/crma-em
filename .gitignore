@@ -1,0 +1,20 @@
+#scripts to ignore
+dashboards.json
+datasets.json
+lenses.json
+dashboard_list.json
+dataset_list.json
+lenses_list.json
+*.info
+
+# Local development
+.vscode
+.env
+.venv
+.ipynb_checkpoints
+.swp
+*.env
+*.dev
+*.log
+*.tmp
+.DS_Store
