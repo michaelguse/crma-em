@@ -12,7 +12,8 @@ curl -s https://edo.my.salesforce.com/services/data/v58.0/wave/dashboards \
     -H "Authorization: Bearer $token" \
     -o dashboards.json \
 
-jq '.dashboards[]|{Id: .id, Label: .label, CreatedDate: .createdDate, LastModDate: .lastModifiedDate}' dashboards.json > dashboard_list.json  
+#jq '.dashboards[]|{Id: .id, Label: .label, CreatedDate: .createdDate, LastModDate: .lastModifiedDate}' dashboards.json > dashboard_list.json  
+jq -r '.dashboards[]|[ .id, .label, .createdDate, .lastModifiedDate] | @csv' dashboards.json > dashboard_csv.json  
 
 
 tmp=`grep '\"Id\":' dashboard_list.json|wc -l|cut -w -f 2`
@@ -26,7 +27,8 @@ curl -s https://edo.my.salesforce.com/services/data/v58.0/wave/datasets \
     -H "Authorization: Bearer $token" \
     -o datasets.json \
 
-jq '.datasets[]|{Id: .id, Name: .name, CreatedDate: .createdDate, LastModDate: .lastModifiedDate}' datasets.json > dataset_list.json
+#jq '.datasets[]|{Id: .id, Name: .name, CreatedDate: .createdDate, LastModDate: .lastModifiedDate}' datasets.json > dataset_list.json
+jq -r '.datasets[]|[ .id, .name, .createdDate, .lastModifiedDate ] | @csv' datasets.json > dataset_csv.json
 
 tmp=`grep '\"Id\":' dataset_list.json|wc -l|cut -w -f 2`
 #printf `bc -e ${tmp}/6`
@@ -39,7 +41,8 @@ curl -s https://edo.my.salesforce.com/services/data/v58.0/wave/lenses \
     -H "Authorization: Bearer $token" \
     -o lenses.json \
 
-jq '.lenses[]|{Id: .id, Label: .label, CreatedDate: .createdDate, LastModDate: .lastModifiedDate}' lenses.json > lenses_list.json
+#jq '.lenses[]|{Id: .id, Label: .label, CreatedDate: .createdDate, LastModDate: .lastModifiedDate}' lenses.json > lenses_list.json
+jq -r '.lenses[]|[ .id, .label, .createdDate, .lastModifiedDate] | @csv' lenses.json > lenses_csv.json
 
 tmp=`grep '\"Id\":' lenses_list.json|wc -l|cut -w -f 2`
 #printf `bc -e ${tmp}/6`
