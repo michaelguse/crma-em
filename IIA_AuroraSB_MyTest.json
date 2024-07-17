@@ -89,7 +89,27 @@
                                 "column": 0,
                                 "name": "container_1",
                                 "row": 0,
-                                "rowspan": 38,
+                                "rowspan": 62,
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
+                            },
+                            {
+                                "colspan": 6,
+                                "column": 1,
+                                "name": "chart_3",
+                                "row": 38,
+                                "rowspan": 20,
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
+                            },
+                            {
+                                "colspan": 6,
+                                "column": 8,
+                                "name": "chart_4",
+                                "row": 38,
+                                "rowspan": 20,
                                 "widgetStyle": {
                                     "borderEdges": []
                                 }
@@ -113,6 +133,125 @@
         ],
         "layouts": [],
         "steps": {
+            "USOpptyAmountByStage_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb7S00000119I5SAI",
+                        "label": "Load_opty_services_acct_all",
+                        "name": "Load_opty_services_acct_all",
+                        "url": "/services/data/v61.0/wave/datasets/0Fb7S00000119I5SAI"
+                    }
+                ],
+                "isGlobal": false,
+                "label": "USOpptyAmountByStage",
+                "query": {
+                    "aggregateFilters": [],
+                    "columnGroups": [],
+                    "columnTotals": [],
+                    "limit": 2000,
+                    "orders": [
+                        {
+                            "name": "OpportunityServices__c.gCRM_GPS_Stage_US__c",
+                            "filters": [],
+                            "ascending": true
+                        }
+                    ],
+                    "rowTotals": [],
+                    "sourceFilters": {},
+                    "sources": [
+                        {
+                            "columns": [
+                                {
+                                    "field": [
+                                        "sum",
+                                        "gCRM_Split_Amount_USD__c"
+                                    ],
+                                    "name": "A"
+                                }
+                            ],
+                            "filters": [],
+                            "groups": [
+                                "OpportunityServices__c.gCRM_GPS_Stage_US__c"
+                            ],
+                            "joins": [],
+                            "name": "Load_opty_services_acct_all"
+                        }
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "centerText": "",
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "bottom-center",
+                            "inside": false
+                        },
+                        "showMeasureTitle": true,
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "pie",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "inner": 60,
+                        "columnMap": {
+                            "trellis": [],
+                            "dimension": [
+                                "OpportunityServices__c.gCRM_GPS_Stage_US__c"
+                            ],
+                            "plots": [
+                                "A"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "centerValueType": "number",
+                        "valueType": "compactNumber",
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart"
+                }
+            },
             "USOpptyCountByStage_1": {
                 "broadcastFacet": true,
                 "datasets": [
@@ -512,6 +651,124 @@
                     "type": "chart"
                 }
             },
+            "NonUSOpptyCountBySta_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb4G0000006P00SAE",
+                        "label": "Opty_Acc_Split_Tag",
+                        "name": "Opty_Acc_Split_Tag",
+                        "url": "/services/data/v61.0/wave/datasets/0Fb4G0000006P00SAE"
+                    }
+                ],
+                "isGlobal": false,
+                "label": "NonUSOpptyAmountByStage",
+                "query": {
+                    "aggregateFilters": [],
+                    "columnGroups": [],
+                    "columnTotals": [],
+                    "limit": 2000,
+                    "orders": [
+                        {
+                            "name": "Opportunity.StageName",
+                            "filters": [],
+                            "ascending": true
+                        }
+                    ],
+                    "rowTotals": [],
+                    "sourceFilters": {},
+                    "sources": [
+                        {
+                            "columns": [
+                                {
+                                    "field": [
+                                        "sum",
+                                        "gCRM_Split_Amount_USD__c"
+                                    ],
+                                    "name": "B"
+                                }
+                            ],
+                            "filters": [],
+                            "groups": [
+                                "Opportunity.StageName"
+                            ],
+                            "joins": [],
+                            "name": "Opty_Acc_Split_Tag"
+                        }
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "centerText": "",
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "bottom-center",
+                            "inside": false
+                        },
+                        "showMeasureTitle": true,
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "pie",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "inner": 60,
+                        "columnMap": {
+                            "trellis": [],
+                            "dimension": [
+                                "Opportunity.StageName"
+                            ],
+                            "plots": [
+                                "B"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "centerValueType": "number",
+                        "valueType": "compactNumber",
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart"
+                }
+            },
             "USCountOfOpptyAll_1": {
                 "broadcastFacet": true,
                 "datasets": [
@@ -738,7 +995,8 @@
                             {
                                 "attributes": {
                                     "color": "#091a3e",
-                                    "size": "16px"
+                                    "size": "20px",
+                                    "bold": true
                                 },
                                 "insert": "Non-US Commercial"
                             },
@@ -750,8 +1008,8 @@
                             },
                             {
                                 "attributes": {
-                                    "color": "#181818",
-                                    "bold": true
+                                    "color": "#54698d",
+                                    "italic": true
                                 },
                                 "insert": "Opty_Acc_Split_Tag"
                             },
@@ -775,7 +1033,8 @@
                             {
                                 "attributes": {
                                     "color": "#091a3e",
-                                    "size": "16px"
+                                    "size": "20px",
+                                    "bold": true
                                 },
                                 "insert": "US Commercial"
                             },
@@ -787,9 +1046,9 @@
                             },
                             {
                                 "attributes": {
-                                    "color": "#181818",
-                                    "size": "14px",
-                                    "bold": true
+                                    "color": "#54698d",
+                                    "size": "16px",
+                                    "italic": true
                                 },
                                 "insert": "Load_opty_services_acct_all"
                             },
@@ -1046,6 +1305,193 @@
                     },
                     "step": "OpptyCountbyStage_1",
                     "compactDecimalDigits": -1
+                },
+                "type": "chart"
+            },
+            "chart_4": {
+                "parameters": {
+                    "autoFitMode": "keepLabels",
+                    "centerText": "",
+                    "bins": {
+                        "breakpoints": {
+                            "high": 100,
+                            "low": 0
+                        },
+                        "bands": {
+                            "high": {
+                                "color": "#008000",
+                                "label": ""
+                            },
+                            "low": {
+                                "color": "#B22222",
+                                "label": ""
+                            },
+                            "medium": {
+                                "color": "#ffa500",
+                                "label": ""
+                            }
+                        }
+                    },
+                    "legend": {
+                        "descOrder": false,
+                        "showHeader": true,
+                        "show": true,
+                        "customSize": "auto",
+                        "position": "bottom-center",
+                        "inside": false
+                    },
+                    "showMeasureTitle": true,
+                    "axisMode": "sync",
+                    "tooltip": {
+                        "content": {
+                            "legend": {
+                                "showBinLabel": true,
+                                "measures": [],
+                                "showNullValues": true,
+                                "customizeLegend": false,
+                                "showPercentage": true,
+                                "showDimensions": true,
+                                "showMeasures": true,
+                                "dimensions": []
+                            }
+                        }
+                    },
+                    "visualizationType": "pie",
+                    "exploreLink": true,
+                    "title": {
+                        "fontSize": 14,
+                        "subtitleFontSize": 11,
+                        "label": "",
+                        "align": "center",
+                        "subtitleLabel": ""
+                    },
+                    "binValues": false,
+                    "trellis": {
+                        "flipLabels": false,
+                        "showGridLines": true,
+                        "size": [
+                            100,
+                            100
+                        ],
+                        "enable": false,
+                        "type": "x",
+                        "chartsPerLine": 4
+                    },
+                    "inner": 60,
+                    "columnMap": {
+                        "trellis": [],
+                        "dimension": [
+                            "OpportunityServices__c.gCRM_GPS_Stage_US__c"
+                        ],
+                        "plots": [
+                            "A"
+                        ]
+                    },
+                    "showActionMenu": true,
+                    "centerValueType": "number",
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "valueType": "compactNumber",
+                    "measureAxis1": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "theme": "wave",
+                    "step": "USOpptyAmountByStage_1",
+                    "compactDecimalDigits": -1,
+                    "dimensionAxis": {
+                        "showTitle": true,
+                        "customSize": "auto",
+                        "showAxis": true,
+                        "title": "",
+                        "icons": {
+                            "useIcons": false,
+                            "iconProps": {
+                                "fit": "cover",
+                                "column": "",
+                                "type": "round"
+                            }
+                        }
+                    },
+                    "applyConditionalFormatting": true
+                },
+                "type": "chart"
+            },
+            "chart_3": {
+                "parameters": {
+                    "centerText": "",
+                    "legend": {
+                        "descOrder": false,
+                        "showHeader": true,
+                        "show": true,
+                        "customSize": "auto",
+                        "position": "bottom-center",
+                        "inside": false
+                    },
+                    "showMeasureTitle": true,
+                    "tooltip": {
+                        "content": {
+                            "legend": {
+                                "showBinLabel": true,
+                                "measures": [],
+                                "showNullValues": true,
+                                "customizeLegend": false,
+                                "showPercentage": true,
+                                "showDimensions": true,
+                                "showMeasures": true,
+                                "dimensions": []
+                            }
+                        }
+                    },
+                    "visualizationType": "pie",
+                    "exploreLink": true,
+                    "title": {
+                        "fontSize": 14,
+                        "subtitleFontSize": 11,
+                        "label": "",
+                        "align": "center",
+                        "subtitleLabel": ""
+                    },
+                    "trellis": {
+                        "flipLabels": false,
+                        "showGridLines": true,
+                        "size": [
+                            100,
+                            100
+                        ],
+                        "enable": false,
+                        "type": "x",
+                        "chartsPerLine": 4
+                    },
+                    "inner": 60,
+                    "columnMap": {
+                        "trellis": [],
+                        "dimension": [
+                            "Opportunity.StageName"
+                        ],
+                        "plots": [
+                            "B"
+                        ]
+                    },
+                    "showActionMenu": true,
+                    "centerValueType": "number",
+                    "valueType": "compactNumber",
+                    "theme": "wave",
+                    "step": "NonUSOpptyCountBySta_1",
+                    "compactDecimalDigits": -1,
+                    "applyConditionalFormatting": true
                 },
                 "type": "chart"
             }
