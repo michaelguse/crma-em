@@ -48,18 +48,6 @@
                                 }
                             },
                             {
-                                "colspan": 10,
-                                "column": 14,
-                                "name": "text_4",
-                                "row": 9,
-                                "rowspan": 13,
-                                "widgetStyle": {
-                                    "backgroundColor": "#E6ECF2",
-                                    "borderEdges": [],
-                                    "borderRadius": 64
-                                }
-                            },
-                            {
                                 "colspan": 9,
                                 "column": 39,
                                 "name": "number_4",
@@ -283,6 +271,19 @@
                                     "borderEdges": [],
                                     "borderRadius": 0,
                                     "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 10,
+                                "column": 14,
+                                "name": "number_6",
+                                "row": 9,
+                                "rowspan": 13,
+                                "widgetStyle": {
+                                    "backgroundColor": "#EEF4FF",
+                                    "borderColor": "#747474",
+                                    "borderEdges": [],
+                                    "borderRadius": 64
                                 }
                             }
                         ]
@@ -844,6 +845,134 @@
                             ],
                             "plots": [
                                 "A"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart"
+                }
+            },
+            "SalesCreditAmount_1": {
+                "broadcastFacet": true,
+                "groups": [],
+                "label": "SalesCreditAmount",
+                "numbers": [],
+                "query": "q = load \"Load_opty_services_acct_all\";\nq = filter q by 'OpportunityServices__c.StageName' == \"Closed Won\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Name\").asString()}}\";\nq = group q by all;\nq = foreach q generate sum(q.'CustomTeams.gCRM_Sales_Credit_Amount__c') as 'B';\nq = limit q 2000;",
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "strings": [],
+                "type": "saql",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "sync",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [],
+                            "plots": [
+                                "B"
                             ]
                         },
                         "showActionMenu": true,
@@ -2007,6 +2136,26 @@
                 },
                 "type": "pillbox"
             },
+            "number_6": {
+                "parameters": {
+                    "compact": false,
+                    "exploreLink": true,
+                    "interactions": [],
+                    "measureField": "B",
+                    "numberColor": "#091A3E",
+                    "numberSize": 32,
+                    "showActionMenu": false,
+                    "step": "SalesCreditAmount_1",
+                    "textAlignment": "center",
+                    "title": "My Sales Credit (US Audit/Tax)",
+                    "titleColor": "#091A3E",
+                    "titleSize": 18,
+                    "tooltip": {
+                        "customizeTooltip": false
+                    }
+                },
+                "type": "number"
+            },
             "table_1": {
                 "parameters": {
                     "borderColor": "#e0e5ee",
@@ -2371,70 +2520,6 @@
                     "interactions": []
                 },
                 "type": "container"
-            },
-            "text_4": {
-                "parameters": {
-                    "content": {
-                        "richTextContent": [
-                            {
-                                "attributes": {
-                                    "color": "#7d98b3",
-                                    "size": "18px"
-                                },
-                                "insert": "Sales Credit"
-                            },
-                            {
-                                "attributes": {
-                                    "align": "center"
-                                },
-                                "insert": "\n"
-                            },
-                            {
-                                "attributes": {
-                                    "color": "#7d98b3",
-                                    "size": "18px"
-                                },
-                                "insert": "(For Audit & Tax Coming Soon)"
-                            },
-                            {
-                                "attributes": {
-                                    "align": "center"
-                                },
-                                "insert": "\n"
-                            },
-                            {
-                                "attributes": {
-                                    "color": "#7d98b3",
-                                    "size": "16px"
-                                },
-                                "insert": "___________________________"
-                            },
-                            {
-                                "attributes": {
-                                    "align": "center"
-                                },
-                                "insert": "\n"
-                            },
-                            {
-                                "attributes": {
-                                    "color": "#7d98b3",
-                                    "size": "32px",
-                                    "bold": true
-                                },
-                                "insert": "--"
-                            },
-                            {
-                                "attributes": {
-                                    "align": "center"
-                                },
-                                "insert": "\n"
-                            }
-                        ]
-                    },
-                    "interactions": [],
-                    "showActionMenu": false
-                },
-                "type": "text"
             },
             "image_2": {
                 "parameters": {
