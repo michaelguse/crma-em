@@ -1,0 +1,38 @@
+"q = load \"Load_opty_services_acct_all\";\n
+q = filter q by 'OpportunityServices__c.gCRM_Opportunity_Team_Members_Name__c' matches \"Pohul Khera\";\n
+q = filter q by 'OpportunityServices__c.Owner.Name' == \"Pohul Khera\";\n
+q = foreach q generate sum(q.'gCRM_Split_Amount_USD__c') as 'A';\n
+q = limit q 2000;"
+
+
+q = filter q by 'OpportunityServices__c.gCRM_Opportunity_Team_Members_Name__c' matches \"Pohul Khera\";\n
+
+
+q = filter q by 'OpportunityServices__c.gCRM_Opportunity_Team_Members_Name__c' matches \"Pohul Khera\";\n
+q = filter q by 'OpportunityServices__c.Owner.Name' == \"Pohul Khera\";\n
+
+
+q = filter q by {{cell(OptyRoleToggle_1.selected, 0,\"saql_filter_team\")}} matches "{{cell(UserData.selected, 0,\"Name\")}};\n"
+
+
+{
+    "Display": "Team",
+    "saql_filter_team": "'OpportunityServices__c.gCRM_Opportunity_Team_Members_Name__c'",
+    "saql_filter_leader": ""
+},
+{
+    "Display": "Leader",
+    "saql_filter_team": "'OpportunityServices__c.gCRM_Opportunity_Team_Members_Name__c'",
+    "saql_filter_leader": "q = filter q by 'OpportunityServices__c.Owner.Name' == "
+}
+
+
+"lens_1",
+"numbers": [],
+"query": "
+q = load \"Load_opty_services_acct_all\";\n
+q = filter q by {{cell(OptyRoleToggle_1.selected, 0,\"saql_filter_team\")}} matches {{cell(UserData.selected, 0,\"Name\")}};\n
+{{cell(OptyRoleToggle_1.selected, 0,\"saql_filter_leader\")}}{{cell(UserData.selected, 0,\"Name\")}}{{cell(OptyRoleToggle_1.selected, 0,\"saql_filter_end\")}}\n
+q = group q by all;\n
+q = foreach q generate sum(q.'gCRM_Split_Amount_USD__c') as 'A';\n
+q = limit q 2000;"
