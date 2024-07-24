@@ -44,7 +44,7 @@
                                 "widgetStyle": {
                                     "backgroundColor": "#EEF4FF",
                                     "borderEdges": [],
-                                    "borderRadius": 0
+                                    "borderRadius": 64
                                 }
                             },
                             {
@@ -56,7 +56,7 @@
                                 "widgetStyle": {
                                     "backgroundColor": "#E6ECF2",
                                     "borderEdges": [],
-                                    "borderRadius": 0
+                                    "borderRadius": 64
                                 }
                             },
                             {
@@ -68,7 +68,7 @@
                                 "widgetStyle": {
                                     "backgroundColor": "#EEF4FF",
                                     "borderEdges": [],
-                                    "borderRadius": 0
+                                    "borderRadius": 64
                                 }
                             },
                             {
@@ -267,7 +267,8 @@
                                 "rowspan": 13,
                                 "widgetStyle": {
                                     "backgroundColor": "#EEF4FF",
-                                    "borderEdges": []
+                                    "borderEdges": [],
+                                    "borderRadius": 64
                                 }
                             },
                             {
