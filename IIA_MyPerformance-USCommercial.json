@@ -1,6 +1,7 @@
 {
     "label": "My Performance - US Commercial",
     "mobileDisabled": false,
+    "description": "",
     "state": {
         "dataSourceLinksInfo": {
             "enableAutomaticLinking": true,
@@ -23,9 +24,15 @@
                                 "column": 1,
                                 "name": "dateselector_2",
                                 "row": 0,
-                                "rowspan": 6,
+                                "rowspan": 7,
                                 "widgetStyle": {
-                                    "borderEdges": []
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#747474",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 1
                                 }
                             },
                             {
@@ -35,7 +42,7 @@
                                 "row": 9,
                                 "rowspan": 13,
                                 "widgetStyle": {
-                                    "backgroundColor": "#BFDAF5",
+                                    "backgroundColor": "#EEF4FF",
                                     "borderEdges": [],
                                     "borderRadius": 0
                                 }
@@ -59,7 +66,7 @@
                                 "row": 9,
                                 "rowspan": 13,
                                 "widgetStyle": {
-                                    "backgroundColor": "#BFDAF5",
+                                    "backgroundColor": "#EEF4FF",
                                     "borderEdges": [],
                                     "borderRadius": 0
                                 }
@@ -75,7 +82,7 @@
                                 }
                             },
                             {
-                                "colspan": 22,
+                                "colspan": 26,
                                 "column": 14,
                                 "name": "pillbox_01",
                                 "row": 3,
@@ -115,7 +122,11 @@
                                 "row": 31,
                                 "rowspan": 2,
                                 "widgetStyle": {
-                                    "borderEdges": []
+                                    "borderColor": "#7D98B3",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4
                                 }
                             },
                             {
@@ -125,7 +136,11 @@
                                 "row": 31,
                                 "rowspan": 2,
                                 "widgetStyle": {
-                                    "borderEdges": []
+                                    "borderColor": "#7D98B3",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4
                                 }
                             },
                             {
@@ -135,11 +150,15 @@
                                 "row": 31,
                                 "rowspan": 2,
                                 "widgetStyle": {
-                                    "borderEdges": []
+                                    "borderColor": "#7D98B3",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4
                                 }
                             },
                             {
-                                "colspan": 15,
+                                "colspan": 16,
                                 "column": 17,
                                 "name": "chart_1",
                                 "row": 35,
@@ -150,7 +169,7 @@
                             },
                             {
                                 "colspan": 15,
-                                "column": 33,
+                                "column": 34,
                                 "name": "chart_2",
                                 "row": 35,
                                 "rowspan": 34,
@@ -169,8 +188,8 @@
                                 }
                             },
                             {
-                                "colspan": 50,
-                                "column": 0,
+                                "colspan": 48,
+                                "column": 1,
                                 "name": "table_1",
                                 "row": 76,
                                 "rowspan": 52,
@@ -200,7 +219,7 @@
                             },
                             {
                                 "colspan": 1,
-                                "column": 32,
+                                "column": 33,
                                 "name": "image_1",
                                 "row": 41,
                                 "rowspan": 22,
@@ -247,6 +266,7 @@
                                 "row": 9,
                                 "rowspan": 13,
                                 "widgetStyle": {
+                                    "backgroundColor": "#EEF4FF",
                                     "borderEdges": []
                                 }
                             },
@@ -317,6 +337,13 @@
                                         "Closed Won"
                                     ],
                                     "in"
+                                ],
+                                [
+                                    "{{cell(OptyRoleToggle_1.selection, 0, \"qry_filter_field\").asString()}}",
+                                    [
+                                        "{{cell(UserData.selection, 0, \"Name\").asString()}}"
+                                    ],
+                                    "{{cell(OptyRoleToggle_1.selection, 0, \"qry_filter_compare\").asString()}}"
                                 ]
                             ]
                         }
@@ -459,7 +486,7 @@
                 "broadcastFacet": true,
                 "groups": [],
                 "numbers": [],
-                "query": "SELECT Name, Country, Id FROM User WHERE Id = '0055E00000IObqKQAT'",
+                "query": "SELECT Name, Country, Id FROM User WHERE Id = '0057S000003rrb9QAA'",
                 "receiveFacetSource": {
                     "mode": "none",
                     "steps": []
@@ -580,7 +607,7 @@
                 "groups": [],
                 "label": "My Sales Total",
                 "numbers": [],
-                "query": "q = load \"Load_opty_services_acct_all\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Name\").asString()}}\";q = group q by all;\nq = foreach q generate sum(q.'gCRM_Split_Amount_USD__c') as 'A';\nq = limit q 2000;",
+                "query": "q = load \"Load_opty_services_acct_all\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Name\").asString()}}\";\nq = group q by all;\nq = foreach q generate sum(q.'gCRM_Split_Amount_USD__c') as 'A';\nq = limit q 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -624,50 +651,19 @@
             },
             "My_Average_Win_Size_1": {
                 "broadcastFacet": true,
-                "datasets": [
-                    {
-                        "id": "0Fb7S00000119I5SAI",
-                        "label": "Load_opty_services_acct_all",
-                        "name": "Load_opty_services_acct_all",
-                        "url": "/services/data/v61.0/wave/datasets/0Fb7S00000119I5SAI"
-                    }
-                ],
-                "isGlobal": false,
+                "groups": [],
                 "label": "My Average Win Size",
-                "query": {
-                    "aggregateFilters": [],
-                    "columnGroups": [],
-                    "columnTotals": [],
-                    "limit": 2000,
-                    "orders": [],
-                    "rowTotals": [],
-                    "sourceFilters": {},
-                    "sources": [
-                        {
-                            "columns": [
-                                {
-                                    "formula": "average(gCRM_Split_Amount_USD__c)",
-                                    "name": "A"
-                                }
-                            ],
-                            "filters": [],
-                            "groups": [
-                                "all"
-                            ],
-                            "joins": [],
-                            "name": "Load_opty_services_acct_all"
-                        }
-                    ]
-                },
+                "numbers": [],
+                "query": "q = load \"Load_opty_services_acct_all\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Name\").asString()}}\";\nq = group q by all;\nq = foreach q generate average(q.'gCRM_Split_Amount_USD__c') as 'A';\nq = limit q 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
                 },
                 "selectMode": "single",
-                "type": "aggregateflex",
+                "strings": [],
+                "type": "saql",
                 "useGlobal": true,
                 "visualizationParameters": {
-                    "options": {},
                     "parameters": {
                         "borderColor": "#e0e5ee",
                         "borderWidth": 1,
@@ -694,7 +690,6 @@
                         "mode": "variable",
                         "numberOfLines": 1,
                         "showActionMenu": true,
-                        "showRowIndexColumn": false,
                         "totals": true,
                         "verticalPadding": 8
                     },
@@ -720,7 +715,7 @@
                     "limit": 2000,
                     "orders": [
                         {
-                            "name": "OpportunityServices__c.gCRM_GPS_Stage_US__c",
+                            "name": "OpportunityServices__c.StageName",
                             "filters": [],
                             "ascending": false
                         }
@@ -730,12 +725,19 @@
                         "Load_opty_services_acct_all": {
                             "filters": [
                                 [
-                                    "OpportunityServices__c.gCRM_GPS_Stage_US__c",
+                                    "OpportunityServices__c.StageName",
                                     [
                                         "Closed Lost",
                                         "Closed Won"
                                     ],
                                     "in"
+                                ],
+                                [
+                                    "{{cell(OptyRoleToggle_1.selection, 0, \"qry_filter_field\").asString()}}",
+                                    [
+                                        "{{cell(UserData.selection, 0, \"Name\").asString()}}"
+                                    ],
+                                    "{{cell(OptyRoleToggle_1.selection, 0, \"qry_filter_compare\").asString()}}"
                                 ]
                             ]
                         }
@@ -753,7 +755,7 @@
                             ],
                             "filters": [],
                             "groups": [
-                                "OpportunityServices__c.gCRM_GPS_Stage_US__c"
+                                "OpportunityServices__c.StageName"
                             ],
                             "joins": [],
                             "name": "Load_opty_services_acct_all"
@@ -837,7 +839,7 @@
                         "columnMap": {
                             "trellis": [],
                             "dimensionAxis": [
-                                "OpportunityServices__c.gCRM_GPS_Stage_US__c"
+                                "OpportunityServices__c.StageName"
                             ],
                             "plots": [
                                 "A"
@@ -890,6 +892,15 @@
                     "saql_filter": {
                         "type": "string"
                     },
+                    "qry_filter_value": {
+                        "type": "string"
+                    },
+                    "qry_filter_compare": {
+                        "type": "string"
+                    },
+                    "qry_filter_field": {
+                        "type": "string"
+                    },
                     "Display": {
                         "type": "string"
                     }
@@ -905,15 +916,24 @@
                 "values": [
                     {
                         "Display": "On the Opportunity Team",
-                        "saql_filter": "q = filter q by 'OpportunityServices__c.gCRM_Opportunity_Team_Members_Name__c' matches "
+                        "saql_filter": "q = filter q by 'OpportunityServices__c.gCRM_Opportunity_Team_Members_Name__c' matches ",
+                        "qry_filter_field": "OpportunityServices__c.Owner.Name",
+                        "qry_filter_compare": "matches",
+                        "qry_filter_value": "*"
                     },
                     {
                         "Display": "Primary",
-                        "saql_filter": "q = filter q by 'OpportunityServices__c.Owner.Name' == "
+                        "saql_filter": "q = filter q by 'CustomTeams.gCRM_Opportunity_Team_Role__c' == \"Pursuit Primary\";\nq = filter q by 'OpportunityServices__c.Owner.Name' == ",
+                        "qry_filter_field": "CustomTeams.gCRM_Opportunity_Team_Role__c",
+                        "qry_filter_compare": "matches",
+                        "qry_filter_value": "Pursuit Primary"
                     },
                     {
                         "Display": "Opportunity Leader",
-                        "saql_filter": "q = filter q by 'OpportunityServices__c.Owner.Name' == "
+                        "saql_filter": "q = filter q by 'OpportunityServices__c.Owner.Name' == ",
+                        "qry_filter_field": "OpportunityServices__c.Owner.Name",
+                        "qry_filter_compare": "matches",
+                        "qry_filter_value": "*"
                     }
                 ]
             },
@@ -950,7 +970,7 @@
                     },
                     {
                         "Display": "$",
-                        "Measure2__field": "gCRM_Split_Amount_USD__c",
+                        "Measure2__field": "OpportunityServices__c.gCRM_Amount_USD__c",
                         "Measure2__func": "sum"
                     }
                 ]
@@ -988,7 +1008,7 @@
                     },
                     {
                         "Display": "$",
-                        "Measure2__field": "gCRM_Split_Amount_USD__c",
+                        "Measure2__field": "OpportunityServices__c.gCRM_Amount_USD__c",
                         "Measure2__func": "sum"
                     }
                 ]
@@ -1026,7 +1046,7 @@
                     },
                     {
                         "Display": "$",
-                        "Measure2__field": "gCRM_Split_Amount_USD__c",
+                        "Measure2__field": "OpportunityServices__c.gCRM_Amount_USD__c",
                         "Measure2__func": "sum"
                     }
                 ]
@@ -1231,7 +1251,7 @@
                     "limit": 2000,
                     "orders": [
                         {
-                            "name": "OpportunityServices__c.gCRM_GPS_Stage_US__c",
+                            "name": "OpportunityServices__c.StageName",
                             "filters": [],
                             "ascending": false
                         }
@@ -1241,12 +1261,19 @@
                         "Load_opty_services_acct_all": {
                             "filters": [
                                 [
-                                    "OpportunityServices__c.gCRM_GPS_Stage_US__c",
+                                    "OpportunityServices__c.StageName",
                                     [
                                         "Closed Lost",
                                         "Closed Won"
                                     ],
                                     "in"
+                                ],
+                                [
+                                    "{{cell(OptyRoleToggle_1.selection, 0, \"qry_filter_field\").asString()}}",
+                                    [
+                                        "{{cell(UserData.selection, 0, \"Name\").asString()}}"
+                                    ],
+                                    "{{cell(OptyRoleToggle_1.selection, 0, \"qry_filter_compare\").asString()}}"
                                 ]
                             ]
                         }
@@ -1264,14 +1291,14 @@
                                 {
                                     "field": [
                                         "sum",
-                                        "gCRM_Split_Amount_USD__c"
+                                        "OpportunityServices__c.gCRM_Amount_USD__c"
                                     ],
                                     "name": "B"
                                 }
                             ],
                             "filters": [],
                             "groups": [
-                                "OpportunityServices__c.gCRM_GPS_Stage_US__c"
+                                "OpportunityServices__c.StageName"
                             ],
                             "joins": [],
                             "name": "Load_opty_services_acct_all"
@@ -1298,7 +1325,6 @@
                     "steps": []
                 },
                 "selectMode": "single",
-                "start": [],
                 "type": "aggregateflex",
                 "useGlobal": false,
                 "visualizationParameters": {
@@ -1316,7 +1342,7 @@
                         "columns": [
                             "A",
                             "B",
-                            "OpportunityServices__c.gCRM_GPS_Stage_US__c",
+                            "OpportunityServices__c.StageName",
                             "C",
                             "D"
                         ],
@@ -1412,7 +1438,19 @@
                     "limit": 100,
                     "orders": [],
                     "rowTotals": [],
-                    "sourceFilters": {},
+                    "sourceFilters": {
+                        "Load_opty_services_acct_all": {
+                            "filters": [
+                                [
+                                    "{{cell(OptyRoleToggle_1.selection, 0, \"qry_filter_field\").asString()}}",
+                                    [
+                                        "{{cell(UserData.selection, 0, \"Name\").asString()}}"
+                                    ],
+                                    "{{cell(OptyRoleToggle_1.selection, 0, \"qry_filter_compare\").asString()}}"
+                                ]
+                            ]
+                        }
+                    },
                     "sources": [
                         {
                             "columns": [
@@ -1441,12 +1479,12 @@
                                     "name": "OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c"
                                 },
                                 {
-                                    "field": "OpportunityServices__c.gCRM_GPS_Stage_US__c",
-                                    "name": "OpportunityServices__c.gCRM_GPS_Stage_US__c"
+                                    "field": "OpportunityServices__c.StageName",
+                                    "name": "OpportunityServices__c.StageName"
                                 },
                                 {
-                                    "field": "OpportunityServices__c.gCRM_Sum_of_Opportunity_Splits__c",
-                                    "name": "OpportunityServices__c.gCRM_Sum_of_Opportunity_Splits__c"
+                                    "field": "OpportunityServices__c.gCRM_Amount_USD__c",
+                                    "name": "OpportunityServices__c.gCRM_Amount_USD__c"
                                 }
                             ],
                             "filters": [],
@@ -1479,11 +1517,11 @@
                             "OpportunityServices__c.Name",
                             "OpportunityServices__c.gCRM_Opportunity_ID__c",
                             "Account_Name_Computed",
-                            "OpportunityServices__c.gCRM_Sum_of_Opportunity_Splits__c",
+                            "OpportunityServices__c.gCRM_Amount_USD__c",
                             "CustomTeams.gCRM_Sales_Credit_Amount__c",
                             "Actual_Close",
                             "OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c",
-                            "OpportunityServices__c.gCRM_GPS_Stage_US__c"
+                            "OpportunityServices__c.StageName"
                         ],
                         "customBulkActions": [],
                         "header": {
@@ -1499,7 +1537,7 @@
                         "minColumnWidth": 40,
                         "mode": "variable",
                         "numberOfLines": 1,
-                        "showActionMenu": true,
+                        "showActionMenu": false,
                         "showRowIndexColumn": true,
                         "totals": true,
                         "verticalPadding": 8
@@ -1601,9 +1639,9 @@
             "lens_4": {
                 "broadcastFacet": true,
                 "groups": [],
-                "label": "lens_4",
+                "label": "Average time to close won in days",
                 "numbers": [],
-                "query": "q = load \"Load_opty_services_acct_all\";\nq = group q by all;\nq = foreach q generate number_to_string((avg(q.'OpportunityAge')), \"##\") + \" Days\" as 'B';\nq = limit q 2000;",
+                "query": "q = load \"Load_opty_services_acct_all\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Name\").asString()}}\";\nq = filter q by 'OpportunityServices__c.StageName' == \"Closed Won\";\nq = foreach q generate 'OpportunityServices__c.Id' as 'Id', 'OpportunityServices__c.Name' as 'name', \n'OpportunityServices__c.gCRM_Source_Creation_Date__c' as 'Created', 'Actual_Close_Year'+\":\"+'Actual_Close_Month'+\":\"+'Actual_Close_Day' as 'closeDate', \ndaysBetween( toDate(((('OpportunityServices__c.gCRM_Source_Creation_Date__c_Year' + \":\") + 'OpportunityServices__c.gCRM_Source_Creation_Date__c_Month' + \":\") \n+ 'OpportunityServices__c.gCRM_Source_Creation_Date__c_Day'), \"yyyy:MM:dd\"), toDate(((('Actual_Close_Year' + \":\") + 'Actual_Close_Month' + \":\") \n+ 'Actual_Close_Day'), \"yyyy:MM:dd\")) as 'DaysToClose', count() as 'count';\nq = group q by all ;\nq = foreach q generate round(average(DaysToClose)) as CY_Days; \nq = limit q 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -1743,7 +1781,7 @@
                             "ascending": true
                         },
                         {
-                            "name": "OpportunityServices__c.gCRM_GPS_Stage_US__c",
+                            "name": "OpportunityServices__c.StageName",
                             "filters": [],
                             "ascending": true
                         }
@@ -1751,21 +1789,21 @@
                     "rowTotals": [],
                     "sourceFilters": {
                         "Load_opty_services_acct_all": {
-                            "booleanFilterLogic": "1 OR 2",
                             "filters": [
                                 [
-                                    "OpportunityServices__c.gCRM_GPS_Stage_US__c",
+                                    "OpportunityServices__c.StageName",
                                     [
+                                        "Closed Abandoned",
                                         "Closed Lost"
                                     ],
                                     "in"
                                 ],
                                 [
-                                    "OpportunityServices__c.gCRM_GPS_Stage_US__c",
+                                    "{{cell(OptyRoleToggle_1.selection, 0, \"qry_filter_field\").asString()}}",
                                     [
-                                        "Closed Abandoned"
+                                        "{{cell(UserData.selection, 0, \"Name\").asString()}}"
                                     ],
-                                    "in"
+                                    "{{cell(OptyRoleToggle_1.selection, 0, \"qry_filter_compare\").asString()}}"
                                 ]
                             ]
                         }
@@ -1784,7 +1822,7 @@
                             "filters": [],
                             "groups": [
                                 "OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c",
-                                "OpportunityServices__c.gCRM_GPS_Stage_US__c"
+                                "OpportunityServices__c.StageName"
                             ],
                             "joins": [],
                             "name": "Load_opty_services_acct_all"
@@ -1796,7 +1834,6 @@
                     "steps": []
                 },
                 "selectMode": "single",
-                "start": [],
                 "type": "aggregateflex",
                 "useGlobal": true,
                 "visualizationParameters": {
@@ -1804,10 +1841,10 @@
                         "autoFitMode": "keepLabels",
                         "legend": {
                             "descOrder": false,
-                            "showHeader": true,
+                            "showHeader": false,
                             "show": true,
                             "customSize": "auto",
-                            "position": "right-top",
+                            "position": "bottom-center",
                             "inside": false
                         },
                         "axisMode": "sync",
@@ -1847,7 +1884,7 @@
                         },
                         "columnMap": {
                             "split": [
-                                "OpportunityServices__c.gCRM_GPS_Stage_US__c"
+                                "OpportunityServices__c.StageName"
                             ],
                             "trellis": [],
                             "dimensionAxis": [
@@ -1857,7 +1894,7 @@
                                 "A"
                             ]
                         },
-                        "showActionMenu": true,
+                        "showActionMenu": false,
                         "measureAxis2": {
                             "sqrtScale": false,
                             "showTitle": true,
@@ -1870,7 +1907,7 @@
                         "valueType": "compactNumber",
                         "measureAxis1": {
                             "sqrtScale": false,
-                            "showTitle": true,
+                            "showTitle": false,
                             "showAxis": true,
                             "title": "",
                             "customDomain": {
@@ -1881,7 +1918,7 @@
                         "theme": "wave",
                         "compactDecimalDigits": -1,
                         "dimensionAxis": {
-                            "showTitle": true,
+                            "showTitle": false,
                             "customSize": "auto",
                             "showAxis": true,
                             "title": "",
@@ -1958,11 +1995,9 @@
                     "fontSize": 14,
                     "selectedTab": {
                         "backgroundColor": "#0070D2",
-                        "borderColor": "#C6D3E1",
-                        "borderEdges": [
-                            "all"
-                        ],
-                        "borderWidth": 1,
+                        "borderColor": "#3274CC",
+                        "borderEdges": [],
+                        "borderWidth": 0,
                         "textColor": "#FFFFFF"
                     },
                     "showActionMenu": false,
@@ -1986,11 +2021,11 @@
                         "OpportunityServices__c.Name",
                         "OpportunityServices__c.gCRM_Opportunity_ID__c",
                         "Account_Name_Computed",
-                        "OpportunityServices__c.gCRM_Sum_of_Opportunity_Splits__c",
+                        "OpportunityServices__c.gCRM_Amount_USD__c",
                         "CustomTeams.gCRM_Sales_Credit_Amount__c",
                         "Actual_Close",
                         "OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c",
-                        "OpportunityServices__c.gCRM_GPS_Stage_US__c"
+                        "OpportunityServices__c.StageName"
                     ],
                     "customBulkActions": [],
                     "exploreLink": true,
@@ -2020,15 +2055,15 @@
                     "compact": false,
                     "exploreLink": true,
                     "interactions": [],
-                    "measureField": "B",
+                    "measureField": "CY_Days",
                     "numberColor": "#091A3E",
-                    "numberSize": 16,
-                    "showActionMenu": true,
+                    "numberSize": 32,
+                    "showActionMenu": false,
                     "step": "lens_4",
-                    "textAlignment": "left",
-                    "title": "Avg of Opportunity Age",
+                    "textAlignment": "center",
+                    "title": "My Average Time to Close Won",
                     "titleColor": "#091A3E",
-                    "titleSize": 16,
+                    "titleSize": 18,
                     "tooltip": {
                         "customizeTooltip": false
                     }
@@ -2043,7 +2078,7 @@
                     "measureField": "A",
                     "numberColor": "#091A3E",
                     "numberSize": 32,
-                    "showActionMenu": true,
+                    "showActionMenu": false,
                     "step": "My_Average_Win_Size_1",
                     "textAlignment": "center",
                     "title": "My Average Win Size",
@@ -2063,7 +2098,7 @@
                     "measureField": "A",
                     "numberColor": "#091A3E",
                     "numberSize": 32,
-                    "showActionMenu": true,
+                    "showActionMenu": false,
                     "step": "My_Sales_Total_1",
                     "textAlignment": "center",
                     "title": "My Sales",
@@ -2082,12 +2117,12 @@
                     "interactions": [],
                     "measureField": "D",
                     "numberColor": "#091A3E",
-                    "numberSize": 18,
+                    "numberSize": 20,
                     "showActionMenu": false,
                     "step": "win_rate_us_1",
                     "textAlignment": "center",
                     "title": "by Amount:",
-                    "titleColor": "#091A3E",
+                    "titleColor": "#7D98B3",
                     "titleSize": 16,
                     "tooltip": {
                         "customizeTooltip": false
@@ -2102,12 +2137,12 @@
                     "interactions": [],
                     "measureField": "C",
                     "numberColor": "#091A3E",
-                    "numberSize": 18,
+                    "numberSize": 20,
                     "showActionMenu": false,
                     "step": "win_rate_us_1",
                     "textAlignment": "center",
                     "title": "by Count:",
-                    "titleColor": "#091A3E",
+                    "titleColor": "#7D98B3",
                     "titleSize": 16,
                     "tooltip": {
                         "customizeTooltip": false
@@ -2122,11 +2157,9 @@
                     "fontSize": 14,
                     "selectedTab": {
                         "backgroundColor": "#0070D2",
-                        "borderColor": "#C6D3E1",
-                        "borderEdges": [
-                            "all"
-                        ],
-                        "borderWidth": 1,
+                        "borderColor": "#3274CC",
+                        "borderEdges": [],
+                        "borderWidth": 0,
                         "textColor": "#FFFFFF"
                     },
                     "showActionMenu": false,
@@ -2142,11 +2175,9 @@
                     "fontSize": 14,
                     "selectedTab": {
                         "backgroundColor": "#0070D2",
-                        "borderColor": "#C6D3E1",
-                        "borderEdges": [
-                            "all"
-                        ],
-                        "borderWidth": 1,
+                        "borderColor": "#3274CC",
+                        "borderEdges": [],
+                        "borderWidth": 0,
                         "textColor": "#FFFFFF"
                     },
                     "showActionMenu": false,
@@ -2204,7 +2235,7 @@
                         "position": "bottom-center",
                         "inside": false
                     },
-                    "showMeasureTitle": true,
+                    "showMeasureTitle": false,
                     "tooltip": {
                         "content": {
                             "legend": {
@@ -2278,19 +2309,19 @@
             "dateselector_2": {
                 "parameters": {
                     "absoluteModeEnabled": true,
-                    "calendarTypeSwitchingAllowed": true,
+                    "calendarTypeSwitchingAllowed": false,
                     "defaultFiscalMode": false,
                     "displayMode": "filter",
                     "filterStyle": {
                         "titleColor": "#747474",
                         "valueColor": "#16325C"
                     },
-                    "instant": false,
-                    "presetsEnabled": true,
-                    "relativeModeEnabled": true,
-                    "showActionMenu": true,
+                    "instant": true,
+                    "presetsEnabled": false,
+                    "relativeModeEnabled": false,
+                    "showActionMenu": false,
                     "step": "Actual_Close_1",
-                    "title": "Actual_Close"
+                    "title": "Actual Close Date"
                 },
                 "type": "dateselector"
             },
@@ -2466,7 +2497,7 @@
                     },
                     "columnMap": {
                         "split": [
-                            "OpportunityServices__c.gCRM_GPS_Stage_US__c"
+                            "OpportunityServices__c.StageName"
                         ],
                         "trellis": [],
                         "dimensionAxis": [
@@ -2476,7 +2507,7 @@
                             "A"
                         ]
                     },
-                    "showActionMenu": true,
+                    "showActionMenu": false,
                     "measureAxis2": {
                         "sqrtScale": false,
                         "showTitle": true,
@@ -2500,77 +2531,6 @@
                     "theme": "wave",
                     "step": "lens_1",
                     "compactDecimalDigits": -1,
-                    "markers": [
-                        {
-                            "measure": "A",
-                            "row": [
-                                "Client Abandoned Project",
-                                "Closed Abandoned"
-                            ],
-                            "properties": {
-                                "backgroundColor": "rgb(0, 179, 180)",
-                                "borderColor": "#193F61",
-                                "measures": [
-                                    "A"
-                                ],
-                                "customText": [],
-                                "isBlinking": false,
-                                "defaultShow": true,
-                                "showDimensions": true,
-                                "showMeasures": true,
-                                "dimensions": [
-                                    "OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c",
-                                    "OpportunityServices__c.gCRM_GPS_Stage_US__c"
-                                ]
-                            }
-                        },
-                        {
-                            "measure": "A",
-                            "row": [
-                                "Overall Best Value",
-                                "Closed Lost"
-                            ],
-                            "properties": {
-                                "backgroundColor": "#00B3B4",
-                                "borderColor": "#193F61",
-                                "measures": [
-                                    "A"
-                                ],
-                                "customText": [],
-                                "isBlinking": false,
-                                "defaultShow": true,
-                                "showDimensions": true,
-                                "showMeasures": true,
-                                "dimensions": [
-                                    "OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c",
-                                    "OpportunityServices__c.gCRM_GPS_Stage_US__c"
-                                ]
-                            }
-                        },
-                        {
-                            "measure": "A",
-                            "row": [
-                                "Erroneous",
-                                "Closed Abandoned"
-                            ],
-                            "properties": {
-                                "backgroundColor": "#193F61",
-                                "borderColor": "#193F61",
-                                "measures": [
-                                    "A"
-                                ],
-                                "customText": [],
-                                "isBlinking": false,
-                                "defaultShow": true,
-                                "showDimensions": true,
-                                "showMeasures": true,
-                                "dimensions": [
-                                    "OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c",
-                                    "OpportunityServices__c.gCRM_GPS_Stage_US__c"
-                                ]
-                            }
-                        }
-                    ],
                     "dimensionAxis": {
                         "showTitle": false,
                         "customSize": "auto",
