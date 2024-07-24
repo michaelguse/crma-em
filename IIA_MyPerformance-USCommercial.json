@@ -19,12 +19,14 @@
                         "navigationHidden": false,
                         "widgets": [
                             {
-                                "colspan": 11,
-                                "column": 0,
+                                "colspan": 10,
+                                "column": 1,
                                 "name": "dateselector_2",
                                 "row": 0,
-                                "rowspan": 7,
-                                "widgetStyle": {}
+                                "rowspan": 6,
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 9,
@@ -35,7 +37,7 @@
                                 "widgetStyle": {
                                     "backgroundColor": "#BFDAF5",
                                     "borderEdges": [],
-                                    "borderRadius": 64
+                                    "borderRadius": 0
                                 }
                             },
                             {
@@ -47,7 +49,7 @@
                                 "widgetStyle": {
                                     "backgroundColor": "#E6ECF2",
                                     "borderEdges": [],
-                                    "borderRadius": 64
+                                    "borderRadius": 0
                                 }
                             },
                             {
@@ -68,7 +70,23 @@
                                 "name": "text_1",
                                 "row": 30,
                                 "rowspan": 4,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
+                            },
+                            {
+                                "colspan": 22,
+                                "column": 14,
+                                "name": "pillbox_01",
+                                "row": 3,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "borderColor": "#7D98B3",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4
+                                }
                             },
                             {
                                 "colspan": 11,
@@ -76,7 +94,9 @@
                                 "name": "text_2",
                                 "row": 30,
                                 "rowspan": 4,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 13,
@@ -84,7 +104,9 @@
                                 "name": "text_3",
                                 "row": 30,
                                 "rowspan": 4,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 3,
@@ -92,7 +114,9 @@
                                 "name": "pillbox_1",
                                 "row": 31,
                                 "rowspan": 2,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 3,
@@ -100,7 +124,9 @@
                                 "name": "pillbox_11",
                                 "row": 31,
                                 "rowspan": 2,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 3,
@@ -108,7 +134,9 @@
                                 "name": "pillbox_3",
                                 "row": 31,
                                 "rowspan": 2,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 15,
@@ -116,7 +144,9 @@
                                 "name": "chart_1",
                                 "row": 35,
                                 "rowspan": 34,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 15,
@@ -124,7 +154,9 @@
                                 "name": "chart_2",
                                 "row": 35,
                                 "rowspan": 34,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 50,
@@ -132,7 +164,9 @@
                                 "name": "container_9",
                                 "row": 76,
                                 "rowspan": 76,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 50,
@@ -140,7 +174,9 @@
                                 "name": "table_1",
                                 "row": 76,
                                 "rowspan": 52,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 46,
@@ -148,7 +184,9 @@
                                 "name": "image_2",
                                 "row": 24,
                                 "rowspan": 2,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 1,
@@ -156,7 +194,9 @@
                                 "name": "image_3",
                                 "row": 41,
                                 "rowspan": 22,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 1,
@@ -164,7 +204,9 @@
                                 "name": "image_1",
                                 "row": 41,
                                 "rowspan": 22,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 7,
@@ -194,7 +236,9 @@
                                 "name": "chart_6",
                                 "row": 37,
                                 "rowspan": 32,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 9,
@@ -202,7 +246,23 @@
                                 "name": "number_5",
                                 "row": 9,
                                 "rowspan": 13,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
+                            },
+                            {
+                                "colspan": 22,
+                                "column": 14,
+                                "name": "text_5",
+                                "row": 0,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#FFFFFF",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
                             }
                         ]
                     }
@@ -294,6 +354,7 @@
                     "steps": []
                 },
                 "selectMode": "single",
+                "start": [],
                 "type": "aggregateflex",
                 "useGlobal": true,
                 "visualizationParameters": {
@@ -391,57 +452,144 @@
                         },
                         "applyConditionalFormatting": true
                     },
-                    "type": "chart",
-                    "options": {}
+                    "type": "chart"
+                }
+            },
+            "UserData": {
+                "broadcastFacet": true,
+                "groups": [],
+                "numbers": [],
+                "query": "SELECT Name, Country, Id FROM User WHERE Id = '0055E00000IObqKQAT'",
+                "receiveFacetSource": {
+                    "mode": "none",
+                    "steps": []
                 },
-                "start": []
+                "selectMode": "singlerequired",
+                "strings": [],
+                "type": "soql",
+                "useGlobal": false,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "sync",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart"
+                }
             },
             "My_Sales_Total_1": {
                 "broadcastFacet": true,
-                "datasets": [
-                    {
-                        "id": "0Fb7S00000119I5SAI",
-                        "label": "Load_opty_services_acct_all",
-                        "name": "Load_opty_services_acct_all",
-                        "url": "/services/data/v61.0/wave/datasets/0Fb7S00000119I5SAI"
-                    }
-                ],
-                "isGlobal": false,
+                "groups": [],
                 "label": "My Sales Total",
-                "query": {
-                    "aggregateFilters": [],
-                    "columnGroups": [],
-                    "columnTotals": [],
-                    "limit": 2000,
-                    "orders": [],
-                    "rowTotals": [],
-                    "sourceFilters": {},
-                    "sources": [
-                        {
-                            "columns": [
-                                {
-                                    "formula": "sum(gCRM_Split_Amount_USD__c)",
-                                    "name": "A"
-                                }
-                            ],
-                            "filters": [],
-                            "groups": [
-                                "all"
-                            ],
-                            "joins": [],
-                            "name": "Load_opty_services_acct_all"
-                        }
-                    ]
-                },
+                "numbers": [],
+                "query": "q = load \"Load_opty_services_acct_all\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Name\").asString()}}\";q = group q by all;\nq = foreach q generate sum(q.'gCRM_Split_Amount_USD__c') as 'A';\nq = limit q 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
                 },
                 "selectMode": "single",
-                "type": "aggregateflex",
+                "strings": [],
+                "type": "saql",
                 "useGlobal": true,
                 "visualizationParameters": {
-                    "options": {},
                     "parameters": {
                         "borderColor": "#e0e5ee",
                         "borderWidth": 1,
@@ -468,7 +616,6 @@
                         "mode": "variable",
                         "numberOfLines": 1,
                         "showActionMenu": true,
-                        "showRowIndexColumn": false,
                         "totals": true,
                         "verticalPadding": 8
                     },
@@ -618,6 +765,7 @@
                     "steps": []
                 },
                 "selectMode": "single",
+                "start": [],
                 "type": "aggregateflex",
                 "useGlobal": true,
                 "visualizationParameters": {
@@ -733,10 +881,41 @@
                         },
                         "applyConditionalFormatting": true
                     },
-                    "type": "chart",
-                    "options": {}
+                    "type": "chart"
+                }
+            },
+            "OptyRoleToggle_1": {
+                "broadcastFacet": true,
+                "columns": {
+                    "saql_filter": {
+                        "type": "string"
+                    },
+                    "Display": {
+                        "type": "string"
+                    }
                 },
-                "start": []
+                "label": "OptyRoleToggle",
+                "selectMode": "single",
+                "start": {
+                    "Display": [
+                        "On the Opportunity Team"
+                    ]
+                },
+                "type": "staticflex",
+                "values": [
+                    {
+                        "Display": "On the Opportunity Team",
+                        "saql_filter": "q = filter q by 'OpportunityServices__c.gCRM_Opportunity_Team_Members_Name__c' matches "
+                    },
+                    {
+                        "Display": "Primary",
+                        "saql_filter": "q = filter q by 'OpportunityServices__c.Owner.Name' == "
+                    },
+                    {
+                        "Display": "Opportunity Leader",
+                        "saql_filter": "q = filter q by 'OpportunityServices__c.Owner.Name' == "
+                    }
+                ]
             },
             "static_2": {
                 "broadcastFacet": true,
@@ -757,6 +936,11 @@
                 },
                 "label": "win rate toggle query",
                 "selectMode": "singlerequired",
+                "start": {
+                    "Display": [
+                        "#"
+                    ]
+                },
                 "type": "staticflex",
                 "values": [
                     {
@@ -769,15 +953,7 @@
                         "Measure2__field": "gCRM_Split_Amount_USD__c",
                         "Measure2__func": "sum"
                     }
-                ],
-                "numbers": [],
-                "strings": [],
-                "groups": [],
-                "start": {
-                    "Display": [
-                        "#"
-                    ]
-                }
+                ]
             },
             "static_1": {
                 "broadcastFacet": true,
@@ -798,6 +974,11 @@
                 },
                 "label": "Closed Won Toggle Query",
                 "selectMode": "singlerequired",
+                "start": {
+                    "Display": [
+                        "#"
+                    ]
+                },
                 "type": "staticflex",
                 "values": [
                     {
@@ -810,15 +991,7 @@
                         "Measure2__field": "gCRM_Split_Amount_USD__c",
                         "Measure2__func": "sum"
                     }
-                ],
-                "numbers": [],
-                "strings": [],
-                "groups": [],
-                "start": {
-                    "Display": [
-                        "#"
-                    ]
-                }
+                ]
             },
             "Lost_Abandoned_Toggl_1": {
                 "broadcastFacet": true,
@@ -839,6 +1012,11 @@
                 },
                 "label": "Lost Abandoned Toggle Query",
                 "selectMode": "singlerequired",
+                "start": {
+                    "Display": [
+                        "#"
+                    ]
+                },
                 "type": "staticflex",
                 "values": [
                     {
@@ -851,15 +1029,7 @@
                         "Measure2__field": "gCRM_Split_Amount_USD__c",
                         "Measure2__func": "sum"
                     }
-                ],
-                "numbers": [],
-                "strings": [],
-                "groups": [],
-                "start": {
-                    "Display": [
-                        "#"
-                    ]
-                }
+                ]
             },
             "Total_closed_won_que_1": {
                 "broadcastFacet": true,
@@ -1039,8 +1209,7 @@
                         },
                         "applyConditionalFormatting": true
                     },
-                    "type": "chart",
-                    "options": {}
+                    "type": "chart"
                 }
             },
             "win_rate_us_1": {
@@ -1129,6 +1298,7 @@
                     "steps": []
                 },
                 "selectMode": "single",
+                "start": [],
                 "type": "aggregateflex",
                 "useGlobal": false,
                 "visualizationParameters": {
@@ -1170,8 +1340,7 @@
                         "verticalPadding": 8
                     },
                     "type": "table"
-                },
-                "start": []
+                }
             },
             "Actual_Close_1": {
                 "broadcastFacet": true,
@@ -1200,17 +1369,15 @@
                     "steps": []
                 },
                 "selectMode": "single",
-                "type": "aggregateflex",
-                "useGlobal": true,
-                "visualizationParameters": {
-                    "options": {}
-                },
                 "start": [
                     [
                         1704067200000,
                         1721260800000
                     ]
-                ]
+                ],
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {}
             },
             "input_1": {
                 "label": "",
@@ -1629,6 +1796,7 @@
                     "steps": []
                 },
                 "selectMode": "single",
+                "start": [],
                 "type": "aggregateflex",
                 "useGlobal": true,
                 "visualizationParameters": {
@@ -1728,10 +1896,8 @@
                         },
                         "applyConditionalFormatting": true
                     },
-                    "type": "chart",
-                    "options": {}
-                },
-                "start": []
+                    "type": "chart"
+                }
             }
         },
         "widgetStyle": {
@@ -1766,6 +1932,24 @@
                     "showActionMenu": true
                 },
                 "type": "text"
+            },
+            "pillbox_01": {
+                "parameters": {
+                    "compact": false,
+                    "exploreLink": false,
+                    "fontSize": 14,
+                    "selectedTab": {
+                        "backgroundColor": "#3274CC",
+                        "borderColor": "#3274CC",
+                        "borderEdges": [],
+                        "borderWidth": 0,
+                        "textColor": "#FFFFFF"
+                    },
+                    "showActionMenu": false,
+                    "step": "OptyRoleToggle_1",
+                    "textColor": "#3274CC"
+                },
+                "type": "pillbox"
             },
             "pillbox_11": {
                 "parameters": {
@@ -1827,9 +2011,7 @@
                     "showRowIndexColumn": true,
                     "step": "lens_5",
                     "totals": true,
-                    "verticalPadding": 8,
-                    "evenRowColor": null,
-                    "oddRowColor": null
+                    "verticalPadding": 8
                 },
                 "type": "table"
             },
@@ -2108,8 +2290,7 @@
                     "relativeModeEnabled": true,
                     "showActionMenu": true,
                     "step": "Actual_Close_1",
-                    "title": "Actual_Close",
-                    "customFilterPresets": []
+                    "title": "Actual_Close"
                 },
                 "type": "dateselector"
             },
@@ -2125,6 +2306,30 @@
                     "interactions": []
                 },
                 "type": "image"
+            },
+            "text_5": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "color": "#7d98b3",
+                                    "size": "14px"
+                                },
+                                "insert": "View opportunities where I am:"
+                            },
+                            {
+                                "attributes": {
+                                    "align": "left"
+                                },
+                                "insert": "\n"
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": false
+                },
+                "type": "text"
             },
             "container_9": {
                 "parameters": {
@@ -2170,7 +2375,7 @@
                                     "color": "#7d98b3",
                                     "size": "16px"
                                 },
-                                "insert": "_______________________________"
+                                "insert": "___________________________"
                             },
                             {
                                 "attributes": {
@@ -2483,8 +2688,7 @@
                 },
                 "type": "chart"
             }
-        },
-        "parameters": []
+        }
     },
     "datasets": [
         {
