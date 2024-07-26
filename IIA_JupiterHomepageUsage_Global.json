@@ -207,7 +207,9 @@
                                 "name": "link_1",
                                 "row": 1,
                                 "rowspan": 3,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 8,
@@ -339,10 +341,7 @@
                         "Text2": "-1",
                         "Text3": "[\"1 day ago\"..\"current day\"]"
                     }
-                ],
-                "numbers": [],
-                "strings": [],
-                "groups": []
+                ]
             },
             "PAGE_URL_1": {
                 "broadcastFacet": true,
@@ -374,9 +373,7 @@
                 "start": [],
                 "type": "aggregateflex",
                 "useGlobal": true,
-                "visualizationParameters": {
-                    "options": {}
-                }
+                "visualizationParameters": {}
             },
             "PAGE_URL_3": {
                 "broadcastFacet": true,
@@ -407,9 +404,7 @@
                 "selectMode": "single",
                 "type": "aggregateflex",
                 "useGlobal": true,
-                "visualizationParameters": {
-                    "options": {}
-                }
+                "visualizationParameters": {}
             },
             "PAGE_URL_2": {
                 "broadcastFacet": true,
@@ -555,8 +550,7 @@
                         },
                         "applyConditionalFormatting": true
                     },
-                    "type": "chart",
-                    "options": {}
+                    "type": "chart"
                 }
             },
             "PageViews_by_Date_1": {
@@ -1251,7 +1245,7 @@
                     "valueType": "compactNumber",
                     "measureAxis1": {
                         "sqrtScale": false,
-                        "showTitle": true,
+                        "showTitle": false,
                         "showAxis": true,
                         "title": "",
                         "customDomain": {
@@ -1262,7 +1256,7 @@
                     "step": "PageViews_by_URL_1",
                     "compactDecimalDigits": -1,
                     "dimensionAxis": {
-                        "showTitle": true,
+                        "showTitle": false,
                         "customSize": "auto",
                         "showAxis": true,
                         "title": "",
@@ -1453,7 +1447,7 @@
                     "title": {
                         "fontSize": 16,
                         "subtitleFontSize": 11,
-                        "label": "PageViews by Date",
+                        "label": "Page Views by Date",
                         "align": "center",
                         "subtitleLabel": ""
                     },
@@ -1523,8 +1517,7 @@
                 },
                 "type": "chart"
             }
-        },
-        "parameters": []
+        }
     },
     "datasets": [
         {
