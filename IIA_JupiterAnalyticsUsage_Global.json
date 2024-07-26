@@ -1,0 +1,3740 @@
+{
+    "label": "Jupiter Analytics Usage",
+    "mobileDisabled": false,
+    "state": {
+        "dataSourceLinksInfo": {
+            "enableAutomaticLinking": false,
+            "excludeRelationships": [],
+            "links": []
+        },
+        "filters": [
+            {
+                "dataset": {
+                    "id": "0Fb3X000000QxdbSAC",
+                    "name": "Reg_AnalyticsAssets",
+                    "url": "/services/data/v61.0/wave/datasets/0Fb3X000000QxdbSAC"
+                },
+                "dependent": true,
+                "fields": [
+                    "TYPE"
+                ],
+                "locked": false,
+                "operator": "in",
+                "value": [
+                    "dashboard"
+                ]
+            },
+            {
+                "dataset": {
+                    "id": "0Fb3X000000QxdbSAC",
+                    "name": "Reg_AnalyticsAssets",
+                    "url": "/services/data/v61.0/wave/datasets/0Fb3X000000QxdbSAC"
+                },
+                "dependent": true,
+                "fields": [
+                    "User.Profile.Name"
+                ],
+                "locked": false,
+                "operator": "in",
+                "value": []
+            },
+            {
+                "dataset": {
+                    "id": "0Fb3X000000QxdRSAS",
+                    "name": "WaveChangeEA",
+                    "url": "/services/data/v61.0/wave/datasets/0Fb3X000000QxdRSAS"
+                },
+                "dependent": true,
+                "fields": [
+                    "Wave_objects_Label"
+                ],
+                "label": "Dashboard Name",
+                "locked": false,
+                "operator": "in",
+                "value": [
+                    "MG - Non-US Opportunity Role PoC",
+                    "MG - US Opportunity Role PoC",
+                    "My Env Test",
+                    "My Performance - Non US",
+                    "My Performance - US Commercial"
+                ]
+            }
+        ],
+        "gridLayouts": [
+            {
+                "name": "Default",
+                "numColumns": 48,
+                "pages": [
+                    {
+                        "label": "Untitled",
+                        "name": "437569f5-7b0d-4a18-bd48-06968b039435",
+                        "navigationHidden": false,
+                        "widgets": [
+                            {
+                                "colspan": 10,
+                                "column": 2,
+                                "name": "listselector_1",
+                                "row": 9,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "rgb(66, 198, 233)",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 2
+                                }
+                            },
+                            {
+                                "colspan": 10,
+                                "column": 14,
+                                "name": "listselector_2",
+                                "row": 9,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#747474",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 48,
+                                "column": 0,
+                                "name": "container_1",
+                                "row": 0,
+                                "rowspan": 5,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(0, 0, 0)",
+                                    "borderColor": "#091A3E",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 23,
+                                "column": 2,
+                                "name": "text_3",
+                                "row": 1,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(0, 0, 0)",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 10,
+                                "column": 2,
+                                "name": "text_4",
+                                "row": 7,
+                                "rowspan": 2,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(241, 248, 255)",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 10,
+                                "column": 14,
+                                "name": "text_5",
+                                "row": 7,
+                                "rowspan": 2,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(241, 248, 255)",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 21,
+                                "column": 25,
+                                "name": "chart_2",
+                                "row": 25,
+                                "rowspan": 29,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "rgb(9, 26, 62)",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 22,
+                                "column": 2,
+                                "name": "chart_4",
+                                "row": 25,
+                                "rowspan": 29,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "rgb(9, 26, 62)",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 8,
+                                "column": 26,
+                                "name": "text_1",
+                                "row": 7,
+                                "rowspan": 2,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(241, 248, 255)",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 8,
+                                "column": 26,
+                                "name": "text_2",
+                                "row": 12,
+                                "rowspan": 2,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(241, 248, 255)",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 8,
+                                "column": 26,
+                                "name": "text_6",
+                                "row": 17,
+                                "rowspan": 2,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(241, 248, 255)",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 8,
+                                "column": 36,
+                                "name": "text_7",
+                                "row": 7,
+                                "rowspan": 2,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(241, 248, 255)",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 1,
+                                "column": 12,
+                                "name": "text_8",
+                                "row": 6,
+                                "rowspan": 12,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(241, 248, 255)",
+                                    "borderColor": "rgb(151, 153, 155)",
+                                    "borderEdges": [
+                                        "right"
+                                    ],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 1,
+                                "column": 24,
+                                "name": "text_9",
+                                "row": 7,
+                                "rowspan": 14,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(241, 248, 255)",
+                                    "borderColor": "rgb(151, 153, 155)",
+                                    "borderEdges": [
+                                        "right"
+                                    ],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 8,
+                                "column": 26,
+                                "name": "listselector_3",
+                                "row": 9,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "rgb(66, 198, 233)",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 2
+                                }
+                            },
+                            {
+                                "colspan": 8,
+                                "column": 26,
+                                "name": "listselector_4",
+                                "row": 14,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "rgb(66, 198, 233)",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 2
+                                }
+                            },
+                            {
+                                "colspan": 8,
+                                "column": 26,
+                                "name": "listselector_5",
+                                "row": 19,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "rgb(66, 198, 233)",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 2
+                                }
+                            },
+                            {
+                                "colspan": 8,
+                                "column": 36,
+                                "name": "listselector_6",
+                                "row": 9,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "rgb(66, 198, 233)",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 2
+                                }
+                            },
+                            {
+                                "colspan": 1,
+                                "column": 34,
+                                "name": "text_10",
+                                "row": 6,
+                                "rowspan": 15,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(241, 248, 255)",
+                                    "borderColor": "rgb(151, 153, 155)",
+                                    "borderEdges": [
+                                        "right"
+                                    ],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 10,
+                                "column": 2,
+                                "name": "text_11",
+                                "row": 12,
+                                "rowspan": 2,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(241, 248, 255)",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 10,
+                                "column": 2,
+                                "name": "listselector_7",
+                                "row": 14,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "rgb(66, 198, 233)",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 2
+                                }
+                            },
+                            {
+                                "colspan": 10,
+                                "column": 2,
+                                "name": "text_12",
+                                "row": 17,
+                                "rowspan": 2,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(241, 248, 255)",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 10,
+                                "column": 2,
+                                "name": "listselector_8",
+                                "row": 19,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "rgb(66, 198, 233)",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 2
+                                }
+                            },
+                            {
+                                "colspan": 10,
+                                "column": 14,
+                                "name": "text_13",
+                                "row": 12,
+                                "rowspan": 2,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(241, 248, 255)",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 10,
+                                "column": 14,
+                                "name": "listselector_9",
+                                "row": 14,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "rgb(66, 198, 233)",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 2
+                                }
+                            },
+                            {
+                                "colspan": 44,
+                                "column": 2,
+                                "name": "chart_3",
+                                "row": 56,
+                                "rowspan": 29,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#020821",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 8,
+                                "column": 31,
+                                "name": "link_2",
+                                "row": 1,
+                                "rowspan": 3,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 8,
+                                "column": 39,
+                                "name": "text_15",
+                                "row": 1,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#3274CC",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 4,
+                                    "borderWidth": 1
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "rowHeight": "fine",
+                "selectors": [],
+                "style": {
+                    "alignmentX": "left",
+                    "alignmentY": "top",
+                    "backgroundColor": "rgb(241, 248, 255)",
+                    "cellSpacingX": 0,
+                    "cellSpacingY": 0,
+                    "fit": "original",
+                    "gutterColor": "#C5D3E0"
+                },
+                "version": 1
+            },
+            {
+                "name": "Mobile",
+                "numColumns": 6,
+                "pages": [
+                    {
+                        "label": "Untitled",
+                        "name": "437569f5-7b0d-4a18-bd48-06968b039435",
+                        "navigationHidden": false,
+                        "widgets": [
+                            {
+                                "colspan": 6,
+                                "column": 0,
+                                "name": "container_1",
+                                "row": 4,
+                                "rowspan": 9,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(0, 0, 0)",
+                                    "borderColor": "#091A3E",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 6,
+                                "column": 0,
+                                "name": "text_3",
+                                "row": 8,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(0, 0, 0)",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 0,
+                                "name": "text_4",
+                                "row": 13,
+                                "rowspan": 2,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(241, 248, 255)",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 3,
+                                "name": "text_5",
+                                "row": 13,
+                                "rowspan": 2,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(241, 248, 255)",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 0,
+                                "name": "text_1",
+                                "row": 18,
+                                "rowspan": 2,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(241, 248, 255)",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 3,
+                                "name": "text_7",
+                                "row": 20,
+                                "rowspan": 2,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(241, 248, 255)",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 0,
+                                "name": "listselector_1",
+                                "row": 15,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "rgb(66, 198, 233)",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 2
+                                }
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 3,
+                                "name": "listselector_2",
+                                "row": 15,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "rgb(66, 198, 233)",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 2
+                                }
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 0,
+                                "name": "listselector_3",
+                                "row": 23,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "rgb(66, 198, 233)",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 2
+                                }
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 3,
+                                "name": "listselector_6",
+                                "row": 22,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "rgb(66, 198, 233)",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 2
+                                }
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 0,
+                                "name": "text_11",
+                                "row": 26,
+                                "rowspan": 2,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(241, 248, 255)",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 3,
+                                "name": "text_13",
+                                "row": 25,
+                                "rowspan": 2,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(241, 248, 255)",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 0,
+                                "name": "text_2",
+                                "row": 31,
+                                "rowspan": 2,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(241, 248, 255)",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 0,
+                                "name": "listselector_7",
+                                "row": 28,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "rgb(66, 198, 233)",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 2
+                                }
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 3,
+                                "name": "listselector_9",
+                                "row": 27,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "rgb(66, 198, 233)",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 2
+                                }
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 0,
+                                "name": "listselector_4",
+                                "row": 33,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "rgb(66, 198, 233)",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 2
+                                }
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 3,
+                                "name": "text_12",
+                                "row": 30,
+                                "rowspan": 2,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(241, 248, 255)",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 0,
+                                "name": "text_6",
+                                "row": 36,
+                                "rowspan": 2,
+                                "widgetStyle": {
+                                    "backgroundColor": "rgb(241, 248, 255)",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 3,
+                                "name": "listselector_8",
+                                "row": 32,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "rgb(66, 198, 233)",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 2
+                                }
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 0,
+                                "name": "listselector_5",
+                                "row": 38,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "rgb(66, 198, 233)",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
+                                    "borderWidth": 2
+                                }
+                            },
+                            {
+                                "colspan": 6,
+                                "column": 0,
+                                "name": "text_14",
+                                "row": 41,
+                                "rowspan": 8,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#091A3E",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 6,
+                                "column": 0,
+                                "name": "chart_4",
+                                "row": 67,
+                                "rowspan": 29,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "rgb(9, 26, 62)",
+                                    "borderEdges": [
+                                        "left",
+                                        "top",
+                                        "bottom"
+                                    ],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 6,
+                                "column": 0,
+                                "name": "chart_2",
+                                "row": 96,
+                                "rowspan": 29,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "rgb(9, 26, 62)",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 2,
+                                "column": 0,
+                                "name": "chart_3",
+                                "row": 55,
+                                "rowspan": 11,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 1,
+                                "column": 4,
+                                "name": "link_2",
+                                "row": 1,
+                                "rowspan": 3,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 1,
+                                "column": 5,
+                                "name": "text_15",
+                                "row": 1,
+                                "rowspan": 3,
+                                "widgetStyle": {}
+                            }
+                        ]
+                    }
+                ],
+                "rowHeight": "fine",
+                "selectors": [
+                    "maxWidth(599)"
+                ],
+                "style": {
+                    "alignmentX": "left",
+                    "alignmentY": "top",
+                    "backgroundColor": "rgb(241, 248, 255)",
+                    "cellSpacingX": 0,
+                    "cellSpacingY": 0,
+                    "fit": "original",
+                    "gutterColor": "#C5D3E0"
+                },
+                "version": 1
+            }
+        ],
+        "layouts": [],
+        "steps": {
+            "F_geo_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb3X000000QxdRSAS",
+                        "label": "WaveChangeEA",
+                        "name": "WaveChangeEA",
+                        "url": "/services/data/v61.0/wave/datasets/0Fb3X000000QxdRSAS"
+                    }
+                ],
+                "isGlobal": false,
+                "label": "F_geo",
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "groups": [
+                        "User.User.gCRM_User_Country__c"
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "multi",
+                "start": [],
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "multi",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "User.gCRM_User_Country__c"
+                            ],
+                            "plots": [
+                                "count"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart",
+                    "options": {}
+                }
+            },
+            "User_gCRM_Leader__c_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb3X000000QxdRSAS",
+                        "label": "WaveChangeEA",
+                        "name": "WaveChangeEA",
+                        "url": "/services/data/v61.0/wave/datasets/0Fb3X000000QxdRSAS"
+                    }
+                ],
+                "isGlobal": false,
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "groups": [
+                        "User.gCRM_Leader__c"
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "multi",
+                "start": [],
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "options": {}
+                }
+            },
+            "SESSION_KEY_Wave_obj_1": {
+                "broadcastFacet": true,
+                "groups": [],
+                "label": "SESSION_KEY_Wave_obj_1",
+                "numbers": [],
+                "query": "q = load \"WaveChangeEA\";\nq = filter q by date('TIMESTAMP_DERIVED_Year', 'TIMESTAMP_DERIVED_Month', 'TIMESTAMP_DERIVED_Day') in {{column(time_1.selection, [\"value1\"]).asObject()}};\nq = filter q by 'TYPE' == \"dashboard\";\n--q = filter q by ('User_Profile_Name' != \"System Administrator\" || 'User_Profile_Name' is null);\nq = group q by ('SESSION_KEY', 'User_Name', 'Wave_objects_Label');\nq = foreach q generate 'SESSION_KEY' as 'SESSION_KEY', 'User_Name' as 'User_Name', unique('Wave_objects_Id') as 'unique_Wave_objects_Id', 'Wave_objects_Label' as 'Wave_objects_Label';\nq = group q by ('User_Name', 'Wave_objects_Label');\nq = foreach q generate  'User_Name' as 'User_Name', 'Wave_objects_Label' as 'Wave_objects_Label', sum('unique_Wave_objects_Id') as 'Count';\nq = order q by ('User_Name' asc, 'Count' desc);\nq = limit q 2000;",
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "start": [],
+                "strings": [],
+                "type": "saql",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": false,
+                            "show": false,
+                            "customSize": "auto",
+                            "position": "bottom-center",
+                            "inside": false
+                        },
+                        "axisMode": "multi",
+                        "totalSumMode": "none",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "stackhbar",
+                        "title": {
+                            "fontSize": 16,
+                            "subtitleFontSize": 11,
+                            "label": "Dashboard Views by Users",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnProperties": {
+                            "Wave_objects_Label": {
+                                "type": "text",
+                                "parameters": {
+                                    "styles": {
+                                        "linkColor": "#006dcc"
+                                    },
+                                    "alignment": "left"
+                                }
+                            }
+                        },
+                        "columnMap": {
+                            "split": [
+                                "Wave_objects_Label"
+                            ],
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "User_Name"
+                            ],
+                            "plots": [
+                                "Count"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": false,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "normalize": false,
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": false,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart"
+                }
+            },
+            "SESSION_KEY_Wave_obj_2": {
+                "broadcastFacet": true,
+                "groups": [],
+                "label": "SESSION_KEY_Wave_obj_1",
+                "numbers": [],
+                "query": "q = load \"WaveChangeEA\";\nq = filter q by date('TIMESTAMP_DERIVED_Year', 'TIMESTAMP_DERIVED_Month', 'TIMESTAMP_DERIVED_Day') in {{column(time_1.selection, [\"value1\"]).asObject()}};\nq = filter q by 'TYPE' == \"dashboard\";\n--q = filter q by ('User_Profile_Name' != \"System Administrator\" || 'User_Profile_Name' is null);\nq = group q by ('SESSION_KEY', 'Wave_objects_Label');\nq = foreach q generate 'SESSION_KEY' as 'SESSION_KEY', 'Wave_objects_Label' as 'Wave_objects_Label', unique('Wave_objects_Id') as 'unique_Wave_objects_Id';\nq = group q by ('Wave_objects_Label');\nq = foreach q generate  'Wave_objects_Label' as 'Wave_objects_Label', sum('unique_Wave_objects_Id') as 'Count';\nq = order q by 'Count' desc;\nq = limit q 2000;",
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "start": [],
+                "strings": [],
+                "type": "saql",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": false,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "multi",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 16,
+                            "subtitleFontSize": 11,
+                            "label": "All Views by Dashboard Name",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnProperties": {
+                            "Wave_objects_Label": {
+                                "type": "text",
+                                "parameters": {
+                                    "styles": {
+                                        "linkColor": "#006dcc"
+                                    },
+                                    "alignment": "left"
+                                }
+                            }
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "Wave_objects_Label"
+                            ],
+                            "plots": [
+                                "Count"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": false,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": false,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart"
+                }
+            },
+            "User_gCRM_Business_U_2": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb3X000000QxdRSAS",
+                        "label": "WaveChangeEA",
+                        "name": "WaveChangeEA",
+                        "url": "/services/data/v61.0/wave/datasets/0Fb3X000000QxdRSAS"
+                    }
+                ],
+                "isGlobal": false,
+                "label": "User_gCRM_Business_U_2",
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "groups": [
+                        "User.gCRM_Business_Unit__c"
+                    ],
+                    "filters": [
+                        [
+                            "User_Profile_Name",
+                            [
+                                "System Administrator"
+                            ],
+                            "not in"
+                        ]
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "multi",
+                "start": [],
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "multi",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "User.gCRM_Business_Unit__c"
+                            ],
+                            "plots": [
+                                "count"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart",
+                    "options": {}
+                }
+            },
+            "F_MemberFirm_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb3X000000QxdRSAS",
+                        "label": "WaveChangeEA",
+                        "name": "WaveChangeEA",
+                        "url": "/services/data/v61.0/wave/datasets/0Fb3X000000QxdRSAS"
+                    }
+                ],
+                "isGlobal": false,
+                "label": "F_MemberFirm",
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "groups": [
+                        "User.User.gCRM_MemberFirm__c"
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "multi",
+                "start": [],
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "multi",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "User.gCRM_MemberFirm__c"
+                            ],
+                            "plots": [
+                                "count"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart",
+                    "options": {}
+                }
+            },
+            "time_1": {
+                "broadcastFacet": true,
+                "columns": {
+                    "Display": {
+                        "type": "string"
+                    }
+                },
+                "label": "time",
+                "selectMode": "singlerequired",
+                "start": {
+                    "Display": [
+                        "Last 7 Days"
+                    ]
+                },
+                "type": "staticflex",
+                "values": [
+                    {
+                        "Display": "Last 7 Days",
+                        "value": "-7",
+                        "value1": "[\"7 days ago\"..\"current day\"]"
+                    },
+                    {
+                        "Display": "Last 14 Days",
+                        "value": "-14",
+                        "value1": "[\"14 days ago\"..\"current day\"]"
+                    },
+                    {
+                        "Display": "Last 30 Days",
+                        "value": "-30",
+                        "value1": "[\"30 days ago\"..\"current day\"]"
+                    },
+                    {
+                        "Display": "Last 60 Days",
+                        "value": "-60",
+                        "value1": "[\"60 days ago\"..\"current day\"]"
+                    },
+                    {
+                        "Display": "Last 90 Days",
+                        "value": "-90",
+                        "value1": "[\"90 days ago\"..\"current day\"]"
+                    },
+                    {
+                        "Display": "Last 180 Days",
+                        "value": "-180",
+                        "value1": "[\"180 days ago\"..\"current day\"]"
+                    },
+                    {
+                        "Display": "Last 270 Days",
+                        "value": "-270",
+                        "value1": "[\"270 days ago\"..\"current day\"]"
+                    },
+                    {
+                        "Display": "Last 364 Days",
+                        "value": "-364",
+                        "value1": "[\"364 days ago\"..\"current day\"]"
+                    }
+                ],
+                "numbers": [],
+                "strings": [],
+                "groups": []
+            },
+            "User_gCRM_Function_L_3": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb3X000000QxdRSAS",
+                        "label": "WaveChangeEA",
+                        "name": "WaveChangeEA",
+                        "url": "/services/data/v61.0/wave/datasets/0Fb3X000000QxdRSAS"
+                    }
+                ],
+                "isGlobal": false,
+                "label": "User_gCRM_Function_L_3",
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "groups": [
+                        "User.gCRM_Function_Level_3__c"
+                    ],
+                    "filters": [
+                        [
+                            "User_Profile_Name",
+                            [
+                                "System Administrator"
+                            ],
+                            "not in"
+                        ]
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "multi",
+                "start": [],
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "multi",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "User.gCRM_Function_Level_3__c"
+                            ],
+                            "plots": [
+                                "count"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart",
+                    "options": {}
+                }
+            },
+            "F_Level_2": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb3X000000QxdRSAS",
+                        "label": "WaveChangeEA",
+                        "name": "WaveChangeEA",
+                        "url": "/services/data/v61.0/wave/datasets/0Fb3X000000QxdRSAS"
+                    }
+                ],
+                "isGlobal": false,
+                "label": "F_Level",
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "groups": [
+                        "User.gCRM_Grade__c"
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "multi",
+                "start": [],
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "multi",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "User.gCRM_Grade__c"
+                            ],
+                            "plots": [
+                                "count"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart",
+                    "options": {}
+                }
+            },
+            "User_gCRM_Function_L_2": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb3X000000QxdRSAS",
+                        "label": "WaveChangeEA",
+                        "name": "WaveChangeEA",
+                        "url": "/services/data/v61.0/wave/datasets/0Fb3X000000QxdRSAS"
+                    }
+                ],
+                "isGlobal": false,
+                "label": "User_gCRM_Function_L_2",
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "groups": [
+                        "User.gCRM_Function_Level_2__c"
+                    ],
+                    "filters": [
+                        [
+                            "User_Profile_Name",
+                            [
+                                "System Administrator"
+                            ],
+                            "not in"
+                        ]
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "multi",
+                "start": [],
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "multi",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "User.gCRM_Function_Level_2__c"
+                            ],
+                            "plots": [
+                                "count"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart",
+                    "options": {}
+                }
+            },
+            "Wave_objects_Label_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb3X000000QxdRSAS",
+                        "label": "WaveChangeEA",
+                        "name": "WaveChangeEA",
+                        "url": "/services/data/v61.0/wave/datasets/0Fb3X000000QxdRSAS"
+                    }
+                ],
+                "isGlobal": false,
+                "label": "Wave_objects_Label_1",
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "groups": [
+                        "Wave_objects_Label"
+                    ],
+                    "filters": [
+                        [
+                            "TYPE",
+                            [
+                                "dashboard"
+                            ],
+                            "in"
+                        ]
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "multi",
+                "start": [],
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "multi",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnProperties": {
+                            "Wave_objects_Label": {
+                                "type": "text",
+                                "parameters": {
+                                    "styles": {
+                                        "linkColor": "#006dcc"
+                                    },
+                                    "alignment": "left"
+                                }
+                            }
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "Wave_objects_Label"
+                            ],
+                            "plots": [
+                                "count"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart",
+                    "options": {}
+                }
+            },
+            "ViewsbyDate_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb3X000000QxdRSAS",
+                        "label": "WaveChangeEA",
+                        "name": "WaveChangeEA",
+                        "url": "/services/data/v61.0/wave/datasets/0Fb3X000000QxdRSAS"
+                    }
+                ],
+                "isGlobal": false,
+                "label": "ViewsbyDate",
+                "query": {
+                    "aggregateFilters": [],
+                    "columnGroups": [],
+                    "columnTotals": [],
+                    "limit": 2000,
+                    "orders": [
+                        {
+                            "name": "TIMESTAMP_DERIVED_Year",
+                            "filters": [],
+                            "ascending": true
+                        },
+                        {
+                            "name": "TIMESTAMP_DERIVED_Month",
+                            "filters": [],
+                            "ascending": true
+                        },
+                        {
+                            "name": "TIMESTAMP_DERIVED_Day",
+                            "filters": [],
+                            "ascending": true
+                        },
+                        {
+                            "name": "Wave_objects_Label",
+                            "filters": [],
+                            "ascending": true
+                        }
+                    ],
+                    "rowTotals": [],
+                    "sourceFilters": {},
+                    "sources": [
+                        {
+                            "columns": [
+                                {
+                                    "field": [
+                                        "count",
+                                        "*"
+                                    ],
+                                    "name": "A"
+                                }
+                            ],
+                            "filters": [],
+                            "groups": [
+                                "TIMESTAMP_DERIVED_Year",
+                                "TIMESTAMP_DERIVED_Month",
+                                "TIMESTAMP_DERIVED_Day",
+                                "Wave_objects_Label"
+                            ],
+                            "joins": [],
+                            "name": "WaveChangeEA"
+                        }
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "sync",
+                        "totalSumMode": "none",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "stackvbar",
+                        "title": {
+                            "fontSize": 16,
+                            "subtitleFontSize": 11,
+                            "label": "Views by Date",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "split": [
+                                "Wave_objects_Label"
+                            ],
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "TIMESTAMP_DERIVED_Year~~~TIMESTAMP_DERIVED_Month~~~TIMESTAMP_DERIVED_Day"
+                            ],
+                            "plots": [
+                                "A"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": false,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "normalize": false,
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": false,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart",
+                    "options": {}
+                }
+            },
+            "lens_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb3X000000QxdRSAS",
+                        "label": "WaveChangeEA",
+                        "name": "WaveChangeEA",
+                        "url": "/services/data/v61.0/wave/datasets/0Fb3X000000QxdRSAS"
+                    }
+                ],
+                "isGlobal": false,
+                "query": {
+                    "aggregateFilters": [],
+                    "columnGroups": [],
+                    "columnTotals": [],
+                    "limit": 2000,
+                    "orders": [
+                        {
+                            "name": "Wave_objects_Label",
+                            "filters": [],
+                            "ascending": true
+                        }
+                    ],
+                    "rowTotals": [],
+                    "sourceFilters": {},
+                    "sources": [
+                        {
+                            "columns": [
+                                {
+                                    "field": [
+                                        "count",
+                                        "*"
+                                    ],
+                                    "name": "A"
+                                }
+                            ],
+                            "filters": [],
+                            "groups": [
+                                "Wave_objects_Label"
+                            ],
+                            "joins": [],
+                            "name": "WaveChangeEA"
+                        }
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "start": [],
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "multi",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "Wave_objects_Label"
+                            ],
+                            "plots": [
+                                "A"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart",
+                    "options": {}
+                }
+            },
+            "lens_2": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb3X000000QxdRSAS",
+                        "label": "WaveChangeEA",
+                        "name": "WaveChangeEA",
+                        "url": "/services/data/v61.0/wave/datasets/0Fb3X000000QxdRSAS"
+                    }
+                ],
+                "isGlobal": false,
+                "query": {
+                    "aggregateFilters": [],
+                    "columnGroups": [],
+                    "columnTotals": [],
+                    "limit": 2000,
+                    "orders": [
+                        {
+                            "name": "Wave_objects_Label",
+                            "filters": [],
+                            "ascending": true
+                        }
+                    ],
+                    "rowTotals": [],
+                    "sourceFilters": {},
+                    "sources": [
+                        {
+                            "columns": [
+                                {
+                                    "field": [
+                                        "count",
+                                        "*"
+                                    ],
+                                    "name": "A"
+                                }
+                            ],
+                            "filters": [],
+                            "groups": [
+                                "Wave_objects_Label"
+                            ],
+                            "joins": [],
+                            "name": "WaveChangeEA"
+                        }
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "multi",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "Wave_objects_Label"
+                            ],
+                            "plots": [
+                                "A"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart",
+                    "options": {}
+                }
+            }
+        },
+        "widgetStyle": {
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#E6ECF2",
+            "borderEdges": [],
+            "borderRadius": 0,
+            "borderWidth": 1
+        },
+        "widgets": {
+            "text_14": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "color": "#8068f1",
+                                    "bold": true
+                                },
+                                "insert": "Note: "
+                            },
+                            {
+                                "attributes": {
+                                    "color": "#8068f1"
+                                },
+                                "insert": "Member firm, User Geography and Level filters will capture data from 17 January 2022. Example: If on Feb 1 (deployment date is from January 17th onwards), the user is trying to see data for last 60 days by filtering on \"Member Firm\" filter, then he should be able to see data only for last 15 days."
+                            },
+                            {
+                                "attributes": {
+                                    "align": "left"
+                                },
+                                "insert": "\n"
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": true
+                },
+                "type": "text"
+            },
+            "text_13": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "size": "12px",
+                                    "color": "#7e8899"
+                                },
+                                "insert": "Level"
+                            },
+                            {
+                                "attributes": {
+                                    "align": "center"
+                                },
+                                "insert": "\n"
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": true
+                },
+                "type": "text"
+            },
+            "text_15": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "color": "#ffffff",
+                                    "size": "16px"
+                                },
+                                "insert": "Dashboard View"
+                            },
+                            {
+                                "attributes": {
+                                    "align": "center"
+                                },
+                                "insert": "\n"
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": true
+                },
+                "type": "text"
+            },
+            "text_10": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "size": "16px",
+                                    "color": "#091A3E",
+                                    "align": "left"
+                                },
+                                "insert": ""
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": true
+                },
+                "type": "text"
+            },
+            "text_12": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "size": "12px",
+                                    "color": "#7e8899"
+                                },
+                                "insert": "User Geography"
+                            },
+                            {
+                                "attributes": {
+                                    "align": "center"
+                                },
+                                "insert": "\n"
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": true
+                },
+                "type": "text"
+            },
+            "text_11": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "size": "12px",
+                                    "color": "#7e8899"
+                                },
+                                "insert": "Member Firm"
+                            },
+                            {
+                                "attributes": {
+                                    "align": "center"
+                                },
+                                "insert": "\n"
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": true
+                },
+                "type": "text"
+            },
+            "container_1": {
+                "parameters": {
+                    "alignmentX": "left",
+                    "alignmentY": "top",
+                    "fit": "original",
+                    "interactions": []
+                },
+                "type": "container"
+            },
+            "text_3": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "size": "20px",
+                                    "color": "#ffffff"
+                                },
+                                "insert": "Jupiter Analytics Usage Metrics"
+                            },
+                            {
+                                "attributes": {},
+                                "insert": "\n"
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": true
+                },
+                "type": "text"
+            },
+            "text_2": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "size": "12px",
+                                    "color": "rgb(126, 136, 153)",
+                                    "align": "center"
+                                },
+                                "insert": "Function L2"
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": true
+                },
+                "type": "text"
+            },
+            "text_5": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "size": "12px",
+                                    "color": "rgb(126, 136, 153)",
+                                    "align": "center"
+                                },
+                                "insert": "Time Frame"
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": false
+                },
+                "type": "text"
+            },
+            "text_4": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "size": "12px",
+                                    "color": "rgb(126, 136, 153)",
+                                    "align": "center"
+                                },
+                                "insert": "Dashboard Name"
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": true
+                },
+                "type": "text"
+            },
+            "chart_2": {
+                "parameters": {
+                    "autoFitMode": "keepLabels",
+                    "legend": {
+                        "descOrder": false,
+                        "showHeader": false,
+                        "show": false,
+                        "customSize": "auto",
+                        "position": "bottom-center",
+                        "inside": false
+                    },
+                    "axisMode": "multi",
+                    "totalSumMode": "none",
+                    "tooltip": {
+                        "content": {
+                            "legend": {
+                                "showBinLabel": true,
+                                "measures": [],
+                                "showNullValues": true,
+                                "customizeLegend": false,
+                                "showPercentage": true,
+                                "showDimensions": true,
+                                "showMeasures": true,
+                                "dimensions": []
+                            }
+                        }
+                    },
+                    "visualizationType": "stackhbar",
+                    "exploreLink": true,
+                    "title": {
+                        "fontSize": 16,
+                        "subtitleFontSize": 11,
+                        "label": "Dashboard Views by Users",
+                        "align": "center",
+                        "subtitleLabel": ""
+                    },
+                    "trellis": {
+                        "flipLabels": false,
+                        "showGridLines": true,
+                        "size": [
+                            100,
+                            100
+                        ],
+                        "enable": false,
+                        "type": "x",
+                        "chartsPerLine": 4
+                    },
+                    "columnProperties": {
+                        "Wave_objects_Label": {
+                            "type": "text",
+                            "parameters": {
+                                "styles": {
+                                    "linkColor": "#006dcc"
+                                },
+                                "alignment": "left"
+                            }
+                        }
+                    },
+                    "columnMap": {
+                        "split": [
+                            "Wave_objects_Label"
+                        ],
+                        "trellis": [],
+                        "dimensionAxis": [
+                            "User_Name"
+                        ],
+                        "plots": [
+                            "Count"
+                        ]
+                    },
+                    "showActionMenu": true,
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "measureAxis1": {
+                        "sqrtScale": false,
+                        "showTitle": false,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "valueType": "compactNumber",
+                    "normalize": false,
+                    "theme": "wave",
+                    "step": "SESSION_KEY_Wave_obj_1",
+                    "compactDecimalDigits": -1,
+                    "dimensionAxis": {
+                        "showTitle": false,
+                        "customSize": "auto",
+                        "showAxis": true,
+                        "title": "",
+                        "icons": {
+                            "useIcons": false,
+                            "iconProps": {
+                                "fit": "cover",
+                                "column": "",
+                                "type": "round"
+                            }
+                        }
+                    },
+                    "applyConditionalFormatting": true
+                },
+                "type": "chart"
+            },
+            "text_7": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "size": "12px",
+                                    "color": "rgb(126, 136, 153)",
+                                    "align": "center"
+                                },
+                                "insert": "Leadership"
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": true
+                },
+                "type": "text"
+            },
+            "text_6": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "size": "12px",
+                                    "color": "rgb(126, 136, 153)",
+                                    "align": "center"
+                                },
+                                "insert": "Function L3"
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": true
+                },
+                "type": "text"
+            },
+            "chart_4": {
+                "parameters": {
+                    "autoFitMode": "keepLabels",
+                    "bins": {
+                        "breakpoints": {
+                            "high": 100,
+                            "low": 0
+                        },
+                        "bands": {
+                            "high": {
+                                "color": "#008000",
+                                "label": ""
+                            },
+                            "low": {
+                                "color": "#B22222",
+                                "label": ""
+                            },
+                            "medium": {
+                                "color": "#ffa500",
+                                "label": ""
+                            }
+                        }
+                    },
+                    "legend": {
+                        "descOrder": false,
+                        "showHeader": true,
+                        "show": false,
+                        "customSize": "auto",
+                        "position": "right-top",
+                        "inside": false
+                    },
+                    "axisMode": "multi",
+                    "tooltip": {
+                        "content": {
+                            "legend": {
+                                "showBinLabel": true,
+                                "measures": [],
+                                "showNullValues": true,
+                                "customizeLegend": false,
+                                "showPercentage": true,
+                                "showDimensions": true,
+                                "showMeasures": true,
+                                "dimensions": []
+                            }
+                        }
+                    },
+                    "visualizationType": "hbar",
+                    "exploreLink": true,
+                    "title": {
+                        "fontSize": 16,
+                        "subtitleFontSize": 11,
+                        "label": "All Views by Dashboard Name",
+                        "align": "center",
+                        "subtitleLabel": ""
+                    },
+                    "binValues": false,
+                    "trellis": {
+                        "flipLabels": false,
+                        "showGridLines": true,
+                        "size": [
+                            100,
+                            100
+                        ],
+                        "enable": false,
+                        "type": "x",
+                        "chartsPerLine": 4
+                    },
+                    "columnProperties": {
+                        "Wave_objects_Label": {
+                            "type": "text",
+                            "parameters": {
+                                "styles": {
+                                    "linkColor": "#006dcc"
+                                },
+                                "alignment": "left"
+                            }
+                        }
+                    },
+                    "columnMap": {
+                        "trellis": [],
+                        "dimensionAxis": [
+                            "Wave_objects_Label"
+                        ],
+                        "plots": [
+                            "Count"
+                        ]
+                    },
+                    "showActionMenu": true,
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "measureAxis1": {
+                        "sqrtScale": false,
+                        "showTitle": false,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "valueType": "compactNumber",
+                    "theme": "wave",
+                    "step": "SESSION_KEY_Wave_obj_2",
+                    "compactDecimalDigits": -1,
+                    "dimensionAxis": {
+                        "showTitle": false,
+                        "customSize": "auto",
+                        "showAxis": true,
+                        "title": "",
+                        "icons": {
+                            "useIcons": false,
+                            "iconProps": {
+                                "fit": "cover",
+                                "column": "",
+                                "type": "round"
+                            }
+                        }
+                    },
+                    "applyConditionalFormatting": true
+                },
+                "type": "chart"
+            },
+            "text_9": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "size": "16px",
+                                    "color": "#091A3E",
+                                    "align": "left"
+                                },
+                                "insert": ""
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": true
+                },
+                "type": "text"
+            },
+            "text_8": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "size": "16px",
+                                    "color": "#091A3E",
+                                    "align": "left"
+                                },
+                                "insert": ""
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": true
+                },
+                "type": "text"
+            },
+            "chart_3": {
+                "parameters": {
+                    "autoFitMode": "keepLabels",
+                    "legend": {
+                        "descOrder": false,
+                        "showHeader": true,
+                        "show": true,
+                        "customSize": "auto",
+                        "position": "left-top",
+                        "inside": false
+                    },
+                    "axisMode": "sync",
+                    "totalSumMode": "none",
+                    "tooltip": {
+                        "content": {
+                            "legend": {
+                                "showBinLabel": true,
+                                "measures": [],
+                                "showNullValues": true,
+                                "customizeLegend": false,
+                                "showPercentage": true,
+                                "showDimensions": true,
+                                "showMeasures": true,
+                                "dimensions": []
+                            }
+                        }
+                    },
+                    "visualizationType": "stackvbar",
+                    "exploreLink": true,
+                    "title": {
+                        "fontSize": 16,
+                        "subtitleFontSize": 11,
+                        "label": "Views by Date",
+                        "align": "center",
+                        "subtitleLabel": ""
+                    },
+                    "trellis": {
+                        "flipLabels": false,
+                        "showGridLines": true,
+                        "size": [
+                            100,
+                            100
+                        ],
+                        "enable": false,
+                        "type": "x",
+                        "chartsPerLine": 4
+                    },
+                    "columnMap": {
+                        "split": [
+                            "Wave_objects_Label"
+                        ],
+                        "trellis": [],
+                        "dimensionAxis": [
+                            "TIMESTAMP_DERIVED_Year~~~TIMESTAMP_DERIVED_Month~~~TIMESTAMP_DERIVED_Day"
+                        ],
+                        "plots": [
+                            "A"
+                        ]
+                    },
+                    "showActionMenu": true,
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "valueType": "compactNumber",
+                    "measureAxis1": {
+                        "sqrtScale": false,
+                        "showTitle": false,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "normalize": false,
+                    "theme": "wave",
+                    "step": "ViewsbyDate_1",
+                    "compactDecimalDigits": -1,
+                    "dimensionAxis": {
+                        "showTitle": false,
+                        "customSize": "auto",
+                        "showAxis": true,
+                        "title": "",
+                        "icons": {
+                            "useIcons": false,
+                            "iconProps": {
+                                "fit": "cover",
+                                "column": "",
+                                "type": "round"
+                            }
+                        }
+                    },
+                    "applyConditionalFormatting": true
+                },
+                "type": "chart"
+            },
+            "listselector_7": {
+                "parameters": {
+                    "compact": false,
+                    "displayMode": "filter",
+                    "exploreLink": false,
+                    "filterStyle": {
+                        "titleColor": "#54698D",
+                        "valueColor": "#16325C"
+                    },
+                    "instant": false,
+                    "measureField": "none",
+                    "showActionMenu": false,
+                    "step": "F_MemberFirm_1",
+                    "title": ""
+                },
+                "type": "listselector"
+            },
+            "listselector_6": {
+                "parameters": {
+                    "compact": false,
+                    "displayMode": "filter",
+                    "exploreLink": false,
+                    "filterStyle": {
+                        "titleColor": "#54698D",
+                        "valueColor": "#16325C"
+                    },
+                    "instant": false,
+                    "measureField": "none",
+                    "showActionMenu": false,
+                    "step": "User_gCRM_Leader__c_1",
+                    "title": ""
+                },
+                "type": "listselector"
+            },
+            "listselector_9": {
+                "parameters": {
+                    "compact": false,
+                    "displayMode": "filter",
+                    "exploreLink": false,
+                    "filterStyle": {
+                        "titleColor": "#54698D",
+                        "valueColor": "#16325C"
+                    },
+                    "instant": false,
+                    "measureField": "count",
+                    "showActionMenu": false,
+                    "step": "F_Level_2",
+                    "title": ""
+                },
+                "type": "listselector"
+            },
+            "listselector_8": {
+                "parameters": {
+                    "compact": false,
+                    "displayMode": "filter",
+                    "exploreLink": false,
+                    "filterStyle": {
+                        "titleColor": "#54698D",
+                        "valueColor": "#16325C"
+                    },
+                    "instant": false,
+                    "measureField": "none",
+                    "showActionMenu": false,
+                    "step": "F_geo_1",
+                    "title": ""
+                },
+                "type": "listselector"
+            },
+            "listselector_3": {
+                "parameters": {
+                    "compact": false,
+                    "displayMode": "filter",
+                    "exploreLink": false,
+                    "filterStyle": {
+                        "titleColor": "#54698D",
+                        "valueColor": "#16325C"
+                    },
+                    "instant": false,
+                    "measureField": "count",
+                    "showActionMenu": false,
+                    "step": "User_gCRM_Business_U_2",
+                    "title": ""
+                },
+                "type": "listselector"
+            },
+            "listselector_2": {
+                "parameters": {
+                    "compact": false,
+                    "displayMode": "filter",
+                    "exploreLink": false,
+                    "filterStyle": {
+                        "titleColor": "#747474",
+                        "valueColor": "#16325C"
+                    },
+                    "instant": false,
+                    "showActionMenu": false,
+                    "step": "time_1",
+                    "title": ""
+                },
+                "type": "listselector"
+            },
+            "text_1": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "size": "12px",
+                                    "color": "rgb(126, 136, 153)",
+                                    "align": "center"
+                                },
+                                "insert": "Function L1"
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": true
+                },
+                "type": "text"
+            },
+            "listselector_5": {
+                "parameters": {
+                    "compact": false,
+                    "displayMode": "filter",
+                    "exploreLink": false,
+                    "filterStyle": {
+                        "titleColor": "#54698D",
+                        "valueColor": "#16325C"
+                    },
+                    "instant": false,
+                    "measureField": "count",
+                    "showActionMenu": false,
+                    "step": "User_gCRM_Function_L_3",
+                    "title": ""
+                },
+                "type": "listselector"
+            },
+            "listselector_4": {
+                "parameters": {
+                    "compact": false,
+                    "displayMode": "filter",
+                    "exploreLink": false,
+                    "filterStyle": {
+                        "titleColor": "#54698D",
+                        "valueColor": "#16325C"
+                    },
+                    "instant": false,
+                    "measureField": "count",
+                    "showActionMenu": false,
+                    "step": "User_gCRM_Function_L_2",
+                    "title": ""
+                },
+                "type": "listselector"
+            },
+            "filterpanel_1": {
+                "parameters": {
+                    "filterItemOptions": {
+                        "propertyColor": "#54698D",
+                        "valueColor": "#16325C"
+                    },
+                    "filters": [],
+                    "showAllFilters": false
+                },
+                "type": "filterpanel"
+            },
+            "link_2": {
+                "parameters": {
+                    "destinationLink": {
+                        "name": "Jupiter_HomePage_Usage"
+                    },
+                    "destinationType": "dashboard",
+                    "fontSize": 16,
+                    "includeState": false,
+                    "text": "Component View",
+                    "textAlignment": "center",
+                    "textColor": "#0070D2"
+                },
+                "type": "link"
+            },
+            "listselector_1": {
+                "parameters": {
+                    "compact": false,
+                    "displayMode": "filter",
+                    "exploreLink": false,
+                    "filterStyle": {
+                        "titleColor": "#54698D",
+                        "valueColor": "#16325C"
+                    },
+                    "instant": false,
+                    "measureField": "none",
+                    "showActionMenu": true,
+                    "step": "Wave_objects_Label_1",
+                    "title": ""
+                },
+                "type": "listselector"
+            }
+        },
+        "parameters": []
+    },
+    "datasets": [
+        {
+            "id": "0Fb3X000000QxdRSAS",
+            "label": "WaveChangeEA",
+            "name": "WaveChangeEA",
+            "url": "/services/data/v61.0/wave/datasets/0Fb3X000000QxdRSAS"
+        },
+        {
+            "id": "0Fb3X000000QxdbSAC",
+            "label": "Reg_AnalyticsAssets",
+            "name": "Reg_AnalyticsAssets",
+            "url": "/services/data/v61.0/wave/datasets/0Fb3X000000QxdbSAC"
+        }
+    ]
+}
