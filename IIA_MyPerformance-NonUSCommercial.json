@@ -656,7 +656,7 @@
                 "groups": [],
                 "label": "ClosedWonReason-NonUS-qry",
                 "numbers": [],
-                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opportunity.StageName' == \"Closed Won\";\nq = group q by ('Opportunity.StageName', 'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c');\n{{cell(static_1.selection, 0, \"saql\").asString()}};\nq = order q by ('Opportunity.StageName' asc, 'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' asc);\nq = limit q 2000;",
+                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opportunity.StageName' == \"Closed Won\";\nq = group q by ('Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c', 'Opportunity.StageName') ;\nq = foreach q generate q.'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'Opportunity.StageName' as 'Opportunity.StageName', sum('gCRM_Split_Amount__c') * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'gCRM_Split_Amount__c', unique('Opportunity.gCRM_Opportunity_ID__c') as 'Count';\nq = foreach q generate q.'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'Opportunity.StageName' as 'Opportunity.StageName', {{cell(static_1.selection, 0, \"saql_field\").asString()}} as {{cell(static_1.selection, 0, \"saql_field\").asString()}};\nq = order q by ('Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' asc, 'Opportunity.StageName' asc);\nq = limit q 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -732,18 +732,6 @@
                             "type": "x",
                             "chartsPerLine": 4
                         },
-                        "columnMap": {
-                            "split": [
-                                "Opportunity.StageName"
-                            ],
-                            "trellis": [],
-                            "dimensionAxis": [
-                                "Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c"
-                            ],
-                            "plots": [
-                                "A"
-                            ]
-                        },
                         "showActionMenu": false,
                         "measureAxis2": {
                             "sqrtScale": false,
@@ -791,7 +779,7 @@
                 "groups": [],
                 "label": "WinRateDonut-NonUS-qry",
                 "numbers": [],
-                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opportunity.StageName' in [\"Closed Lost\", \"Closed Won\"];\nq = group q by 'Opportunity.StageName';\n{{cell(static_2.selection, 0, \"saql\").asString()}};\nq = order q by 'Opportunity.StageName' asc;\nq = limit q 2000;",
+                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opportunity.StageName' in [\"Closed Lost\", \"Closed Won\"];\nq = group q by 'Opportunity.StageName';\n--{{cell(static_2.selection, 0, \"saql\").asString()}};\nq = foreach q generate 'Opportunity.StageName' as 'Opportunity.StageName', sum('gCRM_Split_Amount__c') * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'gCRM_Split_Amount__c', unique('Opportunity.gCRM_Opportunity_ID__c') as 'Count';\nq = foreach q generate 'Opportunity.StageName' as 'Opportunity.StageName', {{cell(static_2.selection, 0, \"saql_field\").asString()}} as {{cell(static_2.selection, 0, \"saql_field\").asString()}};\nq = order q by 'Opportunity.StageName' asc;\nq = limit q 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -960,7 +948,7 @@
                 "groups": [],
                 "label": "ClosedLostAbandonReason-NonUS-qry",
                 "numbers": [],
-                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opportunity.StageName' in [\"Closed Lost\",\"Closed Abandoned\"];\nq = group q by ('Opportunity.StageName', 'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c');\n{{cell(Lost_Abandoned_Toggl_1.selection, 0, \"saql\").asString()}};\nq = order q by ('Opportunity.StageName' asc, 'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' asc);\nq = limit q 2000;",
+                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opportunity.StageName' in [\"Closed Lost\",\"Closed Abandoned\"];\nq = group q by ('Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c', 'Opportunity.StageName') ;\nq = foreach q generate q.'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'Opportunity.StageName' as 'Opportunity.StageName', sum('gCRM_Split_Amount__c') * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'gCRM_Split_Amount__c', unique('Opportunity.gCRM_Opportunity_ID__c') as 'Count';\nq = foreach q generate q.'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'Opportunity.StageName' as 'Opportunity.StageName', {{cell(Lost_Abandoned_Toggl_1.selection, 0, \"saql_field\").asString()}} as {{cell(Lost_Abandoned_Toggl_1.selection, 0, \"saql_field\").asString()}};\nq = order q by ('Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' asc, 'Opportunity.StageName' asc);\nq = limit q 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -1036,19 +1024,7 @@
                             "type": "x",
                             "chartsPerLine": 4
                         },
-                        "columnMap": {
-                            "split": [
-                                "Opportunity.StageName"
-                            ],
-                            "trellis": [],
-                            "dimensionAxis": [
-                                "Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c"
-                            ],
-                            "plots": [
-                                "A"
-                            ]
-                        },
-                        "showActionMenu": true,
+                        "showActionMenu": false,
                         "measureAxis2": {
                             "sqrtScale": false,
                             "showTitle": true,
@@ -1263,15 +1239,8 @@
             "static_2": {
                 "broadcastFacet": true,
                 "columns": {
-                    "Measure2": {
-                        "aggregateFunction": "Measure2__func",
-                        "dataset": {
-                            "id": "0Fb4G0000006P00SAE",
-                            "name": "Opty_Acc_Split_Tag",
-                            "url": "/services/data/v61.0/wave/datasets/0Fb4G0000006P00SAE"
-                        },
-                        "field": "Measure2__field",
-                        "type": "aggregate"
+                    "saql_field": {
+                        "type": "string"
                     },
                     "saql": {
                         "type": "string"
@@ -1292,31 +1261,22 @@
                     {
                         "Display": "#",
                         "saql": "q = foreach q generate 'Opportunity.StageName' as 'Opportunity.StageName', unique('Opportunity.gCRM_Opportunity_ID__c') as 'A'",
-                        "Measure2__field": "Opportunity.gCRM_Opportunity_ID__c",
-                        "Measure2__func": "unique"
+                        "saql_field": "'Count'"
                     },
                     {
                         "Display": "$",
                         "saql": "q = foreach q generate 'Opportunity.StageName' as 'Opportunity.StageName', sum('gCRM_Split_Amount__c') as 'A'",
-                        "Measure2__field": "gCRM_Split_Amount__c",
-                        "Measure2__func": "sum"
+                        "saql_field": "'gCRM_Split_Amount__c'"
                     }
                 ]
             },
             "static_1": {
                 "broadcastFacet": true,
                 "columns": {
-                    "Measure2": {
-                        "aggregateFunction": "Measure2__func",
-                        "dataset": {
-                            "id": "0Fb4G0000006P00SAE",
-                            "name": "Opty_Acc_Split_Tag",
-                            "url": "/services/data/v61.0/wave/datasets/0Fb4G0000006P00SAE"
-                        },
-                        "field": "Measure2__field",
-                        "type": "aggregate"
+                    "saql_map": {
+                        "type": "string"
                     },
-                    "saql": {
+                    "saql_field": {
                         "type": "string"
                     },
                     "Display": {
@@ -1334,15 +1294,13 @@
                 "values": [
                     {
                         "Display": "#",
-                        "saql": "q = foreach q generate q.'Opportunity.StageName' as 'Opportunity.StageName', q.'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c', unique('Opportunity.gCRM_Opportunity_ID__c') as 'A'",
-                        "Measure2__field": "Opportunity.gCRM_Opportunity_ID__c",
-                        "Measure2__func": "unique"
+                        "saql_field": "'Count'",
+                        "saql_map": "Count"
                     },
                     {
                         "Display": "$",
-                        "saql": "q = foreach q generate q.'Opportunity.StageName' as 'Opportunity.StageName', q.'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c', sum('gCRM_Split_Amount__c') as 'A'",
-                        "Measure2__field": "gCRM_Split_Amount__c",
-                        "Measure2__func": "sum"
+                        "saql_field": "'gCRM_Split_Amount__c'",
+                        "saql_map": "gCRM_Split_Amount__c"
                     }
                 ]
             },
@@ -1396,17 +1354,10 @@
             "Lost_Abandoned_Toggl_1": {
                 "broadcastFacet": true,
                 "columns": {
-                    "Measure2": {
-                        "aggregateFunction": "Measure2__func",
-                        "dataset": {
-                            "id": "0Fb4G0000006P00SAE",
-                            "name": "Opty_Acc_Split_Tag",
-                            "url": "/services/data/v61.0/wave/datasets/0Fb4G0000006P00SAE"
-                        },
-                        "field": "Measure2__field",
-                        "type": "aggregate"
+                    "saql_map": {
+                        "type": "string"
                     },
-                    "saql": {
+                    "saql_field": {
                         "type": "string"
                     },
                     "Display": {
@@ -1424,15 +1375,13 @@
                 "values": [
                     {
                         "Display": "#",
-                        "saql": "q = foreach q generate q.'Opportunity.StageName' as 'Opportunity.StageName', q.'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c', unique('Opportunity.gCRM_Opportunity_ID__c') as 'A'",
-                        "Measure2__field": "Opportunity.gCRM_Opportunity_ID__c",
-                        "Measure2__func": "unique"
+                        "saql_field": "'Count'",
+                        "saql_map": "Count"
                     },
                     {
                         "Display": "$",
-                        "saql": "q = foreach q generate q.'Opportunity.StageName' as 'Opportunity.StageName', q.'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c', sum('gCRM_Split_Amount__c') as 'A'",
-                        "Measure2__field": "gCRM_Split_Amount__c",
-                        "Measure2__func": "sum"
+                        "saql_field": "'gCRM_Split_Amount__c'",
+                        "saql_map": "gCRM_Split_Amount__c"
                     }
                 ]
             },
@@ -2059,19 +2008,7 @@
                         "type": "x",
                         "chartsPerLine": 4
                     },
-                    "columnMap": {
-                        "split": [
-                            "Opportunity.StageName"
-                        ],
-                        "trellis": [],
-                        "dimensionAxis": [
-                            "Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c"
-                        ],
-                        "plots": [
-                            "A"
-                        ]
-                    },
-                    "showActionMenu": true,
+                    "showActionMenu": false,
                     "measureAxis2": {
                         "sqrtScale": false,
                         "showTitle": true,
@@ -2180,18 +2117,6 @@
                         "enable": false,
                         "type": "x",
                         "chartsPerLine": 4
-                    },
-                    "columnMap": {
-                        "split": [
-                            "Opportunity.StageName"
-                        ],
-                        "trellis": [],
-                        "dimensionAxis": [
-                            "Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c"
-                        ],
-                        "plots": [
-                            "A"
-                        ]
                     },
                     "showActionMenu": false,
                     "measureAxis2": {
