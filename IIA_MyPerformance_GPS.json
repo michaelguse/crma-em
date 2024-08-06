@@ -1038,13 +1038,7 @@
                     "saql_filter": {
                         "type": "string"
                     },
-                    "qry_filter_value": {
-                        "type": "string"
-                    },
-                    "qry_filter_compare": {
-                        "type": "string"
-                    },
-                    "qry_filter_field": {
+                    "saql_filter_cs": {
                         "type": "string"
                     },
                     "Display": {
@@ -1063,23 +1057,17 @@
                     {
                         "Display": "On the Opportunity Team",
                         "saql_filter": "q = filter q by 'OTM.UserId' matches ",
-                        "qry_filter_field": "OTM.UserId",
-                        "qry_filter_compare": "matches",
-                        "qry_filter_value": "*"
+                        "saql_filter_cs": "q = filter q by 'CompetitorService.OTM.UserId' matches "
                     },
                     {
                         "Display": "Primary",
                         "saql_filter": "q = filter q by 'CustomTeams.gCRM_Opportunity_Team_Role__c' in [\"Opportunity Leader\", \"Split Leader\",\"Split Manager\",\"Pursuit Primary\"] && 'OTM.UserId' matches ",
-                        "qry_filter_field": "CustomTeams.gCRM_Opportunity_Team_Role__c",
-                        "qry_filter_compare": "matches",
-                        "qry_filter_value": "[\"Opportunity Leader\", \"Split Leader\",\"Split Manager\",\"Pursuit Primary\"]"
+                        "saql_filter_cs": "q = filter q by 'CompetitorService.OTM.TeamMemberRole' in [\"Opportunity Leader\", \"Split Leader\",\"Split Manager\",\"Pursuit Primary\"] && 'CompetitorService.OTM.UserId' matches "
                     },
                     {
                         "Display": "Opportunity Leader",
                         "saql_filter": "q = filter q by 'OpportunityServices__c.OwnerId' == ",
-                        "qry_filter_field": "OpportunityServices__c.OwnerId",
-                        "qry_filter_compare": "matches",
-                        "qry_filter_value": "*"
+                        "saql_filter_cs": "q = filter q by 'CompetitorService.OpportunityServices__c.Owner.Name' == "
                     }
                 ]
             },
@@ -1361,7 +1349,7 @@
                 "groups": [],
                 "label": "ClosedLostAbandoned_StackedChart_GPS_saql",
                 "numbers": [],
-                "query": "q = load \"Load_opty_services_acct_all\";\nq = filter q by 'OpportunityServices__c.gCRM_GPS_Stage_US__c' in [\"Closed Lost\",\"Closed Abandoned\"];\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = group q by ('OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', 'OpportunityServices__c.gCRM_GPS_Stage_US__c');\n{{cell(static_1.selection, 0, \"saql\").asString()}};\nq = order q by ('OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' asc, 'OpportunityServices__c.gCRM_GPS_Stage_US__c' asc);\nq = limit q 2000;",
+                "query": "q = load \"Load_Competitor_Service_All\";\nq = filter q by 'CompetitorService.OpportunityServices__c.gCRM_GPS_Stage_US__c' in [\"Closed Lost\",\"Closed Abandoned\"];\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter_cs\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = group q by ('CompetitorService.OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', 'CompetitorService.OpportunityServices__c.gCRM_GPS_Stage_US__c');\n{{cell(Lost_Abandoned_Toggl_1.selection, 0, \"saql\").asString()}};\nq = order q by ('CompetitorService.OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' asc, 'CompetitorService.OpportunityServices__c.gCRM_GPS_Stage_US__c' asc);\nq = limit q 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -1437,7 +1425,7 @@
                             "type": "x",
                             "chartsPerLine": 4
                         },
-                        "showActionMenu": true,
+                        "showActionMenu": false,
                         "measureAxis2": {
                             "sqrtScale": false,
                             "showTitle": true,
