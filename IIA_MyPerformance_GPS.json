@@ -326,7 +326,7 @@
                 "broadcastFacet": true,
                 "groups": [],
                 "numbers": [],
-                "query": "SELECT Name, Country, Id FROM User WHERE Id = '0057S000003rrb9QAA'",
+                "query": "SELECT Name, Country, Id FROM User WHERE Id = '!{UserId}'",
                 "receiveFacetSource": {
                     "mode": "none",
                     "steps": []
