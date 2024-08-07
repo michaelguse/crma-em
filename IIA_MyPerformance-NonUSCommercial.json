@@ -662,6 +662,7 @@
                     "steps": []
                 },
                 "selectMode": "single",
+                "start": [],
                 "strings": [],
                 "type": "saql",
                 "useGlobal": true,
@@ -954,6 +955,7 @@
                     "steps": []
                 },
                 "selectMode": "single",
+                "start": [],
                 "strings": [],
                 "type": "saql",
                 "useGlobal": true,
@@ -1556,55 +1558,25 @@
             },
             "IsoCode_1": {
                 "broadcastFacet": true,
-                "datasets": [
-                    {
-                        "id": "0Fb4G0000006P02SAE",
-                        "label": "Register_CurrencyType",
-                        "name": "Register_CurrencyType",
-                        "url": "/services/data/v61.0/wave/datasets/0Fb4G0000006P02SAE"
-                    }
-                ],
-                "isGlobal": false,
+                "groups": [],
                 "label": "IsoCode_1",
-                "query": {
-                    "measures": [
-                        [
-                            "sum",
-                            "ConversionRate",
-                            "A"
-                        ]
-                    ],
-                    "columns": [
-                        {
-                            "query": {
-                                "measures": [
-                                    [
-                                        "sum",
-                                        "ConversionRate"
-                                    ]
-                                ],
-                                "groups": [
-                                    "IsoCode"
-                                ]
-                            }
-                        }
-                    ],
-                    "groups": [
-                        "IsoCode"
-                    ]
-                },
+                "numbers": [],
+                "query": "q = load \"Register_CurrencyType\";\nresult = group q by 'IsoCode';\nresult = foreach result generate q.'IsoCode' as 'IsoCode', sum(q.'ConversionRate') as 'A', case \n    when q.'IsoCode' matches \"USD\" then\"01\"   \n    when q.'IsoCode' matches \"EUR\" then\"02\"\n    when q.'IsoCode' matches \"GBP\" then\"03\"\n    when q.'IsoCode' matches \"CAD\" then\"04\"\n    when q.'IsoCode' matches \"AUD\" then\"05\"\n    when q.'IsoCode' matches \"SGD\" then\"06\"\n    when q.'IsoCode' matches \"INR\" then\"07\"\n    when q.'IsoCode' matches \"JPY\" then\"08\" \n    else q.'IsoCode' \nend as 'Order';\nresult = order result by ('Order' asc);\nresult = limit result 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
                 },
                 "selectMode": "single",
                 "start": [
-                    "USD"
+                    [
+                        "USD",
+                        "01"
+                    ]
                 ],
-                "type": "aggregateflex",
+                "strings": [],
+                "type": "saql",
                 "useGlobal": true,
                 "visualizationParameters": {
-                    "options": {},
                     "parameters": {
                         "borderColor": "#e0e5ee",
                         "borderWidth": 1,
@@ -1631,7 +1603,6 @@
                         "mode": "variable",
                         "numberOfLines": 1,
                         "showActionMenu": true,
-                        "showRowIndexColumn": false,
                         "totals": true,
                         "verticalPadding": 8
                     },
@@ -1916,7 +1887,7 @@
                                     "color": "#7d98b3",
                                     "size": "12px"
                                 },
-                                "insert": "Rate: [Currency_ISO_Code_1]"
+                                "insert": "Rate: [Currency_ISO_Code]"
                             },
                             {
                                 "attributes": {
@@ -1926,11 +1897,9 @@
                             }
                         ],
                         "values": {
-                            "Currency_ISO_Code_1": {
-                                "compact": false,
+                            "Currency_ISO_Code": {
                                 "field": "IsoCode",
-                                "noResultsLabel": "No Results Found",
-                                "sourceType": "selection",
+                                "sourceType": "result",
                                 "step": "IsoCode_1"
                             }
                         }
@@ -2169,7 +2138,7 @@
                                     "color": "#7d98b3",
                                     "size": "12px"
                                 },
-                                "insert": "[Sum_of_Conversion_Ra]"
+                                "insert": "[A][Sum_of_Conversion_Ra]"
                             },
                             {
                                 "attributes": {
@@ -2179,6 +2148,12 @@
                             }
                         ],
                         "values": {
+                            "A": {
+                                "compact": false,
+                                "field": "A",
+                                "sourceType": "result",
+                                "step": "IsoCode_1"
+                            },
                             "Sum_of_Conversion_Ra": {
                                 "compact": false,
                                 "field": "A",
