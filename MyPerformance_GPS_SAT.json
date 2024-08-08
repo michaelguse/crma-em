@@ -26,7 +26,7 @@
                                 "rowspan": 7,
                                 "widgetStyle": {
                                     "backgroundColor": "#FFFFFF",
-                                    "borderColor": "#747474",
+                                    "borderColor": "#7D98B3",
                                     "borderEdges": [
                                         "all"
                                     ],
@@ -64,7 +64,9 @@
                                 "name": "text_1",
                                 "row": 24,
                                 "rowspan": 4,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 19,
@@ -86,7 +88,9 @@
                                 "name": "text_2",
                                 "row": 24,
                                 "rowspan": 4,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 12,
@@ -94,7 +98,9 @@
                                 "name": "text_3",
                                 "row": 24,
                                 "rowspan": 4,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 3,
@@ -144,7 +150,9 @@
                                 "name": "container_9",
                                 "row": 65,
                                 "rowspan": 66,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 7,
@@ -174,7 +182,9 @@
                                 "name": "chart_6",
                                 "row": 35,
                                 "rowspan": 27,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 9,
@@ -221,7 +231,9 @@
                                 "name": "chart_11",
                                 "row": 30,
                                 "rowspan": 32,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 16,
@@ -229,7 +241,9 @@
                                 "name": "chart_1",
                                 "row": 30,
                                 "rowspan": 32,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 50,
@@ -237,7 +251,9 @@
                                 "name": "table_1",
                                 "row": 66,
                                 "rowspan": 65,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 44,
@@ -801,6 +817,7 @@
                     "steps": []
                 },
                 "selectMode": "single",
+                "start": [],
                 "strings": [],
                 "type": "saql",
                 "useGlobal": true,
@@ -1088,10 +1105,7 @@
                         "saql_filter": "q = filter q by 'OpportunityServices__c.OwnerId' == ",
                         "saql_filter_cs": "q = filter q by 'CompetitorService.OpportunityServices__c.Owner.Name' == "
                     }
-                ],
-                "numbers": [],
-                "strings": [],
-                "groups": []
+                ]
             },
             "static_2": {
                 "broadcastFacet": true,
@@ -1134,10 +1148,7 @@
                         "Measure2__field": "OpportunityServices__c.gCRM_Amount_USD__c",
                         "Measure2__func": "sum"
                     }
-                ],
-                "numbers": [],
-                "strings": [],
-                "groups": []
+                ]
             },
             "static_1": {
                 "broadcastFacet": true,
@@ -1180,10 +1191,7 @@
                         "Measure2__field": "OpportunityServices__c.gCRM_Amount_USD__c",
                         "Measure2__func": "sum"
                     }
-                ],
-                "numbers": [],
-                "strings": [],
-                "groups": []
+                ]
             },
             "gps_closed_lost_aban_1": {
                 "broadcastFacet": true,
@@ -1333,10 +1341,7 @@
                         "Display": "$",
                         "saql": "q = foreach q generate q.'CompetitorService.OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'CompetitorService.OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'CompetitorService.OpportunityServices__c.gCRM_GPS_Stage_US__c' as 'CompetitorService.OpportunityServices__c.gCRM_GPS_Stage_US__c', sum('CompetitorService.gCRM_Split_Amount_USD__c') as 'A'"
                     }
-                ],
-                "numbers": [],
-                "strings": [],
-                "groups": []
+                ]
             },
             "Actual_Close_1": {
                 "broadcastFacet": true,
@@ -1368,14 +1373,12 @@
                 "start": [
                     [
                         1704067200000,
-                        1721779200000
+                        1723075200000
                     ]
                 ],
                 "type": "aggregateflex",
                 "useGlobal": true,
-                "visualizationParameters": {
-                    "options": {}
-                }
+                "visualizationParameters": {}
             },
             "ClosedLostAbandoned__1": {
                 "broadcastFacet": true,
@@ -1388,6 +1391,7 @@
                     "steps": []
                 },
                 "selectMode": "single",
+                "start": [],
                 "strings": [],
                 "type": "saql",
                 "useGlobal": true,
@@ -1764,9 +1768,7 @@
                     "showActionMenu": false,
                     "step": "lens_2",
                     "totals": true,
-                    "verticalPadding": 8,
-                    "evenRowColor": null,
-                    "oddRowColor": null
+                    "verticalPadding": 8
                 },
                 "type": "table"
             },
@@ -2099,8 +2101,7 @@
                     "relativeModeEnabled": false,
                     "showActionMenu": false,
                     "step": "Actual_Close_1",
-                    "title": "Actual Close Date",
-                    "customFilterPresets": []
+                    "title": "Actual Close Date"
                 },
                 "type": "dateselector"
             },
@@ -2369,8 +2370,7 @@
                 },
                 "type": "chart"
             }
-        },
-        "parameters": []
+        }
     },
     "datasets": [
         {
