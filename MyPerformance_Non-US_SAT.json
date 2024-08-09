@@ -48,7 +48,9 @@
                                 "name": "text_1",
                                 "row": 28,
                                 "rowspan": 4,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 20,
@@ -70,7 +72,9 @@
                                 "name": "text_2",
                                 "row": 28,
                                 "rowspan": 4,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 13,
@@ -78,7 +82,9 @@
                                 "name": "text_3",
                                 "row": 28,
                                 "rowspan": 4,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 3,
@@ -128,7 +134,9 @@
                                 "name": "chart_2",
                                 "row": 33,
                                 "rowspan": 34,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 50,
@@ -136,7 +144,9 @@
                                 "name": "container_9",
                                 "row": 70,
                                 "rowspan": 55,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 48,
@@ -144,7 +154,9 @@
                                 "name": "table_1",
                                 "row": 70,
                                 "rowspan": 52,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 7,
@@ -174,7 +186,9 @@
                                 "name": "chart_6",
                                 "row": 36,
                                 "rowspan": 31,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 10,
@@ -284,7 +298,9 @@
                                 "name": "chart_1",
                                 "row": 33,
                                 "rowspan": 34,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 10,
@@ -305,7 +321,9 @@
                                 "name": "text_4",
                                 "row": 6,
                                 "rowspan": 2,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 4,
@@ -313,7 +331,9 @@
                                 "name": "text_6",
                                 "row": 6,
                                 "rowspan": 2,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             }
                         ]
                     }
@@ -922,9 +942,7 @@
                 ],
                 "type": "aggregateflex",
                 "useGlobal": true,
-                "visualizationParameters": {
-                    "options": {}
-                }
+                "visualizationParameters": {}
             },
             "ClosedLostAbandonRea_1": {
                 "broadcastFacet": true,
@@ -1218,10 +1236,7 @@
                         "qry_filter_compare": "matches",
                         "qry_filter_value": "*"
                     }
-                ],
-                "numbers": [],
-                "strings": [],
-                "groups": []
+                ]
             },
             "static_2": {
                 "broadcastFacet": true,
@@ -1255,10 +1270,7 @@
                         "saql": "q = foreach q generate 'Opportunity.StageName' as 'Opportunity.StageName', sum('gCRM_Split_Amount__c') as 'A'",
                         "saql_field": "'gCRM_Split_Amount__c'"
                     }
-                ],
-                "numbers": [],
-                "strings": [],
-                "groups": []
+                ]
             },
             "static_1": {
                 "broadcastFacet": true,
@@ -1292,10 +1304,7 @@
                         "saql_field": "'gCRM_Split_Amount__c'",
                         "saql_map": "gCRM_Split_Amount__c"
                     }
-                ],
-                "numbers": [],
-                "strings": [],
-                "groups": []
+                ]
             },
             "MyAverageWinSize_1": {
                 "broadcastFacet": true,
@@ -1459,10 +1468,7 @@
                         "saql_field": "'gCRM_Split_Amount__c'",
                         "saql_map": "gCRM_Split_Amount__c"
                     }
-                ],
-                "numbers": [],
-                "strings": [],
-                "groups": []
+                ]
             },
             "Sales_Credit_Query_1": {
                 "broadcastFacet": true,
@@ -1597,7 +1603,7 @@
                 "groups": [],
                 "label": "OpportunityList-NonUS-qry",
                 "numbers": [],
-                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opportunity.StageName' in [\"Closed Lost\", \"Closed Won\", \"Closed Abandon\"];\nq = foreach q generate q.'Opportunity.Name' as 'Opportunity Name', q.'Opportunity.gCRM_Opportunity_ID__c' as 'Opportunity ID', q.'Opportunity.Account.Name' as 'Account Name', q.'gCRM_Split_Amount__c' * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'Total Global Opportunity Amount', q.'Opportunity.CloseDate' as 'Expected Close Date', q.'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Closed Reason', q.'Opportunity.StageName' as 'Stage';\nq = order q by 'Expected Close Date' desc;\nq = limit q 100;",
+                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opportunity.StageName' in [\"Closed Lost\", \"Closed Won\", \"Closed Abandoned\"];\nq = foreach q generate q.'Opportunity.Name' as 'Opportunity Name', q.'Opportunity.gCRM_Opportunity_ID__c' as 'Opportunity ID', q.'Opportunity.Account.Name' as 'Account Name', q.'gCRM_Split_Amount__c' * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'Total Global Opportunity Amount', q.'Opportunity.CloseDate' as 'Expected Close Date', q.'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Closed Reason', q.'Opportunity.StageName' as 'Stage';\nq = order q by 'Expected Close Date' desc;\nq = limit q 100;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -1628,9 +1634,7 @@
                         "innerMajorBorderColor": "#a8b7c7",
                         "innerMinorBorderColor": "#e0e5ee",
                         "interactions": [],
-                        "maxColumnWidth": 300,
-                        "minColumnWidth": 40,
-                        "mode": "variable",
+                        "mode": "fittocontainer",
                         "numberOfLines": 1,
                         "showActionMenu": true,
                         "showRowIndexColumn": true,
@@ -2261,8 +2265,7 @@
                     "relativeModeEnabled": true,
                     "showActionMenu": false,
                     "step": "Opportunity_CloseDat_1",
-                    "title": "Expected Close Date",
-                    "customFilterPresets": []
+                    "title": "Expected Close Date"
                 },
                 "type": "dateselector"
             },
@@ -2356,9 +2359,7 @@
                     "showRowIndexColumn": true,
                     "step": "OpportunityList_NonU_1",
                     "totals": true,
-                    "verticalPadding": 8,
-                    "evenRowColor": null,
-                    "oddRowColor": null
+                    "verticalPadding": 8
                 },
                 "type": "table"
             },
@@ -2498,8 +2499,7 @@
                 },
                 "type": "pillbox"
             }
-        },
-        "parameters": []
+        }
     },
     "datasets": [
         {
