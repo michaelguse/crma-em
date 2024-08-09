@@ -1,0 +1,2440 @@
+{
+    "label": "My Performance - Non-US Commercial",
+    "mobileDisabled": false,
+    "state": {
+        "dataSourceLinksInfo": {
+            "enableAutomaticLinking": true,
+            "excludeRelationships": [],
+            "links": []
+        },
+        "filters": [],
+        "gridLayouts": [
+            {
+                "name": "Default",
+                "numColumns": 50,
+                "pages": [
+                    {
+                        "label": "Untitled",
+                        "name": "19533f4d-bf83-4d80-ae23-8955337d518d",
+                        "navigationHidden": false,
+                        "widgets": [
+                            {
+                                "colspan": 10,
+                                "column": 2,
+                                "name": "number_3",
+                                "row": 9,
+                                "rowspan": 13,
+                                "widgetStyle": {
+                                    "backgroundColor": "#EEF4FF",
+                                    "borderEdges": [],
+                                    "borderRadius": 64
+                                }
+                            },
+                            {
+                                "colspan": 10,
+                                "column": 38,
+                                "name": "number_4",
+                                "row": 9,
+                                "rowspan": 13,
+                                "widgetStyle": {
+                                    "backgroundColor": "#EEF4FF",
+                                    "borderEdges": [],
+                                    "borderRadius": 64
+                                }
+                            },
+                            {
+                                "colspan": 12,
+                                "column": 1,
+                                "name": "text_1",
+                                "row": 28,
+                                "rowspan": 4,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 20,
+                                "column": 14,
+                                "name": "pillbox_01",
+                                "row": 3,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "borderColor": "#7D98B3",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4
+                                }
+                            },
+                            {
+                                "colspan": 11,
+                                "column": 17,
+                                "name": "text_2",
+                                "row": 28,
+                                "rowspan": 4,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 13,
+                                "column": 32,
+                                "name": "text_3",
+                                "row": 28,
+                                "rowspan": 4,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 13,
+                                "name": "pillbox_1",
+                                "row": 29,
+                                "rowspan": 2,
+                                "widgetStyle": {
+                                    "borderColor": "#7D98B3",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4
+                                }
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 28,
+                                "name": "pillbox_11",
+                                "row": 29,
+                                "rowspan": 2,
+                                "widgetStyle": {
+                                    "borderColor": "#7D98B3",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4
+                                }
+                            },
+                            {
+                                "colspan": 3,
+                                "column": 45,
+                                "name": "pillbox_3",
+                                "row": 29,
+                                "rowspan": 2,
+                                "widgetStyle": {
+                                    "borderColor": "#7D98B3",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4
+                                }
+                            },
+                            {
+                                "colspan": 15,
+                                "column": 34,
+                                "name": "chart_2",
+                                "row": 33,
+                                "rowspan": 34,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 50,
+                                "column": 0,
+                                "name": "container_9",
+                                "row": 70,
+                                "rowspan": 55,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 48,
+                                "column": 1,
+                                "name": "table_1",
+                                "row": 70,
+                                "rowspan": 52,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 7,
+                                "column": 1,
+                                "name": "number_1",
+                                "row": 32,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "borderEdges": [],
+                                    "borderRadius": 0
+                                }
+                            },
+                            {
+                                "colspan": 7,
+                                "column": 9,
+                                "name": "number_2",
+                                "row": 32,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "borderEdges": [],
+                                    "borderRadius": 0
+                                }
+                            },
+                            {
+                                "colspan": 15,
+                                "column": 1,
+                                "name": "chart_6",
+                                "row": 36,
+                                "rowspan": 31,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 10,
+                                "column": 26,
+                                "name": "number_5",
+                                "row": 9,
+                                "rowspan": 13,
+                                "widgetStyle": {
+                                    "backgroundColor": "#EEF4FF",
+                                    "borderEdges": [],
+                                    "borderRadius": 64
+                                }
+                            },
+                            {
+                                "colspan": 22,
+                                "column": 14,
+                                "name": "text_5",
+                                "row": 0,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#FFFFFF",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 10,
+                                "column": 1,
+                                "name": "dateselector_1",
+                                "row": 2,
+                                "rowspan": 4,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 9,
+                                "column": 40,
+                                "name": "listselector_2",
+                                "row": 2,
+                                "rowspan": 4,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 1,
+                                "column": 16,
+                                "name": "container_3",
+                                "row": 40,
+                                "rowspan": 21,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#7D98B3",
+                                    "borderEdges": [
+                                        "right"
+                                    ],
+                                    "borderRadius": 0,
+                                    "borderWidth": 2
+                                }
+                            },
+                            {
+                                "colspan": 1,
+                                "column": 33,
+                                "name": "container_4",
+                                "row": 40,
+                                "rowspan": 21,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#7D98B3",
+                                    "borderEdges": [
+                                        "right"
+                                    ],
+                                    "borderRadius": 0,
+                                    "borderWidth": 2
+                                }
+                            },
+                            {
+                                "colspan": 44,
+                                "column": 3,
+                                "name": "container_5",
+                                "row": 25,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#7D98B3",
+                                    "borderEdges": [
+                                        "top"
+                                    ],
+                                    "borderRadius": 0,
+                                    "borderWidth": 2
+                                }
+                            },
+                            {
+                                "colspan": 16,
+                                "column": 17,
+                                "name": "chart_1",
+                                "row": 33,
+                                "rowspan": 34,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 10,
+                                "column": 14,
+                                "name": "number_6",
+                                "row": 9,
+                                "rowspan": 13,
+                                "widgetStyle": {
+                                    "backgroundColor": "#EEF4FF",
+                                    "borderColor": "#747474",
+                                    "borderEdges": [],
+                                    "borderRadius": 64
+                                }
+                            },
+                            {
+                                "colspan": 4,
+                                "column": 41,
+                                "name": "text_4",
+                                "row": 6,
+                                "rowspan": 2,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 4,
+                                "column": 45,
+                                "name": "text_6",
+                                "row": 6,
+                                "rowspan": 2,
+                                "widgetStyle": {}
+                            }
+                        ]
+                    }
+                ],
+                "rowHeight": "fine",
+                "selectors": [],
+                "style": {
+                    "alignmentX": "left",
+                    "alignmentY": "top",
+                    "backgroundColor": "#FFFFFF",
+                    "cellSpacingX": 0,
+                    "cellSpacingY": 0,
+                    "fit": "original",
+                    "gutterColor": "#C5D3E0"
+                },
+                "version": 1
+            }
+        ],
+        "layouts": [],
+        "steps": {
+            "My_Sales_Query_1": {
+                "broadcastFacet": true,
+                "groups": [],
+                "label": "My Sales Query",
+                "numbers": [],
+                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opportunity.StageName' == \"Closed Won\";\nq = group q by 'Opportunity.StageName';\nq = foreach q generate sum(q.'gCRM_Split_Amount__c')*{{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'A';\nq = limit q 2000;",
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "strings": [],
+                "type": "saql",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "sync",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [],
+                            "plots": [
+                                "A"
+                            ]
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart"
+                }
+            },
+            "WinRatePercents_1": {
+                "broadcastFacet": false,
+                "groups": [],
+                "label": "WinRatePercents",
+                "numbers": [],
+                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opportunity.StageName' in [\"Closed Lost\", \"Closed Won\"];\nq = group q by 'Opportunity.StageName';\nq = foreach q generate q.'Opportunity.StageName' as 'Opportunity.StageName', sum(q.'gCRM_Split_Amount__c') as 'A', unique(q.'Opportunity.gCRM_Opportunity_ID__c') as 'B';\nq = group q by 'Opportunity.StageName';\nq = foreach q generate 'Opportunity.StageName', first(A) as 'A', first(B) as 'B', sum(B)/sum(sum(B)) over ([..] partition by all) as 'C', sum(A)/sum(sum(A)) over ([..] partition by all) as 'D';\nq = order q by 'Opportunity.StageName' desc;\nq = limit q 2000;",
+                "receiveFacetSource": {
+                    "mode": "none",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "start": [],
+                "strings": [],
+                "type": "saql",
+                "useGlobal": false,
+                "visualizationParameters": {
+                    "parameters": {
+                        "borderColor": "#e0e5ee",
+                        "borderWidth": 1,
+                        "cell": {
+                            "backgroundColor": "#ffffff",
+                            "fontColor": "#16325c",
+                            "fontSize": 12,
+                            "textWrap": true
+                        },
+                        "columnProperties": {},
+                        "columns": [],
+                        "customBulkActions": [],
+                        "header": {
+                            "backgroundColor": "#f4f6f9",
+                            "fontColor": "#16325c",
+                            "fontSize": 12,
+                            "textWrap": true
+                        },
+                        "innerMajorBorderColor": "#a8b7c7",
+                        "innerMinorBorderColor": "#e0e5ee",
+                        "interactions": [],
+                        "maxColumnWidth": 300,
+                        "minColumnWidth": 40,
+                        "mode": "variable",
+                        "numberOfLines": 1,
+                        "showActionMenu": true,
+                        "showRowIndexColumn": false,
+                        "totals": true,
+                        "verticalPadding": 8
+                    },
+                    "type": "table"
+                }
+            },
+            "UserData": {
+                "broadcastFacet": true,
+                "groups": [],
+                "numbers": [],
+                "query": "SELECT Name, Country, Id FROM User WHERE Id = '!{User.Id}'",
+                "receiveFacetSource": {
+                    "mode": "none",
+                    "steps": []
+                },
+                "selectMode": "singlerequired",
+                "strings": [],
+                "type": "soql",
+                "useGlobal": false,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "sync",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart"
+                }
+            },
+            "ClosedWonReason_NonU_1": {
+                "broadcastFacet": true,
+                "groups": [],
+                "label": "ClosedWonReason-NonUS-qry",
+                "numbers": [],
+                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opportunity.StageName' == \"Closed Won\";\nq = group q by ('Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c', 'Opportunity.StageName') ;\nq = foreach q generate q.'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'Opportunity.StageName' as 'Opportunity.StageName', sum('gCRM_Split_Amount__c') * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'gCRM_Split_Amount__c', unique('Opportunity.gCRM_Opportunity_ID__c') as 'Count';\nq = foreach q generate q.'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'Opportunity.StageName' as 'Opportunity.StageName', {{cell(static_1.selection, 0, \"saql_field\").asString()}} as {{cell(static_1.selection, 0, \"saql_field\").asString()}};\nq = order q by ('Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' asc, 'Opportunity.StageName' asc);\nq = limit q 2000;",
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "start": [],
+                "strings": [],
+                "type": "saql",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": false,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "bottom-center",
+                            "inside": false
+                        },
+                        "axisMode": "sync",
+                        "totalSumMode": "none",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "stackhbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "showActionMenu": false,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": false,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "normalize": false,
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": false,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart"
+                }
+            },
+            "WinRateDonut_NonUS_q_1": {
+                "broadcastFacet": true,
+                "groups": [],
+                "label": "WinRateDonut-NonUS-qry",
+                "numbers": [],
+                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opportunity.StageName' in [\"Closed Lost\", \"Closed Won\"];\nq = group q by 'Opportunity.StageName';\n--{{cell(static_2.selection, 0, \"saql\").asString()}};\nq = foreach q generate 'Opportunity.StageName' as 'Opportunity.StageName', sum('gCRM_Split_Amount__c') * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'gCRM_Split_Amount__c', unique('Opportunity.gCRM_Opportunity_ID__c') as 'Count';\nq = foreach q generate 'Opportunity.StageName' as 'Opportunity.StageName', {{cell(static_2.selection, 0, \"saql_field\").asString()}} as {{cell(static_2.selection, 0, \"saql_field\").asString()}};\nq = order q by 'Opportunity.StageName' asc;\nq = limit q 2000;",
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "start": [],
+                "strings": [],
+                "type": "saql",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "centerText": "",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": false,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "bottom-center",
+                            "inside": false
+                        },
+                        "showMeasureTitle": false,
+                        "axisMode": "sync",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "pie",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "inner": 50,
+                        "showActionMenu": true,
+                        "centerValueType": "number",
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart"
+                }
+            },
+            "Opportunity_CloseDat_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0Fb4G0000006P00SAE",
+                        "label": "Opty_Acc_Split_Tag",
+                        "name": "Opty_Acc_Split_Tag",
+                        "url": "/services/data/v61.0/wave/datasets/0Fb4G0000006P00SAE"
+                    }
+                ],
+                "isGlobal": false,
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "groups": [
+                        "Opportunity.CloseDate"
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "start": [
+                    [
+                        [
+                            "fiscal_year",
+                            0
+                        ],
+                        [
+                            "fiscal_year",
+                            0
+                        ]
+                    ]
+                ],
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "options": {}
+                }
+            },
+            "ClosedLostAbandonRea_1": {
+                "broadcastFacet": true,
+                "groups": [],
+                "label": "ClosedLostAbandonReason-NonUS-qry",
+                "numbers": [],
+                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opportunity.StageName' in [\"Closed Lost\",\"Closed Abandoned\"];\nq = group q by ('Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c', 'Opportunity.StageName') ;\nq = foreach q generate q.'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'Opportunity.StageName' as 'Opportunity.StageName', sum('gCRM_Split_Amount__c') * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'gCRM_Split_Amount__c', unique('Opportunity.gCRM_Opportunity_ID__c') as 'Count';\nq = foreach q generate q.'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'Opportunity.StageName' as 'Opportunity.StageName', {{cell(Lost_Abandoned_Toggl_1.selection, 0, \"saql_field\").asString()}} as {{cell(Lost_Abandoned_Toggl_1.selection, 0, \"saql_field\").asString()}};\nq = order q by ('Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' asc, 'Opportunity.StageName' asc);\nq = limit q 2000;",
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "start": [],
+                "strings": [],
+                "type": "saql",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": false,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "bottom-center",
+                            "inside": false
+                        },
+                        "axisMode": "sync",
+                        "totalSumMode": "none",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "stackhbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "showActionMenu": false,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": false,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "normalize": false,
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": false,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart"
+                }
+            },
+            "AverageDaysToClose_1": {
+                "broadcastFacet": true,
+                "groups": [],
+                "label": "AverageDaysToClose",
+                "numbers": [],
+                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opportunity.StageName' == \"Closed Won\";\nq = foreach q generate 'Opportunity.Id' as 'Id', 'Opportunity.Name' as 'name', 'Opportunity.gCRM_Source_Creation_Date__c' as 'Created', 'Opportunity.CloseDate_Year'+\":\"+'Opportunity.CloseDate_Month'+\":\"+'Opportunity.CloseDate_Day' as 'closeDate', daysBetween( toDate(((('Opportunity.gCRM_Source_Creation_Date__c_Year' + \":\") + 'Opportunity.gCRM_Source_Creation_Date__c_Month' + \":\") + 'Opportunity.gCRM_Source_Creation_Date__c_Day'), \"yyyy:MM:dd\"), toDate(((('Opportunity.CloseDate_Year' + \":\") + 'Opportunity.CloseDate_Month' + \":\") + 'Opportunity.CloseDate_Day'), \"yyyy:MM:dd\")) as 'DaysToClose', count() as 'count';\nq = filter q by DaysToClose > 0;\nq = group q by all;\nq = foreach q generate round(average(DaysToClose)) as CY_Days;\nq = limit q 2000;",
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "strings": [],
+                "type": "saql",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "sync",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart"
+                }
+            },
+            "OptyRoleToggle_1": {
+                "broadcastFacet": true,
+                "columns": {
+                    "saql_filter": {
+                        "type": "string"
+                    },
+                    "qry_filter_value": {
+                        "type": "string"
+                    },
+                    "qry_filter_compare": {
+                        "type": "string"
+                    },
+                    "saql_filter_opp": {
+                        "type": "string"
+                    },
+                    "qry_filter_field": {
+                        "type": "string"
+                    },
+                    "Display": {
+                        "type": "string"
+                    }
+                },
+                "label": "OptyRoleToggle",
+                "selectMode": "single",
+                "start": {
+                    "Display": [
+                        "On the Opportunity Team"
+                    ]
+                },
+                "type": "staticflex",
+                "values": [
+                    {
+                        "Display": "On the Opportunity Team",
+                        "saql_filter": "q = filter q by 'OppTeamMember.UserId' matches ",
+                        "saql_filter_opp": "q = filter q by 'oppTeamMember.UserId' matches ",
+                        "qry_filter_field": "OppTeamMember.UserId",
+                        "qry_filter_compare": "matches",
+                        "qry_filter_value": "*"
+                    },
+                    {
+                        "Display": "Opportunity Leader",
+                        "saql_filter": "q = filter q by 'Opportunity.OwnerId' matches ",
+                        "saql_filter_opp": "q = filter q by 'OwnerId' matches ",
+                        "qry_filter_field": "Opportunity.OwnerId",
+                        "qry_filter_compare": "matches",
+                        "qry_filter_value": "*"
+                    }
+                ],
+                "numbers": [],
+                "strings": [],
+                "groups": []
+            },
+            "static_2": {
+                "broadcastFacet": true,
+                "columns": {
+                    "saql_field": {
+                        "type": "string"
+                    },
+                    "saql": {
+                        "type": "string"
+                    },
+                    "Display": {
+                        "type": "string"
+                    }
+                },
+                "label": "win rate toggle query",
+                "selectMode": "singlerequired",
+                "start": {
+                    "Display": [
+                        "$"
+                    ]
+                },
+                "type": "staticflex",
+                "values": [
+                    {
+                        "Display": "#",
+                        "saql": "q = foreach q generate 'Opportunity.StageName' as 'Opportunity.StageName', unique('Opportunity.gCRM_Opportunity_ID__c') as 'A'",
+                        "saql_field": "'Count'"
+                    },
+                    {
+                        "Display": "$",
+                        "saql": "q = foreach q generate 'Opportunity.StageName' as 'Opportunity.StageName', sum('gCRM_Split_Amount__c') as 'A'",
+                        "saql_field": "'gCRM_Split_Amount__c'"
+                    }
+                ],
+                "numbers": [],
+                "strings": [],
+                "groups": []
+            },
+            "static_1": {
+                "broadcastFacet": true,
+                "columns": {
+                    "saql_map": {
+                        "type": "string"
+                    },
+                    "saql_field": {
+                        "type": "string"
+                    },
+                    "Display": {
+                        "type": "string"
+                    }
+                },
+                "label": "Closed Won Toggle Query",
+                "selectMode": "singlerequired",
+                "start": {
+                    "Display": [
+                        "#"
+                    ]
+                },
+                "type": "staticflex",
+                "values": [
+                    {
+                        "Display": "#",
+                        "saql_field": "'Count'",
+                        "saql_map": "Count"
+                    },
+                    {
+                        "Display": "$",
+                        "saql_field": "'gCRM_Split_Amount__c'",
+                        "saql_map": "gCRM_Split_Amount__c"
+                    }
+                ],
+                "numbers": [],
+                "strings": [],
+                "groups": []
+            },
+            "MyAverageWinSize_1": {
+                "broadcastFacet": true,
+                "groups": [],
+                "label": "MyAverageWinSize",
+                "numbers": [],
+                "query": "q = load \"Opty_Acc_Split_Tag\";\nq = group q by all;\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = foreach q generate sum(q.'gCRM_Split_Amount__c') * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'A', unique(q.'Opportunity.gCRM_Opportunity_ID__c') as 'B';\nq = foreach q generate 'A', 'B', A / B as 'C';\nq = limit q 2000;",
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "strings": [],
+                "type": "saql",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "borderColor": "#e0e5ee",
+                        "borderWidth": 1,
+                        "cell": {
+                            "backgroundColor": "#ffffff",
+                            "fontColor": "#16325c",
+                            "fontSize": 12,
+                            "textWrap": true
+                        },
+                        "columnProperties": {},
+                        "columns": [],
+                        "customBulkActions": [],
+                        "header": {
+                            "backgroundColor": "#f4f6f9",
+                            "fontColor": "#16325c",
+                            "fontSize": 12,
+                            "textWrap": true
+                        },
+                        "innerMajorBorderColor": "#a8b7c7",
+                        "innerMinorBorderColor": "#e0e5ee",
+                        "interactions": [],
+                        "maxColumnWidth": 300,
+                        "minColumnWidth": 40,
+                        "mode": "variable",
+                        "numberOfLines": 1,
+                        "showActionMenu": true,
+                        "totals": true,
+                        "verticalPadding": 8
+                    },
+                    "type": "table"
+                }
+            },
+            "Lost_Abandoned_Toggl_1": {
+                "broadcastFacet": true,
+                "columns": {
+                    "saql_map": {
+                        "type": "string"
+                    },
+                    "saql_field": {
+                        "type": "string"
+                    },
+                    "Display": {
+                        "type": "string"
+                    }
+                },
+                "label": "Lost Abandoned Toggle Query",
+                "selectMode": "singlerequired",
+                "start": {
+                    "Display": [
+                        "#"
+                    ]
+                },
+                "type": "staticflex",
+                "values": [
+                    {
+                        "Display": "#",
+                        "saql_field": "'Count'",
+                        "saql_map": "Count"
+                    },
+                    {
+                        "Display": "$",
+                        "saql_field": "'gCRM_Split_Amount__c'",
+                        "saql_map": "gCRM_Split_Amount__c"
+                    }
+                ],
+                "numbers": [],
+                "strings": [],
+                "groups": []
+            },
+            "Sales_Credit_Query_1": {
+                "broadcastFacet": true,
+                "groups": [],
+                "label": "Sales Credit Query",
+                "numbers": [],
+                "query": "q = load \"Opp_SC\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter_opp\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opp.StageName' == \"Closed Won\";\nq = group q by 'Opp.StageName';\nq = foreach q generate sum(q.'gCRM_Sales_Credit_Amount__c') * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'C';\nq = limit q 2000;",
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "strings": [],
+                "type": "saql",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
+                        },
+                        "axisMode": "sync",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart"
+                }
+            },
+            "OpportunityList_NonU_1": {
+                "broadcastFacet": true,
+                "groups": [],
+                "label": "OpportunityList-NonUS-qry",
+                "numbers": [],
+                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = foreach q generate q.'Opportunity.Name' as 'Opportunity Name', q.'Opportunity.gCRM_Opportunity_ID__c' as 'Opportunity ID', q.'Opportunity.Account.Name' as 'Account Name', q.'gCRM_Split_Amount__c' * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'Total Global Opportunity Amount', q.'Opportunity.CloseDate' as 'Expected Close Date', q.'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Closed Reason', q.'Opportunity.StageName' as 'Stage';\nq = order q by 'Expected Close Date' desc;\nq = limit q 100;",
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "strings": [],
+                "type": "saql",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "borderColor": "#e0e5ee",
+                        "borderWidth": 1,
+                        "cell": {
+                            "backgroundColor": "#ffffff",
+                            "fontColor": "#16325c",
+                            "fontSize": 12,
+                            "textWrap": true
+                        },
+                        "columnProperties": {},
+                        "columns": [],
+                        "customBulkActions": [],
+                        "header": {
+                            "backgroundColor": "#f4f6f9",
+                            "fontColor": "#16325c",
+                            "fontSize": 12,
+                            "textWrap": true
+                        },
+                        "innerMajorBorderColor": "#a8b7c7",
+                        "innerMinorBorderColor": "#e0e5ee",
+                        "interactions": [],
+                        "maxColumnWidth": 300,
+                        "minColumnWidth": 40,
+                        "mode": "variable",
+                        "numberOfLines": 1,
+                        "showActionMenu": true,
+                        "showRowIndexColumn": true,
+                        "totals": true,
+                        "verticalPadding": 8
+                    },
+                    "type": "table"
+                }
+            },
+            "IsoCode_1": {
+                "broadcastFacet": true,
+                "groups": [],
+                "label": "IsoCode_1",
+                "numbers": [],
+                "query": "q = load \"Register_CurrencyType\";\nresult = group q by 'IsoCode';\nresult = foreach result generate q.'IsoCode' as 'IsoCode', sum(q.'ConversionRate') as 'A', case \n    when q.'IsoCode' matches \"USD\" then\"01\"   \n    when q.'IsoCode' matches \"EUR\" then\"02\"\n    when q.'IsoCode' matches \"GBP\" then\"03\"\n    when q.'IsoCode' matches \"CAD\" then\"04\"\n    when q.'IsoCode' matches \"AUD\" then\"05\"\n    when q.'IsoCode' matches \"SGD\" then\"06\"\n    when q.'IsoCode' matches \"INR\" then\"07\"\n    when q.'IsoCode' matches \"JPY\" then\"08\" \n    else q.'IsoCode' \nend as 'Order';\nresult = order result by ('Order' asc);\nresult = limit result 2000;",
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "start": [
+                    [
+                        "USD",
+                        "01"
+                    ]
+                ],
+                "strings": [],
+                "type": "saql",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "borderColor": "#e0e5ee",
+                        "borderWidth": 1,
+                        "cell": {
+                            "backgroundColor": "#ffffff",
+                            "fontColor": "#16325c",
+                            "fontSize": 12,
+                            "textWrap": true
+                        },
+                        "columnProperties": {},
+                        "columns": [],
+                        "customBulkActions": [],
+                        "header": {
+                            "backgroundColor": "#f4f6f9",
+                            "fontColor": "#16325c",
+                            "fontSize": 12,
+                            "textWrap": true
+                        },
+                        "innerMajorBorderColor": "#a8b7c7",
+                        "innerMinorBorderColor": "#e0e5ee",
+                        "interactions": [],
+                        "maxColumnWidth": 300,
+                        "minColumnWidth": 40,
+                        "mode": "variable",
+                        "numberOfLines": 1,
+                        "showActionMenu": true,
+                        "totals": true,
+                        "verticalPadding": 8
+                    },
+                    "type": "table"
+                }
+            }
+        },
+        "widgetStyle": {
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#747474",
+            "borderEdges": [],
+            "borderRadius": 0,
+            "borderWidth": 1
+        },
+        "widgets": {
+            "pillbox_01": {
+                "parameters": {
+                    "compact": false,
+                    "exploreLink": false,
+                    "fontSize": 14,
+                    "selectedTab": {
+                        "backgroundColor": "#3274CC",
+                        "borderColor": "#3274CC",
+                        "borderEdges": [],
+                        "borderWidth": 0,
+                        "textColor": "#FFFFFF"
+                    },
+                    "showActionMenu": false,
+                    "step": "OptyRoleToggle_1",
+                    "textColor": "#3274CC"
+                },
+                "type": "pillbox"
+            },
+            "number_6": {
+                "parameters": {
+                    "compact": false,
+                    "exploreLink": true,
+                    "interactions": [],
+                    "measureField": "C",
+                    "numberColor": "#091A3E",
+                    "numberSize": 32,
+                    "showActionMenu": false,
+                    "step": "Sales_Credit_Query_1",
+                    "textAlignment": "center",
+                    "title": "My Sales Credit",
+                    "titleColor": "#091A3E",
+                    "titleSize": 18,
+                    "tooltip": {
+                        "customizeTooltip": false
+                    }
+                },
+                "type": "number"
+            },
+            "container_3": {
+                "parameters": {
+                    "alignmentX": "left",
+                    "alignmentY": "top",
+                    "fit": "original",
+                    "interactions": []
+                },
+                "type": "container"
+            },
+            "container_4": {
+                "parameters": {
+                    "alignmentX": "left",
+                    "alignmentY": "top",
+                    "fit": "original",
+                    "interactions": []
+                },
+                "type": "container"
+            },
+            "container_5": {
+                "parameters": {
+                    "alignmentX": "left",
+                    "alignmentY": "top",
+                    "fit": "original",
+                    "interactions": []
+                },
+                "type": "container"
+            },
+            "text_3": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "size": "20px",
+                                    "color": "#020821",
+                                    "bold": true
+                                },
+                                "insert": "Closed Lost / Abandoned Reason"
+                            },
+                            {
+                                "attributes": {
+                                    "align": "left"
+                                },
+                                "insert": "\n"
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": false
+                },
+                "type": "text"
+            },
+            "chart_6": {
+                "parameters": {
+                    "autoFitMode": "keepLabels",
+                    "centerText": "",
+                    "bins": {
+                        "breakpoints": {
+                            "high": 100,
+                            "low": 0
+                        },
+                        "bands": {
+                            "high": {
+                                "color": "#008000",
+                                "label": ""
+                            },
+                            "low": {
+                                "color": "#B22222",
+                                "label": ""
+                            },
+                            "medium": {
+                                "color": "#ffa500",
+                                "label": ""
+                            }
+                        }
+                    },
+                    "legend": {
+                        "descOrder": false,
+                        "showHeader": false,
+                        "show": true,
+                        "customSize": "auto",
+                        "position": "bottom-center",
+                        "inside": false
+                    },
+                    "showMeasureTitle": false,
+                    "axisMode": "sync",
+                    "tooltip": {
+                        "content": {
+                            "legend": {
+                                "showBinLabel": true,
+                                "measures": [],
+                                "showNullValues": true,
+                                "customizeLegend": false,
+                                "showPercentage": true,
+                                "showDimensions": true,
+                                "showMeasures": true,
+                                "dimensions": []
+                            }
+                        }
+                    },
+                    "visualizationType": "pie",
+                    "exploreLink": true,
+                    "title": {
+                        "fontSize": 14,
+                        "subtitleFontSize": 11,
+                        "label": "",
+                        "align": "center",
+                        "subtitleLabel": ""
+                    },
+                    "binValues": false,
+                    "trellis": {
+                        "flipLabels": false,
+                        "showGridLines": true,
+                        "size": [
+                            100,
+                            100
+                        ],
+                        "enable": false,
+                        "type": "x",
+                        "chartsPerLine": 4
+                    },
+                    "inner": 50,
+                    "showActionMenu": true,
+                    "centerValueType": "number",
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "valueType": "compactNumber",
+                    "measureAxis1": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "theme": "wave",
+                    "step": "WinRateDonut_NonUS_q_1",
+                    "compactDecimalDigits": -1,
+                    "dimensionAxis": {
+                        "showTitle": true,
+                        "customSize": "auto",
+                        "showAxis": true,
+                        "title": "",
+                        "icons": {
+                            "useIcons": false,
+                            "iconProps": {
+                                "fit": "cover",
+                                "column": "",
+                                "type": "round"
+                            }
+                        }
+                    },
+                    "applyConditionalFormatting": true
+                },
+                "type": "chart"
+            },
+            "text_2": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "size": "20px",
+                                    "color": "#020821",
+                                    "bold": true
+                                },
+                                "insert": "Closed Won Reason"
+                            },
+                            {
+                                "attributes": {
+                                    "align": "left"
+                                },
+                                "insert": "\n"
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": false
+                },
+                "type": "text"
+            },
+            "text_5": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "color": "#7d98b3",
+                                    "size": "14px"
+                                },
+                                "insert": "View opportunities where I am:"
+                            },
+                            {
+                                "attributes": {
+                                    "align": "left"
+                                },
+                                "insert": "\n"
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": false
+                },
+                "type": "text"
+            },
+            "container_9": {
+                "parameters": {
+                    "alignmentX": "left",
+                    "alignmentY": "top",
+                    "fit": "original",
+                    "interactions": []
+                },
+                "type": "container"
+            },
+            "text_4": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "color": "#7d98b3",
+                                    "size": "12px"
+                                },
+                                "insert": "Rate: [Currency_ISO_Code]"
+                            },
+                            {
+                                "attributes": {
+                                    "align": "left"
+                                },
+                                "insert": "\n"
+                            }
+                        ],
+                        "values": {
+                            "Currency_ISO_Code": {
+                                "field": "IsoCode",
+                                "sourceType": "result",
+                                "step": "IsoCode_1"
+                            }
+                        }
+                    },
+                    "interactions": [],
+                    "showActionMenu": false
+                },
+                "type": "text"
+            },
+            "chart_2": {
+                "parameters": {
+                    "autoFitMode": "keepLabels",
+                    "bins": {
+                        "breakpoints": {
+                            "high": 100,
+                            "low": 0
+                        },
+                        "bands": {
+                            "high": {
+                                "color": "#008000",
+                                "label": ""
+                            },
+                            "low": {
+                                "color": "#B22222",
+                                "label": ""
+                            },
+                            "medium": {
+                                "color": "#ffa500",
+                                "label": ""
+                            }
+                        }
+                    },
+                    "legend": {
+                        "descOrder": false,
+                        "showHeader": false,
+                        "show": true,
+                        "customSize": "auto",
+                        "position": "bottom-center",
+                        "inside": false
+                    },
+                    "axisMode": "sync",
+                    "totalSumMode": "none",
+                    "tooltip": {
+                        "content": {
+                            "legend": {
+                                "showBinLabel": true,
+                                "measures": [],
+                                "showNullValues": true,
+                                "customizeLegend": false,
+                                "showPercentage": true,
+                                "showDimensions": true,
+                                "showMeasures": true,
+                                "dimensions": []
+                            }
+                        }
+                    },
+                    "visualizationType": "stackhbar",
+                    "exploreLink": true,
+                    "title": {
+                        "fontSize": 14,
+                        "subtitleFontSize": 11,
+                        "label": "",
+                        "align": "center",
+                        "subtitleLabel": ""
+                    },
+                    "binValues": false,
+                    "trellis": {
+                        "flipLabels": false,
+                        "showGridLines": true,
+                        "size": [
+                            100,
+                            100
+                        ],
+                        "enable": false,
+                        "type": "x",
+                        "chartsPerLine": 4
+                    },
+                    "showActionMenu": false,
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "valueType": "compactNumber",
+                    "measureAxis1": {
+                        "sqrtScale": false,
+                        "showTitle": false,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "normalize": false,
+                    "theme": "wave",
+                    "step": "ClosedLostAbandonRea_1",
+                    "compactDecimalDigits": -1,
+                    "dimensionAxis": {
+                        "showTitle": false,
+                        "customSize": "auto",
+                        "showAxis": true,
+                        "title": "",
+                        "icons": {
+                            "useIcons": false,
+                            "iconProps": {
+                                "fit": "cover",
+                                "column": "",
+                                "type": "round"
+                            }
+                        }
+                    },
+                    "applyConditionalFormatting": true
+                },
+                "type": "chart"
+            },
+            "chart_1": {
+                "parameters": {
+                    "autoFitMode": "keepLabels",
+                    "bins": {
+                        "breakpoints": {
+                            "high": 100,
+                            "low": 0
+                        },
+                        "bands": {
+                            "high": {
+                                "color": "#008000",
+                                "label": ""
+                            },
+                            "low": {
+                                "color": "#B22222",
+                                "label": ""
+                            },
+                            "medium": {
+                                "color": "#ffa500",
+                                "label": ""
+                            }
+                        }
+                    },
+                    "legend": {
+                        "descOrder": false,
+                        "showHeader": false,
+                        "show": true,
+                        "customSize": "auto",
+                        "position": "bottom-center",
+                        "inside": false
+                    },
+                    "axisMode": "sync",
+                    "totalSumMode": "none",
+                    "tooltip": {
+                        "content": {
+                            "legend": {
+                                "showBinLabel": true,
+                                "measures": [],
+                                "showNullValues": true,
+                                "customizeLegend": false,
+                                "showPercentage": true,
+                                "showDimensions": true,
+                                "showMeasures": true,
+                                "dimensions": []
+                            }
+                        }
+                    },
+                    "visualizationType": "stackhbar",
+                    "exploreLink": true,
+                    "title": {
+                        "fontSize": 14,
+                        "subtitleFontSize": 11,
+                        "label": "",
+                        "align": "center",
+                        "subtitleLabel": ""
+                    },
+                    "binValues": false,
+                    "trellis": {
+                        "flipLabels": false,
+                        "showGridLines": true,
+                        "size": [
+                            100,
+                            100
+                        ],
+                        "enable": false,
+                        "type": "x",
+                        "chartsPerLine": 4
+                    },
+                    "showActionMenu": false,
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "valueType": "compactNumber",
+                    "measureAxis1": {
+                        "sqrtScale": false,
+                        "showTitle": false,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "normalize": false,
+                    "theme": "wave",
+                    "step": "ClosedWonReason_NonU_1",
+                    "compactDecimalDigits": -1,
+                    "dimensionAxis": {
+                        "showTitle": false,
+                        "customSize": "auto",
+                        "showAxis": true,
+                        "title": "",
+                        "icons": {
+                            "useIcons": false,
+                            "iconProps": {
+                                "fit": "cover",
+                                "column": "",
+                                "type": "round"
+                            }
+                        }
+                    },
+                    "applyConditionalFormatting": true
+                },
+                "type": "chart"
+            },
+            "text_6": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "color": "#7d98b3",
+                                    "size": "12px"
+                                },
+                                "insert": "[A][Sum_of_Conversion_Ra]"
+                            },
+                            {
+                                "attributes": {
+                                    "align": "center"
+                                },
+                                "insert": "\n"
+                            }
+                        ],
+                        "values": {
+                            "A": {
+                                "compact": false,
+                                "field": "A",
+                                "sourceType": "result",
+                                "step": "IsoCode_1"
+                            },
+                            "Sum_of_Conversion_Ra": {
+                                "compact": false,
+                                "field": "A",
+                                "sourceType": "selection",
+                                "step": "IsoCode_1"
+                            }
+                        }
+                    },
+                    "interactions": [],
+                    "showActionMenu": true
+                },
+                "type": "text"
+            },
+            "dateselector_1": {
+                "parameters": {
+                    "absoluteModeEnabled": true,
+                    "calendarTypeSwitchingAllowed": false,
+                    "defaultFiscalMode": false,
+                    "displayMode": "combo",
+                    "filterStyle": {
+                        "titleColor": "#091A3E",
+                        "valueColor": "#091A3E"
+                    },
+                    "instant": false,
+                    "presetsEnabled": true,
+                    "relativeModeEnabled": true,
+                    "showActionMenu": false,
+                    "step": "Opportunity_CloseDat_1",
+                    "title": "Expected Close Date",
+                    "customFilterPresets": []
+                },
+                "type": "dateselector"
+            },
+            "listselector_2": {
+                "parameters": {
+                    "compact": false,
+                    "displayMode": "combo",
+                    "exploreLink": false,
+                    "filterStyle": {
+                        "titleColor": "#091A3E",
+                        "valueColor": "#091A3E"
+                    },
+                    "instant": true,
+                    "measureField": "A",
+                    "showActionMenu": false,
+                    "step": "IsoCode_1",
+                    "title": "Select your Currency:"
+                },
+                "type": "listselector"
+            },
+            "text_1": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "color": "#020821",
+                                    "size": "20px",
+                                    "bold": true
+                                },
+                                "insert": "Win Rate"
+                            },
+                            {
+                                "attributes": {
+                                    "align": "left"
+                                },
+                                "insert": "\n"
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": true
+                },
+                "type": "text"
+            },
+            "pillbox_11": {
+                "parameters": {
+                    "compact": false,
+                    "exploreLink": false,
+                    "fontSize": 14,
+                    "selectedTab": {
+                        "backgroundColor": "#0070D2",
+                        "borderColor": "#3274CC",
+                        "borderEdges": [],
+                        "borderWidth": 0,
+                        "textColor": "#FFFFFF"
+                    },
+                    "showActionMenu": false,
+                    "step": "static_1",
+                    "textColor": "#0070D2"
+                },
+                "type": "pillbox"
+            },
+            "table_1": {
+                "parameters": {
+                    "borderColor": "#e0e5ee",
+                    "borderWidth": 1,
+                    "cell": {
+                        "backgroundColor": "#ffffff",
+                        "fontColor": "#16325c",
+                        "fontSize": 12,
+                        "textWrap": true
+                    },
+                    "columnProperties": {},
+                    "columns": [],
+                    "customBulkActions": [],
+                    "exploreLink": true,
+                    "header": {
+                        "backgroundColor": "#f4f6f9",
+                        "fontColor": "#16325c",
+                        "fontSize": 12,
+                        "textWrap": true
+                    },
+                    "innerMajorBorderColor": "#a8b7c7",
+                    "innerMinorBorderColor": "#e0e5ee",
+                    "interactions": [],
+                    "maxColumnWidth": 300,
+                    "minColumnWidth": 40,
+                    "mode": "variable",
+                    "numberOfLines": 1,
+                    "showActionMenu": true,
+                    "showRowIndexColumn": true,
+                    "step": "OpportunityList_NonU_1",
+                    "totals": true,
+                    "verticalPadding": 8,
+                    "evenRowColor": null,
+                    "oddRowColor": null
+                },
+                "type": "table"
+            },
+            "number_5": {
+                "parameters": {
+                    "compact": false,
+                    "exploreLink": true,
+                    "interactions": [],
+                    "measureField": "CY_Days",
+                    "numberColor": "#091A3E",
+                    "numberSize": 32,
+                    "showActionMenu": false,
+                    "step": "AverageDaysToClose_1",
+                    "textAlignment": "center",
+                    "title": "My Average Time to Closed Won",
+                    "titleColor": "#091A3E",
+                    "titleSize": 18,
+                    "tooltip": {
+                        "customizeTooltip": false
+                    }
+                },
+                "type": "number"
+            },
+            "number_4": {
+                "parameters": {
+                    "compact": false,
+                    "exploreLink": true,
+                    "interactions": [],
+                    "measureField": "C",
+                    "numberColor": "#091A3E",
+                    "numberSize": 32,
+                    "showActionMenu": false,
+                    "step": "MyAverageWinSize_1",
+                    "textAlignment": "center",
+                    "title": "My Average Win Size",
+                    "titleColor": "#091A3E",
+                    "titleSize": 18,
+                    "tooltip": {
+                        "customizeTooltip": false
+                    }
+                },
+                "type": "number"
+            },
+            "number_3": {
+                "parameters": {
+                    "compact": false,
+                    "exploreLink": true,
+                    "interactions": [],
+                    "measureField": "A",
+                    "numberColor": "#091A3E",
+                    "numberSize": 32,
+                    "showActionMenu": false,
+                    "step": "My_Sales_Query_1",
+                    "textAlignment": "center",
+                    "title": "My Sales",
+                    "titleColor": "#091A3E",
+                    "titleSize": 18,
+                    "tooltip": {
+                        "customizeTooltip": false
+                    }
+                },
+                "type": "number"
+            },
+            "number_2": {
+                "parameters": {
+                    "compact": false,
+                    "exploreLink": true,
+                    "interactions": [],
+                    "measureField": "D",
+                    "numberColor": "#091A3E",
+                    "numberSize": 20,
+                    "showActionMenu": false,
+                    "step": "WinRatePercents_1",
+                    "textAlignment": "left",
+                    "title": "by Amount:",
+                    "titleColor": "#7D98B3",
+                    "titleSize": 16,
+                    "tooltip": {
+                        "customizeTooltip": false
+                    }
+                },
+                "type": "number"
+            },
+            "number_1": {
+                "parameters": {
+                    "compact": false,
+                    "exploreLink": true,
+                    "interactions": [],
+                    "measureField": "C",
+                    "numberColor": "#091A3E",
+                    "numberSize": 20,
+                    "showActionMenu": false,
+                    "step": "WinRatePercents_1",
+                    "textAlignment": "left",
+                    "title": "by Count:",
+                    "titleColor": "#7D98B3",
+                    "titleSize": 16,
+                    "tooltip": {
+                        "customizeTooltip": false
+                    }
+                },
+                "type": "number"
+            },
+            "pillbox_1": {
+                "parameters": {
+                    "compact": false,
+                    "exploreLink": false,
+                    "fontSize": 14,
+                    "selectedTab": {
+                        "backgroundColor": "#0070D2",
+                        "borderColor": "#3274CC",
+                        "borderEdges": [],
+                        "borderWidth": 0,
+                        "textColor": "#FFFFFF"
+                    },
+                    "showActionMenu": false,
+                    "step": "static_2",
+                    "textColor": "#0070D2"
+                },
+                "type": "pillbox"
+            },
+            "pillbox_3": {
+                "parameters": {
+                    "compact": false,
+                    "exploreLink": false,
+                    "fontSize": 14,
+                    "selectedTab": {
+                        "backgroundColor": "#0070D2",
+                        "borderColor": "#3274CC",
+                        "borderEdges": [],
+                        "borderWidth": 0,
+                        "textColor": "#FFFFFF"
+                    },
+                    "showActionMenu": false,
+                    "step": "Lost_Abandoned_Toggl_1",
+                    "textColor": "#0070D2"
+                },
+                "type": "pillbox"
+            }
+        },
+        "parameters": []
+    },
+    "datasets": [
+        {
+            "id": "0Fb3O0000001AP8SAM",
+            "label": "Opp_SC",
+            "name": "Opp_SC",
+            "url": "/services/data/v61.0/wave/datasets/0Fb3O0000001AP8SAM"
+        },
+        {
+            "id": "0Fb4G0000006P00SAE",
+            "label": "Opty_Acc_Split_Tag",
+            "name": "Opty_Acc_Split_Tag",
+            "url": "/services/data/v61.0/wave/datasets/0Fb4G0000006P00SAE"
+        },
+        {
+            "id": "0Fb4G0000006P02SAE",
+            "label": "Register_CurrencyType",
+            "name": "Register_CurrencyType",
+            "url": "/services/data/v61.0/wave/datasets/0Fb4G0000006P02SAE"
+        }
+    ]
+}
