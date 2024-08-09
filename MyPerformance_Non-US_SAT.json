@@ -148,7 +148,7 @@
                             },
                             {
                                 "colspan": 7,
-                                "column": 1,
+                                "column": 9,
                                 "name": "number_1",
                                 "row": 32,
                                 "rowspan": 3,
@@ -158,8 +158,8 @@
                                 }
                             },
                             {
-                                "colspan": 7,
-                                "column": 9,
+                                "colspan": 8,
+                                "column": 1,
                                 "name": "number_2",
                                 "row": 32,
                                 "rowspan": 3,
@@ -192,8 +192,8 @@
                                 "colspan": 22,
                                 "column": 14,
                                 "name": "text_5",
-                                "row": 0,
-                                "rowspan": 3,
+                                "row": 1,
+                                "rowspan": 2,
                                 "widgetStyle": {
                                     "backgroundColor": "#FFFFFF",
                                     "borderColor": "#FFFFFF",
@@ -217,8 +217,8 @@
                                 }
                             },
                             {
-                                "colspan": 9,
-                                "column": 40,
+                                "colspan": 8,
+                                "column": 41,
                                 "name": "listselector_2",
                                 "row": 2,
                                 "rowspan": 4,
@@ -1302,7 +1302,7 @@
                 "groups": [],
                 "label": "MyAverageWinSize",
                 "numbers": [],
-                "query": "q = load \"Opty_Acc_Split_Tag\";\nq = group q by all;\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = foreach q generate sum(q.'gCRM_Split_Amount__c') * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'A', unique(q.'Opportunity.gCRM_Opportunity_ID__c') as 'B';\nq = foreach q generate 'A', 'B', A / B as 'C';\nq = limit q 2000;",
+                "query": "q = load \"Opty_Acc_Split_Tag\";\nq = group q by all;\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opportunity.StageName' matches \"Closed Won\";\nq = foreach q generate sum(q.'gCRM_Split_Amount__c') * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'A', unique(q.'Opportunity.gCRM_Opportunity_ID__c') as 'B';\nq = foreach q generate 'A', 'B', A / B as 'C';\nq = limit q 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -1313,35 +1313,118 @@
                 "useGlobal": true,
                 "visualizationParameters": {
                     "parameters": {
-                        "borderColor": "#e0e5ee",
-                        "borderWidth": 1,
-                        "cell": {
-                            "backgroundColor": "#ffffff",
-                            "fontColor": "#16325c",
-                            "fontSize": 12,
-                            "textWrap": true
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
                         },
-                        "columnProperties": {},
-                        "columns": [],
-                        "customBulkActions": [],
-                        "header": {
-                            "backgroundColor": "#f4f6f9",
-                            "fontColor": "#16325c",
-                            "fontSize": 12,
-                            "textWrap": true
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
                         },
-                        "innerMajorBorderColor": "#a8b7c7",
-                        "innerMinorBorderColor": "#e0e5ee",
-                        "interactions": [],
-                        "maxColumnWidth": 300,
-                        "minColumnWidth": 40,
-                        "mode": "variable",
-                        "numberOfLines": 1,
+                        "axisMode": "sync",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [],
+                            "plots": [
+                                "A",
+                                "B",
+                                "C"
+                            ]
+                        },
                         "showActionMenu": true,
-                        "totals": true,
-                        "verticalPadding": 8
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
                     },
-                    "type": "table"
+                    "type": "chart"
                 }
             },
             "Lost_Abandoned_Toggl_1": {
@@ -1461,6 +1544,13 @@
                             "type": "x",
                             "chartsPerLine": 4
                         },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [],
+                            "plots": [
+                                "C"
+                            ]
+                        },
                         "showActionMenu": true,
                         "measureAxis2": {
                             "sqrtScale": false,
@@ -1507,7 +1597,7 @@
                 "groups": [],
                 "label": "OpportunityList-NonUS-qry",
                 "numbers": [],
-                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = foreach q generate q.'Opportunity.Name' as 'Opportunity Name', q.'Opportunity.gCRM_Opportunity_ID__c' as 'Opportunity ID', q.'Opportunity.Account.Name' as 'Account Name', q.'gCRM_Split_Amount__c' * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'Total Global Opportunity Amount', q.'Opportunity.CloseDate' as 'Expected Close Date', q.'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Closed Reason', q.'Opportunity.StageName' as 'Stage';\nq = order q by 'Expected Close Date' desc;\nq = limit q 100;",
+                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opportunity.StageName' in [\"Closed Lost\", \"Closed Won\", \"Closed Abandon\"];\nq = foreach q generate q.'Opportunity.Name' as 'Opportunity Name', q.'Opportunity.gCRM_Opportunity_ID__c' as 'Opportunity ID', q.'Opportunity.Account.Name' as 'Account Name', q.'gCRM_Split_Amount__c' * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'Total Global Opportunity Amount', q.'Opportunity.CloseDate' as 'Expected Close Date', q.'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Closed Reason', q.'Opportunity.StageName' as 'Stage';\nq = order q by 'Expected Close Date' desc;\nq = limit q 100;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -1555,7 +1645,7 @@
                 "groups": [],
                 "label": "IsoCode_1",
                 "numbers": [],
-                "query": "q = load \"Register_CurrencyType\";\nresult = group q by 'IsoCode';\nresult = foreach result generate q.'IsoCode' as 'IsoCode', sum(q.'ConversionRate') as 'A', case \n    when q.'IsoCode' matches \"USD\" then\"01\"   \n    when q.'IsoCode' matches \"EUR\" then\"02\"\n    when q.'IsoCode' matches \"GBP\" then\"03\"\n    when q.'IsoCode' matches \"CAD\" then\"04\"\n    when q.'IsoCode' matches \"AUD\" then\"05\"\n    when q.'IsoCode' matches \"SGD\" then\"06\"\n    when q.'IsoCode' matches \"INR\" then\"07\"\n    when q.'IsoCode' matches \"JPY\" then\"08\" \n    else q.'IsoCode' \nend as 'Order';\nresult = order result by ('Order' asc);\nresult = limit result 2000;",
+                "query": "q = load \"Register_CurrencyType\";\nresult = filter q by 'IsActive' == \"true\";\nresult = group q by 'IsoCode';\nresult = foreach result generate q.'IsoCode' as 'IsoCode', sum(q.'ConversionRate') as 'A', case \n    when q.'IsoCode' matches \"USD\" then\"01\"   \n    when q.'IsoCode' matches \"EUR\" then\"02\"\n    when q.'IsoCode' matches \"GBP\" then\"03\"\n    when q.'IsoCode' matches \"CAD\" then\"04\"\n    when q.'IsoCode' matches \"AUD\" then\"05\"\n    when q.'IsoCode' matches \"SGD\" then\"06\"\n    when q.'IsoCode' matches \"INR\" then\"07\"\n    when q.'IsoCode' matches \"JPY\" then\"08\" \n    else q.'IsoCode' \nend as 'Order';\nresult = order result by ('Order' asc);\nresult = limit result 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -1845,8 +1935,8 @@
                         "richTextContent": [
                             {
                                 "attributes": {
-                                    "color": "#7d98b3",
-                                    "size": "14px"
+                                    "color": "#54698d",
+                                    "size": "12px"
                                 },
                                 "insert": "View opportunities where I am:"
                             },
@@ -1881,7 +1971,7 @@
                                     "color": "#7d98b3",
                                     "size": "12px"
                                 },
-                                "insert": "Rate: [Currency_ISO_Code]"
+                                "insert": "Rate: [Currency_ISO_Code_1]"
                             },
                             {
                                 "attributes": {
@@ -1891,9 +1981,10 @@
                             }
                         ],
                         "values": {
-                            "Currency_ISO_Code": {
+                            "Currency_ISO_Code_1": {
+                                "compact": false,
                                 "field": "IsoCode",
-                                "sourceType": "result",
+                                "sourceType": "selection",
                                 "step": "IsoCode_1"
                             }
                         }
@@ -2132,7 +2223,7 @@
                                     "color": "#7d98b3",
                                     "size": "12px"
                                 },
-                                "insert": "[A][Sum_of_Conversion_Ra]"
+                                "insert": "[Sum_of_Conversion_Ra]"
                             },
                             {
                                 "attributes": {
@@ -2142,12 +2233,6 @@
                             }
                         ],
                         "values": {
-                            "A": {
-                                "compact": false,
-                                "field": "A",
-                                "sourceType": "result",
-                                "step": "IsoCode_1"
-                            },
                             "Sum_of_Conversion_Ra": {
                                 "compact": false,
                                 "field": "A",
@@ -2168,7 +2253,7 @@
                     "defaultFiscalMode": false,
                     "displayMode": "combo",
                     "filterStyle": {
-                        "titleColor": "#091A3E",
+                        "titleColor": "#54698D",
                         "valueColor": "#091A3E"
                     },
                     "instant": false,
@@ -2185,13 +2270,14 @@
                 "parameters": {
                     "compact": false,
                     "displayMode": "combo",
+                    "displayTemplate": "[IsoCode]",
                     "exploreLink": false,
                     "filterStyle": {
-                        "titleColor": "#091A3E",
-                        "valueColor": "#091A3E"
+                        "titleColor": "#54698D",
+                        "valueColor": "#16325C"
                     },
                     "instant": true,
-                    "measureField": "A",
+                    "measureField": "none",
                     "showActionMenu": false,
                     "step": "IsoCode_1",
                     "title": "Select your Currency:"
@@ -2264,9 +2350,7 @@
                     "innerMajorBorderColor": "#a8b7c7",
                     "innerMinorBorderColor": "#e0e5ee",
                     "interactions": [],
-                    "maxColumnWidth": 300,
-                    "minColumnWidth": 40,
-                    "mode": "variable",
+                    "mode": "fittocontainer",
                     "numberOfLines": 1,
                     "showActionMenu": true,
                     "showRowIndexColumn": true,
@@ -2344,13 +2428,13 @@
                     "exploreLink": true,
                     "interactions": [],
                     "measureField": "D",
-                    "numberColor": "#091A3E",
-                    "numberSize": 20,
+                    "numberColor": "#16325C",
+                    "numberSize": 24,
                     "showActionMenu": false,
                     "step": "WinRatePercents_1",
                     "textAlignment": "left",
                     "title": "by Amount:",
-                    "titleColor": "#7D98B3",
+                    "titleColor": "#16325C",
                     "titleSize": 16,
                     "tooltip": {
                         "customizeTooltip": false
@@ -2364,8 +2448,8 @@
                     "exploreLink": true,
                     "interactions": [],
                     "measureField": "C",
-                    "numberColor": "#091A3E",
-                    "numberSize": 20,
+                    "numberColor": "#7D98B3",
+                    "numberSize": 16,
                     "showActionMenu": false,
                     "step": "WinRatePercents_1",
                     "textAlignment": "left",
