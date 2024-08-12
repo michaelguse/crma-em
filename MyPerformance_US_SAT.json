@@ -701,7 +701,7 @@
                 "groups": [],
                 "label": "SalesCreditAmount",
                 "numbers": [],
-                "query": "q = load \"Load_opty_services_acct_all\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'OpportunityServices__c.StageName' == \"Closed Won\";\nq = group q by all;\nq = foreach q generate sum(q.'CustomTeams.gCRM_Sales_Credit_Amount__c') as 'B';\nq = limit q 2000;",
+                "query": "q = load \"Load_opty_custom_team\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter_sc\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'opty.OpportunityServices__c.StageName' == \"Closed Won\";\nq = group q by all;\nq = foreach q generate sum(q.'gCRM_Sales_Credit_Amount__c') as 'B';\nq = limit q 2000;\n",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -776,13 +776,6 @@
                             "type": "x",
                             "chartsPerLine": 4
                         },
-                        "columnMap": {
-                            "trellis": [],
-                            "dimensionAxis": [],
-                            "plots": [
-                                "B"
-                            ]
-                        },
                         "showActionMenu": true,
                         "measureAxis2": {
                             "sqrtScale": false,
@@ -830,13 +823,7 @@
                     "saql_filter": {
                         "type": "string"
                     },
-                    "qry_filter_value": {
-                        "type": "string"
-                    },
-                    "qry_filter_compare": {
-                        "type": "string"
-                    },
-                    "qry_filter_field": {
+                    "saql_filter_sc": {
                         "type": "string"
                     },
                     "Display": {
@@ -844,7 +831,7 @@
                     }
                 },
                 "label": "OptyRoleToggle",
-                "selectMode": "single",
+                "selectMode": "singlerequired",
                 "start": {
                     "Display": [
                         "On the Opportunity Team"
@@ -854,15 +841,18 @@
                 "values": [
                     {
                         "Display": "On the Opportunity Team",
-                        "saql_filter": "q = filter q by 'OTM.UserId' matches "
+                        "saql_filter": "q = filter q by 'OTM.UserId' matches ",
+                        "saql_filter_sc": "q = filter q by 'gCRM_User__c' matches "
                     },
                     {
                         "Display": "Primary",
-                        "saql_filter": "q = filter q by 'CustomTeams.gCRM_Opportunity_Team_Role__c' in [\"Opportunity Leader\", \"Split Leader\",\"Split Manager\",\"Pursuit Primary\"] && 'OTM.UserId' matches "
+                        "saql_filter": "q = filter q by 'CustomTeams.gCRM_Opportunity_Team_Role__c' in [\"Opportunity Leader\", \"Split Leader\",\"Split Manager\",\"Pursuit Primary\"] && 'OTM.UserId' matches ",
+                        "saql_filter_sc": "q = filter q by 'opty.CustomTeams.gCRM_Opportunity_Team_Role__c' in [\"Opportunity Leader\", \"Split Leader\",\"Split Manager\",\"Pursuit Primary\"] && 'gCRM_User__c' matches "
                     },
                     {
                         "Display": "Opportunity Leader",
-                        "saql_filter": "q = filter q by 'OpportunityServices__c.OwnerId' == "
+                        "saql_filter": "q = filter q by 'OpportunityServices__c.OwnerId' == ",
+                        "saql_filter_sc": "q = filter q by 'opty.OpportunityServices__c.OwnerId' == "
                     }
                 ]
             },
@@ -1411,17 +1401,17 @@
                         "innerMajorBorderColor": "#a8b7c7",
                         "innerMinorBorderColor": "#e0e5ee",
                         "interactions": [],
-                        "maxColumnWidth": 300,
-                        "minColumnWidth": 40,
-                        "mode": "variable",
+                        "mode": "fittocontainer",
                         "numberOfLines": 1,
-                        "showActionMenu": true,
+                        "pivoted": false,
+                        "showActionMenu": false,
                         "showRowIndexColumn": false,
                         "totals": true,
                         "verticalPadding": 8
                     },
                     "type": "table"
-                }
+                },
+                "start": []
             },
             "Actual_Close_1": {
                 "broadcastFacet": true,
@@ -1453,7 +1443,7 @@
                 "start": [
                     [
                         1704067200000,
-                        1723158000000
+                        1723420800000
                     ]
                 ],
                 "type": "aggregateflex",
@@ -1894,12 +1884,10 @@
                     "innerMajorBorderColor": "#a8b7c7",
                     "innerMinorBorderColor": "#e0e5ee",
                     "interactions": [],
-                    "maxColumnWidth": 300,
-                    "minColumnWidth": 40,
-                    "mode": "variable",
+                    "mode": "fittocontainer",
                     "numberOfLines": 1,
                     "pivoted": false,
-                    "showActionMenu": true,
+                    "showActionMenu": false,
                     "showRowIndexColumn": false,
                     "step": "opty_list_view_saql_1",
                     "totals": true,
@@ -2287,7 +2275,7 @@
                         "type": "x",
                         "chartsPerLine": 4
                     },
-                    "showActionMenu": true,
+                    "showActionMenu": false,
                     "measureAxis2": {
                         "sqrtScale": false,
                         "showTitle": true,
@@ -2459,6 +2447,12 @@
             "label": "Load_opty_services_acct_all",
             "name": "Load_opty_services_acct_all",
             "url": "/services/data/v61.0/wave/datasets/0FbbY000000ALMZSA4"
+        },
+        {
+            "id": "0FbbY000000CbTeSAK",
+            "label": "Load_opty_custom_team",
+            "name": "Load_opty_custom_team",
+            "url": "/services/data/v61.0/wave/datasets/0FbbY000000CbTeSAK"
         }
     ]
 }
