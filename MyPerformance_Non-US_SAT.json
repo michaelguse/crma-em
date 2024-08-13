@@ -5,7 +5,24 @@
         "dataSourceLinksInfo": {
             "enableAutomaticLinking": true,
             "excludeRelationships": [],
-            "links": []
+            "links": [
+                {
+                    "fields": [
+                        {
+                            "dataSourceName": "Opp_SC",
+                            "dataSourceType": "dataset",
+                            "fieldName": "Opp.StageName"
+                        },
+                        {
+                            "dataSourceName": "Opty_Acc_Split_Tag",
+                            "dataSourceType": "dataset",
+                            "fieldName": "Opportunity.StageName"
+                        }
+                    ],
+                    "label": "Link Opp Sales Credit",
+                    "name": "Link_2336"
+                }
+            ]
         },
         "filters": [],
         "gridLayouts": [
@@ -48,7 +65,9 @@
                                 "name": "text_1",
                                 "row": 28,
                                 "rowspan": 4,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 20,
@@ -70,7 +89,9 @@
                                 "name": "text_2",
                                 "row": 28,
                                 "rowspan": 4,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 13,
@@ -78,7 +99,9 @@
                                 "name": "text_3",
                                 "row": 28,
                                 "rowspan": 4,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 3,
@@ -128,7 +151,9 @@
                                 "name": "chart_2",
                                 "row": 33,
                                 "rowspan": 34,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 50,
@@ -136,7 +161,9 @@
                                 "name": "container_9",
                                 "row": 70,
                                 "rowspan": 55,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 48,
@@ -144,7 +171,9 @@
                                 "name": "table_1",
                                 "row": 70,
                                 "rowspan": 52,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 7,
@@ -174,7 +203,9 @@
                                 "name": "chart_6",
                                 "row": 36,
                                 "rowspan": 31,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 10,
@@ -284,7 +315,9 @@
                                 "name": "chart_1",
                                 "row": 33,
                                 "rowspan": 34,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 10,
@@ -305,7 +338,9 @@
                                 "name": "text_4",
                                 "row": 6,
                                 "rowspan": 2,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 4,
@@ -313,7 +348,9 @@
                                 "name": "text_6",
                                 "row": 6,
                                 "rowspan": 2,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             }
                         ]
                     }
@@ -922,9 +959,7 @@
                 ],
                 "type": "aggregateflex",
                 "useGlobal": true,
-                "visualizationParameters": {
-                    "options": {}
-                }
+                "visualizationParameters": {}
             },
             "ClosedLostAbandonRea_1": {
                 "broadcastFacet": true,
@@ -1218,10 +1253,7 @@
                         "qry_filter_compare": "matches",
                         "qry_filter_value": "*"
                     }
-                ],
-                "numbers": [],
-                "strings": [],
-                "groups": []
+                ]
             },
             "static_2": {
                 "broadcastFacet": true,
@@ -1255,10 +1287,7 @@
                         "saql": "q = foreach q generate 'Opportunity.StageName' as 'Opportunity.StageName', sum('gCRM_Split_Amount__c') as 'A'",
                         "saql_field": "'gCRM_Split_Amount__c'"
                     }
-                ],
-                "numbers": [],
-                "strings": [],
-                "groups": []
+                ]
             },
             "static_1": {
                 "broadcastFacet": true,
@@ -1292,10 +1321,7 @@
                         "saql_field": "'gCRM_Split_Amount__c'",
                         "saql_map": "gCRM_Split_Amount__c"
                     }
-                ],
-                "numbers": [],
-                "strings": [],
-                "groups": []
+                ]
             },
             "MyAverageWinSize_1": {
                 "broadcastFacet": true,
@@ -1459,10 +1485,7 @@
                         "saql_field": "'gCRM_Split_Amount__c'",
                         "saql_map": "gCRM_Split_Amount__c"
                     }
-                ],
-                "numbers": [],
-                "strings": [],
-                "groups": []
+                ]
             },
             "Sales_Credit_Query_1": {
                 "broadcastFacet": true,
@@ -2259,8 +2282,7 @@
                     "relativeModeEnabled": true,
                     "showActionMenu": false,
                     "step": "Opportunity_CloseDat_1",
-                    "title": "Expected Close Date",
-                    "customFilterPresets": []
+                    "title": "Expected Close Date"
                 },
                 "type": "dateselector"
             },
@@ -2362,9 +2384,7 @@
                     "showRowIndexColumn": true,
                     "step": "OpportunityList_NonU_1",
                     "totals": true,
-                    "verticalPadding": 8,
-                    "evenRowColor": null,
-                    "oddRowColor": null
+                    "verticalPadding": 8
                 },
                 "type": "table"
             },
@@ -2504,8 +2524,7 @@
                 },
                 "type": "pillbox"
             }
-        },
-        "parameters": []
+        }
     },
     "datasets": [
         {
