@@ -19,7 +19,7 @@
                             "fieldName": "Opportunity.StageName"
                         }
                     ],
-                    "label": "Link Opp Sales Credit",
+                    "label": "Stage Name",
                     "name": "Link_2336"
                 }
             ]
@@ -504,48 +504,132 @@
                 "groups": [],
                 "label": "WinRatePercents",
                 "numbers": [],
-                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opportunity.StageName' in [\"Closed Lost\", \"Closed Won\"];\nq = group q by 'Opportunity.StageName';\nq = foreach q generate q.'Opportunity.StageName' as 'Opportunity.StageName', sum(q.'gCRM_Split_Amount__c') as 'A', unique(q.'Opportunity.gCRM_Opportunity_ID__c') as 'B';\nq = group q by 'Opportunity.StageName';\nq = foreach q generate 'Opportunity.StageName', first(A) as 'A', first(B) as 'B', sum(B)/sum(sum(B)) over ([..] partition by all) as 'C', sum(A)/sum(sum(A)) over ([..] partition by all) as 'D';\nq = order q by 'Opportunity.StageName' desc;\nq = limit q 2000;",
+                "query": "q = load \"Opty_Acc_Split_Tag\";\nq = filter q by 'Opportunity.StageName' in [\"Closed Lost\", \"Closed Won\"];\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\n--q = group q by 'Opportunity.StageName';\n--q = foreach q generate q.'Opportunity.StageName' as 'Opportunity.StageName', sum(q.'gCRM_Split_Amount__c') as 'A', unique(q.'Opportunity.gCRM_Opportunity_ID__c') as 'B';\n--q = foreach q generate 'Opportunity.StageName', first(A) as 'A', first(B) as 'B', sum(B)/sum(sum(B)) over ([..] partition by all) as 'C', sum(A)/sum(sum(A)) over ([..] partition by all) as 'D';\nq = foreach q generate 'Opportunity.StageName' as 'Opportunity.StageName', unique(q.'Opportunity.gCRM_Opportunity_ID__c') as 'B', sum(q.'gCRM_Split_Amount__c') as 'C';\nq = group q by 'Opportunity.StageName';\nq = order q by 'Opportunity.StageName' desc;\nq = foreach q generate 'Opportunity.StageName', sum(B) as 'B', sum('C') as 'C', sum(B)/sum(sum(B)) over ([..] partition by all) as 'Win Rate Count', sum(C)/sum(sum(C)) over ([..] partition by all) as 'Win Rate Amount';\nq = limit q 10;\n",
                 "receiveFacetSource": {
-                    "mode": "none",
+                    "mode": "all",
                     "steps": []
                 },
                 "selectMode": "single",
-                "start": [],
                 "strings": [],
                 "type": "saql",
-                "useGlobal": false,
+                "useGlobal": true,
                 "visualizationParameters": {
                     "parameters": {
-                        "borderColor": "#e0e5ee",
-                        "borderWidth": 1,
-                        "cell": {
-                            "backgroundColor": "#ffffff",
-                            "fontColor": "#16325c",
-                            "fontSize": 12,
-                            "textWrap": true
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
                         },
-                        "columnProperties": {},
-                        "columns": [],
-                        "customBulkActions": [],
-                        "header": {
-                            "backgroundColor": "#f4f6f9",
-                            "fontColor": "#16325c",
-                            "fontSize": 12,
-                            "textWrap": true
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
                         },
-                        "innerMajorBorderColor": "#a8b7c7",
-                        "innerMinorBorderColor": "#e0e5ee",
-                        "interactions": [],
-                        "maxColumnWidth": 300,
-                        "minColumnWidth": 40,
-                        "mode": "variable",
-                        "numberOfLines": 1,
+                        "axisMode": "sync",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "Opportunity.StageName"
+                            ],
+                            "plots": [
+                                "B",
+                                "C",
+                                "Win Rate Count",
+                                "Win Rate Amount"
+                            ]
+                        },
                         "showActionMenu": true,
-                        "showRowIndexColumn": false,
-                        "totals": true,
-                        "verticalPadding": 8
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
                     },
-                    "type": "table"
+                    "type": "chart"
                 }
             },
             "UserData": {
@@ -2457,14 +2541,14 @@
                     "compact": false,
                     "exploreLink": true,
                     "interactions": [],
-                    "measureField": "D",
-                    "numberColor": "#16325C",
+                    "measureField": "Win Rate Amount",
+                    "numberColor": "#091A3E",
                     "numberSize": 24,
                     "showActionMenu": false,
                     "step": "WinRatePercents_1",
                     "textAlignment": "left",
                     "title": "by Amount:",
-                    "titleColor": "#16325C",
+                    "titleColor": "#091A3E",
                     "titleSize": 16,
                     "tooltip": {
                         "customizeTooltip": false
@@ -2477,7 +2561,7 @@
                     "compact": false,
                     "exploreLink": true,
                     "interactions": [],
-                    "measureField": "C",
+                    "measureField": "Win Rate Count",
                     "numberColor": "#7D98B3",
                     "numberSize": 16,
                     "showActionMenu": false,
