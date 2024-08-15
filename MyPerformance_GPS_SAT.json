@@ -5,7 +5,40 @@
         "dataSourceLinksInfo": {
             "enableAutomaticLinking": true,
             "excludeRelationships": [],
-            "links": []
+            "links": [
+                {
+                    "fields": [
+                        {
+                            "dataSourceName": "Load_CustomTeam_Opty",
+                            "dataSourceType": "dataset",
+                            "fieldName": "Opty.gCRM_GPS_Stage_US__c"
+                        },
+                        {
+                            "dataSourceName": "Load_opty_services_acct_all",
+                            "dataSourceType": "dataset",
+                            "fieldName": "OpportunityServices__c.gCRM_GPS_Stage_US__c"
+                        }
+                    ],
+                    "label": "GPS Stage Name",
+                    "name": "Link_16916"
+                },
+                {
+                    "fields": [
+                        {
+                            "dataSourceName": "Load_CustomTeam_Opty",
+                            "dataSourceType": "dataset",
+                            "fieldName": "Opty.gCRM_Reason_for_Won_Lost_Abandoned__c"
+                        },
+                        {
+                            "dataSourceName": "Load_opty_services_acct_all",
+                            "dataSourceType": "dataset",
+                            "fieldName": "OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c"
+                        }
+                    ],
+                    "label": "Primary Reason Code",
+                    "name": "Link_16934"
+                }
+            ]
         },
         "filters": [],
         "gridLayouts": [
