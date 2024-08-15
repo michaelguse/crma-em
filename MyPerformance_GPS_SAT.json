@@ -1,5 +1,5 @@
 {
-    "label": "Copy of My Performance - GPS",
+    "label": "My Performance - GPS",
     "mobileDisabled": false,
     "state": {
         "dataSourceLinksInfo": {
@@ -226,16 +226,6 @@
                                 }
                             },
                             {
-                                "colspan": 15,
-                                "column": 34,
-                                "name": "chart_11",
-                                "row": 30,
-                                "rowspan": 32,
-                                "widgetStyle": {
-                                    "borderEdges": []
-                                }
-                            },
-                            {
                                 "colspan": 16,
                                 "column": 17,
                                 "name": "chart_1",
@@ -246,8 +236,8 @@
                                 }
                             },
                             {
-                                "colspan": 50,
-                                "column": 0,
+                                "colspan": 48,
+                                "column": 1,
                                 "name": "table_1",
                                 "row": 66,
                                 "rowspan": 65,
@@ -301,6 +291,16 @@
                                     ],
                                     "borderRadius": 0,
                                     "borderWidth": 2
+                                }
+                            },
+                            {
+                                "colspan": 15,
+                                "column": 34,
+                                "name": "chart_2",
+                                "row": 30,
+                                "rowspan": 32,
+                                "widgetStyle": {
+                                    "borderEdges": []
                                 }
                             }
                         ]
@@ -1372,8 +1372,14 @@
                 "selectMode": "single",
                 "start": [
                     [
-                        1704067200000,
-                        1723075200000
+                        [
+                            "fiscal_year",
+                            0
+                        ],
+                        [
+                            "day",
+                            0
+                        ]
                     ]
                 ],
                 "type": "aggregateflex",
@@ -1385,39 +1391,18 @@
                 "groups": [],
                 "label": "ClosedLostAbandoned_StackedChart_GPS_saql",
                 "numbers": [],
-                "query": "q = load \"Load_Competitor_Service_All\";\nLoad_Competitor_Service_All = load \"Load_Competitor_Service_All\";\nq = filter q by 'CompetitorService.OpportunityServices__c.gCRM_GPS_Stage_US__c' in [\"Closed Lost\",\"Closed Abandoned\"];\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter_cs\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = group q by ('CompetitorService.OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', 'CompetitorService.OpportunityServices__c.gCRM_GPS_Stage_US__c');\n{{cell(Lost_Abandoned_Toggl_1.selection, 0, \"saql\").asString()}};\nq = order q by ('CompetitorService.OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' asc, 'CompetitorService.OpportunityServices__c.gCRM_GPS_Stage_US__c' asc);\nq = limit q 2000;",
+                "query": "q = load \"Load_Competitor_Service_All\";\nq = filter q by 'CompetitorService.OpportunityServices__c.gCRM_GPS_Stage_US__c' in [\"Closed Lost\",\"Closed Abandoned\"];\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter_cs\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = group q by ('CompetitorService.OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', 'CompetitorService.OpportunityServices__c.gCRM_GPS_Stage_US__c');\n{{cell(Lost_Abandoned_Toggl_1.selection, 0, \"saql\").asString()}};\nq = order q by ('CompetitorService.OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' asc, 'CompetitorService.OpportunityServices__c.gCRM_GPS_Stage_US__c' asc);\nq = limit q 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
                 },
                 "selectMode": "single",
-                "start": [],
                 "strings": [],
                 "type": "saql",
                 "useGlobal": true,
                 "visualizationParameters": {
                     "parameters": {
                         "autoFitMode": "keepLabels",
-                        "bins": {
-                            "breakpoints": {
-                                "high": 100,
-                                "low": 0
-                            },
-                            "bands": {
-                                "high": {
-                                    "color": "#008000",
-                                    "label": ""
-                                },
-                                "low": {
-                                    "color": "#B22222",
-                                    "label": ""
-                                },
-                                "medium": {
-                                    "color": "#ffa500",
-                                    "label": ""
-                                }
-                            }
-                        },
                         "legend": {
                             "descOrder": false,
                             "showHeader": false,
@@ -1450,7 +1435,6 @@
                             "align": "center",
                             "subtitleLabel": ""
                         },
-                        "binValues": false,
                         "trellis": {
                             "flipLabels": false,
                             "showGridLines": true,
@@ -1461,6 +1445,18 @@
                             "enable": false,
                             "type": "x",
                             "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "split": [
+                                "CompetitorService.OpportunityServices__c.gCRM_GPS_Stage_US__c"
+                            ],
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "CompetitorService.OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c"
+                            ],
+                            "plots": [
+                                "A"
+                            ]
                         },
                         "showActionMenu": false,
                         "measureAxis2": {
@@ -1590,12 +1586,13 @@
                 "groups": [],
                 "label": "bottom table query 2",
                 "numbers": [],
-                "query": "q = load \"Load_opty_services_acct_all\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'OpportunityServices__c.gCRM_GPS_Stage_US__c' in [\"Closed Won\", \"Closed Abandoned\", \"Closed Lost\"];\nq = foreach q generate q.'OpportunityServices__c.Name' as 'Opportunity Name', q.'OpportunityServices__c.gCRM_Opportunity_ID__c' as 'Opportunity ID', q.'OpportunityServices__c.gCRM_English_Account_Name__c' as 'English Account Name', q.'OpportunityServices__c.gCRM_Sum_of_Opportunity_Splits__c'  as 'TGOA (converted)', q.'OpportunityServices__c.SalesCredit.gCRM_Sales_Credit_Amount__c' as 'Sales Credit Amount', q.'OpportunityServices__c.gCRM_Actual_Close_Date__c' as 'Actual Close Date', q.'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Closed Reason', q.'OpportunityServices__c.gCRM_GPS_Stage_US__c' as 'GPS Stagec';\nq = order q by 'Actual Close Date' desc;\nq = limit q 2000;\n",
+                "query": "q = load \"Load_opty_services_acct_all\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'OpportunityServices__c.gCRM_GPS_Stage_US__c' in [\"Closed Won\", \"Closed Abandoned\", \"Closed Lost\"];\nq = group q by ('OpportunityServices__c.Name', 'OpportunityServices__c.gCRM_Opportunity_ID__c', 'OpportunityServices__c.gCRM_English_Account_Name__c', 'OpportunityServices__c.gCRM_Actual_Close_Date__c', 'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', 'OpportunityServices__c.gCRM_GPS_Stage_US__c');\nq = foreach q generate q.'OpportunityServices__c.Name' as 'Opportunity Name', q.'OpportunityServices__c.gCRM_Opportunity_ID__c' as 'OpportunityServices__c.gCRM_Opportunity_ID__c', q.'OpportunityServices__c.gCRM_English_Account_Name__c' as 'English Account Name', sum(q.'OpportunityServices__c.gCRM_Sum_of_Opportunity_Splits__c') as 'TGOA (converted)', sum(q.'OpportunityServices__c.SalesCredit.gCRM_Sales_Credit_Amount__c') as 'Sales Credit Amount', substr(date_to_string(toDate(q.'OpportunityServices__c.gCRM_Actual_Close_Date__c', \"yyyy-MM-dd\"), \"MM/dd/yyyy\"), 1, 10) as 'Actual Close Date', q.'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Closed Reason', q.'OpportunityServices__c.gCRM_GPS_Stage_US__c' as 'GPS Stage';\nq = order q by 'Actual Close Date' desc;\nq = limit q 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
                 },
                 "selectMode": "single",
+                "start": [],
                 "strings": [],
                 "type": "saql",
                 "useGlobal": true,
@@ -1750,7 +1747,17 @@
                         "fontSize": 12,
                         "textWrap": true
                     },
-                    "columnProperties": {},
+                    "columnProperties": {
+                        "OpportunityServices__c.gCRM_Opportunity_ID__c": {
+                            "parameters": {
+                                "alignment": "left",
+                                "styles": {
+                                    "linkColor": "#1b96ff"
+                                }
+                            },
+                            "type": "text"
+                        }
+                    },
                     "columns": [],
                     "customBulkActions": [],
                     "exploreLink": true,
@@ -1765,6 +1772,7 @@
                     "interactions": [],
                     "mode": "fittocontainer",
                     "numberOfLines": 1,
+                    "pivoted": false,
                     "showActionMenu": false,
                     "step": "lens_2",
                     "totals": true,
@@ -2090,6 +2098,10 @@
                 "parameters": {
                     "absoluteModeEnabled": true,
                     "calendarTypeSwitchingAllowed": false,
+                    "customFilterPresets": [
+                        "currentFiscalYear",
+                        "currentFiscalYearToDate"
+                    ],
                     "defaultFiscalMode": false,
                     "displayMode": "filter",
                     "filterStyle": {
@@ -2097,7 +2109,7 @@
                         "valueColor": "#16325C"
                     },
                     "instant": true,
-                    "presetsEnabled": false,
+                    "presetsEnabled": true,
                     "relativeModeEnabled": false,
                     "showActionMenu": false,
                     "step": "Actual_Close_1",
@@ -2137,6 +2149,107 @@
                     "interactions": []
                 },
                 "type": "container"
+            },
+            "chart_2": {
+                "parameters": {
+                    "autoFitMode": "keepLabels",
+                    "legend": {
+                        "descOrder": false,
+                        "showHeader": false,
+                        "show": true,
+                        "customSize": "auto",
+                        "position": "bottom-center",
+                        "inside": false
+                    },
+                    "axisMode": "sync",
+                    "totalSumMode": "none",
+                    "tooltip": {
+                        "content": {
+                            "legend": {
+                                "showBinLabel": true,
+                                "measures": [],
+                                "showNullValues": true,
+                                "customizeLegend": false,
+                                "showPercentage": true,
+                                "showDimensions": true,
+                                "showMeasures": true,
+                                "dimensions": []
+                            }
+                        }
+                    },
+                    "visualizationType": "stackhbar",
+                    "exploreLink": false,
+                    "title": {
+                        "fontSize": 14,
+                        "subtitleFontSize": 11,
+                        "label": "",
+                        "align": "center",
+                        "subtitleLabel": ""
+                    },
+                    "trellis": {
+                        "flipLabels": false,
+                        "showGridLines": true,
+                        "size": [
+                            100,
+                            100
+                        ],
+                        "enable": false,
+                        "type": "x",
+                        "chartsPerLine": 4
+                    },
+                    "columnMap": {
+                        "split": [
+                            "CompetitorService.OpportunityServices__c.gCRM_GPS_Stage_US__c"
+                        ],
+                        "trellis": [],
+                        "dimensionAxis": [
+                            "CompetitorService.OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c"
+                        ],
+                        "plots": [
+                            "A"
+                        ]
+                    },
+                    "showActionMenu": false,
+                    "measureAxis2": {
+                        "sqrtScale": false,
+                        "showTitle": true,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "valueType": "compactNumber",
+                    "measureAxis1": {
+                        "sqrtScale": false,
+                        "showTitle": false,
+                        "showAxis": true,
+                        "title": "",
+                        "customDomain": {
+                            "showDomain": false
+                        }
+                    },
+                    "normalize": false,
+                    "theme": "wave",
+                    "step": "ClosedLostAbandoned__1",
+                    "compactDecimalDigits": -1,
+                    "dimensionAxis": {
+                        "showTitle": false,
+                        "customSize": "auto",
+                        "showAxis": true,
+                        "title": "",
+                        "icons": {
+                            "useIcons": false,
+                            "iconProps": {
+                                "fit": "cover",
+                                "column": "",
+                                "type": "round"
+                            }
+                        }
+                    },
+                    "applyConditionalFormatting": true
+                },
+                "type": "chart"
             },
             "chart_1": {
                 "parameters": {
@@ -2241,116 +2354,6 @@
                     "normalize": false,
                     "theme": "wave",
                     "step": "ClosedWonReason_Stac_1",
-                    "compactDecimalDigits": -1,
-                    "dimensionAxis": {
-                        "showTitle": false,
-                        "customSize": "auto",
-                        "showAxis": true,
-                        "title": "",
-                        "icons": {
-                            "useIcons": false,
-                            "iconProps": {
-                                "fit": "cover",
-                                "column": "",
-                                "type": "round"
-                            }
-                        }
-                    },
-                    "applyConditionalFormatting": true
-                },
-                "type": "chart"
-            },
-            "chart_11": {
-                "parameters": {
-                    "autoFitMode": "keepLabels",
-                    "bins": {
-                        "breakpoints": {
-                            "high": 100,
-                            "low": 0
-                        },
-                        "bands": {
-                            "high": {
-                                "color": "#008000",
-                                "label": ""
-                            },
-                            "low": {
-                                "color": "#B22222",
-                                "label": ""
-                            },
-                            "medium": {
-                                "color": "#ffa500",
-                                "label": ""
-                            }
-                        }
-                    },
-                    "legend": {
-                        "descOrder": false,
-                        "showHeader": false,
-                        "show": true,
-                        "customSize": "auto",
-                        "position": "bottom-center",
-                        "inside": false
-                    },
-                    "axisMode": "sync",
-                    "totalSumMode": "none",
-                    "tooltip": {
-                        "content": {
-                            "legend": {
-                                "showBinLabel": true,
-                                "measures": [],
-                                "showNullValues": true,
-                                "customizeLegend": false,
-                                "showPercentage": true,
-                                "showDimensions": true,
-                                "showMeasures": true,
-                                "dimensions": []
-                            }
-                        }
-                    },
-                    "visualizationType": "stackhbar",
-                    "exploreLink": true,
-                    "title": {
-                        "fontSize": 14,
-                        "subtitleFontSize": 11,
-                        "label": "",
-                        "align": "center",
-                        "subtitleLabel": ""
-                    },
-                    "binValues": false,
-                    "trellis": {
-                        "flipLabels": false,
-                        "showGridLines": true,
-                        "size": [
-                            100,
-                            100
-                        ],
-                        "enable": false,
-                        "type": "x",
-                        "chartsPerLine": 4
-                    },
-                    "showActionMenu": false,
-                    "measureAxis2": {
-                        "sqrtScale": false,
-                        "showTitle": true,
-                        "showAxis": true,
-                        "title": "",
-                        "customDomain": {
-                            "showDomain": false
-                        }
-                    },
-                    "valueType": "compactNumber",
-                    "measureAxis1": {
-                        "sqrtScale": false,
-                        "showTitle": false,
-                        "showAxis": true,
-                        "title": "",
-                        "customDomain": {
-                            "showDomain": false
-                        }
-                    },
-                    "normalize": false,
-                    "theme": "wave",
-                    "step": "ClosedLostAbandoned__1",
                     "compactDecimalDigits": -1,
                     "dimensionAxis": {
                         "showTitle": false,
