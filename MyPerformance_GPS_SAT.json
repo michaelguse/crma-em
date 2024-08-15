@@ -1399,7 +1399,7 @@
                 "start": [
                     [
                         [
-                            "fiscal_year",
+                            "year",
                             0
                         ],
                         [
@@ -1423,6 +1423,7 @@
                     "steps": []
                 },
                 "selectMode": "single",
+                "start": [],
                 "strings": [],
                 "type": "saql",
                 "useGlobal": true,
@@ -1606,6 +1607,7 @@
                     "steps": []
                 },
                 "selectMode": "single",
+                "start": [],
                 "strings": [],
                 "type": "saql",
                 "useGlobal": true,
@@ -2103,8 +2105,8 @@
                     "absoluteModeEnabled": true,
                     "calendarTypeSwitchingAllowed": false,
                     "customFilterPresets": [
-                        "currentFiscalYear",
-                        "currentFiscalYearToDate"
+                        "currentYear",
+                        "currentYearToDate"
                     ],
                     "defaultFiscalMode": false,
                     "displayMode": "filter",
