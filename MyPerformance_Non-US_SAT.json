@@ -1620,7 +1620,7 @@
                 "groups": [],
                 "label": "OpportunityList-NonUS-qry",
                 "numbers": [],
-                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opportunity.StageName' in [\"Closed Lost\", \"Closed Won\", \"Closed Abandoned\"];\nq = group q by ('Opportunity.Name', 'Opportunity.gCRM_Opportunity_ID__c', 'Opportunity.Account.Name', 'Opportunity.CloseDate', 'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c', 'Opportunity.StageName');\nq = foreach q generate q.'Opportunity.Name' as 'Opportunity Name', q.'Opportunity.gCRM_Opportunity_ID__c' as 'Opportunity ID', q.'Opportunity.Account.Name' as 'Account Name', sum(q.'gCRM_Split_Amount__c') * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'Total Global Opportunity Amount', q.'Opportunity.CloseDate' as 'Expected Close Date', q.'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Closed Reason', q.'Opportunity.StageName' as 'Stage';\nq = order q by 'Expected Close Date' desc;\nq = limit q 2000;",
+                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opportunity.StageName' in [\"Closed Lost\", \"Closed Won\", \"Closed Abandoned\"];\nq = group q by ('Opportunity.Name', 'Opportunity.gCRM_Opportunity_ID__c', 'Opportunity.Account.Name', 'Opportunity.CloseDate', 'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c', 'Opportunity.StageName');\nq = foreach q generate q.'Opportunity.Name' as 'Opportunity Name', q.'Opportunity.gCRM_Opportunity_ID__c' as 'Opportunity.gCRM_Opportunity_ID__c', q.'Opportunity.Account.Name' as 'Account Name', sum(q.'gCRM_Split_Amount__c') * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'Total Global Opportunity Amount', q.'Opportunity.CloseDate' as 'Expected Close Date', q.'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Closed Reason', q.'Opportunity.StageName' as 'Stage';\nq = order q by 'Expected Close Date' desc;\nq = limit q 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -1653,6 +1653,7 @@
                         "interactions": [],
                         "mode": "fittocontainer",
                         "numberOfLines": 1,
+                        "pivoted": false,
                         "showActionMenu": false,
                         "showRowIndexColumn": true,
                         "totals": true,
@@ -2358,9 +2359,12 @@
                         "textWrap": true
                     },
                     "columnProperties": {
-                        "Expected Close Date": {
+                        "Opportunity.gCRM_Opportunity_ID__c": {
                             "parameters": {
-                                "alignment": "center"
+                                "alignment": "left",
+                                "styles": {
+                                    "linkColor": "#1b96ff"
+                                }
                             },
                             "type": "text"
                         }
