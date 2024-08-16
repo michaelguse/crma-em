@@ -37,6 +37,22 @@
                     ],
                     "label": "Primary Reason Code",
                     "name": "Link_2960"
+                },
+                {
+                    "fields": [
+                        {
+                            "dataSourceName": "Load_CustomTeam_Opty",
+                            "dataSourceType": "dataset",
+                            "fieldName": "Opty.gCRM_Actual_Close_Date__c"
+                        },
+                        {
+                            "dataSourceName": "Load_opty_services_acct_all",
+                            "dataSourceType": "dataset",
+                            "fieldName": "OpportunityServices__c.gCRM_Actual_Close_Date__c"
+                        }
+                    ],
+                    "label": "Actual Close Date",
+                    "name": "Link_916"
                 }
             ]
         },
@@ -1108,7 +1124,7 @@
                     }
                 },
                 "label": "OptyRoleToggle",
-                "selectMode": "single",
+                "selectMode": "singlerequired",
                 "start": {
                     "Display": [
                         "On the Opportunity Team"
@@ -1368,6 +1384,155 @@
                         "saql": "q = foreach q generate q.'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'OpportunityServices__c.gCRM_GPS_Stage_US__c' as 'OpportunityServices__c.gCRM_GPS_Stage_US__c', sum('OpportunityServices__c.gCRM_Amount_USD__c') as 'A'"
                     }
                 ]
+            },
+            "GPSOptysbyTeamMember_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0FbbY000000ALMZSA4",
+                        "label": "Load_opty_services_acct_all",
+                        "name": "Load_opty_services_acct_all",
+                        "url": "/services/data/v61.0/wave/datasets/0FbbY000000ALMZSA4"
+                    }
+                ],
+                "isGlobal": false,
+                "label": "GPSOptysbyTeamMember",
+                "query": {
+                    "aggregateFilters": [],
+                    "columnGroups": [],
+                    "columnTotals": [
+                        "OTM.UserId",
+                        "OpportunityServices__c.gCRM_GPS_Stage_US__c",
+                        "OpportunityServices__c.gCRM_Opportunity_ID__c"
+                    ],
+                    "limit": 2000,
+                    "orders": [
+                        {
+                            "name": "OTM.UserId",
+                            "filters": [],
+                            "ascending": true
+                        },
+                        {
+                            "name": "OpportunityServices__c.gCRM_GPS_Stage_US__c",
+                            "filters": [],
+                            "ascending": false
+                        },
+                        {
+                            "name": "OpportunityServices__c.gCRM_Opportunity_ID__c",
+                            "filters": [],
+                            "ascending": true
+                        }
+                    ],
+                    "rowTotals": [],
+                    "sourceFilters": {
+                        "Load_opty_services_acct_all": {
+                            "filters": [
+                                [
+                                    "OTM.UserId",
+                                    [
+                                        "005bY000001P87AQAS"
+                                    ],
+                                    "in"
+                                ],
+                                [
+                                    "OpportunityServices__c.gCRM_GPS_Stage_US__c",
+                                    [
+                                        "Closed Abandoned",
+                                        "Closed Lost",
+                                        "Closed Won"
+                                    ],
+                                    "in"
+                                ]
+                            ]
+                        }
+                    },
+                    "sources": [
+                        {
+                            "columns": [
+                                {
+                                    "field": [
+                                        "count",
+                                        "*"
+                                    ],
+                                    "name": "A"
+                                },
+                                {
+                                    "field": [
+                                        "sum",
+                                        "OpportunityServices__c.SalesCredit.gCRM_Sales_Credit_Amount__c"
+                                    ],
+                                    "name": "B"
+                                }
+                            ],
+                            "filters": [],
+                            "groups": [
+                                "OTM.UserId",
+                                "OpportunityServices__c.gCRM_GPS_Stage_US__c",
+                                "OpportunityServices__c.gCRM_Opportunity_ID__c"
+                            ],
+                            "joins": [],
+                            "name": "Load_opty_services_acct_all"
+                        }
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "options": {},
+                    "parameters": {
+                        "borderColor": "#e0e5ee",
+                        "borderWidth": 1,
+                        "cell": {
+                            "backgroundColor": "#ffffff",
+                            "fontColor": "#16325c",
+                            "fontSize": 12,
+                            "textWrap": true
+                        },
+                        "columnProperties": {
+                            "OpportunityServices__c.gCRM_Opportunity_ID__c": {
+                                "parameters": {
+                                    "alignment": "left",
+                                    "styles": {
+                                        "linkColor": "#1b96ff"
+                                    }
+                                },
+                                "type": "text"
+                            }
+                        },
+                        "columnSubtotals": true,
+                        "columns": [
+                            "A",
+                            "OTM.UserId",
+                            "OpportunityServices__c.gCRM_GPS_Stage_US__c",
+                            "OpportunityServices__c.gCRM_Opportunity_ID__c",
+                            "B"
+                        ],
+                        "customBulkActions": [],
+                        "header": {
+                            "backgroundColor": "#f4f6f9",
+                            "fontColor": "#16325c",
+                            "fontSize": 12,
+                            "textWrap": true
+                        },
+                        "innerMajorBorderColor": "#a8b7c7",
+                        "innerMinorBorderColor": "#e0e5ee",
+                        "interactions": [],
+                        "maxColumnWidth": 300,
+                        "minColumnWidth": 40,
+                        "mode": "variable",
+                        "numberOfLines": 1,
+                        "showActionMenu": true,
+                        "showRowIndexColumn": false,
+                        "totals": true,
+                        "verticalPadding": 8
+                    },
+                    "type": "table"
+                }
             },
             "Actual_Close_1": {
                 "broadcastFacet": true,
@@ -2043,7 +2208,7 @@
                             "B"
                         ]
                     },
-                    "showActionMenu": true,
+                    "showActionMenu": false,
                     "centerValueType": "number",
                     "measureAxis2": {
                         "sqrtScale": false,
