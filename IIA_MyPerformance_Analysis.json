@@ -1,0 +1,713 @@
+{
+    "label": "MyPerformance - Analysis",
+    "mobileDisabled": false,
+    "state": {
+        "dataSourceLinksInfo": {
+            "enableAutomaticLinking": true,
+            "excludeRelationships": [],
+            "links": [
+                {
+                    "fields": [
+                        {
+                            "dataSourceName": "Load_CustomTeam_Opty",
+                            "dataSourceType": "dataset",
+                            "fieldName": "Opty.gCRM_GPS_Stage_US__c"
+                        },
+                        {
+                            "dataSourceName": "Load_opty_services_acct_all",
+                            "dataSourceType": "dataset",
+                            "fieldName": "OpportunityServices__c.StageName"
+                        }
+                    ],
+                    "label": "Stage",
+                    "name": "Link_12749"
+                },
+                {
+                    "fields": [
+                        {
+                            "dataSourceName": "Load_CustomTeam_Opty",
+                            "dataSourceType": "dataset",
+                            "fieldName": "gCRM_User__c"
+                        },
+                        {
+                            "dataSourceName": "Load_opty_services_acct_all",
+                            "dataSourceType": "dataset",
+                            "fieldName": "CustomTeams.gCRM_User__c"
+                        }
+                    ],
+                    "label": "Team Member",
+                    "name": "Link_12768"
+                }
+            ]
+        },
+        "filters": [],
+        "gridLayouts": [
+            {
+                "name": "Default",
+                "numColumns": 50,
+                "pages": [
+                    {
+                        "label": "Untitled",
+                        "name": "89561349-8f9b-49c8-af17-96ea57f68c17",
+                        "navigationHidden": false,
+                        "widgets": [
+                            {
+                                "colspan": 48,
+                                "column": 1,
+                                "name": "table_1",
+                                "row": 17,
+                                "rowspan": 32,
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
+                            },
+                            {
+                                "colspan": 8,
+                                "column": 1,
+                                "name": "listselector_1",
+                                "row": 8,
+                                "rowspan": 4,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 8,
+                                "column": 10,
+                                "name": "listselector_2",
+                                "row": 8,
+                                "rowspan": 4,
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
+                            },
+                            {
+                                "colspan": 8,
+                                "column": 19,
+                                "name": "listselector_3",
+                                "row": 8,
+                                "rowspan": 4,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 50,
+                                "column": 0,
+                                "name": "container_1",
+                                "row": 0,
+                                "rowspan": 6,
+                                "widgetStyle": {
+                                    "backgroundColor": "#98B1FF",
+                                    "borderColor": "#747474",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 26,
+                                "column": 1,
+                                "name": "text_1",
+                                "row": 1,
+                                "rowspan": 4,
+                                "widgetStyle": {
+                                    "backgroundColor": "#98B1FF",
+                                    "borderColor": "#747474",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 16,
+                                "column": 1,
+                                "name": "text_2",
+                                "row": 14,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#16325C",
+                                    "borderColor": "#747474",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 9,
+                                "column": 29,
+                                "name": "listselector_4",
+                                "row": 8,
+                                "rowspan": 4,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#E6ECF2",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 16,
+                                "column": 1,
+                                "name": "text_3",
+                                "row": 51,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#16325C",
+                                    "borderColor": "#747474",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
+                                }
+                            },
+                            {
+                                "colspan": 48,
+                                "column": 1,
+                                "name": "table_2",
+                                "row": 54,
+                                "rowspan": 32,
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "rowHeight": "fine",
+                "selectors": [],
+                "style": {
+                    "alignmentX": "left",
+                    "alignmentY": "top",
+                    "backgroundColor": "#FFFFFF",
+                    "cellSpacingX": 0,
+                    "cellSpacingY": 0,
+                    "fit": "original",
+                    "gutterColor": "#C5D3E0"
+                },
+                "version": 1
+            }
+        ],
+        "layouts": [],
+        "steps": {
+            "Opty_OwnerId_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0FbbY000000CkbmSAC",
+                        "label": "Load_CustomTeam_Opty",
+                        "name": "Load_CustomTeam_Opty",
+                        "url": "/services/data/v61.0/wave/datasets/0FbbY000000CkbmSAC"
+                    }
+                ],
+                "isGlobal": false,
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "groups": [
+                        "Opty.OwnerId"
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "multi",
+                "start": [],
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {}
+            },
+            "Dataset_1": {
+                "broadcastFacet": true,
+                "columns": {
+                    "Dataset Name": {
+                        "type": "string"
+                    },
+                    "Display": {
+                        "type": "string"
+                    }
+                },
+                "label": "Dataset",
+                "selectMode": "singlerequired",
+                "start": {
+                    "Display": [
+                        "Load_CustomTeam_Opty"
+                    ]
+                },
+                "type": "staticflex",
+                "values": [
+                    {
+                        "Display": "Load_CustomTeam_Opty",
+                        "Dataset Name": "Load_CustomTeam_Opty"
+                    },
+                    {
+                        "Display": "Load_opty_services_acct_all",
+                        "Dataset Name": "Load_opty_services_acct_all"
+                    },
+                    {
+                        "Display": "Opp_SC",
+                        "Dataset Name": "Opp_SC"
+                    },
+                    {
+                        "Display": "Opty_acc_split_tag",
+                        "Dataset Name": "Opty_acc_split_tag"
+                    }
+                ]
+            },
+            "GPSOptysbyTeamMember_1": {
+                "broadcastFacet": true,
+                "groups": [],
+                "label": "GPSOptysbyTeamMember",
+                "numbers": [],
+                "query": "q = load \"Load_opty_services_acct_all\";\nq = filter q by 'OTM.UserId' in {{column(gCRM_User__c_1.selection, [\"gCRM_User__c\"]).asString()}};\nq = filter q by 'OpportunityServices__c.gCRM_GPS_Stage_US__c' in {{column(Opty_gCRM_GPS_Stage__1.result, [\"Opty.gCRM_GPS_Stage_US__c\"]).asString()}};\nq = group q by ('OpportunityServices__c.OwnerId', 'OTM.UserId', 'OpportunityServices__c.gCRM_Opportunity_ID__c', 'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', 'OpportunityServices__c.gCRM_GPS_Stage_US__c');\nq = foreach q generate q.'OpportunityServices__c.OwnerId' as 'Leader', q.'OTM.UserId' as 'Team Member', q.'OpportunityServices__c.gCRM_Opportunity_ID__c' as 'OpportunityServices__c.gCRM_Opportunity_ID__c', 'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Primary Closed Reason', q.'OpportunityServices__c.gCRM_GPS_Stage_US__c' as 'GPS Stage (US)', sum(q.'OpportunityServices__c.gCRM_Amount_USD__c') as 'SUM of Sales Amount', sum(q.'OpportunityServices__c.SalesCredit.gCRM_Sales_Credit_Amount__c') as 'SUM of Sales Credit';\nq = order q by ('Leader' asc, 'Team Member' asc,'OpportunityServices__c.gCRM_Opportunity_ID__c' asc ,'GPS Stage (US)' desc);\nq = limit q 2000;",
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "strings": [],
+                "type": "saql",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "borderColor": "#e0e5ee",
+                        "borderWidth": 1,
+                        "cell": {
+                            "backgroundColor": "#ffffff",
+                            "fontColor": "#16325c",
+                            "fontSize": 12,
+                            "textWrap": true
+                        },
+                        "columnProperties": {},
+                        "columns": [],
+                        "customBulkActions": [],
+                        "header": {
+                            "backgroundColor": "#f4f6f9",
+                            "fontColor": "#16325c",
+                            "fontSize": 12,
+                            "textWrap": true
+                        },
+                        "innerMajorBorderColor": "#a8b7c7",
+                        "innerMinorBorderColor": "#e0e5ee",
+                        "interactions": [],
+                        "mode": "fittocontainer",
+                        "numberOfLines": 1,
+                        "pivoted": false,
+                        "showActionMenu": true,
+                        "showRowIndexColumn": false,
+                        "totals": true,
+                        "verticalPadding": 8
+                    },
+                    "type": "table"
+                }
+            },
+            "Opty_gCRM_Opportunit_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0FbbY000000CkbmSAC",
+                        "label": "Load_CustomTeam_Opty",
+                        "name": "Load_CustomTeam_Opty",
+                        "url": "/services/data/v61.0/wave/datasets/0FbbY000000CkbmSAC"
+                    }
+                ],
+                "isGlobal": false,
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "groups": [
+                        "Opty.gCRM_Opportunity_ID__c"
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "multi",
+                "start": [],
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {}
+            },
+            "SalesCreditAnalysis_1": {
+                "broadcastFacet": true,
+                "groups": [],
+                "label": "SalesCreditAnalysis",
+                "numbers": [],
+                "query": "q = load \"Load_CustomTeam_Opty\";\nq = filter q by date('Opty.gCRM_Actual_Close_Date__c_Year', 'Opty.gCRM_Actual_Close_Date__c_Month', 'Opty.gCRM_Actual_Close_Date__c_Day') in [\"current year\"..\"current day\"];\nq = filter q by 'Opty.gCRM_GPS_Stage_US__c' in {{column(Opty_gCRM_GPS_Stage__1.result, [\"Opty.gCRM_GPS_Stage_US__c\"]).asString()}};\nq = filter q by 'gCRM_User__c' in {{column(gCRM_User__c_1.selection, [\"gCRM_User__c\"]).asString()}};\nq = group q by ('Opty.OwnerId', 'gCRM_User__c','Opty.gCRM_Opportunity_ID__c', 'Opty.gCRM_Reason_for_Won_Lost_Abandoned__c', \n 'Opty.gCRM_GPS_Stage_US__c');\nq = foreach q generate 'Opty.OwnerId', 'gCRM_User__c', 'Opty.gCRM_Opportunity_ID__c', 'Opty.gCRM_Reason_for_Won_Lost_Abandoned__c', 'Opty.gCRM_GPS_Stage_US__c', sum('Opty.gCRM_Amount_USD__c') as 'TGOA',sum(q.'gCRM_Sales_Credit_Amount__c') as 'sum_SalesCreditAmount';\nq = order q by ('Opty.OwnerId' asc, 'gCRM_User__c' asc, 'gCRM_User__c','Opty.gCRM_Opportunity_ID__c' asc, 'Opty.gCRM_GPS_Stage_US__c' desc);\nq = limit q 2000;\n",
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "strings": [],
+                "type": "saql",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "borderColor": "#e0e5ee",
+                        "borderWidth": 1,
+                        "cell": {
+                            "backgroundColor": "#ffffff",
+                            "fontColor": "#16325c",
+                            "fontSize": 12,
+                            "textWrap": true
+                        },
+                        "columnProperties": {},
+                        "columns": [],
+                        "customBulkActions": [],
+                        "header": {
+                            "backgroundColor": "#f4f6f9",
+                            "fontColor": "#16325c",
+                            "fontSize": 12,
+                            "textWrap": true
+                        },
+                        "innerMajorBorderColor": "#a8b7c7",
+                        "innerMinorBorderColor": "#e0e5ee",
+                        "interactions": [],
+                        "mode": "fittocontainer",
+                        "numberOfLines": 1,
+                        "pivoted": false,
+                        "showActionMenu": false,
+                        "showRowIndexColumn": false,
+                        "totals": true,
+                        "verticalPadding": 8
+                    },
+                    "type": "table"
+                }
+            },
+            "Opty_gCRM_GPS_Stage__1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0FbbY000000CkbmSAC",
+                        "label": "Load_CustomTeam_Opty",
+                        "name": "Load_CustomTeam_Opty",
+                        "url": "/services/data/v61.0/wave/datasets/0FbbY000000CkbmSAC"
+                    }
+                ],
+                "isGlobal": false,
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "groups": [
+                        "Opty.gCRM_GPS_Stage_US__c"
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "multi",
+                "start": [
+                    "Closed Won"
+                ],
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {}
+            },
+            "gCRM_User__c_1": {
+                "broadcastFacet": true,
+                "datasets": [
+                    {
+                        "id": "0FbbY000000CkbmSAC",
+                        "label": "Load_CustomTeam_Opty",
+                        "name": "Load_CustomTeam_Opty",
+                        "url": "/services/data/v61.0/wave/datasets/0FbbY000000CkbmSAC"
+                    }
+                ],
+                "isGlobal": false,
+                "query": {
+                    "measures": [
+                        [
+                            "count",
+                            "*"
+                        ]
+                    ],
+                    "groups": [
+                        "gCRM_User__c"
+                    ]
+                },
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "multi",
+                "start": [
+                    "!{User.Id}"
+                ],
+                "type": "aggregateflex",
+                "useGlobal": true,
+                "visualizationParameters": {}
+            }
+        },
+        "widgetStyle": {
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#747474",
+            "borderEdges": [],
+            "borderRadius": 0,
+            "borderWidth": 1
+        },
+        "widgets": {
+            "table_1": {
+                "parameters": {
+                    "borderColor": "#e0e5ee",
+                    "borderWidth": 1,
+                    "cell": {
+                        "backgroundColor": "#ffffff",
+                        "fontColor": "#16325c",
+                        "fontSize": 12,
+                        "textWrap": true
+                    },
+                    "columnProperties": {},
+                    "columns": [],
+                    "customBulkActions": [],
+                    "exploreLink": false,
+                    "header": {
+                        "backgroundColor": "#f4f6f9",
+                        "fontColor": "#16325c",
+                        "fontSize": 12,
+                        "textWrap": true
+                    },
+                    "innerMajorBorderColor": "#a8b7c7",
+                    "innerMinorBorderColor": "#e0e5ee",
+                    "interactions": [],
+                    "mode": "fittocontainer",
+                    "numberOfLines": 1,
+                    "pivoted": false,
+                    "showActionMenu": false,
+                    "showRowIndexColumn": false,
+                    "step": "SalesCreditAnalysis_1",
+                    "totals": true,
+                    "verticalPadding": 8
+                },
+                "type": "table"
+            },
+            "table_2": {
+                "parameters": {
+                    "borderColor": "#e0e5ee",
+                    "borderWidth": 1,
+                    "cell": {
+                        "backgroundColor": "#ffffff",
+                        "fontColor": "#16325c",
+                        "fontSize": 12,
+                        "textWrap": true
+                    },
+                    "columnProperties": {},
+                    "columns": [],
+                    "customBulkActions": [],
+                    "exploreLink": true,
+                    "header": {
+                        "backgroundColor": "#f4f6f9",
+                        "fontColor": "#16325c",
+                        "fontSize": 12,
+                        "textWrap": true
+                    },
+                    "innerMajorBorderColor": "#a8b7c7",
+                    "innerMinorBorderColor": "#e0e5ee",
+                    "interactions": [],
+                    "mode": "fittocontainer",
+                    "numberOfLines": 1,
+                    "pivoted": false,
+                    "showActionMenu": true,
+                    "showRowIndexColumn": false,
+                    "step": "GPSOptysbyTeamMember_1",
+                    "totals": true,
+                    "verticalPadding": 8
+                },
+                "type": "table"
+            },
+            "container_1": {
+                "parameters": {
+                    "alignmentX": "left",
+                    "alignmentY": "top",
+                    "fit": "original",
+                    "interactions": []
+                },
+                "type": "container"
+            },
+            "listselector_3": {
+                "parameters": {
+                    "compact": false,
+                    "displayMode": "combo",
+                    "exploreLink": false,
+                    "filterStyle": {
+                        "titleColor": "#091A3E",
+                        "valueColor": "#091A3E"
+                    },
+                    "instant": true,
+                    "measureField": "count",
+                    "showActionMenu": false,
+                    "step": "Opty_gCRM_Opportunit_1",
+                    "title": "Opportunity ID"
+                },
+                "type": "listselector"
+            },
+            "listselector_2": {
+                "parameters": {
+                    "compact": false,
+                    "displayMode": "combo",
+                    "exploreLink": false,
+                    "filterStyle": {
+                        "titleColor": "#091A3E",
+                        "valueColor": "#091A3E"
+                    },
+                    "instant": true,
+                    "measureField": "count",
+                    "showActionMenu": false,
+                    "step": "gCRM_User__c_1",
+                    "title": "Team Member"
+                },
+                "type": "listselector"
+            },
+            "text_1": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "color": "#091a3e",
+                                    "size": "32px",
+                                    "bold": true
+                                },
+                                "insert": "MyPerformance - Analysis"
+                            },
+                            {
+                                "attributes": {
+                                    "align": "left"
+                                },
+                                "insert": "\n"
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": true
+                },
+                "type": "text"
+            },
+            "listselector_4": {
+                "parameters": {
+                    "compact": false,
+                    "displayMode": "combo",
+                    "exploreLink": true,
+                    "filterStyle": {
+                        "titleColor": "#091A3E",
+                        "valueColor": "#091A3E"
+                    },
+                    "instant": true,
+                    "measureField": "count",
+                    "showActionMenu": true,
+                    "step": "Opty_gCRM_GPS_Stage__1",
+                    "title": "Opportunity Stage"
+                },
+                "type": "listselector"
+            },
+            "text_3": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "color": "#e6ecf2",
+                                    "size": "16px",
+                                    "bold": true
+                                },
+                                "insert": "Load_opty_services-acct-all"
+                            },
+                            {
+                                "attributes": {
+                                    "align": "left"
+                                },
+                                "insert": "\n"
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": true
+                },
+                "type": "text"
+            },
+            "text_2": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "color": "#e6ecf2",
+                                    "size": "16px",
+                                    "bold": true
+                                },
+                                "insert": "Load_CustomTeams_Opty"
+                            },
+                            {
+                                "attributes": {
+                                    "align": "left"
+                                },
+                                "insert": "\n"
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": true
+                },
+                "type": "text"
+            },
+            "listselector_1": {
+                "parameters": {
+                    "compact": false,
+                    "displayMode": "combo",
+                    "exploreLink": false,
+                    "filterStyle": {
+                        "titleColor": "#091A3E",
+                        "valueColor": "#091A3E"
+                    },
+                    "instant": true,
+                    "measureField": "count",
+                    "showActionMenu": false,
+                    "step": "Opty_OwnerId_1",
+                    "title": "Opportunity Leader"
+                },
+                "type": "listselector"
+            }
+        }
+    },
+    "datasets": [
+        {
+            "id": "0FbbY000000ALMZSA4",
+            "label": "Load_opty_services_acct_all",
+            "name": "Load_opty_services_acct_all",
+            "url": "/services/data/v61.0/wave/datasets/0FbbY000000ALMZSA4"
+        },
+        {
+            "id": "0FbbY000000CkbmSAC",
+            "label": "Load_CustomTeam_Opty",
+            "name": "Load_CustomTeam_Opty",
+            "url": "/services/data/v61.0/wave/datasets/0FbbY000000CkbmSAC"
+        }
+    ]
+}
