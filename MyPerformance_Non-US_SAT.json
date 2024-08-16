@@ -21,6 +21,38 @@
                     ],
                     "label": "Stage Name",
                     "name": "Link_2336"
+                },
+                {
+                    "fields": [
+                        {
+                            "dataSourceName": "Opp_SC",
+                            "dataSourceType": "dataset",
+                            "fieldName": "Opp.CloseDate"
+                        },
+                        {
+                            "dataSourceName": "Opty_Acc_Split_Tag",
+                            "dataSourceType": "dataset",
+                            "fieldName": "Opportunity.CloseDate"
+                        }
+                    ],
+                    "label": "Close Date",
+                    "name": "Link_421"
+                },
+                {
+                    "fields": [
+                        {
+                            "dataSourceName": "Opp_SC",
+                            "dataSourceType": "dataset",
+                            "fieldName": "Opp.gCRM_Reason_for_Won_Lost_Abandoned__c"
+                        },
+                        {
+                            "dataSourceName": "Opty_Acc_Split_Tag",
+                            "dataSourceType": "dataset",
+                            "fieldName": "Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c"
+                        }
+                    ],
+                    "label": "Reason Code",
+                    "name": "Link_548"
                 }
             ]
         },
@@ -1968,7 +2000,7 @@
                         "chartsPerLine": 4
                     },
                     "inner": 50,
-                    "showActionMenu": true,
+                    "showActionMenu": false,
                     "centerValueType": "number",
                     "measureAxis2": {
                         "sqrtScale": false,
