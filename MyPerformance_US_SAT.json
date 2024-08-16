@@ -37,6 +37,22 @@
                     ],
                     "label": "Primary Reason Code",
                     "name": "Link_2965"
+                },
+                {
+                    "fields": [
+                        {
+                            "dataSourceName": "Load_CustomTeam_Opty",
+                            "dataSourceType": "dataset",
+                            "fieldName": "Opty.gCRM_Actual_Close_Date__c"
+                        },
+                        {
+                            "dataSourceName": "Load_opty_services_acct_all",
+                            "dataSourceType": "dataset",
+                            "fieldName": "Actual_Close"
+                        }
+                    ],
+                    "label": "Close Date",
+                    "name": "Link_466"
                 }
             ]
         },
