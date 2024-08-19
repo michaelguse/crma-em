@@ -380,6 +380,7 @@
                     "steps": []
                 },
                 "selectMode": "single",
+                "start": [],
                 "strings": [],
                 "type": "saql",
                 "useGlobal": true,
@@ -1483,11 +1484,11 @@
                 "start": [
                     [
                         [
-                            "year",
+                            "fiscal_year",
                             0
                         ],
                         [
-                            "day",
+                            "fiscal_year",
                             0
                         ]
                     ]
@@ -1969,8 +1970,8 @@
                     "absoluteModeEnabled": true,
                     "calendarTypeSwitchingAllowed": false,
                     "customFilterPresets": [
-                        "currentYearToDate",
-                        "currentYear"
+                        "currentFiscalYear",
+                        "currentFiscalYearToDate"
                     ],
                     "defaultFiscalMode": false,
                     "displayMode": "combo",
