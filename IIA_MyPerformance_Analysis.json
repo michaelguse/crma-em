@@ -53,31 +53,15 @@
                         "widgets": [
                             {
                                 "colspan": 8,
-                                "column": 1,
-                                "name": "listselector_1",
-                                "row": 8,
-                                "rowspan": 4,
-                                "widgetStyle": {
-                                    "backgroundColor": "#FFFFFF",
-                                    "borderColor": "#E6ECF2",
-                                    "borderEdges": [],
-                                    "borderRadius": 0,
-                                    "borderWidth": 1
-                                }
-                            },
-                            {
-                                "colspan": 8,
-                                "column": 10,
+                                "column": 2,
                                 "name": "listselector_2",
                                 "row": 8,
                                 "rowspan": 4,
-                                "widgetStyle": {
-                                    "borderEdges": []
-                                }
+                                "widgetStyle": {}
                             },
                             {
                                 "colspan": 8,
-                                "column": 19,
+                                "column": 11,
                                 "name": "listselector_3",
                                 "row": 8,
                                 "rowspan": 4,
@@ -135,7 +119,7 @@
                             },
                             {
                                 "colspan": 9,
-                                "column": 28,
+                                "column": 20,
                                 "name": "listselector_4",
                                 "row": 8,
                                 "rowspan": 4,
@@ -169,13 +153,11 @@
                                 "name": "chart_2",
                                 "row": 14,
                                 "rowspan": 31,
-                                "widgetStyle": {
-                                    "borderEdges": []
-                                }
+                                "widgetStyle": {}
                             },
                             {
                                 "colspan": 9,
-                                "column": 38,
+                                "column": 30,
                                 "name": "listselector_5",
                                 "row": 8,
                                 "rowspan": 4,
@@ -210,31 +192,15 @@
                         "widgets": [
                             {
                                 "colspan": 8,
-                                "column": 1,
-                                "name": "listselector_1",
-                                "row": 8,
-                                "rowspan": 4,
-                                "widgetStyle": {
-                                    "backgroundColor": "#FFFFFF",
-                                    "borderColor": "#E6ECF2",
-                                    "borderEdges": [],
-                                    "borderRadius": 0,
-                                    "borderWidth": 1
-                                }
-                            },
-                            {
-                                "colspan": 8,
-                                "column": 10,
+                                "column": 2,
                                 "name": "listselector_2",
                                 "row": 8,
                                 "rowspan": 4,
-                                "widgetStyle": {
-                                    "borderEdges": []
-                                }
+                                "widgetStyle": {}
                             },
                             {
                                 "colspan": 8,
-                                "column": 19,
+                                "column": 11,
                                 "name": "listselector_3",
                                 "row": 8,
                                 "rowspan": 4,
@@ -292,7 +258,7 @@
                             },
                             {
                                 "colspan": 9,
-                                "column": 28,
+                                "column": 20,
                                 "name": "listselector_4",
                                 "row": 8,
                                 "rowspan": 4,
@@ -326,9 +292,7 @@
                                 "name": "table_3",
                                 "row": 49,
                                 "rowspan": 43,
-                                "widgetStyle": {
-                                    "borderEdges": []
-                                }
+                                "widgetStyle": {}
                             },
                             {
                                 "colspan": 46,
@@ -336,13 +300,11 @@
                                 "name": "chart_2",
                                 "row": 14,
                                 "rowspan": 31,
-                                "widgetStyle": {
-                                    "borderEdges": []
-                                }
+                                "widgetStyle": {}
                             },
                             {
                                 "colspan": 9,
-                                "column": 38,
+                                "column": 30,
                                 "name": "listselector_5",
                                 "row": 8,
                                 "rowspan": 4,
@@ -423,7 +385,10 @@
                         "Display": "US",
                         "Value": "US"
                     }
-                ]
+                ],
+                "numbers": [],
+                "strings": [],
+                "groups": []
             },
             "Opty_OwnerId_1": {
                 "broadcastFacet": true,
@@ -455,7 +420,9 @@
                 "start": [],
                 "type": "aggregateflex",
                 "useGlobal": true,
-                "visualizationParameters": {}
+                "visualizationParameters": {
+                    "options": {}
+                }
             },
             "static_1": {
                 "broadcastFacet": true,
@@ -485,14 +452,17 @@
                         "Display": "Yes",
                         "Value": "Yes"
                     }
-                ]
+                ],
+                "numbers": [],
+                "strings": [],
+                "groups": []
             },
             "No_Team_Member_Optys_1": {
                 "broadcastFacet": true,
                 "groups": [],
                 "label": "No Team Member Optys",
                 "numbers": [],
-                "query": "q1 = load \"Load_CustomTeam_Opty\";\nq2 = load \"Load_opty_services_acct_all\";\nq1 = filter q1 by 'Opty.gCRM_GPS_Stage_US__c' in {{column(Opty_gCRM_GPS_Stage__1.result, [\"Opty.gCRM_GPS_Stage_US__c\"]).asString()}};\nq1 = filter q1 by 'gCRM_User__c' in {{column(gCRM_User__c_1.selection, [\"gCRM_User__c\"]).asString()}};\nq2 = filter q2 by 'OpportunityServices__c.gCRM_GPS_Stage_US__c' in {{column(Opty_gCRM_GPS_Stage__1.result, [\"Opty.gCRM_GPS_Stage_US__c\"]).asString()}};\nq2 = filter q2 by 'OTM.UserId' in {{column(gCRM_User__c_1.selection, [\"gCRM_User__c\"]).asString()}};\nq = cogroup q1 by ('gCRM_User__c', 'Opty.gCRM_Opportunity_ID__c', 'Opty.gCRM_GPS_Stage_US__c') left, q2 by ('OTM.UserId', 'OpportunityServices__c.gCRM_Opportunity_ID__c', 'OpportunityServices__c.gCRM_GPS_Stage_US__c');\nq = foreach q generate coalesce(q1.'gCRM_User__c', q2.'OTM.UserId') as 'gCRM_User__c', coalesce(q1.'Opty.gCRM_Opportunity_ID__c', q2.'OpportunityServices__c.gCRM_Opportunity_ID__c') as 'Opty.gCRM_Opportunity_ID__c', coalesce(q1.'Opty.gCRM_GPS_Stage_US__c', q2.'OpportunityServices__c.gCRM_GPS_Stage_US__c') as 'Opty.gCRM_GPS_Stage_US__c', count(q1) as 'CustomTeam Count', count(q2) as 'Load_opty Count', (case (count(q1) == count(q2)) when true then \"Yes\" else \"No\" end) as 'Match?';\nq = filter q by 'Match?' in {{column(static_1.selection, [\"Value\"]).asString()}};\nq = order q by ('gCRM_User__c' asc, 'Match?' asc, 'Opty.gCRM_GPS_Stage_US__c' asc);\nq = limit q 2000;",
+                "query": "q1 = load \"Load_CustomTeam_Opty\";\nq2 = load \"Load_opty_services_acct_all\";\nq1 = filter q1 by 'Opty.gCRM_GPS_Stage_US__c' in {{column(Opty_gCRM_GPS_Stage__1.result, [\"Opty.gCRM_GPS_Stage_US__c\"]).asString()}};\nq1 = filter q1 by 'gCRM_User__c' in {{column(gCRM_User__c_1.selection, [\"gCRM_User__c\"]).asString()}};\nq2 = filter q2 by 'OpportunityServices__c.gCRM_GPS_Stage_US__c' in {{column(Opty_gCRM_GPS_Stage__1.result, [\"Opty.gCRM_GPS_Stage_US__c\"]).asString()}};\nq2 = filter q2 by 'OTM.UserId' in {{column(gCRM_User__c_1.selection, [\"gCRM_User__c\"]).asString()}};\nq = cogroup q1 by ('gCRM_User__c', 'Opty.gCRM_Opportunity_ID__c', 'Opty.gCRM_GPS_Stage_US__c') left, q2 by ('OTM.UserId', 'OpportunityServices__c.gCRM_Opportunity_ID__c', 'OpportunityServices__c.gCRM_GPS_Stage_US__c');\nq = foreach q generate coalesce(q1.'gCRM_User__c', q2.'OTM.UserId') as 'gCRM_User__c', coalesce(q1.'Opty.gCRM_Opportunity_ID__c', q2.'OpportunityServices__c.gCRM_Opportunity_ID__c') as 'Opty.gCRM_Opportunity_ID__c', coalesce(q1.'Opty.gCRM_GPS_Stage_US__c', q2.'OpportunityServices__c.gCRM_GPS_Stage_US__c') as 'Opty.gCRM_GPS_Stage_US__c', count(q1) as 'CustomTeam Count', count(q2) as 'Load_opty Count', (case (count(q1) == count(q2)) when true then \"Yes\" else \"No\" end) as 'Match?';\nq = filter q by 'Match?' in {{column(static_1.selection, [\"Value\"]).asString()}};\nq = order q by ('gCRM_User__c' asc, 'Match?' asc, 'Opty.gCRM_GPS_Stage_US__c' asc, 'Opty.gCRM_Opportunity_ID__c' asc);\nq = limit q 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -569,7 +539,10 @@
                         "Display": "Opty_acc_split_tag",
                         "Dataset Name": "Opty_acc_split_tag"
                     }
-                ]
+                ],
+                "numbers": [],
+                "strings": [],
+                "groups": []
             },
             "GPSOptysbyTeamMember_1": {
                 "broadcastFacet": true,
@@ -648,7 +621,9 @@
                 "start": [],
                 "type": "aggregateflex",
                 "useGlobal": true,
-                "visualizationParameters": {}
+                "visualizationParameters": {
+                    "options": {}
+                }
             },
             "SalesCreditAnalysis_1": {
                 "broadcastFacet": true,
@@ -729,7 +704,9 @@
                 ],
                 "type": "aggregateflex",
                 "useGlobal": true,
-                "visualizationParameters": {}
+                "visualizationParameters": {
+                    "options": {}
+                }
             },
             "gCRM_User__c_1": {
                 "broadcastFacet": true,
@@ -782,7 +759,9 @@
                 ],
                 "type": "aggregateflex",
                 "useGlobal": true,
-                "visualizationParameters": {}
+                "visualizationParameters": {
+                    "options": {}
+                }
             }
         },
         "widgetStyle": {
@@ -943,7 +922,9 @@
                     "showRowIndexColumn": false,
                     "step": "No_Team_Member_Optys_1",
                     "totals": true,
-                    "verticalPadding": 8
+                    "verticalPadding": 8,
+                    "evenRowColor": null,
+                    "oddRowColor": null
                 },
                 "type": "table"
             },
@@ -1014,23 +995,6 @@
                     "showActionMenu": true
                 },
                 "type": "text"
-            },
-            "listselector_1": {
-                "parameters": {
-                    "compact": false,
-                    "displayMode": "combo",
-                    "exploreLink": false,
-                    "filterStyle": {
-                        "titleColor": "#091A3E",
-                        "valueColor": "#091A3E"
-                    },
-                    "instant": true,
-                    "measureField": "count",
-                    "showActionMenu": false,
-                    "step": "Opty_OwnerId_1",
-                    "title": "Opportunity Leader"
-                },
-                "type": "listselector"
             },
             "chart_2": {
                 "parameters": {
@@ -1126,7 +1090,8 @@
                 },
                 "type": "chart"
             }
-        }
+        },
+        "parameters": []
     },
     "datasets": [
         {
