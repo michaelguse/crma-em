@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset xsi:nil="true"/>
+    <dimensions>
+        <field>PageViews_by_URL_1.PAGE_URL</field>
+        <isDerived>false</isDerived>
+        <label>PAGE URL</label>
+        <sortIndex>0</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>PageViews_by_User_1.user.Name</field>
+        <isDerived>false</isDerived>
+        <label>User Name</label>
+        <sortIndex>1</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>PageViews_by_Date_1.PAGE_URL</field>
+        <isDerived>false</isDerived>
+        <label>PAGE URL</label>
+        <sortIndex>2</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>PageViews_by_Date_1.TIMESTAMP_DERIVED_Day</field>
+        <isDerived>false</isDerived>
+        <label>TIMESTAMP DERIVED (Day)</label>
+        <sortIndex>3</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>PageViews_by_Date_1.TIMESTAMP_DERIVED_Month</field>
+        <isDerived>false</isDerived>
+        <label>TIMESTAMP DERIVED (Month)</label>
+        <sortIndex>4</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>PageViews_by_Date_1.TIMESTAMP_DERIVED_Year</field>
+        <isDerived>false</isDerived>
+        <label>TIMESTAMP DERIVED (Year)</label>
+        <sortIndex>5</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>PAge_Views_by_Date_H_1.PAGE_URL</field>
+        <isDerived>false</isDerived>
+        <label>PAGE URL</label>
+        <sortIndex>6</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>PAge_Views_by_Date_H_1.TIMESTAMP_DERIVED_Day</field>
+        <isDerived>false</isDerived>
+        <label>TIMESTAMP DERIVED (Day)</label>
+        <sortIndex>7</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>PAge_Views_by_Date_H_1.TIMESTAMP_DERIVED_Month</field>
+        <isDerived>false</isDerived>
+        <label>TIMESTAMP DERIVED (Month)</label>
+        <sortIndex>8</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>PAge_Views_by_Date_H_1.TIMESTAMP_DERIVED_Year</field>
+        <isDerived>false</isDerived>
+        <label>TIMESTAMP DERIVED (Year)</label>
+        <sortIndex>9</sortIndex>
+    </dimensions>
+    <type>Asset</type>
+    <waveVisualization>Jupiter_HomePage_Usage</waveVisualization>
+</WaveXmd>
