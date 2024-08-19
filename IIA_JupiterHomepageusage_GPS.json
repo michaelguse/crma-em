@@ -1,6 +1,7 @@
 {
     "label": "Jupiter HomePage Usage (GPS)",
     "mobileDisabled": false,
+    "description": "",
     "state": {
         "dataSourceLinksInfo": {
             "enableAutomaticLinking": true,
@@ -38,7 +39,7 @@
                 "locked": false,
                 "operator": "in",
                 "value": [
-                    "Jupiter_20"
+                    "GCRM_Global_CRM"
                 ]
             },
             {
@@ -577,8 +578,7 @@
                     "mode": "all",
                     "steps": []
                 },
-                "selectMode": "single",
-                "start": [],
+                "selectMode": "multi",
                 "strings": [],
                 "type": "saql",
                 "useGlobal": true,
@@ -610,7 +610,7 @@
                             "showHeader": true,
                             "show": true,
                             "customSize": "auto",
-                            "position": "right-top",
+                            "position": "bottom-center",
                             "inside": false
                         },
                         "axisMode": "sync",
@@ -632,9 +632,9 @@
                         "lowColor": "#E2F4FC",
                         "visualizationType": "heatmap",
                         "title": {
-                            "fontSize": 14,
+                            "fontSize": 16,
                             "subtitleFontSize": 11,
-                            "label": "",
+                            "label": "Page Views Heat Map (Page Vs Date)",
                             "align": "center",
                             "subtitleLabel": ""
                         },
@@ -663,7 +663,7 @@
                                 "PAGE_URL"
                             ]
                         },
-                        "showActionMenu": true,
+                        "showActionMenu": false,
                         "measureAxis2": {
                             "sqrtScale": false,
                             "showTitle": true,
@@ -683,12 +683,12 @@
                             }
                         },
                         "x": {
-                            "showTitle": true,
+                            "showTitle": false,
                             "showAxis": true,
                             "title": ""
                         },
                         "y": {
-                            "showTitle": true,
+                            "showTitle": false,
                             "showAxis": true,
                             "title": ""
                         },
@@ -740,7 +740,7 @@
                     "mode": "all",
                     "steps": []
                 },
-                "selectMode": "single",
+                "selectMode": "multi",
                 "start": [],
                 "type": "aggregateflex",
                 "useGlobal": true,
@@ -857,8 +857,7 @@
                         },
                         "applyConditionalFormatting": true
                     },
-                    "type": "chart",
-                    "options": {}
+                    "type": "chart"
                 }
             },
             "PAGE_URL_2_8": {
@@ -888,7 +887,7 @@
                     "mode": "all",
                     "steps": []
                 },
-                "selectMode": "single",
+                "selectMode": "multi",
                 "start": [],
                 "type": "aggregateflex",
                 "useGlobal": true,
@@ -1005,8 +1004,7 @@
                         },
                         "applyConditionalFormatting": true
                     },
-                    "type": "chart",
-                    "options": {}
+                    "type": "chart"
                 }
             },
             "PAGE_URL_2_7": {
@@ -1036,7 +1034,7 @@
                     "mode": "all",
                     "steps": []
                 },
-                "selectMode": "single",
+                "selectMode": "multi",
                 "start": [],
                 "type": "aggregateflex",
                 "useGlobal": true,
@@ -1153,8 +1151,7 @@
                         },
                         "applyConditionalFormatting": true
                     },
-                    "type": "chart",
-                    "options": {}
+                    "type": "chart"
                 }
             },
             "PAGE_URL_2_6": {
@@ -1184,7 +1181,7 @@
                     "mode": "all",
                     "steps": []
                 },
-                "selectMode": "single",
+                "selectMode": "multi",
                 "start": [],
                 "type": "aggregateflex",
                 "useGlobal": true,
@@ -1301,8 +1298,7 @@
                         },
                         "applyConditionalFormatting": true
                     },
-                    "type": "chart",
-                    "options": {}
+                    "type": "chart"
                 }
             },
             "PAGE_URL_2_5": {
@@ -1332,7 +1328,7 @@
                     "mode": "all",
                     "steps": []
                 },
-                "selectMode": "single",
+                "selectMode": "multi",
                 "start": [],
                 "type": "aggregateflex",
                 "useGlobal": true,
@@ -1449,8 +1445,7 @@
                         },
                         "applyConditionalFormatting": true
                     },
-                    "type": "chart",
-                    "options": {}
+                    "type": "chart"
                 }
             },
             "PAGE_URL_2_4": {
@@ -1480,7 +1475,7 @@
                     "mode": "all",
                     "steps": []
                 },
-                "selectMode": "single",
+                "selectMode": "multi",
                 "start": [],
                 "type": "aggregateflex",
                 "useGlobal": true,
@@ -1597,8 +1592,7 @@
                         },
                         "applyConditionalFormatting": true
                     },
-                    "type": "chart",
-                    "options": {}
+                    "type": "chart"
                 }
             },
             "PAGE_URL_2_3": {
@@ -1628,7 +1622,7 @@
                     "mode": "all",
                     "steps": []
                 },
-                "selectMode": "single",
+                "selectMode": "multi",
                 "start": [],
                 "type": "aggregateflex",
                 "useGlobal": true,
@@ -1745,8 +1739,7 @@
                         },
                         "applyConditionalFormatting": true
                     },
-                    "type": "chart",
-                    "options": {}
+                    "type": "chart"
                 }
             },
             "PageViews_by_Date_1": {
@@ -1759,8 +1752,7 @@
                     "mode": "all",
                     "steps": []
                 },
-                "selectMode": "single",
-                "start": [],
+                "selectMode": "multi",
                 "strings": [],
                 "type": "saql",
                 "useGlobal": true,
@@ -1914,7 +1906,7 @@
                     "mode": "all",
                     "steps": []
                 },
-                "selectMode": "single",
+                "selectMode": "multi",
                 "start": [],
                 "type": "aggregateflex",
                 "useGlobal": true,
@@ -2031,8 +2023,7 @@
                         },
                         "applyConditionalFormatting": true
                     },
-                    "type": "chart",
-                    "options": {}
+                    "type": "chart"
                 }
             },
             "PAGE_URL_2_1": {
@@ -2062,7 +2053,7 @@
                     "mode": "all",
                     "steps": []
                 },
-                "selectMode": "single",
+                "selectMode": "multi",
                 "start": [],
                 "type": "aggregateflex",
                 "useGlobal": true,
@@ -2179,8 +2170,7 @@
                         },
                         "applyConditionalFormatting": true
                     },
-                    "type": "chart",
-                    "options": {}
+                    "type": "chart"
                 }
             },
             "PageViews_by_URL_1": {
@@ -2188,13 +2178,12 @@
                 "groups": [],
                 "label": "PageViews by URL",
                 "numbers": [],
-                "query": "q = load \"LightningPageViewWithUserEA\";\nq = filter q by date('TIMESTAMP_DERIVED_Year', 'TIMESTAMP_DERIVED_Month', 'TIMESTAMP_DERIVED_Day') in {{column(static_1.selection, [\"Text3\"]).asObject()}};\nq = group q by 'PAGE_URL';\nq = foreach q generate q.'PAGE_URL' as 'PAGE_URL', count(q) as 'A';\nq = order q by 'A' desc;\nq = limit q 2000;",
+                "query": "q = load \"LightningPageViewWithUserEA\";\nq = filter q by date('TIMESTAMP_DERIVED_Year', 'TIMESTAMP_DERIVED_Month', 'TIMESTAMP_DERIVED_Day') in {{column(static_1.selection, [\"Text3\"]).asObject()}};\nq = group q by 'PAGE_URL';\nq = foreach q generate q.'PAGE_URL' as 'PAGE_URL', count(q) as 'Page Views';\nq = order q by 'Page Views' desc;\nq = limit q 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
                 },
-                "selectMode": "single",
-                "start": [],
+                "selectMode": "multi",
                 "strings": [],
                 "type": "saql",
                 "useGlobal": true,
@@ -2248,7 +2237,7 @@
                         "title": {
                             "fontSize": 16,
                             "subtitleFontSize": 11,
-                            "label": "Page Views from Jupiter Home components",
+                            "label": "Page Views from Jupiter Home Components",
                             "align": "center",
                             "subtitleLabel": ""
                         },
@@ -2264,7 +2253,16 @@
                             "type": "x",
                             "chartsPerLine": 4
                         },
-                        "showActionMenu": true,
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "PAGE_URL"
+                            ],
+                            "plots": [
+                                "Page Views"
+                            ]
+                        },
+                        "showActionMenu": false,
                         "measureAxis2": {
                             "sqrtScale": false,
                             "showTitle": true,
@@ -2372,10 +2370,7 @@
                         "Text2": "-1",
                         "Text3": "[\"1 day ago\"..\"current day\"]"
                     }
-                ],
-                "numbers": [],
-                "strings": [],
-                "groups": []
+                ]
             },
             "PAGE_URL_1": {
                 "broadcastFacet": true,
@@ -2403,13 +2398,11 @@
                     "mode": "all",
                     "steps": []
                 },
-                "selectMode": "single",
+                "selectMode": "multi",
                 "start": [],
                 "type": "aggregateflex",
                 "useGlobal": true,
-                "visualizationParameters": {
-                    "options": {}
-                }
+                "visualizationParameters": {}
             },
             "PAGE_URL_3": {
                 "broadcastFacet": true,
@@ -2440,9 +2433,7 @@
                 "selectMode": "single",
                 "type": "aggregateflex",
                 "useGlobal": true,
-                "visualizationParameters": {
-                    "options": {}
-                }
+                "visualizationParameters": {}
             },
             "PAGE_URL_2": {
                 "broadcastFacet": true,
@@ -2471,7 +2462,7 @@
                     "mode": "all",
                     "steps": []
                 },
-                "selectMode": "single",
+                "selectMode": "multi",
                 "start": [],
                 "type": "aggregateflex",
                 "useGlobal": true,
@@ -2588,8 +2579,7 @@
                         },
                         "applyConditionalFormatting": true
                     },
-                    "type": "chart",
-                    "options": {}
+                    "type": "chart"
                 }
             },
             "PAGE_URL_2_10": {
@@ -2619,7 +2609,7 @@
                     "mode": "all",
                     "steps": []
                 },
-                "selectMode": "single",
+                "selectMode": "multi",
                 "start": [],
                 "type": "aggregateflex",
                 "useGlobal": true,
@@ -2736,8 +2726,7 @@
                         },
                         "applyConditionalFormatting": true
                     },
-                    "type": "chart",
-                    "options": {}
+                    "type": "chart"
                 }
             },
             "lens_1": {
@@ -2879,8 +2868,7 @@
                     "mode": "all",
                     "steps": []
                 },
-                "selectMode": "single",
-                "start": [],
+                "selectMode": "multi",
                 "strings": [],
                 "type": "saql",
                 "useGlobal": true,
@@ -2959,7 +2947,7 @@
                                 "A"
                             ]
                         },
-                        "showActionMenu": true,
+                        "showActionMenu": false,
                         "measureAxis2": {
                             "sqrtScale": false,
                             "showTitle": true,
@@ -3239,7 +3227,7 @@
                     "title": {
                         "fontSize": 16,
                         "subtitleFontSize": 11,
-                        "label": "Page Views Heat Map (Page vs Date)",
+                        "label": "Page Views Heat Map (Page Vs Date)",
                         "align": "center",
                         "subtitleLabel": ""
                     },
@@ -3417,7 +3405,7 @@
                     "title": {
                         "fontSize": 16,
                         "subtitleFontSize": 11,
-                        "label": "Most Visited Components",
+                        "label": "Page Views from Jupiter Home Components",
                         "align": "center",
                         "subtitleLabel": ""
                     },
@@ -3432,6 +3420,15 @@
                         "enable": false,
                         "type": "x",
                         "chartsPerLine": 4
+                    },
+                    "columnMap": {
+                        "trellis": [],
+                        "dimensionAxis": [
+                            "PAGE_URL"
+                        ],
+                        "plots": [
+                            "Page Views"
+                        ]
                     },
                     "showActionMenu": false,
                     "measureAxis2": {
@@ -3549,7 +3546,7 @@
                     "title": {
                         "fontSize": 16,
                         "subtitleFontSize": 11,
-                        "label": "Most Active Users",
+                        "label": "Page Views by User",
                         "align": "center",
                         "subtitleLabel": ""
                     },
@@ -3820,9 +3817,9 @@
                         "titleColor": "#747474",
                         "valueColor": "#16325C"
                     },
-                    "instant": true,
-                    "measureField": "count",
-                    "showActionMenu": true,
+                    "instant": false,
+                    "measureField": "none",
+                    "showActionMenu": false,
                     "step": "PAGE_URL_2_4",
                     "title": ""
                 },
@@ -3837,9 +3834,9 @@
                         "titleColor": "#747474",
                         "valueColor": "#16325C"
                     },
-                    "instant": true,
-                    "measureField": "count",
-                    "showActionMenu": true,
+                    "instant": false,
+                    "measureField": "none",
+                    "showActionMenu": false,
                     "step": "PAGE_URL_2_3",
                     "title": ""
                 },
@@ -3854,9 +3851,9 @@
                         "titleColor": "#747474",
                         "valueColor": "#16325C"
                     },
-                    "instant": true,
-                    "measureField": "count",
-                    "showActionMenu": true,
+                    "instant": false,
+                    "measureField": "none",
+                    "showActionMenu": false,
                     "step": "PAGE_URL_2_6",
                     "title": ""
                 },
@@ -3871,9 +3868,9 @@
                         "titleColor": "#747474",
                         "valueColor": "#16325C"
                     },
-                    "instant": true,
-                    "measureField": "count",
-                    "showActionMenu": true,
+                    "instant": false,
+                    "measureField": "none",
+                    "showActionMenu": false,
                     "step": "PAGE_URL_2_5",
                     "title": ""
                 },
@@ -3888,9 +3885,9 @@
                         "titleColor": "#747474",
                         "valueColor": "#16325C"
                     },
-                    "instant": true,
-                    "measureField": "count",
-                    "showActionMenu": true,
+                    "instant": false,
+                    "measureField": "none",
+                    "showActionMenu": false,
                     "step": "PAGE_URL_2_1",
                     "title": ""
                 },
@@ -3905,9 +3902,9 @@
                         "titleColor": "#747474",
                         "valueColor": "#16325C"
                     },
-                    "instant": true,
-                    "measureField": "count",
-                    "showActionMenu": true,
+                    "instant": false,
+                    "measureField": "none",
+                    "showActionMenu": false,
                     "step": "PAGE_URL_2",
                     "title": ""
                 },
@@ -3922,7 +3919,7 @@
                                     "size": "20px",
                                     "color": "#ffffff"
                                 },
-                                "insert": "Jupiter Home Page Usage Metrics - US & Non-US Commercial (GPS)"
+                                "insert": "Jupiter Home Page Usage Metrics - GPS"
                             },
                             {
                                 "attributes": {},
@@ -3944,9 +3941,9 @@
                         "titleColor": "#747474",
                         "valueColor": "#16325C"
                     },
-                    "instant": true,
-                    "measureField": "count",
-                    "showActionMenu": true,
+                    "instant": false,
+                    "measureField": "none",
+                    "showActionMenu": false,
                     "step": "PAGE_URL_2_2",
                     "title": ""
                 },
@@ -3962,7 +3959,7 @@
                         "valueColor": "#16325C"
                     },
                     "instant": true,
-                    "showActionMenu": true,
+                    "showActionMenu": false,
                     "step": "static_1",
                     "title": ""
                 },
@@ -3977,9 +3974,9 @@
                         "titleColor": "#747474",
                         "valueColor": "#16325C"
                     },
-                    "instant": true,
-                    "measureField": "count",
-                    "showActionMenu": true,
+                    "instant": false,
+                    "measureField": "none",
+                    "showActionMenu": false,
                     "step": "PAGE_URL_2_9",
                     "title": ""
                 },
@@ -3994,9 +3991,9 @@
                         "titleColor": "#747474",
                         "valueColor": "#16325C"
                     },
-                    "instant": true,
-                    "measureField": "count",
-                    "showActionMenu": true,
+                    "instant": false,
+                    "measureField": "none",
+                    "showActionMenu": false,
                     "step": "PAGE_URL_2_8",
                     "title": ""
                 },
@@ -4011,9 +4008,9 @@
                         "titleColor": "#747474",
                         "valueColor": "#16325C"
                     },
-                    "instant": true,
-                    "measureField": "count",
-                    "showActionMenu": true,
+                    "instant": false,
+                    "measureField": "none",
+                    "showActionMenu": false,
                     "step": "PAGE_URL_1",
                     "title": ""
                 },
@@ -4028,9 +4025,9 @@
                         "titleColor": "#747474",
                         "valueColor": "#16325C"
                     },
-                    "instant": true,
-                    "measureField": "count",
-                    "showActionMenu": true,
+                    "instant": false,
+                    "measureField": "none",
+                    "showActionMenu": false,
                     "step": "PAGE_URL_2_7",
                     "title": ""
                 },
@@ -4045,16 +4042,15 @@
                         "titleColor": "#747474",
                         "valueColor": "#16325C"
                     },
-                    "instant": true,
-                    "measureField": "count",
-                    "showActionMenu": true,
+                    "instant": false,
+                    "measureField": "none",
+                    "showActionMenu": false,
                     "step": "PAGE_URL_2_10",
                     "title": ""
                 },
                 "type": "listselector"
             }
-        },
-        "parameters": []
+        }
     },
     "datasets": [
         {
