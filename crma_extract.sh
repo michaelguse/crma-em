@@ -1,10 +1,14 @@
 #!/bin/zsh
 
+# defaults are set to DEV environment
+# other environments are supported by providing inst and targetorg parameters to the script invocation
 local inst="https://deloitte--aurora.sandbox.my.salesforce.com"
 local targetorg="mguse@deloitte.com.gcrm.6335400.aurora"
 local sfversion="61.0"
+local source="src"
 local positional=()
 local debug="false"
+local process="crma_extract"
 
 local usage=(
     "crma_extract.sh [-h|--help] [-d|--debug] [-i|--inst <instance UR>] [-t|--targetorg <login email for targetorg>] [-v|--version <Salesforce API Version|default('61.0')>]"
@@ -25,15 +29,31 @@ while (( $# )); do
     shift
 done
 
+# Extract sandbox name from URL
+### Grab text after "--" string
+source=${inst#*--} 
+### Split string by "." and take first value
+source=${source[(ws:.:)1]} 
+
 if [[ $debug == "true" ]] 
 then
     echo "\nDebug Info"
     echo "----------------------------------------------------------------"
+    echo "Process:            ${process}"
     echo "Instance URL:       ${inst}"
     echo "Target Org:         ${targetorg}"
     echo "Salesforce Version: v${sfversion}"
+    echo "Source:             ${source}"
     echo '\nPress any key to continue...'; read -k1 -s
     echo
+fi
+
+# Make sure directory exists to place outputs from script
+DIR="./${process}/"
+if [ ! -d "$DIR" ] ; then
+  ### Take action if $DIR does not exist ###
+  echo "Creating output directory ${DIR}..."
+  mkdir ${process}
 fi
 
 # Get Access Token from SF CLI environment
@@ -47,11 +67,11 @@ printf "\nExtracting CRMA Dashboard Info ... "
 curl -s ${inst}/services/data/v${sfversion}/wave/dashboards \
     -H "Accept: application/json" \
     -H "Authorization: Bearer $token" \
-    -o dashboards.json \
+    -o ${DIR}${source}_dashboards.json \
 
-jq '.dashboards[]|{Id: .id, Label: .label, Name: .name, CreatedDate: .createdDate, LastModDate: .lastModifiedDate}' dashboards.json > dashboard_list.json  
+jq '.dashboards[]|{Id: .id, Label: .label, Name: .name, CreatedDate: .createdDate, LastModDate: .lastModifiedDate}' ${DIR}${source}_dashboards.json > ${DIR}${source}_dashboard_list.json  
 
-tmp=`grep '\"Id\":' dashboard_list.json|wc -l|cut -w -f 2`
+tmp=`grep '\"Id\":' ${DIR}${source}_dashboard_list.json|wc -l|cut -w -f 2`
 printf "${tmp} entries.\n"
 
 printf "Extracting CRMA Dataset Info   ... "
@@ -59,11 +79,11 @@ printf "Extracting CRMA Dataset Info   ... "
 curl -s ${inst}/services/data/v${sfversion}/wave/datasets \
     -H "Accept: application/json" \
     -H "Authorization: Bearer $token" \
-    -o datasets.json \
+    -o ${DIR}${source}_datasets.json \
 
-jq '.datasets[]|{Id: .id, Name: .name, CreatedDate: .createdDate, LastModDate: .lastModifiedDate}' datasets.json > dataset_list.json
+jq '.datasets[]|{Id: .id, Name: .name, CreatedDate: .createdDate, LastModDate: .lastModifiedDate}' ${DIR}${source}_datasets.json > ${DIR}${source}_dataset_list.json
 
-tmp=`grep '\"Id\":' dataset_list.json|wc -l|cut -w -f 2`
+tmp=`grep '\"Id\":' ${DIR}${source}_dataset_list.json|wc -l|cut -w -f 2`
 printf "${tmp} entries.\n"
 
 printf "Extracting CRMA Lenses Info    ... "
@@ -71,11 +91,11 @@ printf "Extracting CRMA Lenses Info    ... "
 curl -s ${inst}/services/data/v${sfversion}/wave/lenses \
     -H "Accept: application/json" \
     -H "Authorization: Bearer $token" \
-    -o lenses.json \
+    -o ${DIR}${source}_lenses.json \
 
-jq '.lenses[]|{Id: .id, Label: .label, Name: .name, CreatedDate: .createdDate, LastModDate: .lastModifiedDate}' lenses.json > lenses_list.json
+jq '.lenses[]|{Id: .id, Label: .label, Name: .name, CreatedDate: .createdDate, LastModDate: .lastModifiedDate}' ${DIR}${source}_lenses.json > ${DIR}${source}_lenses_list.json
 
-tmp=`grep '\"Id\":' lenses_list.json|wc -l|cut -w -f 2`
+tmp=`grep '\"Id\":' ${DIR}${source}_lenses_list.json|wc -l|cut -w -f 2`
 printf "${tmp} entries.\n"
 
 printf "\nDone!\n"

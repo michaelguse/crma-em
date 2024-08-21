@@ -1,14 +1,6 @@
-#scripts to ignore
+#scripts/folder/files to ignore
+crma_extract
 crma_extract/*
-dashboards.json
-datasets.json
-lenses.json
-dashboard_list.json
-dataset_list.json
-lenses_list.json
-dashboard_csv.json
-dataset_csv.json
-lenses_csv.json
 *.info
 
 # Local development
