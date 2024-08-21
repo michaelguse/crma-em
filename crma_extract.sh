@@ -1,51 +1,82 @@
 #!/bin/zsh
 
-# Get Access Token from SF CLI environment
-sf org display --target-org mguse#@salesforce.demo > crma_org.info
-token=`grep "Access Token" crma_org.info | cut -w -f 4`
-rm crma_org.info
+local inst=""
+local targetorg=""
+local positional=()
+local debug="false"
 
-printf "\nExtracting CRMA Dashboard Info ... "
+local usage=(
+    "crma_extract.sh [-h|--help] [-d|--debug] [-i|--inst <instance UR>] [-t|--targetorg <login email for targetorg>]"
+)
 
-curl -s https://edo.my.salesforce.com/services/data/v58.0/wave/dashboards \
-    -H "Accept: application/json" \
-    -H "Authorization: Bearer $token" \
-    -o dashboards.json \
+opterr() { echo >&2 "optparsing_demo: Unknown option '$1'" }
 
-#jq '.dashboards[]|{Id: .id, Label: .label, CreatedDate: .createdDate, LastModDate: .lastModifiedDate}' dashboards.json > dashboard_list.json  
-jq -r '.dashboards[]|[ .id, .label, .createdDate, .lastModifiedDate] | @csv' dashboards.json > dashboard_csv.json  
+while (( $# )); do
+    case $1 in
+        --)                 shift; positional+=("${@[@]}"); break  ;;
+        -h|--help)          printf "%s\n" $usage && return         ;;
+        -d|--debug)         debug="true"                           ;;
+        -i|--inst)          shift; inst=$1                         ;;
+        -t|--targetorg)     shift; targetorg=$1                    ;;
+        -*)                 opterr $1 && return 2                  ;;
+        *)                  positional+=("${@[@]}"); break         ;;
+    esac
+    shift
+done
 
+if [[ $debug == "true" ]] 
+then
+    echo "Debug Info"
+    echo "--------------------------------"
+    echo "Instance URL: ${inst}"
+    echo "Target Org: ${targetorg}"
+    
+    echo "\n"
+    echo 'Press any key to continue...'; read -k1 -s
+else
 
-tmp=`grep '\"Id\":' dashboard_list.json|wc -l|cut -w -f 2`
-#printf `bc -e ${tmp}/6`
-printf "${tmp} entries.\n"
+    # Get Access Token from SF CLI environment
+    #sf org display --target-org mguse@deloitte.com.gcrm.6335400.aurora > crma_org.info
+    sf org display --target-org ${targetorg} > crma_org.info
+    token=`grep "Access Token" crma_org.info | cut -w -f 4`
+    rm crma_org.info
 
-printf "Extracting CRMA Dataset Info   ... "
+    printf "\nExtracting CRMA Dashboard Info ... "
 
-curl -s https://edo.my.salesforce.com/services/data/v58.0/wave/datasets \
-    -H "Accept: application/json" \
-    -H "Authorization: Bearer $token" \
-    -o datasets.json \
+    curl -s ${inst}/services/data/v58.0/wave/dashboards \
+        -H "Accept: application/json" \
+        -H "Authorization: Bearer $token" \
+        -o dashboards.json \
 
-#jq '.datasets[]|{Id: .id, Name: .name, CreatedDate: .createdDate, LastModDate: .lastModifiedDate}' datasets.json > dataset_list.json
-jq -r '.datasets[]|[ .id, .name, .createdDate, .lastModifiedDate ] | @csv' datasets.json > dataset_csv.json
+    jq '.dashboards[]|{Id: .id, Label: .label, Name: .name, CreatedDate: .createdDate, LastModDate: .lastModifiedDate}' dashboards.json > dashboard_list.json  
 
-tmp=`grep '\"Id\":' dataset_list.json|wc -l|cut -w -f 2`
-#printf `bc -e ${tmp}/6`
-printf "${tmp} entries.\n"
+    tmp=`grep '\"Id\":' dashboard_list.json|wc -l|cut -w -f 2`
+    printf "${tmp} entries.\n"
 
-printf "Extracting CRMA Lenses Info    ... "
+    printf "Extracting CRMA Dataset Info   ... "
 
-curl -s https://edo.my.salesforce.com/services/data/v58.0/wave/lenses \
-    -H "Accept: application/json" \
-    -H "Authorization: Bearer $token" \
-    -o lenses.json \
+    curl -s ${inst}/services/data/v58.0/wave/datasets \
+        -H "Accept: application/json" \
+        -H "Authorization: Bearer $token" \
+        -o datasets.json \
 
-#jq '.lenses[]|{Id: .id, Label: .label, CreatedDate: .createdDate, LastModDate: .lastModifiedDate}' lenses.json > lenses_list.json
-jq -r '.lenses[]|[ .id, .label, .createdDate, .lastModifiedDate] | @csv' lenses.json > lenses_csv.json
+    jq '.datasets[]|{Id: .id, Name: .name, CreatedDate: .createdDate, LastModDate: .lastModifiedDate}' datasets.json > dataset_list.json
 
-tmp=`grep '\"Id\":' lenses_list.json|wc -l|cut -w -f 2`
-#printf `bc -e ${tmp}/6`
-printf "${tmp} entries.\n"
+    tmp=`grep '\"Id\":' dataset_list.json|wc -l|cut -w -f 2`
+    printf "${tmp} entries.\n"
 
-printf "\nDone!\n"
+    printf "Extracting CRMA Lenses Info    ... "
+
+    curl -s ${inst}/services/data/v58.0/wave/lenses \
+        -H "Accept: application/json" \
+        -H "Authorization: Bearer $token" \
+        -o lenses.json \
+
+    jq '.lenses[]|{Id: .id, Label: .label, Name: .name, CreatedDate: .createdDate, LastModDate: .lastModifiedDate}' lenses.json > lenses_list.json
+
+    tmp=`grep '\"Id\":' lenses_list.json|wc -l|cut -w -f 2`
+    printf "${tmp} entries.\n"
+
+    printf "\nDone!\n"
+
+fi
