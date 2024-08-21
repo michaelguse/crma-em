@@ -35,24 +35,23 @@ source=${inst#*--}
 ### Split string by "." and take first value
 source=${source[(ws:.:)1]} 
 
-if [[ $debug == "true" ]] 
-then
-    echo "\nDebug Info"
-    echo "----------------------------------------------------------------"
-    echo "Process:            ${process}"
-    echo "Instance URL:       ${inst}"
-    echo "Target Org:         ${targetorg}"
-    echo "Salesforce Version: v${sfversion}"
-    echo "Source:             ${source}"
-    echo '\nPress any key to continue...'; read -k1 -s
-    echo
-fi
+# List process execution info 
+echo "\Process Info"
+echo "----------------------------------------------------------------"
+echo "Output folder:      /${process}/"
+echo "Instance URL:       ${inst}"
+echo "Target Org:         ${targetorg}"
+echo "Salesforce Version: v${sfversion}"
+echo "Source:             ${source}"
+echo '\nPress any key to continue...'; read -k1 -s
+echo
+
 
 # Make sure directory exists to place outputs from script
 DIR="./${process}/"
 if [ ! -d "$DIR" ] ; then
   ### Take action if $DIR does not exist ###
-  echo "Creating output directory ${DIR}..."
+  echo "Creating output directory ${DIR}...\n"
   mkdir ${process}
 fi
 
