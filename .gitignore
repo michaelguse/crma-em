@@ -1,4 +1,5 @@
 #scripts to ignore
+./crma_extract/**
 dashboards.json
 datasets.json
 lenses.json
