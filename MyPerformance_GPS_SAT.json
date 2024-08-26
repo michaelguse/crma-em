@@ -68,11 +68,11 @@
                         "navigationHidden": false,
                         "widgets": [
                             {
-                                "colspan": 10,
-                                "column": 1,
+                                "colspan": 5,
+                                "column": 2,
                                 "name": "dateselector_2",
-                                "row": 0,
-                                "rowspan": 7,
+                                "row": 3,
+                                "rowspan": 3,
                                 "widgetStyle": {
                                     "backgroundColor": "#FFFFFF",
                                     "borderColor": "#7D98B3",
@@ -113,12 +113,10 @@
                                 "name": "text_1",
                                 "row": 24,
                                 "rowspan": 4,
-                                "widgetStyle": {
-                                    "borderEdges": []
-                                }
+                                "widgetStyle": {}
                             },
                             {
-                                "colspan": 19,
+                                "colspan": 15,
                                 "column": 14,
                                 "name": "pillbox_01",
                                 "row": 3,
@@ -137,9 +135,7 @@
                                 "name": "text_2",
                                 "row": 24,
                                 "rowspan": 4,
-                                "widgetStyle": {
-                                    "borderEdges": []
-                                }
+                                "widgetStyle": {}
                             },
                             {
                                 "colspan": 12,
@@ -147,9 +143,7 @@
                                 "name": "text_3",
                                 "row": 24,
                                 "rowspan": 4,
-                                "widgetStyle": {
-                                    "borderEdges": []
-                                }
+                                "widgetStyle": {}
                             },
                             {
                                 "colspan": 3,
@@ -199,9 +193,7 @@
                                 "name": "container_9",
                                 "row": 65,
                                 "rowspan": 66,
-                                "widgetStyle": {
-                                    "borderEdges": []
-                                }
+                                "widgetStyle": {}
                             },
                             {
                                 "colspan": 7,
@@ -226,14 +218,12 @@
                                 }
                             },
                             {
-                                "colspan": 10,
+                                "colspan": 11,
                                 "column": 4,
                                 "name": "chart_6",
-                                "row": 35,
-                                "rowspan": 27,
-                                "widgetStyle": {
-                                    "borderEdges": []
-                                }
+                                "row": 34,
+                                "rowspan": 28,
+                                "widgetStyle": {}
                             },
                             {
                                 "colspan": 9,
@@ -248,7 +238,7 @@
                                 }
                             },
                             {
-                                "colspan": 22,
+                                "colspan": 15,
                                 "column": 14,
                                 "name": "text_5",
                                 "row": 0,
@@ -280,9 +270,7 @@
                                 "name": "chart_1",
                                 "row": 30,
                                 "rowspan": 32,
-                                "widgetStyle": {
-                                    "borderEdges": []
-                                }
+                                "widgetStyle": {}
                             },
                             {
                                 "colspan": 48,
@@ -290,9 +278,7 @@
                                 "name": "table_1",
                                 "row": 66,
                                 "rowspan": 65,
-                                "widgetStyle": {
-                                    "borderEdges": []
-                                }
+                                "widgetStyle": {}
                             },
                             {
                                 "colspan": 44,
@@ -348,8 +334,20 @@
                                 "name": "chart_2",
                                 "row": 30,
                                 "rowspan": 32,
+                                "widgetStyle": {}
+                            },
+                            {
+                                "colspan": 5,
+                                "column": 2,
+                                "name": "text_4",
+                                "row": 0,
+                                "rowspan": 3,
                                 "widgetStyle": {
-                                    "borderEdges": []
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#FFFFFF",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
                                 }
                             }
                         ]
@@ -570,6 +568,13 @@
                             "enable": false,
                             "type": "x",
                             "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [],
+                            "plots": [
+                                "A"
+                            ]
                         },
                         "showActionMenu": true,
                         "measureAxis2": {
@@ -1069,6 +1074,13 @@
                             "type": "x",
                             "chartsPerLine": 4
                         },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [],
+                            "plots": [
+                                "B"
+                            ]
+                        },
                         "showActionMenu": true,
                         "measureAxis2": {
                             "sqrtScale": false,
@@ -1147,7 +1159,10 @@
                         "saql_filter": "q = filter q by 'OpportunityServices__c.OwnerId' == ",
                         "saql_filter_sc": "q = filter q by 'Opty.OwnerId' == "
                     }
-                ]
+                ],
+                "numbers": [],
+                "strings": [],
+                "groups": []
             },
             "static_2": {
                 "broadcastFacet": true,
@@ -1190,7 +1205,10 @@
                         "Measure2__field": "OpportunityServices__c.gCRM_Amount_USD__c",
                         "Measure2__func": "sum"
                     }
-                ]
+                ],
+                "numbers": [],
+                "strings": [],
+                "groups": []
             },
             "static_1": {
                 "broadcastFacet": true,
@@ -1233,7 +1251,10 @@
                         "Measure2__field": "OpportunityServices__c.gCRM_Amount_USD__c",
                         "Measure2__func": "sum"
                     }
-                ]
+                ],
+                "numbers": [],
+                "strings": [],
+                "groups": []
             },
             "gps_closed_lost_aban_1": {
                 "broadcastFacet": true,
@@ -1383,7 +1404,10 @@
                         "Display": "$",
                         "saql": "q = foreach q generate q.'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'OpportunityServices__c.gCRM_GPS_Stage_US__c' as 'OpportunityServices__c.gCRM_GPS_Stage_US__c', sum('OpportunityServices__c.gCRM_Amount_USD__c') as 'A'"
                     }
-                ]
+                ],
+                "numbers": [],
+                "strings": [],
+                "groups": []
             },
             "GPSOptysbyTeamMember_1": {
                 "broadcastFacet": true,
@@ -1575,7 +1599,9 @@
                 ],
                 "type": "aggregateflex",
                 "useGlobal": true,
-                "visualizationParameters": {}
+                "visualizationParameters": {
+                    "options": {}
+                }
             },
             "ClosedLostAbandoned__1": {
                 "broadcastFacet": true,
@@ -1909,7 +1935,7 @@
                     "showActionMenu": false,
                     "step": "gps_closed_lost_aban_1",
                     "textAlignment": "center",
-                    "title": "My Average Days to Closed Won",
+                    "title": "My Average time to Closed Won (in Days)",
                     "titleColor": "#091A3E",
                     "titleSize": 16,
                     "tooltip": {
@@ -1957,7 +1983,9 @@
                     "showActionMenu": false,
                     "step": "lens_2",
                     "totals": true,
-                    "verticalPadding": 8
+                    "verticalPadding": 8,
+                    "evenRowColor": null,
+                    "oddRowColor": null
                 },
                 "type": "table"
             },
@@ -2012,7 +2040,7 @@
                     "showActionMenu": false,
                     "step": "winrate_gps_saql_1",
                     "textAlignment": "left",
-                    "title": "by Amount: ",
+                    "title": "By Amount: ",
                     "titleColor": "#091A3E",
                     "titleSize": 16,
                     "tooltip": {
@@ -2037,11 +2065,11 @@
                     "interactions": [],
                     "measureField": "Win Rate Count",
                     "numberColor": "#54698D",
-                    "numberSize": 16,
+                    "numberSize": 20,
                     "showActionMenu": false,
                     "step": "winrate_gps_saql_1",
                     "textAlignment": "left",
-                    "title": "by Count: ",
+                    "title": "By Count: ",
                     "titleColor": "#54698D",
                     "titleSize": 16,
                     "tooltip": {
@@ -2294,7 +2322,7 @@
                     "relativeModeEnabled": false,
                     "showActionMenu": false,
                     "step": "Actual_Close_1",
-                    "title": "Actual Close Date"
+                    "title": ""
                 },
                 "type": "dateselector"
             },
@@ -2330,6 +2358,30 @@
                     "interactions": []
                 },
                 "type": "container"
+            },
+            "text_4": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "color": "#7d98b3",
+                                    "size": "13px"
+                                },
+                                "insert": "Actual Close Date:"
+                            },
+                            {
+                                "attributes": {
+                                    "align": "left"
+                                },
+                                "insert": "\n"
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": false
+                },
+                "type": "text"
             },
             "chart_2": {
                 "parameters": {
@@ -2542,7 +2594,8 @@
                 },
                 "type": "chart"
             }
-        }
+        },
+        "parameters": []
     },
     "datasets": [
         {
