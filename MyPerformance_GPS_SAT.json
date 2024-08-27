@@ -68,7 +68,7 @@
                         "navigationHidden": false,
                         "widgets": [
                             {
-                                "colspan": 5,
+                                "colspan": 7,
                                 "column": 2,
                                 "name": "dateselector_2",
                                 "row": 3,
@@ -84,7 +84,7 @@
                                 }
                             },
                             {
-                                "colspan": 9,
+                                "colspan": 10,
                                 "column": 2,
                                 "name": "number_3",
                                 "row": 9,
@@ -96,8 +96,8 @@
                                 }
                             },
                             {
-                                "colspan": 9,
-                                "column": 39,
+                                "colspan": 10,
+                                "column": 38,
                                 "name": "number_4",
                                 "row": 9,
                                 "rowspan": 9,
@@ -117,7 +117,7 @@
                             },
                             {
                                 "colspan": 15,
-                                "column": 14,
+                                "column": 15,
                                 "name": "pillbox_01",
                                 "row": 3,
                                 "rowspan": 3,
@@ -130,16 +130,16 @@
                                 }
                             },
                             {
-                                "colspan": 12,
-                                "column": 18,
+                                "colspan": 13,
+                                "column": 17,
                                 "name": "text_2",
                                 "row": 24,
                                 "rowspan": 4,
                                 "widgetStyle": {}
                             },
                             {
-                                "colspan": 12,
-                                "column": 34,
+                                "colspan": 13,
+                                "column": 33,
                                 "name": "text_3",
                                 "row": 24,
                                 "rowspan": 4,
@@ -218,16 +218,16 @@
                                 }
                             },
                             {
-                                "colspan": 11,
-                                "column": 4,
+                                "colspan": 12,
+                                "column": 3,
                                 "name": "chart_6",
-                                "row": 34,
+                                "row": 33,
                                 "rowspan": 28,
                                 "widgetStyle": {}
                             },
                             {
-                                "colspan": 9,
-                                "column": 27,
+                                "colspan": 10,
+                                "column": 26,
                                 "name": "number_5",
                                 "row": 9,
                                 "rowspan": 9,
@@ -239,7 +239,7 @@
                             },
                             {
                                 "colspan": 15,
-                                "column": 14,
+                                "column": 15,
                                 "name": "text_5",
                                 "row": 0,
                                 "rowspan": 3,
@@ -268,7 +268,7 @@
                                 "colspan": 16,
                                 "column": 17,
                                 "name": "chart_1",
-                                "row": 30,
+                                "row": 29,
                                 "rowspan": 32,
                                 "widgetStyle": {}
                             },
@@ -300,7 +300,7 @@
                                 "colspan": 1,
                                 "column": 16,
                                 "name": "container_2",
-                                "row": 35,
+                                "row": 34,
                                 "rowspan": 21,
                                 "widgetStyle": {
                                     "backgroundColor": "#FFFFFF",
@@ -316,7 +316,7 @@
                                 "colspan": 1,
                                 "column": 33,
                                 "name": "container_3",
-                                "row": 35,
+                                "row": 34,
                                 "rowspan": 21,
                                 "widgetStyle": {
                                     "backgroundColor": "#FFFFFF",
@@ -332,12 +332,12 @@
                                 "colspan": 15,
                                 "column": 34,
                                 "name": "chart_2",
-                                "row": 30,
+                                "row": 29,
                                 "rowspan": 32,
                                 "widgetStyle": {}
                             },
                             {
-                                "colspan": 5,
+                                "colspan": 7,
                                 "column": 2,
                                 "name": "text_4",
                                 "row": 0,
@@ -1935,7 +1935,7 @@
                     "showActionMenu": false,
                     "step": "gps_closed_lost_aban_1",
                     "textAlignment": "center",
-                    "title": "My Average time to Closed Won (in Days)",
+                    "title": "My Average Time to Closed Won",
                     "titleColor": "#091A3E",
                     "titleSize": 16,
                     "tooltip": {
@@ -2064,13 +2064,13 @@
                     "exploreLink": true,
                     "interactions": [],
                     "measureField": "Win Rate Count",
-                    "numberColor": "#54698D",
+                    "numberColor": "#7D98B3",
                     "numberSize": 20,
                     "showActionMenu": false,
                     "step": "winrate_gps_saql_1",
                     "textAlignment": "left",
                     "title": "By Count: ",
-                    "titleColor": "#54698D",
+                    "titleColor": "#7D98B3",
                     "titleSize": 16,
                     "tooltip": {
                         "customizeTooltip": false

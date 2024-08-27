@@ -68,7 +68,7 @@
                         "navigationHidden": false,
                         "widgets": [
                             {
-                                "colspan": 8,
+                                "colspan": 7,
                                 "column": 2,
                                 "name": "dateselector_2",
                                 "row": 3,
@@ -191,7 +191,7 @@
                                 "colspan": 16,
                                 "column": 17,
                                 "name": "chart_1",
-                                "row": 28,
+                                "row": 29,
                                 "rowspan": 31,
                                 "widgetStyle": {}
                             },
@@ -199,7 +199,7 @@
                                 "colspan": 15,
                                 "column": 34,
                                 "name": "chart_2",
-                                "row": 28,
+                                "row": 29,
                                 "rowspan": 31,
                                 "widgetStyle": {}
                             },
@@ -207,7 +207,7 @@
                                 "colspan": 50,
                                 "column": 0,
                                 "name": "container_9",
-                                "row": 62,
+                                "row": 63,
                                 "rowspan": 70,
                                 "widgetStyle": {}
                             },
@@ -276,7 +276,7 @@
                                 "colspan": 12,
                                 "column": 3,
                                 "name": "chart_8",
-                                "row": 32,
+                                "row": 33,
                                 "rowspan": 27,
                                 "widgetStyle": {}
                             },
@@ -284,7 +284,7 @@
                                 "colspan": 1,
                                 "column": 16,
                                 "name": "container_1",
-                                "row": 33,
+                                "row": 34,
                                 "rowspan": 21,
                                 "widgetStyle": {
                                     "backgroundColor": "#FFFFFF",
@@ -300,7 +300,7 @@
                                 "colspan": 1,
                                 "column": 33,
                                 "name": "container_2",
-                                "row": 33,
+                                "row": 34,
                                 "rowspan": 21,
                                 "widgetStyle": {
                                     "backgroundColor": "#FFFFFF",
@@ -332,12 +332,12 @@
                                 "colspan": 48,
                                 "column": 1,
                                 "name": "table_1",
-                                "row": 62,
+                                "row": 63,
                                 "rowspan": 68,
                                 "widgetStyle": {}
                             },
                             {
-                                "colspan": 8,
+                                "colspan": 7,
                                 "column": 2,
                                 "name": "text_4",
                                 "row": 0,
@@ -1828,7 +1828,7 @@
                     "showActionMenu": false,
                     "step": "lens_4",
                     "textAlignment": "center",
-                    "title": "My Average Time to Closed Won (in Days)",
+                    "title": "My Average Time to Closed Won",
                     "titleColor": "#091A3E",
                     "titleSize": 16,
                     "tooltip": {
