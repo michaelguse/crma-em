@@ -1,5 +1,5 @@
 {
-    "label": "Copy of My Performance (US)",
+    "label": "My Performance",
     "mobileDisabled": false,
     "state": {
         "dataSourceLinksInfo": {
@@ -11,12 +11,12 @@
                         {
                             "dataSourceName": "Load_CustomTeam_Opty",
                             "dataSourceType": "dataset",
-                            "fieldName": "Opty.StageName"
+                            "fieldName": "Opty.gCRM_GPS_Stage_US__c"
                         },
                         {
                             "dataSourceName": "Load_opty_services_acct_all",
                             "dataSourceType": "dataset",
-                            "fieldName": "OpportunityServices__c.StageName"
+                            "fieldName": "OpportunityServices__c.gCRM_GPS_Stage_US__c"
                         }
                     ],
                     "label": "Stage Name",
@@ -390,7 +390,7 @@
                 "groups": [],
                 "label": "Clone of opty_list_view_saql",
                 "numbers": [],
-                "query": "q = load \"Load_CustomTeam_Opty\";{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter_sc\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opty.StageName' in [\"Closed Lost\", \"Closed Won\",\"Closed Abandoned\"];\nq = group q by ('Opty.Name', 'Opty.gCRM_Opportunity_ID__c', 'Opty.gCRM_English_Account_Name__c', 'Opty.gCRM_Actual_Close_Date__c', 'Opty.gCRM_Reason_for_Won_Lost_Abandoned__c', 'Opty.StageName');\nq = foreach q generate q.'Opty.Name' as 'Opportunity Name', q.'Opty.gCRM_Opportunity_ID__c' as 'Opty.gCRM_Opportunity_ID__c', q.'Opty.gCRM_English_Account_Name__c' as 'English Account Name', sum(q.'Opty.gCRM_Amount_USD__c') as 'TGOA (US)', sum(q.'gCRM_Sales_Credit_Amount__c') as 'Sales Credit Amount', substr(date_to_string(toDate(q.'Opty.gCRM_Actual_Close_Date__c', \"yyyy-MM-dd\"), \"MM/dd/yyyy\"), 1, 10) as 'Actual Close Date', q.'Opty.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Closed Reason',  q.'Opty.StageName' as 'Stage';\nq = order q by 'Actual Close Date' desc;\nq = limit q 100;\n",
+                "query": "q = load \"Load_CustomTeam_Opty\";{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter_sc\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opty.gCRM_GPS_Stage_US__c' in [\"Closed Lost\", \"Closed Won\",\"Closed Abandoned\"];\nq = group q by ('Opty.Name', 'Opty.gCRM_Opportunity_ID__c', 'Opty.gCRM_English_Account_Name__c', 'Opty.gCRM_Actual_Close_Date__c', 'Opty.gCRM_Reason_for_Won_Lost_Abandoned__c', 'Opty.gCRM_GPS_Stage_US__c');\nq = foreach q generate q.'Opty.Name' as 'Opportunity Name', q.'Opty.gCRM_Opportunity_ID__c' as 'Opty.gCRM_Opportunity_ID__c', q.'Opty.gCRM_English_Account_Name__c' as 'English Account Name', sum(q.'Opty.gCRM_Amount_USD__c') as 'TGOA (US)', sum(q.'gCRM_Sales_Credit_Amount__c') as 'Sales Credit Amount', substr(date_to_string(toDate(q.'Opty.gCRM_Actual_Close_Date__c', \"yyyy-MM-dd\"), \"MM/dd/yyyy\"), 1, 10) as 'Actual Close Date', q.'Opty.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Closed Reason',  q.'Opty.gCRM_GPS_Stage_US__c' as 'Stage';\nq = order q by 'Actual Close Date' desc;\nq = limit q 100;\n",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -437,7 +437,7 @@
                 "groups": [],
                 "label": "winrate-us-saql",
                 "numbers": [],
-                "query": "q = load \"Load_opty_services_acct_all\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'OpportunityServices__c.StageName' in [\"Closed Lost\", \"Closed Won\"];\n{{cell(static_2.selection, 0, \"saql\").asString()}};\nq = group q by 'OpportunityServices__c.StageName';\nq = order q by 'OpportunityServices__c.StageName' desc;\nq = foreach q generate 'OpportunityServices__c.StageName', sum(B) as 'B', sum(B)/sum(sum(B)) over ([..] partition by all)*100 as 'Win Rate';\nq = limit q 10;",
+                "query": "q = load \"Load_opty_services_acct_all\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";;\nq = filter q by 'OpportunityServices__c.gCRM_GPS_Stage_US__c' in [\"Closed Lost\", \"Closed Won\"];\nq = group q by 'OpportunityServices__c.gCRM_GPS_Stage_US__c';\n{{cell(static_2.selection, 0, \"saql\").asString()}};\nq = group q by 'OpportunityServices__c.gCRM_GPS_Stage_US__c';\nq = order q by 'OpportunityServices__c.gCRM_GPS_Stage_US__c' desc;\nq = foreach q generate 'OpportunityServices__c.gCRM_GPS_Stage_US__c', sum(B) as '{{cell(static_2.selection, 0, \"Value1\").asString()}}', sum(B)/sum(sum(B)) over ([..] partition by all)*100 as 'Win Rate';\nq = limit q 10;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -497,10 +497,10 @@
                         "columnMap": {
                             "trellis": [],
                             "dimension": [
-                                "OpportunityServices__c.StageName"
+                                "OpportunityServices__c.gCRM_GPS_Stage_US__c"
                             ],
                             "plots": [
-                                "B"
+                                "{{cell(static_2.selection, 0, \"Value1\").asString()}}"
                             ]
                         },
                         "showActionMenu": false,
@@ -638,7 +638,7 @@
                 "groups": [],
                 "label": "My Sales Total",
                 "numbers": [],
-                "query": "q = load \"Load_opty_services_acct_all\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'OpportunityServices__c.StageName' == \"Closed Won\";\nq = group q by all;\nq = foreach q generate sum(q.'gCRM_Split_Amount_USD__c') as 'A';\nq = limit q 2000;",
+                "query": "q = load \"Load_opty_services_acct_all\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";;\nq = filter q by 'OpportunityServices__c.gCRM_GPS_Stage_US__c' == \"Closed Won\";\nq = group q by all;\nq = foreach q generate sum(q.'gCRM_Split_Amount_USD__c') as 'Amount';\nq = limit q 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -766,7 +766,7 @@
                 "groups": [],
                 "label": "My Average Win Size",
                 "numbers": [],
-                "query": "q = load \"Load_opty_services_acct_all\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'OpportunityServices__c.StageName' == \"Closed Won\";\nq = filter q by 'gCRM_Split_Amount_USD__c' > 0;\nq = group q by ('OpportunityServices__c.gCRM_Opportunity_ID__c');\nq = foreach q generate sum('gCRM_Split_Amount_USD__c') as 'gCRM_Split_Amount_USD__c', 'OpportunityServices__c.gCRM_Opportunity_ID__c' as 'OpportunityServices__c.gCRM_Opportunity_ID__c';\nq = group q by all;\nq = foreach q generate sum('gCRM_Split_Amount_USD__c') as 'Amount', unique('OpportunityServices__c.gCRM_Opportunity_ID__c') as 'count';\nq = foreach q generate coalesce(coalesce('Amount', 0)/coalesce('count', 0), 0) as 'Amount';\nq = limit q 10;",
+                "query": "q = load \"Load_opty_services_acct_all\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";;\nq = filter q by 'OpportunityServices__c.gCRM_GPS_Stage_US__c' == \"Closed Won\";\nq = filter q by 'gCRM_Split_Amount_USD__c' > 0;\nq = group q by ('OpportunityServices__c.gCRM_Opportunity_ID__c');\nq = foreach q generate sum('gCRM_Split_Amount_USD__c') as 'gCRM_Split_Amount_USD__c', 'OpportunityServices__c.gCRM_Opportunity_ID__c' as 'OpportunityServices__c.gCRM_Opportunity_ID__c';\nq = group q by all;\nq = foreach q generate sum('gCRM_Split_Amount_USD__c') as 'Amount', unique('OpportunityServices__c.gCRM_Opportunity_ID__c') as 'count';\nq = foreach q generate coalesce(coalesce('Amount', 0)/coalesce('count', 0), 0) as 'Amount';\nq = limit q 10;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -894,7 +894,7 @@
                 "groups": [],
                 "label": "SalesCreditAmount",
                 "numbers": [],
-                "query": "q = load \"Load_CustomTeam_Opty\";\nq = filter q by 'Opty.StageName' == \"Closed Won\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter_sc\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = group q by all;\nq = foreach q generate sum(q.'gCRM_Sales_Credit_Amount__c') as 'B';\nq = limit q 2000;\n",
+                "query": "q = load \"Load_CustomTeam_Opty\";\nq = filter q by 'Opty.gCRM_GPS_Stage_US__c' == \"Closed Won\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter_sc\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = group q by all;\nq = foreach q generate sum(q.'gCRM_Sales_Credit_Amount__c') as 'B';\nq = limit q 2000;\n",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -1052,7 +1052,7 @@
                     {
                         "Display": "Opportunity Leader",
                         "saql_filter": "q = filter q by 'OpportunityServices__c.OwnerId' == ",
-                        "saql_filter_sc": "q = filter q by 'Opty.OwnerId' == "
+                        "saql_filter_sc": "q = filter q by 'gCRM_Opportunity_Team_Role__c' in [\"Opportunity Leader\"] && 'Opty.OwnerId' == "
                     }
                 ]
             },
@@ -1061,7 +1061,7 @@
                 "groups": [],
                 "label": "winrate-percen-us-saql",
                 "numbers": [],
-                "query": "q = load \"Load_opty_services_acct_all\";\nq = filter q by 'OpportunityServices__c.StageName' in [\"Closed Lost\", \"Closed Won\"];\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = foreach q generate 'OpportunityServices__c.StageName' as 'OpportunityServices__c.StageName', unique(q.'OpportunityServices__c.gCRM_Opportunity_ID__c') as 'B', sum(q.'OpportunityServices__c.gCRM_Amount_USD__c') as 'C';\nq = group q by 'OpportunityServices__c.StageName';\nq = order q by 'OpportunityServices__c.StageName' desc;\nq = foreach q generate 'OpportunityServices__c.StageName', sum(B) as 'B', sum('C') as 'C', sum(B)/sum(sum(B)) over ([..] partition by all) as 'Win Rate Count', sum(C)/sum(sum(C)) over ([..] partition by all) as 'Win Rate Amount';\nq = limit q 10;",
+                "query": "q = load \"Load_opty_services_acct_all\";\nq = filter q by 'OpportunityServices__c.gCRM_GPS_Stage_US__c' in [\"Closed Lost\", \"Closed Won\"];\n\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";;\nq = group q by 'OpportunityServices__c.gCRM_GPS_Stage_US__c';\nq = foreach q generate 'OpportunityServices__c.gCRM_GPS_Stage_US__c' as 'OpportunityServices__c.gCRM_GPS_Stage_US__c', unique(q.'OpportunityServices__c.gCRM_Opportunity_ID__c') as 'B', sum(q.'gCRM_Split_Amount_USD__c') as 'C';\nq = group q by 'OpportunityServices__c.gCRM_GPS_Stage_US__c';\nq = order q by 'OpportunityServices__c.gCRM_GPS_Stage_US__c' desc;\nq = foreach q generate 'OpportunityServices__c.gCRM_GPS_Stage_US__c', sum(B) as 'B', sum('C') as 'C', sum(B)/sum(sum(B)) over ([..] partition by all) as 'Win Rate Count', sum(C)/sum(sum(C)) over ([..] partition by all) as 'Win Rate Amount';\nq = limit q 10;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -1137,18 +1137,6 @@
                             "type": "x",
                             "chartsPerLine": 4
                         },
-                        "columnMap": {
-                            "trellis": [],
-                            "dimensionAxis": [
-                                "OpportunityServices__c.StageName"
-                            ],
-                            "plots": [
-                                "B",
-                                "C",
-                                "Win Rate Count",
-                                "Win Rate Amount"
-                            ]
-                        },
                         "showActionMenu": true,
                         "measureAxis2": {
                             "sqrtScale": false,
@@ -1196,9 +1184,9 @@
                     "Measure2": {
                         "aggregateFunction": "Measure2__func",
                         "dataset": {
-                            "id": "0Fb7S00000119I5SAI",
+                            "id": "0Fb8Y000000wlEXSAY",
                             "name": "Load_opty_services_acct_all",
-                            "url": "/services/data/v62.0/wave/datasets/0Fb7S00000119I5SAI"
+                            "url": "/services/data/v62.0/wave/datasets/0Fb8Y000000wlEXSAY"
                         },
                         "field": "Measure2__field",
                         "type": "aggregate"
@@ -1214,24 +1202,24 @@
                 "selectMode": "singlerequired",
                 "start": {
                     "Display": [
-                        "$"
+                        "#"
                     ]
                 },
                 "type": "staticflex",
                 "values": [
                     {
                         "Display": "#",
-                        "saql": "q = foreach q generate 'OpportunityServices__c.StageName' as 'OpportunityServices__c.StageName', unique('OpportunityServices__c.gCRM_Opportunity_ID__c') as 'B'",
+                        "saql": "q = foreach q generate 'OpportunityServices__c.gCRM_GPS_Stage_US__c' as 'OpportunityServices__c.gCRM_GPS_Stage_US__c', unique('OpportunityServices__c.gCRM_Opportunity_ID__c') as 'B'",
                         "Measure2__field": "OpportunityServices__c.gCRM_Opportunity_ID__c",
                         "Measure2__func": "unique",
-                        "Value1": "Amount"
+                        "Value1": "WinRate Count"
                     },
                     {
                         "Display": "$",
-                        "saql": "q = foreach q generate 'OpportunityServices__c.StageName' as 'OpportunityServices__c.StageName', sum('gCRM_Split_Amount_USD__c') as 'B'",
+                        "saql": "q = foreach q generate 'OpportunityServices__c.gCRM_GPS_Stage_US__c' as 'OpportunityServices__c.gCRM_GPS_Stage_US__c', sum('gCRM_Split_Amount_USD__c') as 'B'",
                         "Measure2__field": "gCRM_Split_Amount_USD__c",
                         "Measure2__func": "sum",
-                        "Value1": "Count"
+                        "Value1": "WinRate Amount"
                     }
                 ]
             },
@@ -1241,9 +1229,9 @@
                     "Measure2": {
                         "aggregateFunction": "Measure2__func",
                         "dataset": {
-                            "id": "0Fb7S00000119I5SAI",
+                            "id": "0Fb8Y000000wlEXSAY",
                             "name": "Load_opty_services_acct_all",
-                            "url": "/services/data/v62.0/wave/datasets/0Fb7S00000119I5SAI"
+                            "url": "/services/data/v62.0/wave/datasets/0Fb8Y000000wlEXSAY"
                         },
                         "field": "Measure2__field",
                         "type": "aggregate"
@@ -1259,22 +1247,24 @@
                 "selectMode": "singlerequired",
                 "start": {
                     "Display": [
-                        "#"
+                        "$"
                     ]
                 },
                 "type": "staticflex",
                 "values": [
                     {
                         "Display": "#",
-                        "saql": "q = foreach q generate q.'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'OpportunityServices__c.StageName' as 'OpportunityServices__c.StageName', unique('OpportunityServices__c.gCRM_Opportunity_ID__c') as 'A'",
+                        "saql": "q = foreach q generate q.'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'OpportunityServices__c.gCRM_GPS_Stage_US__c' as 'OpportunityServices__c.gCRM_GPS_Stage_US__c', unique('OpportunityServices__c.gCRM_Opportunity_ID__c') as 'ClosedWon Count'",
                         "Measure2__field": "OpportunityServices__c.gCRM_Opportunity_ID__c",
-                        "Measure2__func": "unique"
+                        "Measure2__func": "unique",
+                        "Value1": "ClosedWon Count"
                     },
                     {
                         "Display": "$",
-                        "saql": "q = foreach q generate q.'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'OpportunityServices__c.StageName' as 'OpportunityServices__c.StageName', sum('gCRM_Split_Amount_USD__c') as 'A'",
+                        "saql": "q = foreach q generate q.'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'OpportunityServices__c.gCRM_GPS_Stage_US__c' as 'OpportunityServices__c.gCRM_GPS_Stage_US__c', sum('gCRM_Split_Amount_USD__c') as 'Amount'",
                         "Measure2__field": "gCRM_Split_Amount_USD__c",
-                        "Measure2__func": "sum"
+                        "Measure2__func": "sum",
+                        "Value2": "Amount"
                     }
                 ]
             },
@@ -1292,18 +1282,20 @@
                 "selectMode": "singlerequired",
                 "start": {
                     "Display": [
-                        "#"
+                        "$"
                     ]
                 },
                 "type": "staticflex",
                 "values": [
                     {
                         "Display": "#",
-                        "saql": "q = foreach q generate q.'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'OpportunityServices__c.gCRM_GPS_Stage_US__c' as 'OpportunityServices__c.gCRM_GPS_Stage_US__c', unique('OpportunityServices__c.gCRM_Opportunity_ID__c') as 'A'"
+                        "saql": "q = foreach q generate q.'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'OpportunityServices__c.gCRM_GPS_Stage_US__c' as 'OpportunityServices__c.gCRM_GPS_Stage_US__c', unique('OpportunityServices__c.gCRM_Opportunity_ID__c') as 'ClosedLost Count'",
+                        "Value1": "ClosedLost Count"
                     },
                     {
                         "Display": "$",
-                        "saql": "q = foreach q generate q.'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'OpportunityServices__c.gCRM_GPS_Stage_US__c' as 'OpportunityServices__c.gCRM_GPS_Stage_US__c', sum('gCRM_Split_Amount_USD__c') as 'A'"
+                        "saql": "q = foreach q generate q.'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'OpportunityServices__c.gCRM_GPS_Stage_US__c' as 'OpportunityServices__c.gCRM_GPS_Stage_US__c', sum('gCRM_Split_Amount_USD__c') as 'Amount'",
+                        "Value1": "Amount"
                     }
                 ]
             },
@@ -1312,7 +1304,7 @@
                 "groups": [],
                 "label": "ClosedLostAbandonedReason_chart_saql",
                 "numbers": [],
-                "query": "q = load \"Load_opty_services_acct_all\";\nq = filter q by 'OpportunityServices__c.gCRM_GPS_Stage_US__c' in [\"Closed Lost\",\"Closed Abandoned\"];\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = group q by ('OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', 'OpportunityServices__c.gCRM_GPS_Stage_US__c');\n{{cell(Lost_Abandoned_Toggl_1.selection, 0, \"saql\").asString()}};\nq = order q by ('OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' asc, 'OpportunityServices__c.gCRM_GPS_Stage_US__c' asc);\nq = limit q 2000;",
+                "query": "q = load \"Load_opty_services_acct_all\";\nq = filter q by 'OpportunityServices__c.gCRM_GPS_Stage_US__c' in [\"Closed Lost\",\"Closed Abandoned\"];\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";;\nq = group q by ('OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', 'OpportunityServices__c.gCRM_GPS_Stage_US__c');\n{{cell(Lost_Abandoned_Toggl_1.selection, 0, \"saql\").asString()}};\nq = order q by ('OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' asc, 'OpportunityServices__c.gCRM_GPS_Stage_US__c' asc);\nq = limit q 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -1436,7 +1428,7 @@
                 "groups": [],
                 "label": "Closed_Won_Reason_qry",
                 "numbers": [],
-                "query": "q = load \"Load_opty_services_acct_all\";\nq = filter q by 'OpportunityServices__c.StageName' == \"Closed Won\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = group q by ('OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', 'OpportunityServices__c.StageName');\n{{cell(static_1.selection, 0, \"saql\").asString()}};\n--q = foreach q generate q.'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'OpportunityServices__c.StageName' as 'OpportunityServices__c.StageName', count(q) as 'A';\nq = order q by ('OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' asc, 'OpportunityServices__c.StageName' asc);\nq = limit q 2000;",
+                "query": "q = load \"Load_opty_services_acct_all\";\nq = filter q by 'OpportunityServices__c.gCRM_GPS_Stage_US__c' == \"Closed Won\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";;\nq = group q by ('OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', 'OpportunityServices__c.gCRM_GPS_Stage_US__c');\n{{cell(static_1.selection, 0, \"saql\").asString()}};\n--q = foreach q generate q.'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'OpportunityServices__c.gCRM_GPS_Stage_US__c' as 'OpportunityServices__c.gCRM_GPS_Stage_US__c', count(q) as 'A';\nq = order q by ('OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' asc, 'OpportunityServices__c.gCRM_GPS_Stage_US__c' asc);\nq = limit q 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -1513,18 +1505,6 @@
                             "type": "x",
                             "chartsPerLine": 4
                         },
-                        "columnMap": {
-                            "split": [
-                                "OpportunityServices__c.StageName"
-                            ],
-                            "trellis": [],
-                            "dimensionAxis": [
-                                "OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c"
-                            ],
-                            "plots": [
-                                "A"
-                            ]
-                        },
                         "showActionMenu": false,
                         "measureAxis2": {
                             "sqrtScale": false,
@@ -1571,10 +1551,10 @@
                 "broadcastFacet": true,
                 "datasets": [
                     {
-                        "id": "0Fb7S00000119I5SAI",
+                        "id": "0Fb8Y000000wlEXSAY",
                         "label": "Load_opty_services_acct_all",
                         "name": "Load_opty_services_acct_all",
-                        "url": "/services/data/v62.0/wave/datasets/0Fb7S00000119I5SAI"
+                        "url": "/services/data/v62.0/wave/datasets/0Fb8Y000000wlEXSAY"
                     }
                 ],
                 "isGlobal": false,
@@ -1615,7 +1595,7 @@
                 "groups": [],
                 "label": "Average time to close won in days",
                 "numbers": [],
-                "query": "q = load \"Load_opty_services_acct_all\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'OpportunityServices__c.StageName' == \"Closed Won\";\nq = filter q by 'Days_to_Close__c' != 0;\nq = group q by ('OpportunityServices__c.gCRM_Opportunity_ID__c');\nq = foreach q generate first(q.'Days_to_Close__c') as 'Days_to_Close__c',('OpportunityServices__c.gCRM_Opportunity_ID__c') as 'C';\nq = group q by all;\nq = foreach q generate sum('Days_to_Close__c') as 'Days_to_Close__c', unique('C') as 'C';\nq = foreach q generate round(coalesce((coalesce('Days_to_Close__c', 0)/coalesce('C', 0)), 0)) as 'Avg Days to Close';\n",
+                "query": "q = load \"Load_opty_services_acct_all\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";;\nq = filter q by 'OpportunityServices__c.gCRM_GPS_Stage_US__c' == \"Closed Won\";\nq = filter q by 'Days_to_Close__c' != 0;\nq = group q by ('OpportunityServices__c.gCRM_Opportunity_ID__c');\nq = foreach q generate first(q.'Days_to_Close__c') as 'Days_to_Close__c',('OpportunityServices__c.gCRM_Opportunity_ID__c') as 'C';\nq = group q by all;\nq = foreach q generate sum('Days_to_Close__c') as 'Days_to_Close__c', unique('C') as 'C';\nq = foreach q generate round(coalesce((coalesce('Days_to_Close__c', 0)/coalesce('C', 0)), 0)) as 'Avg Days to Close';\n",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -1874,7 +1854,7 @@
                     },
                     "columns": [],
                     "customBulkActions": [],
-                    "exploreLink": false,
+                    "exploreLink": true,
                     "header": {
                         "alignment": "left",
                         "backgroundColor": "#f4f6f9",
@@ -1928,7 +1908,7 @@
                     "compact": false,
                     "exploreLink": true,
                     "interactions": [],
-                    "measureField": "A",
+                    "measureField": "Amount",
                     "numberBold": false,
                     "numberColor": "#091A3E",
                     "numberItalic": false,
@@ -1958,7 +1938,7 @@
                     "numberColor": "#091A3E",
                     "numberItalic": false,
                     "numberSize": 24,
-                    "showActionMenu": false,
+                    "showActionMenu": true,
                     "step": "winrate_percen_us_sa_1",
                     "textAlignment": "left",
                     "title": "By Amount:",
@@ -2209,10 +2189,10 @@
                     "columnMap": {
                         "trellis": [],
                         "dimension": [
-                            "OpportunityServices__c.StageName"
+                            "OpportunityServices__c.gCRM_GPS_Stage_US__c"
                         ],
                         "plots": [
-                            "B"
+                            "{{cell(static_2.selection, 0, \"Value1\").asString()}}"
                         ]
                     },
                     "showActionMenu": true,
@@ -2436,18 +2416,6 @@
                         "type": "x",
                         "chartsPerLine": 4
                     },
-                    "columnMap": {
-                        "split": [
-                            "OpportunityServices__c.StageName"
-                        ],
-                        "trellis": [],
-                        "dimensionAxis": [
-                            "OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c"
-                        ],
-                        "plots": [
-                            "A"
-                        ]
-                    },
                     "showActionMenu": true,
                     "measureAxis2": {
                         "sqrtScale": false,
@@ -2494,16 +2462,16 @@
     },
     "datasets": [
         {
-            "id": "0Fb7S00000119I5SAI",
+            "id": "0Fb8Y000000wlEXSAY",
             "label": "Load_opty_services_acct_all",
             "name": "Load_opty_services_acct_all",
-            "url": "/services/data/v62.0/wave/datasets/0Fb7S00000119I5SAI"
+            "url": "/services/data/v62.0/wave/datasets/0Fb8Y000000wlEXSAY"
         },
         {
-            "id": "0Fbaf000000IThtCAG",
+            "id": "0FbFZ000001Ey3o0AC",
             "label": "Load_CustomTeam_Opty",
             "name": "Load_CustomTeam_Opty",
-            "url": "/services/data/v62.0/wave/datasets/0Fbaf000000IThtCAG"
+            "url": "/services/data/v62.0/wave/datasets/0FbFZ000001Ey3o0AC"
         }
     ]
 }
