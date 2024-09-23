@@ -5,7 +5,56 @@
         "dataSourceLinksInfo": {
             "enableAutomaticLinking": true,
             "excludeRelationships": [],
-            "links": []
+            "links": [
+                {
+                    "fields": [
+                        {
+                            "dataSourceName": "Opp_SC",
+                            "dataSourceType": "dataset",
+                            "fieldName": "Opp.StageName"
+                        },
+                        {
+                            "dataSourceName": "Opty_Acc_Split_Tag",
+                            "dataSourceType": "dataset",
+                            "fieldName": "Opportunity.StageName"
+                        }
+                    ],
+                    "label": "Stage Name",
+                    "name": "Link_2336"
+                },
+                {
+                    "fields": [
+                        {
+                            "dataSourceName": "Opp_SC",
+                            "dataSourceType": "dataset",
+                            "fieldName": "Opp.CloseDate"
+                        },
+                        {
+                            "dataSourceName": "Opty_Acc_Split_Tag",
+                            "dataSourceType": "dataset",
+                            "fieldName": "Opportunity.CloseDate"
+                        }
+                    ],
+                    "label": "Close Date",
+                    "name": "Link_421"
+                },
+                {
+                    "fields": [
+                        {
+                            "dataSourceName": "Opp_SC",
+                            "dataSourceType": "dataset",
+                            "fieldName": "Opp.gCRM_Reason_for_Won_Lost_Abandoned__c"
+                        },
+                        {
+                            "dataSourceName": "Opty_Acc_Split_Tag",
+                            "dataSourceType": "dataset",
+                            "fieldName": "Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c"
+                        }
+                    ],
+                    "label": "Reason Code",
+                    "name": "Link_548"
+                }
+            ]
         },
         "filters": [],
         "gridLayouts": [
@@ -23,7 +72,7 @@
                                 "column": 2,
                                 "name": "number_3",
                                 "row": 9,
-                                "rowspan": 13,
+                                "rowspan": 9,
                                 "widgetStyle": {
                                     "backgroundColor": "#EEF4FF",
                                     "borderEdges": [],
@@ -35,7 +84,7 @@
                                 "column": 38,
                                 "name": "number_4",
                                 "row": 9,
-                                "rowspan": 13,
+                                "rowspan": 9,
                                 "widgetStyle": {
                                     "backgroundColor": "#EEF4FF",
                                     "borderEdges": [],
@@ -43,17 +92,17 @@
                                 }
                             },
                             {
-                                "colspan": 12,
-                                "column": 1,
+                                "colspan": 11,
+                                "column": 2,
                                 "name": "text_1",
-                                "row": 28,
+                                "row": 24,
                                 "rowspan": 4,
                                 "widgetStyle": {
                                     "borderEdges": []
                                 }
                             },
                             {
-                                "colspan": 20,
+                                "colspan": 14,
                                 "column": 14,
                                 "name": "pillbox_01",
                                 "row": 3,
@@ -70,7 +119,7 @@
                                 "colspan": 11,
                                 "column": 17,
                                 "name": "text_2",
-                                "row": 28,
+                                "row": 24,
                                 "rowspan": 4,
                                 "widgetStyle": {
                                     "borderEdges": []
@@ -80,7 +129,7 @@
                                 "colspan": 13,
                                 "column": 32,
                                 "name": "text_3",
-                                "row": 28,
+                                "row": 24,
                                 "rowspan": 4,
                                 "widgetStyle": {
                                     "borderEdges": []
@@ -90,7 +139,7 @@
                                 "colspan": 3,
                                 "column": 13,
                                 "name": "pillbox_1",
-                                "row": 29,
+                                "row": 25,
                                 "rowspan": 2,
                                 "widgetStyle": {
                                     "borderColor": "#7D98B3",
@@ -104,7 +153,7 @@
                                 "colspan": 3,
                                 "column": 28,
                                 "name": "pillbox_11",
-                                "row": 29,
+                                "row": 25,
                                 "rowspan": 2,
                                 "widgetStyle": {
                                     "borderColor": "#7D98B3",
@@ -118,7 +167,7 @@
                                 "colspan": 3,
                                 "column": 45,
                                 "name": "pillbox_3",
-                                "row": 29,
+                                "row": 25,
                                 "rowspan": 2,
                                 "widgetStyle": {
                                     "borderColor": "#7D98B3",
@@ -132,7 +181,7 @@
                                 "colspan": 15,
                                 "column": 34,
                                 "name": "chart_2",
-                                "row": 33,
+                                "row": 28,
                                 "rowspan": 34,
                                 "widgetStyle": {
                                     "borderEdges": []
@@ -142,7 +191,7 @@
                                 "colspan": 50,
                                 "column": 0,
                                 "name": "container_9",
-                                "row": 70,
+                                "row": 65,
                                 "rowspan": 55,
                                 "widgetStyle": {
                                     "borderEdges": []
@@ -152,7 +201,7 @@
                                 "colspan": 48,
                                 "column": 1,
                                 "name": "table_1",
-                                "row": 70,
+                                "row": 66,
                                 "rowspan": 52,
                                 "widgetStyle": {
                                     "borderEdges": []
@@ -160,9 +209,9 @@
                             },
                             {
                                 "colspan": 7,
-                                "column": 1,
+                                "column": 9,
                                 "name": "number_1",
-                                "row": 32,
+                                "row": 29,
                                 "rowspan": 3,
                                 "widgetStyle": {
                                     "borderEdges": [],
@@ -171,9 +220,9 @@
                             },
                             {
                                 "colspan": 7,
-                                "column": 9,
+                                "column": 2,
                                 "name": "number_2",
-                                "row": 32,
+                                "row": 29,
                                 "rowspan": 3,
                                 "widgetStyle": {
                                     "borderEdges": [],
@@ -181,11 +230,11 @@
                                 }
                             },
                             {
-                                "colspan": 15,
-                                "column": 1,
+                                "colspan": 12,
+                                "column": 3,
                                 "name": "chart_6",
-                                "row": 36,
-                                "rowspan": 31,
+                                "row": 33,
+                                "rowspan": 29,
                                 "widgetStyle": {
                                     "borderEdges": []
                                 }
@@ -195,7 +244,7 @@
                                 "column": 26,
                                 "name": "number_5",
                                 "row": 9,
-                                "rowspan": 13,
+                                "rowspan": 9,
                                 "widgetStyle": {
                                     "backgroundColor": "#EEF4FF",
                                     "borderEdges": [],
@@ -203,11 +252,11 @@
                                 }
                             },
                             {
-                                "colspan": 22,
+                                "colspan": 14,
                                 "column": 14,
                                 "name": "text_5",
-                                "row": 0,
-                                "rowspan": 3,
+                                "row": 1,
+                                "rowspan": 2,
                                 "widgetStyle": {
                                     "backgroundColor": "#FFFFFF",
                                     "borderColor": "#FFFFFF",
@@ -217,22 +266,24 @@
                                 }
                             },
                             {
-                                "colspan": 10,
-                                "column": 1,
+                                "colspan": 7,
+                                "column": 2,
                                 "name": "dateselector_1",
-                                "row": 2,
-                                "rowspan": 4,
+                                "row": 3,
+                                "rowspan": 3,
                                 "widgetStyle": {
                                     "backgroundColor": "#FFFFFF",
-                                    "borderColor": "#E6ECF2",
-                                    "borderEdges": [],
-                                    "borderRadius": 0,
+                                    "borderColor": "#747474",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
                                     "borderWidth": 1
                                 }
                             },
                             {
-                                "colspan": 9,
-                                "column": 40,
+                                "colspan": 8,
+                                "column": 41,
                                 "name": "listselector_2",
                                 "row": 2,
                                 "rowspan": 4,
@@ -248,7 +299,7 @@
                                 "colspan": 1,
                                 "column": 16,
                                 "name": "container_3",
-                                "row": 40,
+                                "row": 35,
                                 "rowspan": 21,
                                 "widgetStyle": {
                                     "backgroundColor": "#FFFFFF",
@@ -264,7 +315,7 @@
                                 "colspan": 1,
                                 "column": 33,
                                 "name": "container_4",
-                                "row": 40,
+                                "row": 35,
                                 "rowspan": 21,
                                 "widgetStyle": {
                                     "backgroundColor": "#FFFFFF",
@@ -280,7 +331,7 @@
                                 "colspan": 44,
                                 "column": 3,
                                 "name": "container_5",
-                                "row": 25,
+                                "row": 21,
                                 "rowspan": 3,
                                 "widgetStyle": {
                                     "backgroundColor": "#FFFFFF",
@@ -296,7 +347,7 @@
                                 "colspan": 16,
                                 "column": 17,
                                 "name": "chart_1",
-                                "row": 33,
+                                "row": 28,
                                 "rowspan": 34,
                                 "widgetStyle": {
                                     "borderEdges": []
@@ -307,7 +358,7 @@
                                 "column": 14,
                                 "name": "number_6",
                                 "row": 9,
-                                "rowspan": 13,
+                                "rowspan": 9,
                                 "widgetStyle": {
                                     "backgroundColor": "#EEF4FF",
                                     "borderColor": "#747474",
@@ -333,6 +384,20 @@
                                 "rowspan": 2,
                                 "widgetStyle": {
                                     "borderEdges": []
+                                }
+                            },
+                            {
+                                "colspan": 7,
+                                "column": 2,
+                                "name": "text_8",
+                                "row": 1,
+                                "rowspan": 2,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#FFFFFF",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
                                 }
                             }
                         ]
@@ -487,48 +552,132 @@
                 "groups": [],
                 "label": "WinRatePercents",
                 "numbers": [],
-                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opportunity.StageName' in [\"Closed Lost\", \"Closed Won\"];\nq = group q by 'Opportunity.StageName';\nq = foreach q generate q.'Opportunity.StageName' as 'Opportunity.StageName', sum(q.'gCRM_Split_Amount__c') as 'A', unique(q.'Opportunity.gCRM_Opportunity_ID__c') as 'B';\nq = group q by 'Opportunity.StageName';\nq = foreach q generate 'Opportunity.StageName', first(A) as 'A', first(B) as 'B', sum(B)/sum(sum(B)) over ([..] partition by all) as 'C', sum(A)/sum(sum(A)) over ([..] partition by all) as 'D';\nq = order q by 'Opportunity.StageName' desc;\nq = limit q 2000;",
+                "query": "q = load \"Opty_Acc_Split_Tag\";\nq = filter q by 'Opportunity.StageName' in [\"Closed Lost\", \"Closed Won\"];\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\n--q = group q by 'Opportunity.StageName';\n--q = foreach q generate q.'Opportunity.StageName' as 'Opportunity.StageName', sum(q.'gCRM_Split_Amount__c') as 'A', unique(q.'Opportunity.gCRM_Opportunity_ID__c') as 'B';\n--q = foreach q generate 'Opportunity.StageName', first(A) as 'A', first(B) as 'B', sum(B)/sum(sum(B)) over ([..] partition by all) as 'C', sum(A)/sum(sum(A)) over ([..] partition by all) as 'D';\nq = foreach q generate 'Opportunity.StageName' as 'Opportunity.StageName', unique(q.'Opportunity.gCRM_Opportunity_ID__c') as 'B', sum(q.'gCRM_Split_Amount__c') as 'C';\nq = group q by 'Opportunity.StageName';\nq = order q by 'Opportunity.StageName' desc;\nq = foreach q generate 'Opportunity.StageName', sum(B) as 'B', sum('C') as 'C', sum(B)/sum(sum(B)) over ([..] partition by all) as 'Win Rate Count', sum(C)/sum(sum(C)) over ([..] partition by all) as 'Win Rate Amount';\nq = limit q 10;\n",
                 "receiveFacetSource": {
-                    "mode": "none",
+                    "mode": "all",
                     "steps": []
                 },
                 "selectMode": "single",
-                "start": [],
                 "strings": [],
                 "type": "saql",
-                "useGlobal": false,
+                "useGlobal": true,
                 "visualizationParameters": {
                     "parameters": {
-                        "borderColor": "#e0e5ee",
-                        "borderWidth": 1,
-                        "cell": {
-                            "backgroundColor": "#ffffff",
-                            "fontColor": "#16325c",
-                            "fontSize": 12,
-                            "textWrap": true
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
                         },
-                        "columnProperties": {},
-                        "columns": [],
-                        "customBulkActions": [],
-                        "header": {
-                            "backgroundColor": "#f4f6f9",
-                            "fontColor": "#16325c",
-                            "fontSize": 12,
-                            "textWrap": true
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
                         },
-                        "innerMajorBorderColor": "#a8b7c7",
-                        "innerMinorBorderColor": "#e0e5ee",
-                        "interactions": [],
-                        "maxColumnWidth": 300,
-                        "minColumnWidth": 40,
-                        "mode": "variable",
-                        "numberOfLines": 1,
+                        "axisMode": "sync",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [
+                                "Opportunity.StageName"
+                            ],
+                            "plots": [
+                                "B",
+                                "C",
+                                "Win Rate Count",
+                                "Win Rate Amount"
+                            ]
+                        },
                         "showActionMenu": true,
-                        "showRowIndexColumn": false,
-                        "totals": true,
-                        "verticalPadding": 8
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
                     },
-                    "type": "table"
+                    "type": "chart"
                 }
             },
             "UserData": {
@@ -908,7 +1057,7 @@
                         "id": "0Fb4G0000006P00SAE",
                         "label": "Opty_Acc_Split_Tag",
                         "name": "Opty_Acc_Split_Tag",
-                        "url": "/services/data/v61.0/wave/datasets/0Fb4G0000006P00SAE"
+                        "url": "/services/data/v62.0/wave/datasets/0Fb4G0000006P00SAE"
                     }
                 ],
                 "isGlobal": false,
@@ -1195,16 +1344,7 @@
                     "saql_filter": {
                         "type": "string"
                     },
-                    "qry_filter_value": {
-                        "type": "string"
-                    },
-                    "qry_filter_compare": {
-                        "type": "string"
-                    },
                     "saql_filter_opp": {
-                        "type": "string"
-                    },
-                    "qry_filter_field": {
                         "type": "string"
                     },
                     "Display": {
@@ -1212,7 +1352,7 @@
                     }
                 },
                 "label": "OptyRoleToggle",
-                "selectMode": "single",
+                "selectMode": "singlerequired",
                 "start": {
                     "Display": [
                         "On the Opportunity Team"
@@ -1223,18 +1363,12 @@
                     {
                         "Display": "On the Opportunity Team",
                         "saql_filter": "q = filter q by 'OppTeamMember.UserId' matches ",
-                        "saql_filter_opp": "q = filter q by 'oppTeamMember.UserId' matches ",
-                        "qry_filter_field": "OppTeamMember.UserId",
-                        "qry_filter_compare": "matches",
-                        "qry_filter_value": "*"
+                        "saql_filter_opp": "q = filter q by 'User.Id' matches "
                     },
                     {
                         "Display": "Opportunity Leader",
                         "saql_filter": "q = filter q by 'Opportunity.OwnerId' matches ",
-                        "saql_filter_opp": "q = filter q by 'OwnerId' matches ",
-                        "qry_filter_field": "Opportunity.OwnerId",
-                        "qry_filter_compare": "matches",
-                        "qry_filter_value": "*"
+                        "saql_filter_opp": "q = filter q by 'OwnerId' matches "
                     }
                 ]
             },
@@ -1311,7 +1445,7 @@
                 "groups": [],
                 "label": "MyAverageWinSize",
                 "numbers": [],
-                "query": "q = load \"Opty_Acc_Split_Tag\";\nq = group q by all;\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = foreach q generate sum(q.'gCRM_Split_Amount__c') * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'A', unique(q.'Opportunity.gCRM_Opportunity_ID__c') as 'B';\nq = foreach q generate 'A', 'B', A / B as 'C';\nq = limit q 2000;",
+                "query": "q = load \"Opty_Acc_Split_Tag\";\nq = group q by all;\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opportunity.StageName' matches \"Closed Won\";\nq = foreach q generate sum(q.'gCRM_Split_Amount__c') * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'A', unique(q.'Opportunity.gCRM_Opportunity_ID__c') as 'B';\nq = foreach q generate 'A', 'B', A / B as 'C';\nq = limit q 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -1322,35 +1456,118 @@
                 "useGlobal": true,
                 "visualizationParameters": {
                     "parameters": {
-                        "borderColor": "#e0e5ee",
-                        "borderWidth": 1,
-                        "cell": {
-                            "backgroundColor": "#ffffff",
-                            "fontColor": "#16325c",
-                            "fontSize": 12,
-                            "textWrap": true
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
                         },
-                        "columnProperties": {},
-                        "columns": [],
-                        "customBulkActions": [],
-                        "header": {
-                            "backgroundColor": "#f4f6f9",
-                            "fontColor": "#16325c",
-                            "fontSize": 12,
-                            "textWrap": true
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
                         },
-                        "innerMajorBorderColor": "#a8b7c7",
-                        "innerMinorBorderColor": "#e0e5ee",
-                        "interactions": [],
-                        "maxColumnWidth": 300,
-                        "minColumnWidth": 40,
-                        "mode": "variable",
-                        "numberOfLines": 1,
+                        "axisMode": "sync",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [],
+                            "plots": [
+                                "A",
+                                "B",
+                                "C"
+                            ]
+                        },
                         "showActionMenu": true,
-                        "totals": true,
-                        "verticalPadding": 8
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
                     },
-                    "type": "table"
+                    "type": "chart"
                 }
             },
             "Lost_Abandoned_Toggl_1": {
@@ -1467,6 +1684,13 @@
                             "type": "x",
                             "chartsPerLine": 4
                         },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [],
+                            "plots": [
+                                "C"
+                            ]
+                        },
                         "showActionMenu": true,
                         "measureAxis2": {
                             "sqrtScale": false,
@@ -1513,7 +1737,7 @@
                 "groups": [],
                 "label": "OpportunityList-NonUS-qry",
                 "numbers": [],
-                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = foreach q generate q.'Opportunity.Name' as 'Opportunity Name', q.'Opportunity.gCRM_Opportunity_ID__c' as 'Opportunity ID', q.'Opportunity.Account.Name' as 'Account Name', q.'gCRM_Split_Amount__c' * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'Total Global Opportunity Amount', q.'Opportunity.CloseDate' as 'Expected Close Date', q.'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Closed Reason', q.'Opportunity.StageName' as 'Stage';\nq = order q by 'Expected Close Date' desc;\nq = limit q 100;",
+                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opportunity.StageName' in [\"Closed Lost\", \"Closed Won\", \"Closed Abandoned\"];\nq = group q by ('Opportunity.Name', 'Opportunity.gCRM_Opportunity_ID__c', 'Opportunity.Account.Name', 'Opportunity.CloseDate', 'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c', 'Opportunity.StageName');\nq = foreach q generate q.'Opportunity.Name' as 'Opportunity Name', q.'Opportunity.gCRM_Opportunity_ID__c' as 'Opportunity.gCRM_Opportunity_ID__c', q.'Opportunity.Account.Name' as 'Account Name', sum(q.'gCRM_Split_Amount__c') * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'Total Global Opportunity Amount', q.'Opportunity.CloseDate' as 'Expected Close Date', q.'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'Opportunity.StageName' as 'Stage';\nq = order q by 'Expected Close Date' desc;\nq = limit q 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -1536,19 +1760,21 @@
                         "columns": [],
                         "customBulkActions": [],
                         "header": {
+                            "alignment": "left",
                             "backgroundColor": "#f4f6f9",
                             "fontColor": "#16325c",
                             "fontSize": 12,
-                            "textWrap": true
+                            "italic": false,
+                            "textWrap": true,
+                            "underline": false
                         },
                         "innerMajorBorderColor": "#a8b7c7",
                         "innerMinorBorderColor": "#e0e5ee",
                         "interactions": [],
-                        "maxColumnWidth": 300,
-                        "minColumnWidth": 40,
-                        "mode": "variable",
+                        "mode": "fittocontainer",
                         "numberOfLines": 1,
-                        "showActionMenu": true,
+                        "pivoted": false,
+                        "showActionMenu": false,
                         "showRowIndexColumn": true,
                         "totals": true,
                         "verticalPadding": 8
@@ -1561,12 +1787,12 @@
                 "groups": [],
                 "label": "IsoCode_1",
                 "numbers": [],
-                "query": "q = load \"Register_CurrencyType\";\nresult = group q by 'IsoCode';\nresult = foreach result generate q.'IsoCode' as 'IsoCode', sum(q.'ConversionRate') as 'A', case \n    when q.'IsoCode' matches \"USD\" then\"01\"   \n    when q.'IsoCode' matches \"EUR\" then\"02\"\n    when q.'IsoCode' matches \"GBP\" then\"03\"\n    when q.'IsoCode' matches \"CAD\" then\"04\"\n    when q.'IsoCode' matches \"AUD\" then\"05\"\n    when q.'IsoCode' matches \"SGD\" then\"06\"\n    when q.'IsoCode' matches \"INR\" then\"07\"\n    when q.'IsoCode' matches \"JPY\" then\"08\" \n    else q.'IsoCode' \nend as 'Order';\nresult = order result by ('Order' asc);\nresult = limit result 2000;",
+                "query": "q = load \"Register_CurrencyType\";\nresult = filter q by 'IsActive' == \"true\";\nresult = group q by 'IsoCode';\nresult = foreach result generate q.'IsoCode' as 'IsoCode', sum(q.'ConversionRate') as 'A', case \n    when q.'IsoCode' matches \"USD\" then\"01\"   \n    when q.'IsoCode' matches \"EUR\" then\"02\"\n    when q.'IsoCode' matches \"GBP\" then\"03\"\n    when q.'IsoCode' matches \"CAD\" then\"04\"\n    when q.'IsoCode' matches \"AUD\" then\"05\"\n    when q.'IsoCode' matches \"SGD\" then\"06\"\n    when q.'IsoCode' matches \"INR\" then\"07\"\n    when q.'IsoCode' matches \"JPY\" then\"08\" \n    else q.'IsoCode' \nend as 'Order';\nresult = order result by ('Order' asc);\nresult = limit result 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
                 },
-                "selectMode": "single",
+                "selectMode": "singlerequired",
                 "start": [
                     [
                         "USD",
@@ -1642,16 +1868,21 @@
                     "exploreLink": true,
                     "interactions": [],
                     "measureField": "C",
+                    "numberBold": false,
                     "numberColor": "#091A3E",
+                    "numberItalic": false,
                     "numberSize": 32,
                     "showActionMenu": false,
                     "step": "Sales_Credit_Query_1",
                     "textAlignment": "center",
                     "title": "My Sales Credit",
+                    "titleBold": false,
                     "titleColor": "#091A3E",
-                    "titleSize": 18,
+                    "titleItalic": false,
+                    "titleSize": 16,
                     "tooltip": {
-                        "customizeTooltip": false
+                        "customizeTooltip": false,
+                        "showTitleTooltip": true
                     }
                 },
                 "type": "number"
@@ -1778,7 +2009,7 @@
                         "chartsPerLine": 4
                     },
                     "inner": 50,
-                    "showActionMenu": true,
+                    "showActionMenu": false,
                     "centerValueType": "number",
                     "measureAxis2": {
                         "sqrtScale": false,
@@ -1851,8 +2082,8 @@
                         "richTextContent": [
                             {
                                 "attributes": {
-                                    "color": "#7d98b3",
-                                    "size": "14px"
+                                    "color": "#54698d",
+                                    "size": "12px"
                                 },
                                 "insert": "View opportunities where I am:"
                             },
@@ -1887,7 +2118,7 @@
                                     "color": "#7d98b3",
                                     "size": "12px"
                                 },
-                                "insert": "Rate: [Currency_ISO_Code]"
+                                "insert": "Rate: [Currency_ISO_Code_1]"
                             },
                             {
                                 "attributes": {
@@ -1897,9 +2128,10 @@
                             }
                         ],
                         "values": {
-                            "Currency_ISO_Code": {
+                            "Currency_ISO_Code_1": {
+                                "compact": false,
                                 "field": "IsoCode",
-                                "sourceType": "result",
+                                "sourceType": "selection",
                                 "step": "IsoCode_1"
                             }
                         }
@@ -2138,7 +2370,7 @@
                                     "color": "#7d98b3",
                                     "size": "12px"
                                 },
-                                "insert": "[A][Sum_of_Conversion_Ra]"
+                                "insert": "[Sum_of_Conversion_Ra]"
                             },
                             {
                                 "attributes": {
@@ -2148,12 +2380,6 @@
                             }
                         ],
                         "values": {
-                            "A": {
-                                "compact": false,
-                                "field": "A",
-                                "sourceType": "result",
-                                "step": "IsoCode_1"
-                            },
                             "Sum_of_Conversion_Ra": {
                                 "compact": false,
                                 "field": "A",
@@ -2167,22 +2393,46 @@
                 },
                 "type": "text"
             },
+            "text_8": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "color": "#54698d",
+                                    "size": "12px"
+                                },
+                                "insert": "Expected Close Date"
+                            },
+                            {
+                                "attributes": {
+                                    "align": "left"
+                                },
+                                "insert": "\n"
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": false
+                },
+                "type": "text"
+            },
             "dateselector_1": {
                 "parameters": {
                     "absoluteModeEnabled": true,
                     "calendarTypeSwitchingAllowed": false,
                     "defaultFiscalMode": false,
-                    "displayMode": "combo",
+                    "displayMode": "filter",
                     "filterStyle": {
-                        "titleColor": "#091A3E",
-                        "valueColor": "#091A3E"
+                        "titleColor": "#747474",
+                        "valueColor": "#16325C"
                     },
                     "instant": false,
                     "presetsEnabled": true,
                     "relativeModeEnabled": true,
                     "showActionMenu": false,
                     "step": "Opportunity_CloseDat_1",
-                    "title": "Expected Close Date"
+                    "title": ""
                 },
                 "type": "dateselector"
             },
@@ -2190,13 +2440,14 @@
                 "parameters": {
                     "compact": false,
                     "displayMode": "combo",
+                    "displayTemplate": "[IsoCode]",
                     "exploreLink": false,
                     "filterStyle": {
-                        "titleColor": "#091A3E",
-                        "valueColor": "#091A3E"
+                        "titleColor": "#54698D",
+                        "valueColor": "#16325C"
                     },
                     "instant": true,
-                    "measureField": "A",
+                    "measureField": "none",
                     "showActionMenu": false,
                     "step": "IsoCode_1",
                     "title": "Select your Currency:"
@@ -2261,19 +2512,21 @@
                     "customBulkActions": [],
                     "exploreLink": true,
                     "header": {
+                        "alignment": "left",
                         "backgroundColor": "#f4f6f9",
                         "fontColor": "#16325c",
                         "fontSize": 12,
-                        "textWrap": true
+                        "italic": false,
+                        "textWrap": true,
+                        "underline": false
                     },
                     "innerMajorBorderColor": "#a8b7c7",
                     "innerMinorBorderColor": "#e0e5ee",
                     "interactions": [],
-                    "maxColumnWidth": 300,
-                    "minColumnWidth": 40,
-                    "mode": "variable",
+                    "mode": "fittocontainer",
                     "numberOfLines": 1,
-                    "showActionMenu": true,
+                    "pivoted": false,
+                    "showActionMenu": false,
                     "showRowIndexColumn": true,
                     "step": "OpportunityList_NonU_1",
                     "totals": true,
@@ -2287,16 +2540,21 @@
                     "exploreLink": true,
                     "interactions": [],
                     "measureField": "CY_Days",
+                    "numberBold": false,
                     "numberColor": "#091A3E",
+                    "numberItalic": false,
                     "numberSize": 32,
                     "showActionMenu": false,
                     "step": "AverageDaysToClose_1",
                     "textAlignment": "center",
-                    "title": "My Average Time to Closed Won",
+                    "title": "My Average Days to Closed Won",
+                    "titleBold": false,
                     "titleColor": "#091A3E",
-                    "titleSize": 18,
+                    "titleItalic": false,
+                    "titleSize": 16,
                     "tooltip": {
-                        "customizeTooltip": false
+                        "customizeTooltip": false,
+                        "showTitleTooltip": true
                     }
                 },
                 "type": "number"
@@ -2307,16 +2565,21 @@
                     "exploreLink": true,
                     "interactions": [],
                     "measureField": "C",
+                    "numberBold": false,
                     "numberColor": "#091A3E",
+                    "numberItalic": false,
                     "numberSize": 32,
                     "showActionMenu": false,
                     "step": "MyAverageWinSize_1",
                     "textAlignment": "center",
                     "title": "My Average Win Size",
+                    "titleBold": false,
                     "titleColor": "#091A3E",
-                    "titleSize": 18,
+                    "titleItalic": false,
+                    "titleSize": 16,
                     "tooltip": {
-                        "customizeTooltip": false
+                        "customizeTooltip": false,
+                        "showTitleTooltip": true
                     }
                 },
                 "type": "number"
@@ -2327,16 +2590,21 @@
                     "exploreLink": true,
                     "interactions": [],
                     "measureField": "A",
+                    "numberBold": false,
                     "numberColor": "#091A3E",
+                    "numberItalic": false,
                     "numberSize": 32,
                     "showActionMenu": false,
                     "step": "My_Sales_Query_1",
                     "textAlignment": "center",
                     "title": "My Sales",
+                    "titleBold": false,
                     "titleColor": "#091A3E",
-                    "titleSize": 18,
+                    "titleItalic": false,
+                    "titleSize": 16,
                     "tooltip": {
-                        "customizeTooltip": false
+                        "customizeTooltip": false,
+                        "showTitleTooltip": true
                     }
                 },
                 "type": "number"
@@ -2346,17 +2614,22 @@
                     "compact": false,
                     "exploreLink": true,
                     "interactions": [],
-                    "measureField": "D",
+                    "measureField": "Win Rate Amount",
+                    "numberBold": false,
                     "numberColor": "#091A3E",
-                    "numberSize": 20,
+                    "numberItalic": false,
+                    "numberSize": 24,
                     "showActionMenu": false,
                     "step": "WinRatePercents_1",
                     "textAlignment": "left",
-                    "title": "by Amount:",
-                    "titleColor": "#7D98B3",
+                    "title": "By Amount:",
+                    "titleBold": false,
+                    "titleColor": "#091A3E",
+                    "titleItalic": false,
                     "titleSize": 16,
                     "tooltip": {
-                        "customizeTooltip": false
+                        "customizeTooltip": false,
+                        "showTitleTooltip": true
                     }
                 },
                 "type": "number"
@@ -2366,17 +2639,22 @@
                     "compact": false,
                     "exploreLink": true,
                     "interactions": [],
-                    "measureField": "C",
-                    "numberColor": "#091A3E",
-                    "numberSize": 20,
+                    "measureField": "Win Rate Count",
+                    "numberBold": false,
+                    "numberColor": "#7D98B3",
+                    "numberItalic": false,
+                    "numberSize": 16,
                     "showActionMenu": false,
                     "step": "WinRatePercents_1",
                     "textAlignment": "left",
-                    "title": "by Count:",
+                    "title": "By Count:",
+                    "titleBold": false,
                     "titleColor": "#7D98B3",
+                    "titleItalic": false,
                     "titleSize": 16,
                     "tooltip": {
-                        "customizeTooltip": false
+                        "customizeTooltip": false,
+                        "showTitleTooltip": true
                     }
                 },
                 "type": "number"
@@ -2424,19 +2702,19 @@
             "id": "0Fb3X0000009Ny3SAE",
             "label": "Opp_SC",
             "name": "Opp_SC",
-            "url": "/services/data/v61.0/wave/datasets/0Fb3X0000009Ny3SAE"
+            "url": "/services/data/v62.0/wave/datasets/0Fb3X0000009Ny3SAE"
         },
         {
             "id": "0Fb4G0000006P00SAE",
             "label": "Opty_Acc_Split_Tag",
             "name": "Opty_Acc_Split_Tag",
-            "url": "/services/data/v61.0/wave/datasets/0Fb4G0000006P00SAE"
+            "url": "/services/data/v62.0/wave/datasets/0Fb4G0000006P00SAE"
         },
         {
             "id": "0Fb4G0000006P02SAE",
             "label": "Register_CurrencyType",
             "name": "Register_CurrencyType",
-            "url": "/services/data/v61.0/wave/datasets/0Fb4G0000006P02SAE"
+            "url": "/services/data/v62.0/wave/datasets/0Fb4G0000006P02SAE"
         }
     ]
 }
