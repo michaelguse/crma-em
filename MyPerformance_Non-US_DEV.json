@@ -97,9 +97,7 @@
                                 "name": "text_1",
                                 "row": 24,
                                 "rowspan": 4,
-                                "widgetStyle": {
-                                    "borderEdges": []
-                                }
+                                "widgetStyle": {}
                             },
                             {
                                 "colspan": 14,
@@ -121,9 +119,7 @@
                                 "name": "text_2",
                                 "row": 24,
                                 "rowspan": 4,
-                                "widgetStyle": {
-                                    "borderEdges": []
-                                }
+                                "widgetStyle": {}
                             },
                             {
                                 "colspan": 13,
@@ -131,9 +127,7 @@
                                 "name": "text_3",
                                 "row": 24,
                                 "rowspan": 4,
-                                "widgetStyle": {
-                                    "borderEdges": []
-                                }
+                                "widgetStyle": {}
                             },
                             {
                                 "colspan": 3,
@@ -183,9 +177,7 @@
                                 "name": "chart_2",
                                 "row": 28,
                                 "rowspan": 34,
-                                "widgetStyle": {
-                                    "borderEdges": []
-                                }
+                                "widgetStyle": {}
                             },
                             {
                                 "colspan": 50,
@@ -193,9 +185,7 @@
                                 "name": "container_9",
                                 "row": 65,
                                 "rowspan": 55,
-                                "widgetStyle": {
-                                    "borderEdges": []
-                                }
+                                "widgetStyle": {}
                             },
                             {
                                 "colspan": 48,
@@ -203,9 +193,7 @@
                                 "name": "table_1",
                                 "row": 66,
                                 "rowspan": 52,
-                                "widgetStyle": {
-                                    "borderEdges": []
-                                }
+                                "widgetStyle": {}
                             },
                             {
                                 "colspan": 7,
@@ -235,9 +223,7 @@
                                 "name": "chart_6",
                                 "row": 33,
                                 "rowspan": 29,
-                                "widgetStyle": {
-                                    "borderEdges": []
-                                }
+                                "widgetStyle": {}
                             },
                             {
                                 "colspan": 10,
@@ -349,9 +335,7 @@
                                 "name": "chart_1",
                                 "row": 28,
                                 "rowspan": 34,
-                                "widgetStyle": {
-                                    "borderEdges": []
-                                }
+                                "widgetStyle": {}
                             },
                             {
                                 "colspan": 10,
@@ -372,9 +356,7 @@
                                 "name": "text_4",
                                 "row": 6,
                                 "rowspan": 2,
-                                "widgetStyle": {
-                                    "borderEdges": []
-                                }
+                                "widgetStyle": {}
                             },
                             {
                                 "colspan": 4,
@@ -382,9 +364,7 @@
                                 "name": "text_6",
                                 "row": 6,
                                 "rowspan": 2,
-                                "widgetStyle": {
-                                    "borderEdges": []
-                                }
+                                "widgetStyle": {}
                             },
                             {
                                 "colspan": 7,
@@ -684,7 +664,7 @@
                 "broadcastFacet": true,
                 "groups": [],
                 "numbers": [],
-                "query": "SELECT Name, Country, Id FROM User WHERE Id = '!{User.Id}'",
+                "query": "SELECT Name, Country, Id FROM User WHERE Id = '0057S000003rrb9QAA'",
                 "receiveFacetSource": {
                     "mode": "none",
                     "steps": []
@@ -1091,7 +1071,9 @@
                 ],
                 "type": "aggregateflex",
                 "useGlobal": true,
-                "visualizationParameters": {}
+                "visualizationParameters": {
+                    "options": {}
+                }
             },
             "ClosedLostAbandonRea_1": {
                 "broadcastFacet": true,
@@ -1341,6 +1323,9 @@
             "OptyRoleToggle_1": {
                 "broadcastFacet": true,
                 "columns": {
+                    "saql_filter_opp2": {
+                        "type": "string"
+                    },
                     "saql_filter": {
                         "type": "string"
                     },
@@ -1363,14 +1348,19 @@
                     {
                         "Display": "On the Opportunity Team",
                         "saql_filter": "q = filter q by 'OppTeamMember.UserId' matches ",
-                        "saql_filter_opp": "q = filter q by 'User.Id' matches "
+                        "saql_filter_opp": "q = filter q by 'User.Id' matches ",
+                        "saql_filter_opp2": "--q = filter q by 'Opp.OwnerId' matches "
                     },
                     {
                         "Display": "Opportunity Leader",
                         "saql_filter": "q = filter q by 'Opportunity.OwnerId' matches ",
-                        "saql_filter_opp": "q = filter q by 'OwnerId' matches "
+                        "saql_filter_opp": "q = filter q by 'User.Id' matches ",
+                        "saql_filter_opp2": "q = filter q by 'Opp.OwnerId' matches "
                     }
-                ]
+                ],
+                "numbers": [],
+                "strings": [],
+                "groups": []
             },
             "static_2": {
                 "broadcastFacet": true,
@@ -1404,7 +1394,10 @@
                         "saql": "q = foreach q generate 'Opportunity.StageName' as 'Opportunity.StageName', sum('gCRM_Split_Amount__c') as 'A'",
                         "saql_field": "'gCRM_Split_Amount__c'"
                     }
-                ]
+                ],
+                "numbers": [],
+                "strings": [],
+                "groups": []
             },
             "static_1": {
                 "broadcastFacet": true,
@@ -1438,7 +1431,10 @@
                         "saql_field": "'gCRM_Split_Amount__c'",
                         "saql_map": "gCRM_Split_Amount__c"
                     }
-                ]
+                ],
+                "numbers": [],
+                "strings": [],
+                "groups": []
             },
             "MyAverageWinSize_1": {
                 "broadcastFacet": true,
@@ -1602,14 +1598,17 @@
                         "saql_field": "'gCRM_Split_Amount__c'",
                         "saql_map": "gCRM_Split_Amount__c"
                     }
-                ]
+                ],
+                "numbers": [],
+                "strings": [],
+                "groups": []
             },
             "Sales_Credit_Query_1": {
                 "broadcastFacet": true,
                 "groups": [],
                 "label": "Sales Credit Query",
                 "numbers": [],
-                "query": "q = load \"Opp_SC\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter_opp\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opp.StageName' == \"Closed Won\";\nq = group q by 'Opp.StageName';\nq = foreach q generate sum(q.'gCRM_Sales_Credit_Amount__c') * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'C';\nq = limit q 2000;",
+                "query": "q = load \"Opp_SC\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter_opp\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter_opp2\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opp.StageName' == \"Closed Won\";\nq = group q by 'Opp.StageName';\nq = foreach q generate sum(q.'gCRM_Sales_Credit_Amount__c') * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'C';\nq = limit q 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -1683,13 +1682,6 @@
                             "enable": false,
                             "type": "x",
                             "chartsPerLine": 4
-                        },
-                        "columnMap": {
-                            "trellis": [],
-                            "dimensionAxis": [],
-                            "plots": [
-                                "C"
-                            ]
                         },
                         "showActionMenu": true,
                         "measureAxis2": {
@@ -2432,7 +2424,8 @@
                     "relativeModeEnabled": true,
                     "showActionMenu": false,
                     "step": "Opportunity_CloseDat_1",
-                    "title": ""
+                    "title": "",
+                    "customFilterPresets": []
                 },
                 "type": "dateselector"
             },
@@ -2530,7 +2523,9 @@
                     "showRowIndexColumn": true,
                     "step": "OpportunityList_NonU_1",
                     "totals": true,
-                    "verticalPadding": 8
+                    "verticalPadding": 8,
+                    "evenRowColor": null,
+                    "oddRowColor": null
                 },
                 "type": "table"
             },
@@ -2695,7 +2690,8 @@
                 },
                 "type": "pillbox"
             }
-        }
+        },
+        "parameters": []
     },
     "datasets": [
         {
