@@ -1,5 +1,5 @@
 {
-    "label": "My Performance - Non-US Commercial",
+    "label": "My Performance",
     "mobileDisabled": false,
     "state": {
         "dataSourceLinksInfo": {
@@ -97,7 +97,9 @@
                                 "name": "text_1",
                                 "row": 24,
                                 "rowspan": 4,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 14,
@@ -119,7 +121,9 @@
                                 "name": "text_2",
                                 "row": 24,
                                 "rowspan": 4,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 13,
@@ -127,7 +131,9 @@
                                 "name": "text_3",
                                 "row": 24,
                                 "rowspan": 4,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 3,
@@ -177,7 +183,9 @@
                                 "name": "chart_2",
                                 "row": 28,
                                 "rowspan": 34,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 50,
@@ -185,7 +193,9 @@
                                 "name": "container_9",
                                 "row": 65,
                                 "rowspan": 55,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 48,
@@ -193,7 +203,9 @@
                                 "name": "table_1",
                                 "row": 66,
                                 "rowspan": 52,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 7,
@@ -223,7 +235,9 @@
                                 "name": "chart_6",
                                 "row": 33,
                                 "rowspan": 29,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 10,
@@ -335,7 +349,9 @@
                                 "name": "chart_1",
                                 "row": 28,
                                 "rowspan": 34,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 10,
@@ -356,7 +372,9 @@
                                 "name": "text_4",
                                 "row": 6,
                                 "rowspan": 2,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 4,
@@ -364,7 +382,9 @@
                                 "name": "text_6",
                                 "row": 6,
                                 "rowspan": 2,
-                                "widgetStyle": {}
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
                             },
                             {
                                 "colspan": 7,
@@ -1037,7 +1057,7 @@
                         "id": "0Fb4G0000006P00SAE",
                         "label": "Opty_Acc_Split_Tag",
                         "name": "Opty_Acc_Split_Tag",
-                        "url": "/services/data/v61.0/wave/datasets/0Fb4G0000006P00SAE"
+                        "url": "/services/data/v62.0/wave/datasets/0Fb4G0000006P00SAE"
                     }
                 ],
                 "isGlobal": false,
@@ -1071,9 +1091,7 @@
                 ],
                 "type": "aggregateflex",
                 "useGlobal": true,
-                "visualizationParameters": {
-                    "options": {}
-                }
+                "visualizationParameters": {}
             },
             "ClosedLostAbandonRea_1": {
                 "broadcastFacet": true,
@@ -1326,16 +1344,7 @@
                     "saql_filter": {
                         "type": "string"
                     },
-                    "qry_filter_value": {
-                        "type": "string"
-                    },
-                    "qry_filter_compare": {
-                        "type": "string"
-                    },
                     "saql_filter_opp": {
-                        "type": "string"
-                    },
-                    "qry_filter_field": {
                         "type": "string"
                     },
                     "Display": {
@@ -1354,23 +1363,14 @@
                     {
                         "Display": "On the Opportunity Team",
                         "saql_filter": "q = filter q by 'OppTeamMember.UserId' matches ",
-                        "saql_filter_opp": "q = filter q by 'oppTeamMember.UserId' matches ",
-                        "qry_filter_field": "OppTeamMember.UserId",
-                        "qry_filter_compare": "matches",
-                        "qry_filter_value": "*"
+                        "saql_filter_opp": "q = filter q by 'User.Id' matches "
                     },
                     {
                         "Display": "Opportunity Leader",
                         "saql_filter": "q = filter q by 'Opportunity.OwnerId' matches ",
-                        "saql_filter_opp": "q = filter q by 'OwnerId' matches ",
-                        "qry_filter_field": "Opportunity.OwnerId",
-                        "qry_filter_compare": "matches",
-                        "qry_filter_value": "*"
+                        "saql_filter_opp": "q = filter q by 'OwnerId' matches "
                     }
-                ],
-                "numbers": [],
-                "strings": [],
-                "groups": []
+                ]
             },
             "static_2": {
                 "broadcastFacet": true,
@@ -1404,10 +1404,7 @@
                         "saql": "q = foreach q generate 'Opportunity.StageName' as 'Opportunity.StageName', sum('gCRM_Split_Amount__c') as 'A'",
                         "saql_field": "'gCRM_Split_Amount__c'"
                     }
-                ],
-                "numbers": [],
-                "strings": [],
-                "groups": []
+                ]
             },
             "static_1": {
                 "broadcastFacet": true,
@@ -1441,10 +1438,7 @@
                         "saql_field": "'gCRM_Split_Amount__c'",
                         "saql_map": "gCRM_Split_Amount__c"
                     }
-                ],
-                "numbers": [],
-                "strings": [],
-                "groups": []
+                ]
             },
             "MyAverageWinSize_1": {
                 "broadcastFacet": true,
@@ -1608,10 +1602,7 @@
                         "saql_field": "'gCRM_Split_Amount__c'",
                         "saql_map": "gCRM_Split_Amount__c"
                     }
-                ],
-                "numbers": [],
-                "strings": [],
-                "groups": []
+                ]
             },
             "Sales_Credit_Query_1": {
                 "broadcastFacet": true,
@@ -1746,7 +1737,7 @@
                 "groups": [],
                 "label": "OpportunityList-NonUS-qry",
                 "numbers": [],
-                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opportunity.StageName' in [\"Closed Lost\", \"Closed Won\", \"Closed Abandoned\"];\nq = group q by ('Opportunity.Name', 'Opportunity.gCRM_Opportunity_ID__c', 'Opportunity.Account.Name', 'Opportunity.CloseDate', 'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c', 'Opportunity.StageName');\nq = foreach q generate q.'Opportunity.Name' as 'Opportunity Name', q.'Opportunity.gCRM_Opportunity_ID__c' as 'Opportunity.gCRM_Opportunity_ID__c', q.'Opportunity.Account.Name' as 'Account Name', sum(q.'gCRM_Split_Amount__c') * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'Total Global Opportunity Amount', q.'Opportunity.CloseDate' as 'Expected Close Date', q.'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Closed Reason', q.'Opportunity.StageName' as 'Stage';\nq = order q by 'Expected Close Date' desc;\nq = limit q 2000;",
+                "query": "q = load \"Opty_Acc_Split_Tag\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opportunity.StageName' in [\"Closed Lost\", \"Closed Won\", \"Closed Abandoned\"];\nq = group q by ('Opportunity.Name', 'Opportunity.gCRM_Opportunity_ID__c', 'Opportunity.Account.Name', 'Opportunity.CloseDate', 'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c', 'Opportunity.StageName');\nq = foreach q generate q.'Opportunity.Name' as 'Opportunity Name', q.'Opportunity.gCRM_Opportunity_ID__c' as 'Opportunity.gCRM_Opportunity_ID__c', q.'Opportunity.Account.Name' as 'Account Name', sum(q.'gCRM_Split_Amount__c') * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'Total Global Opportunity Amount', q.'Opportunity.CloseDate' as 'Expected Close Date', q.'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Opportunity.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'Opportunity.StageName' as 'Stage';\nq = order q by 'Expected Close Date' desc;\nq = limit q 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -1769,10 +1760,13 @@
                         "columns": [],
                         "customBulkActions": [],
                         "header": {
+                            "alignment": "left",
                             "backgroundColor": "#f4f6f9",
                             "fontColor": "#16325c",
                             "fontSize": 12,
-                            "textWrap": true
+                            "italic": false,
+                            "textWrap": true,
+                            "underline": false
                         },
                         "innerMajorBorderColor": "#a8b7c7",
                         "innerMinorBorderColor": "#e0e5ee",
@@ -1874,16 +1868,21 @@
                     "exploreLink": true,
                     "interactions": [],
                     "measureField": "C",
+                    "numberBold": false,
                     "numberColor": "#091A3E",
+                    "numberItalic": false,
                     "numberSize": 32,
                     "showActionMenu": false,
                     "step": "Sales_Credit_Query_1",
                     "textAlignment": "center",
                     "title": "My Sales Credit",
+                    "titleBold": false,
                     "titleColor": "#091A3E",
+                    "titleItalic": false,
                     "titleSize": 16,
                     "tooltip": {
-                        "customizeTooltip": false
+                        "customizeTooltip": false,
+                        "showTitleTooltip": true
                     }
                 },
                 "type": "number"
@@ -2433,8 +2432,7 @@
                     "relativeModeEnabled": true,
                     "showActionMenu": false,
                     "step": "Opportunity_CloseDat_1",
-                    "title": "",
-                    "customFilterPresets": []
+                    "title": ""
                 },
                 "type": "dateselector"
             },
@@ -2509,25 +2507,18 @@
                         "fontSize": 12,
                         "textWrap": true
                     },
-                    "columnProperties": {
-                        "Opportunity.gCRM_Opportunity_ID__c": {
-                            "parameters": {
-                                "alignment": "left",
-                                "styles": {
-                                    "linkColor": "#1b96ff"
-                                }
-                            },
-                            "type": "text"
-                        }
-                    },
+                    "columnProperties": {},
                     "columns": [],
                     "customBulkActions": [],
                     "exploreLink": true,
                     "header": {
+                        "alignment": "left",
                         "backgroundColor": "#f4f6f9",
                         "fontColor": "#16325c",
                         "fontSize": 12,
-                        "textWrap": true
+                        "italic": false,
+                        "textWrap": true,
+                        "underline": false
                     },
                     "innerMajorBorderColor": "#a8b7c7",
                     "innerMinorBorderColor": "#e0e5ee",
@@ -2539,9 +2530,7 @@
                     "showRowIndexColumn": true,
                     "step": "OpportunityList_NonU_1",
                     "totals": true,
-                    "verticalPadding": 8,
-                    "evenRowColor": null,
-                    "oddRowColor": null
+                    "verticalPadding": 8
                 },
                 "type": "table"
             },
@@ -2551,16 +2540,21 @@
                     "exploreLink": true,
                     "interactions": [],
                     "measureField": "CY_Days",
+                    "numberBold": false,
                     "numberColor": "#091A3E",
+                    "numberItalic": false,
                     "numberSize": 32,
                     "showActionMenu": false,
                     "step": "AverageDaysToClose_1",
                     "textAlignment": "center",
-                    "title": "My Average Time to Closed Won",
+                    "title": "My Average Days to Closed Won",
+                    "titleBold": false,
                     "titleColor": "#091A3E",
+                    "titleItalic": false,
                     "titleSize": 16,
                     "tooltip": {
-                        "customizeTooltip": false
+                        "customizeTooltip": false,
+                        "showTitleTooltip": true
                     }
                 },
                 "type": "number"
@@ -2571,16 +2565,21 @@
                     "exploreLink": true,
                     "interactions": [],
                     "measureField": "C",
+                    "numberBold": false,
                     "numberColor": "#091A3E",
+                    "numberItalic": false,
                     "numberSize": 32,
                     "showActionMenu": false,
                     "step": "MyAverageWinSize_1",
                     "textAlignment": "center",
                     "title": "My Average Win Size",
+                    "titleBold": false,
                     "titleColor": "#091A3E",
+                    "titleItalic": false,
                     "titleSize": 16,
                     "tooltip": {
-                        "customizeTooltip": false
+                        "customizeTooltip": false,
+                        "showTitleTooltip": true
                     }
                 },
                 "type": "number"
@@ -2591,16 +2590,21 @@
                     "exploreLink": true,
                     "interactions": [],
                     "measureField": "A",
+                    "numberBold": false,
                     "numberColor": "#091A3E",
+                    "numberItalic": false,
                     "numberSize": 32,
                     "showActionMenu": false,
                     "step": "My_Sales_Query_1",
                     "textAlignment": "center",
                     "title": "My Sales",
+                    "titleBold": false,
                     "titleColor": "#091A3E",
+                    "titleItalic": false,
                     "titleSize": 16,
                     "tooltip": {
-                        "customizeTooltip": false
+                        "customizeTooltip": false,
+                        "showTitleTooltip": true
                     }
                 },
                 "type": "number"
@@ -2611,16 +2615,21 @@
                     "exploreLink": true,
                     "interactions": [],
                     "measureField": "Win Rate Amount",
+                    "numberBold": false,
                     "numberColor": "#091A3E",
+                    "numberItalic": false,
                     "numberSize": 24,
                     "showActionMenu": false,
                     "step": "WinRatePercents_1",
                     "textAlignment": "left",
                     "title": "By Amount:",
+                    "titleBold": false,
                     "titleColor": "#091A3E",
+                    "titleItalic": false,
                     "titleSize": 16,
                     "tooltip": {
-                        "customizeTooltip": false
+                        "customizeTooltip": false,
+                        "showTitleTooltip": true
                     }
                 },
                 "type": "number"
@@ -2631,16 +2640,21 @@
                     "exploreLink": true,
                     "interactions": [],
                     "measureField": "Win Rate Count",
+                    "numberBold": false,
                     "numberColor": "#7D98B3",
+                    "numberItalic": false,
                     "numberSize": 16,
                     "showActionMenu": false,
                     "step": "WinRatePercents_1",
                     "textAlignment": "left",
                     "title": "By Count:",
+                    "titleBold": false,
                     "titleColor": "#7D98B3",
+                    "titleItalic": false,
                     "titleSize": 16,
                     "tooltip": {
-                        "customizeTooltip": false
+                        "customizeTooltip": false,
+                        "showTitleTooltip": true
                     }
                 },
                 "type": "number"
@@ -2681,27 +2695,26 @@
                 },
                 "type": "pillbox"
             }
-        },
-        "parameters": []
+        }
     },
     "datasets": [
         {
             "id": "0Fb3O0000001AP8SAM",
             "label": "Opp_SC",
             "name": "Opp_SC",
-            "url": "/services/data/v61.0/wave/datasets/0Fb3O0000001AP8SAM"
+            "url": "/services/data/v62.0/wave/datasets/0Fb3O0000001AP8SAM"
         },
         {
             "id": "0Fb4G0000006P00SAE",
             "label": "Opty_Acc_Split_Tag",
             "name": "Opty_Acc_Split_Tag",
-            "url": "/services/data/v61.0/wave/datasets/0Fb4G0000006P00SAE"
+            "url": "/services/data/v62.0/wave/datasets/0Fb4G0000006P00SAE"
         },
         {
             "id": "0Fb4G0000006P02SAE",
             "label": "Register_CurrencyType",
             "name": "Register_CurrencyType",
-            "url": "/services/data/v61.0/wave/datasets/0Fb4G0000006P02SAE"
+            "url": "/services/data/v62.0/wave/datasets/0Fb4G0000006P02SAE"
         }
     ]
 }
