@@ -1341,6 +1341,9 @@
             "OptyRoleToggle_1": {
                 "broadcastFacet": true,
                 "columns": {
+                    "saql_filter_opp2": {
+                        "type": "string"
+                    },
                     "saql_filter": {
                         "type": "string"
                     },
@@ -1363,12 +1366,14 @@
                     {
                         "Display": "On the Opportunity Team",
                         "saql_filter": "q = filter q by 'OppTeamMember.UserId' matches ",
-                        "saql_filter_opp": "q = filter q by 'User.Id' matches "
+                        "saql_filter_opp": "q = filter q by 'User.Id' matches ",
+                        "saql_filter_opp2": "--q = filter q by 'Opp.OwnerId' matches "
                     },
                     {
                         "Display": "Opportunity Leader",
                         "saql_filter": "q = filter q by 'Opportunity.OwnerId' matches ",
-                        "saql_filter_opp": "q = filter q by 'OwnerId' matches "
+                        "saql_filter_opp": "q = filter q by 'User.Id' matches ",
+                        "saql_filter_opp2": "q = filter q by 'Opp.OwnerId' matches "
                     }
                 ]
             },
@@ -1609,7 +1614,7 @@
                 "groups": [],
                 "label": "Sales Credit Query",
                 "numbers": [],
-                "query": "q = load \"Opp_SC\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter_opp\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opp.StageName' == \"Closed Won\";\nq = group q by 'Opp.StageName';\nq = foreach q generate sum(q.'gCRM_Sales_Credit_Amount__c') * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'C';\nq = limit q 2000;",
+                "query": "q = load \"Opp_SC\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter_opp\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter_opp2\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opp.StageName' == \"Closed Won\";\nq = group q by 'Opp.StageName';\nq = foreach q generate sum(q.'gCRM_Sales_Credit_Amount__c') * {{cell(IsoCode_1.selection, 0, \"A\").asObject()}} as 'C';\nq = limit q 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -1683,13 +1688,6 @@
                             "enable": false,
                             "type": "x",
                             "chartsPerLine": 4
-                        },
-                        "columnMap": {
-                            "trellis": [],
-                            "dimensionAxis": [],
-                            "plots": [
-                                "C"
-                            ]
                         },
                         "showActionMenu": true,
                         "measureAxis2": {
