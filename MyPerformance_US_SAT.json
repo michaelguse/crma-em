@@ -443,7 +443,6 @@
                     "steps": []
                 },
                 "selectMode": "single",
-                "start": [],
                 "strings": [],
                 "type": "saql",
                 "useGlobal": true,
@@ -493,17 +492,17 @@
                             "type": "x",
                             "chartsPerLine": 4
                         },
-                        "inner": 50,
+                        "inner": 60,
                         "columnMap": {
                             "trellis": [],
                             "dimension": [
                                 "OpportunityServices__c.StageName"
                             ],
                             "plots": [
-                                "{{cell(static_2.selection, 0, \"Value1\").asString()}}"
+                                "WinRate Amount"
                             ]
                         },
-                        "showActionMenu": false,
+                        "showActionMenu": true,
                         "centerValueType": "number",
                         "valueType": "compactNumber",
                         "theme": "wave",
@@ -894,7 +893,7 @@
                 "groups": [],
                 "label": "SalesCreditAmount",
                 "numbers": [],
-                "query": "q = load \"Load_CustomTeam_Opty\";\nq = filter q by 'Opty.StageName' == \"Closed Won\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter_sc\").asString()}}\"0050Y000002huSrQAI\";\nq = group q by all;\nq = foreach q generate sum(q.'gCRM_Sales_Credit_Amount__c') as 'B';\nq = limit q 2000;\n",
+                "query": "q = load \"Load_CustomTeam_Opty\";\nq = filter q by 'Opty.StageName' == \"Closed Won\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter_sc\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = group q by all;\nq = foreach q generate sum(q.'gCRM_Sales_Credit_Amount__c') as 'B';\nq = limit q 2000;\n",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -1434,6 +1433,7 @@
                     "steps": []
                 },
                 "selectMode": "single",
+                "start": [],
                 "strings": [],
                 "type": "saql",
                 "useGlobal": true,
@@ -1790,7 +1790,7 @@
                     "numberColor": "#091A3E",
                     "numberItalic": false,
                     "numberSize": 32,
-                    "showActionMenu": false,
+                    "showActionMenu": true,
                     "step": "SalesCreditAmount_1",
                     "textAlignment": "center",
                     "title": "My Sales Credit (US Audit/Tax)",
@@ -1815,7 +1815,7 @@
                     "numberColor": "#091A3E",
                     "numberItalic": false,
                     "numberSize": 32,
-                    "showActionMenu": false,
+                    "showActionMenu": true,
                     "step": "lens_4",
                     "textAlignment": "center",
                     "title": "My Average Days to Closed Won",
@@ -1869,7 +1869,7 @@
                     "mode": "fittocontainer",
                     "numberOfLines": 1,
                     "pivoted": false,
-                    "showActionMenu": false,
+                    "showActionMenu": true,
                     "showRowIndexColumn": false,
                     "step": "Clone_of_opty_list_v_1",
                     "totals": true,
@@ -1887,7 +1887,7 @@
                     "numberColor": "#091A3E",
                     "numberItalic": false,
                     "numberSize": 32,
-                    "showActionMenu": false,
+                    "showActionMenu": true,
                     "step": "My_Average_Win_Size_1",
                     "textAlignment": "center",
                     "title": "My Average Win Size",
@@ -1912,7 +1912,7 @@
                     "numberColor": "#091A3E",
                     "numberItalic": false,
                     "numberSize": 32,
-                    "showActionMenu": false,
+                    "showActionMenu": true,
                     "step": "My_Sales_Total_1",
                     "textAlignment": "center",
                     "title": "My Sales",
@@ -2191,10 +2191,10 @@
                             "OpportunityServices__c.StageName"
                         ],
                         "plots": [
-                            "{{cell(static_2.selection, 0, \"Value1\").asString()}}"
+                            "WinRate Amount"
                         ]
                     },
-                    "showActionMenu": false,
+                    "showActionMenu": true,
                     "centerValueType": "number",
                     "valueType": "compactNumber",
                     "theme": "colorblind",
@@ -2305,7 +2305,7 @@
                         "type": "x",
                         "chartsPerLine": 4
                     },
-                    "showActionMenu": false,
+                    "showActionMenu": true,
                     "measureAxis2": {
                         "sqrtScale": false,
                         "showTitle": true,
@@ -2415,7 +2415,7 @@
                         "type": "x",
                         "chartsPerLine": 4
                     },
-                    "showActionMenu": false,
+                    "showActionMenu": true,
                     "measureAxis2": {
                         "sqrtScale": false,
                         "showTitle": true,
