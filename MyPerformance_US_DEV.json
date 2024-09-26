@@ -1,11 +1,60 @@
 {
-    "label": "My Performance - US Commercial",
+    "label": "My Performance (US)",
     "mobileDisabled": false,
     "state": {
         "dataSourceLinksInfo": {
             "enableAutomaticLinking": true,
             "excludeRelationships": [],
-            "links": []
+            "links": [
+                {
+                    "fields": [
+                        {
+                            "dataSourceName": "Load_CustomTeam_Opty",
+                            "dataSourceType": "dataset",
+                            "fieldName": "Opty.StageName"
+                        },
+                        {
+                            "dataSourceName": "Load_opty_services_acct_all",
+                            "dataSourceType": "dataset",
+                            "fieldName": "OpportunityServices__c.StageName"
+                        }
+                    ],
+                    "label": "Stage Name",
+                    "name": "Link_772"
+                },
+                {
+                    "fields": [
+                        {
+                            "dataSourceName": "Load_CustomTeam_Opty",
+                            "dataSourceType": "dataset",
+                            "fieldName": "Opty.gCRM_Reason_for_Won_Lost_Abandoned__c"
+                        },
+                        {
+                            "dataSourceName": "Load_opty_services_acct_all",
+                            "dataSourceType": "dataset",
+                            "fieldName": "OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c"
+                        }
+                    ],
+                    "label": "Primary Reason Code",
+                    "name": "Link_2965"
+                },
+                {
+                    "fields": [
+                        {
+                            "dataSourceName": "Load_CustomTeam_Opty",
+                            "dataSourceType": "dataset",
+                            "fieldName": "Opty.gCRM_Actual_Close_Date__c"
+                        },
+                        {
+                            "dataSourceName": "Load_opty_services_acct_all",
+                            "dataSourceType": "dataset",
+                            "fieldName": "Actual_Close"
+                        }
+                    ],
+                    "label": "Close Date",
+                    "name": "Link_466"
+                }
+            ]
         },
         "filters": [],
         "gridLayouts": [
@@ -19,16 +68,18 @@
                         "navigationHidden": false,
                         "widgets": [
                             {
-                                "colspan": 10,
-                                "column": 1,
+                                "colspan": 7,
+                                "column": 2,
                                 "name": "dateselector_2",
-                                "row": 0,
-                                "rowspan": 7,
+                                "row": 3,
+                                "rowspan": 3,
                                 "widgetStyle": {
                                     "backgroundColor": "#FFFFFF",
-                                    "borderColor": "#E6ECF2",
-                                    "borderEdges": [],
-                                    "borderRadius": 0,
+                                    "borderColor": "#747474",
+                                    "borderEdges": [
+                                        "all"
+                                    ],
+                                    "borderRadius": 4,
                                     "borderWidth": 1
                                 }
                             },
@@ -37,7 +88,7 @@
                                 "column": 2,
                                 "name": "number_3",
                                 "row": 9,
-                                "rowspan": 13,
+                                "rowspan": 9,
                                 "widgetStyle": {
                                     "backgroundColor": "#EEF4FF",
                                     "borderEdges": [],
@@ -49,7 +100,7 @@
                                 "column": 38,
                                 "name": "number_4",
                                 "row": 9,
-                                "rowspan": 13,
+                                "rowspan": 9,
                                 "widgetStyle": {
                                     "backgroundColor": "#EEF4FF",
                                     "borderEdges": [],
@@ -57,18 +108,18 @@
                                 }
                             },
                             {
-                                "colspan": 12,
-                                "column": 1,
+                                "colspan": 11,
+                                "column": 2,
                                 "name": "text_1",
-                                "row": 28,
+                                "row": 24,
                                 "rowspan": 4,
                                 "widgetStyle": {
                                     "borderEdges": []
                                 }
                             },
                             {
-                                "colspan": 26,
-                                "column": 14,
+                                "colspan": 15,
+                                "column": 15,
                                 "name": "pillbox_01",
                                 "row": 3,
                                 "rowspan": 3,
@@ -84,7 +135,7 @@
                                 "colspan": 13,
                                 "column": 17,
                                 "name": "text_2",
-                                "row": 28,
+                                "row": 24,
                                 "rowspan": 4,
                                 "widgetStyle": {
                                     "borderEdges": []
@@ -94,7 +145,7 @@
                                 "colspan": 13,
                                 "column": 33,
                                 "name": "text_3",
-                                "row": 28,
+                                "row": 24,
                                 "rowspan": 4,
                                 "widgetStyle": {
                                     "borderEdges": []
@@ -104,7 +155,7 @@
                                 "colspan": 3,
                                 "column": 13,
                                 "name": "pillbox_1",
-                                "row": 29,
+                                "row": 25,
                                 "rowspan": 2,
                                 "widgetStyle": {
                                     "borderColor": "#7D98B3",
@@ -118,7 +169,7 @@
                                 "colspan": 3,
                                 "column": 30,
                                 "name": "pillbox_11",
-                                "row": 29,
+                                "row": 25,
                                 "rowspan": 2,
                                 "widgetStyle": {
                                     "borderColor": "#7D98B3",
@@ -132,7 +183,7 @@
                                 "colspan": 3,
                                 "column": 46,
                                 "name": "pillbox_3",
-                                "row": 29,
+                                "row": 25,
                                 "rowspan": 2,
                                 "widgetStyle": {
                                     "borderColor": "#7D98B3",
@@ -146,8 +197,8 @@
                                 "colspan": 16,
                                 "column": 17,
                                 "name": "chart_1",
-                                "row": 32,
-                                "rowspan": 34,
+                                "row": 29,
+                                "rowspan": 31,
                                 "widgetStyle": {
                                     "borderEdges": []
                                 }
@@ -156,8 +207,8 @@
                                 "colspan": 15,
                                 "column": 34,
                                 "name": "chart_2",
-                                "row": 32,
-                                "rowspan": 34,
+                                "row": 29,
+                                "rowspan": 31,
                                 "widgetStyle": {
                                     "borderEdges": []
                                 }
@@ -166,27 +217,17 @@
                                 "colspan": 50,
                                 "column": 0,
                                 "name": "container_9",
-                                "row": 69,
-                                "rowspan": 76,
-                                "widgetStyle": {
-                                    "borderEdges": []
-                                }
-                            },
-                            {
-                                "colspan": 48,
-                                "column": 1,
-                                "name": "table_1",
-                                "row": 69,
-                                "rowspan": 37,
+                                "row": 63,
+                                "rowspan": 70,
                                 "widgetStyle": {
                                     "borderEdges": []
                                 }
                             },
                             {
                                 "colspan": 7,
-                                "column": 1,
+                                "column": 9,
                                 "name": "number_1",
-                                "row": 32,
+                                "row": 28,
                                 "rowspan": 3,
                                 "widgetStyle": {
                                     "borderEdges": [],
@@ -195,9 +236,9 @@
                             },
                             {
                                 "colspan": 7,
-                                "column": 9,
+                                "column": 2,
                                 "name": "number_2",
-                                "row": 32,
+                                "row": 28,
                                 "rowspan": 3,
                                 "widgetStyle": {
                                     "borderEdges": [],
@@ -209,7 +250,7 @@
                                 "column": 26,
                                 "name": "number_5",
                                 "row": 9,
-                                "rowspan": 13,
+                                "rowspan": 9,
                                 "widgetStyle": {
                                     "backgroundColor": "#EEF4FF",
                                     "borderEdges": [],
@@ -217,8 +258,8 @@
                                 }
                             },
                             {
-                                "colspan": 22,
-                                "column": 14,
+                                "colspan": 15,
+                                "column": 15,
                                 "name": "text_5",
                                 "row": 0,
                                 "rowspan": 3,
@@ -235,7 +276,7 @@
                                 "column": 14,
                                 "name": "number_6",
                                 "row": 9,
-                                "rowspan": 13,
+                                "rowspan": 9,
                                 "widgetStyle": {
                                     "backgroundColor": "#EEF4FF",
                                     "borderColor": "#747474",
@@ -244,11 +285,11 @@
                                 }
                             },
                             {
-                                "colspan": 15,
-                                "column": 1,
+                                "colspan": 12,
+                                "column": 3,
                                 "name": "chart_8",
-                                "row": 36,
-                                "rowspan": 30,
+                                "row": 33,
+                                "rowspan": 27,
                                 "widgetStyle": {
                                     "borderEdges": []
                                 }
@@ -257,11 +298,11 @@
                                 "colspan": 1,
                                 "column": 16,
                                 "name": "container_1",
-                                "row": 37,
+                                "row": 34,
                                 "rowspan": 21,
                                 "widgetStyle": {
                                     "backgroundColor": "#FFFFFF",
-                                    "borderColor": "#7D98B3",
+                                    "borderColor": "#C6D3E1",
                                     "borderEdges": [
                                         "right"
                                     ],
@@ -273,11 +314,11 @@
                                 "colspan": 1,
                                 "column": 33,
                                 "name": "container_2",
-                                "row": 37,
+                                "row": 34,
                                 "rowspan": 21,
                                 "widgetStyle": {
                                     "backgroundColor": "#FFFFFF",
-                                    "borderColor": "#7D98B3",
+                                    "borderColor": "#C6D3E1",
                                     "borderEdges": [
                                         "right"
                                     ],
@@ -289,16 +330,40 @@
                                 "colspan": 44,
                                 "column": 3,
                                 "name": "container_3",
-                                "row": 25,
+                                "row": 21,
                                 "rowspan": 3,
                                 "widgetStyle": {
                                     "backgroundColor": "#FFFFFF",
-                                    "borderColor": "#7D98B3",
+                                    "borderColor": "#C6D3E1",
                                     "borderEdges": [
                                         "top"
                                     ],
                                     "borderRadius": 0,
                                     "borderWidth": 2
+                                }
+                            },
+                            {
+                                "colspan": 48,
+                                "column": 1,
+                                "name": "table_1",
+                                "row": 63,
+                                "rowspan": 68,
+                                "widgetStyle": {
+                                    "borderEdges": []
+                                }
+                            },
+                            {
+                                "colspan": 7,
+                                "column": 2,
+                                "name": "text_4",
+                                "row": 0,
+                                "rowspan": 3,
+                                "widgetStyle": {
+                                    "backgroundColor": "#FFFFFF",
+                                    "borderColor": "#FFFFFF",
+                                    "borderEdges": [],
+                                    "borderRadius": 0,
+                                    "borderWidth": 1
                                 }
                             }
                         ]
@@ -320,12 +385,59 @@
         ],
         "layouts": [],
         "steps": {
+            "Clone_of_opty_list_v_1": {
+                "broadcastFacet": true,
+                "groups": [],
+                "label": "Clone of opty_list_view_saql",
+                "numbers": [],
+                "query": "q = load \"Load_CustomTeam_Opty\";{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter_sc\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'Opty.StageName' in [\"Closed Lost\", \"Closed Won\",\"Closed Abandoned\"];\nq = group q by ('Opty.Name', 'Opty.gCRM_Opportunity_ID__c', 'Opty.gCRM_English_Account_Name__c', 'Opty.gCRM_Actual_Close_Date__c', 'Opty.gCRM_Reason_for_Won_Lost_Abandoned__c', 'Opty.StageName');\nq = foreach q generate q.'Opty.Name' as 'Opportunity Name', q.'Opty.gCRM_Opportunity_ID__c' as 'Opty.gCRM_Opportunity_ID__c', q.'Opty.gCRM_English_Account_Name__c' as 'English Account Name', sum(q.'Opty.gCRM_Amount_USD__c') as 'TGOA (US)', sum(q.'gCRM_Sales_Credit_Amount__c') as 'Sales Credit Amount', substr(date_to_string(toDate(q.'Opty.gCRM_Actual_Close_Date__c', \"yyyy-MM-dd\"), \"MM/dd/yyyy\"), 1, 10) as 'Actual Close Date', q.'Opty.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Closed Reason',  q.'Opty.StageName' as 'Stage';\nq = order q by 'Actual Close Date' desc;\nq = limit q 100;\n",
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "start": [],
+                "strings": [],
+                "type": "saql",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "borderColor": "#e0e5ee",
+                        "borderWidth": 1,
+                        "cell": {
+                            "backgroundColor": "#ffffff",
+                            "fontColor": "#16325c",
+                            "fontSize": 12,
+                            "textWrap": true
+                        },
+                        "columnProperties": {},
+                        "columns": [],
+                        "customBulkActions": [],
+                        "header": {
+                            "backgroundColor": "#f4f6f9",
+                            "fontColor": "#16325c",
+                            "fontSize": 12,
+                            "textWrap": true
+                        },
+                        "innerMajorBorderColor": "#a8b7c7",
+                        "innerMinorBorderColor": "#e0e5ee",
+                        "interactions": [],
+                        "mode": "fittocontainer",
+                        "numberOfLines": 1,
+                        "showActionMenu": false,
+                        "showRowIndexColumn": false,
+                        "totals": true,
+                        "verticalPadding": 8
+                    },
+                    "type": "table"
+                }
+            },
             "winrate_us_saql_1": {
                 "broadcastFacet": true,
                 "groups": [],
                 "label": "winrate-us-saql",
                 "numbers": [],
-                "query": "q = load \"Load_opty_services_acct_all\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'OpportunityServices__c.StageName' in [\"Closed Lost\", \"Closed Won\"];\n{{cell(static_2.selection, 0, \"saql\").asString()}};\nq = group q by 'OpportunityServices__c.StageName';\nq = order q by 'OpportunityServices__c.StageName' desc;\nq = foreach q generate 'OpportunityServices__c.StageName', sum(B) as 'B', sum(B)/sum(sum(B)) over ([..] partition by all)*100 as 'Win Rate';\nq = limit q 10;",
+                "query": "q = load \"Load_opty_services_acct_all\";\nq = filter q by 'OpportunityServices__c.gCRM_Opportunity_ID__c' in {{coalesce(column(Clone_of_opty_list_v_1.result, [\"Opty.gCRM_Opportunity_ID__c\"]), \"[]\").asString()}};\nq = filter q by 'OpportunityServices__c.StageName' in [\"Closed Lost\", \"Closed Won\"];\nq = group q by 'OpportunityServices__c.StageName';\n{{cell(static_2.selection, 0, \"saql\").asString()}};\nq = group q by 'OpportunityServices__c.StageName';\nq = order q by 'OpportunityServices__c.StageName' desc;\nq = foreach q generate 'OpportunityServices__c.StageName', sum(B) as '{{cell(static_2.selection, 0, \"Value1\").asString()}}', sum(B)/sum(sum(B)) over ([..] partition by all)*100 as 'Win Rate';\nq = limit q 10;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -380,17 +492,17 @@
                             "type": "x",
                             "chartsPerLine": 4
                         },
-                        "inner": 50,
+                        "inner": 60,
                         "columnMap": {
                             "trellis": [],
                             "dimension": [
                                 "OpportunityServices__c.StageName"
                             ],
                             "plots": [
-                                "B"
+                                "{{cell(static_2.selection, 0, \"Value1\").asString()}}"
                             ]
                         },
-                        "showActionMenu": false,
+                        "showActionMenu": true,
                         "centerValueType": "number",
                         "valueType": "compactNumber",
                         "theme": "wave",
@@ -404,7 +516,7 @@
                 "broadcastFacet": true,
                 "groups": [],
                 "numbers": [],
-                "query": "SELECT Name, Country, Id FROM User WHERE Id = '!{User.Id}'",
+                "query": "SELECT Name, Country, Id FROM User WHERE Id = '0057S000003rrb9QAA'",
                 "receiveFacetSource": {
                     "mode": "none",
                     "steps": []
@@ -525,7 +637,7 @@
                 "groups": [],
                 "label": "My Sales Total",
                 "numbers": [],
-                "query": "q = load \"Load_opty_services_acct_all\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'OpportunityServices__c.StageName' == \"Closed Won\";\nq = group q by all;\nq = foreach q generate sum(q.'gCRM_Split_Amount_USD__c') as 'A';\nq = limit q 2000;",
+                "query": "q = load \"Load_opty_services_acct_all\";\nq = filter q by 'OpportunityServices__c.gCRM_Opportunity_ID__c' in {{coalesce(column(Clone_of_opty_list_v_1.result, [\"Opty.gCRM_Opportunity_ID__c\"]), \"[]\").asString()}};\n--{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"0050Y000002huSrQAI\";;\nq = filter q by 'OpportunityServices__c.StageName' == \"Closed Won\";\nq = group q by all;\nq = foreach q generate sum(q.'gCRM_Split_Amount_USD__c') as 'Amount';\nq = limit q 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -536,35 +648,116 @@
                 "useGlobal": true,
                 "visualizationParameters": {
                     "parameters": {
-                        "borderColor": "#e0e5ee",
-                        "borderWidth": 1,
-                        "cell": {
-                            "backgroundColor": "#ffffff",
-                            "fontColor": "#16325c",
-                            "fontSize": 12,
-                            "textWrap": true
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
                         },
-                        "columnProperties": {},
-                        "columns": [],
-                        "customBulkActions": [],
-                        "header": {
-                            "backgroundColor": "#f4f6f9",
-                            "fontColor": "#16325c",
-                            "fontSize": 12,
-                            "textWrap": true
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": true,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "right-top",
+                            "inside": false
                         },
-                        "innerMajorBorderColor": "#a8b7c7",
-                        "innerMinorBorderColor": "#e0e5ee",
-                        "interactions": [],
-                        "maxColumnWidth": 300,
-                        "minColumnWidth": 40,
-                        "mode": "variable",
-                        "numberOfLines": 1,
+                        "axisMode": "sync",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "hbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "columnMap": {
+                            "trellis": [],
+                            "dimensionAxis": [],
+                            "plots": [
+                                "Amount"
+                            ]
+                        },
                         "showActionMenu": true,
-                        "totals": true,
-                        "verticalPadding": 8
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "valueType": "compactNumber",
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
                     },
-                    "type": "table"
+                    "type": "chart"
                 }
             },
             "My_Average_Win_Size_1": {
@@ -572,7 +765,7 @@
                 "groups": [],
                 "label": "My Average Win Size",
                 "numbers": [],
-                "query": "q = load \"Load_opty_services_acct_all\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'OpportunityServices__c.StageName' == \"Closed Won\";\nq = group q by ('OpportunityServices__c.gCRM_Opportunity_ID__c');\nq = foreach q generate sum('gCRM_Split_Amount_USD__c') as 'gCRM_Split_Amount_USD__c', 'OpportunityServices__c.gCRM_Opportunity_ID__c' as 'OpportunityServices__c.gCRM_Opportunity_ID__c';\nq = group q by all;\nq = foreach q generate sum('gCRM_Split_Amount_USD__c') as 'Amount', unique('OpportunityServices__c.gCRM_Opportunity_ID__c') as 'count';\nq = foreach q generate coalesce(coalesce('Amount', 0)/coalesce('count', 0), 0) as 'Amount';\nq = limit q 10;",
+                "query": "q = load \"Load_opty_services_acct_all\";\nq = filter q by 'OpportunityServices__c.gCRM_Opportunity_ID__c' in {{coalesce(column(Clone_of_opty_list_v_1.result, [\"Opty.gCRM_Opportunity_ID__c\"]), \"[]\").asString()}};\n--{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"0050Y000002huSrQAI\";;\nq = filter q by 'OpportunityServices__c.StageName' == \"Closed Won\";\nq = filter q by 'gCRM_Split_Amount_USD__c' > 0;\nq = group q by ('OpportunityServices__c.gCRM_Opportunity_ID__c');\nq = foreach q generate sum('gCRM_Split_Amount_USD__c') as 'gCRM_Split_Amount_USD__c', 'OpportunityServices__c.gCRM_Opportunity_ID__c' as 'OpportunityServices__c.gCRM_Opportunity_ID__c';\nq = group q by all;\nq = foreach q generate sum('gCRM_Split_Amount_USD__c') as 'Amount', unique('OpportunityServices__c.gCRM_Opportunity_ID__c') as 'count';\nq = foreach q generate coalesce(coalesce('Amount', 0)/coalesce('count', 0), 0) as 'Amount';\nq = limit q 10;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -700,7 +893,7 @@
                 "groups": [],
                 "label": "SalesCreditAmount",
                 "numbers": [],
-                "query": "q = load \"Load_opty_services_acct_all\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'OpportunityServices__c.StageName' == \"Closed Won\";\nq = group q by all;\nq = foreach q generate sum(q.'CustomTeams.gCRM_Sales_Credit_Amount__c') as 'B';\nq = limit q 2000;",
+                "query": "q = load \"Load_CustomTeam_Opty\";\nq = filter q by 'Opty.StageName' == \"Closed Won\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter_sc\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = group q by all;\nq = foreach q generate sum(q.'gCRM_Sales_Credit_Amount__c') as 'B';\nq = limit q 2000;\n",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -829,13 +1022,7 @@
                     "saql_filter": {
                         "type": "string"
                     },
-                    "qry_filter_value": {
-                        "type": "string"
-                    },
-                    "qry_filter_compare": {
-                        "type": "string"
-                    },
-                    "qry_filter_field": {
+                    "saql_filter_sc": {
                         "type": "string"
                     },
                     "Display": {
@@ -843,7 +1030,7 @@
                     }
                 },
                 "label": "OptyRoleToggle",
-                "selectMode": "single",
+                "selectMode": "singlerequired",
                 "start": {
                     "Display": [
                         "On the Opportunity Team"
@@ -854,23 +1041,17 @@
                     {
                         "Display": "On the Opportunity Team",
                         "saql_filter": "q = filter q by 'OTM.UserId' matches ",
-                        "qry_filter_field": "OTM.UserId",
-                        "qry_filter_compare": "matches",
-                        "qry_filter_value": "*"
+                        "saql_filter_sc": "q = filter q by 'gCRM_User__c' matches "
                     },
                     {
                         "Display": "Primary",
                         "saql_filter": "q = filter q by 'CustomTeams.gCRM_Opportunity_Team_Role__c' in [\"Opportunity Leader\", \"Split Leader\",\"Split Manager\",\"Pursuit Primary\"] && 'OTM.UserId' matches ",
-                        "qry_filter_field": "CustomTeams.gCRM_Opportunity_Team_Role__c",
-                        "qry_filter_compare": "matches",
-                        "qry_filter_value": "[\"Opportunity Leader\", \"Split Leader\",\"Split Manager\",\"Pursuit Primary\"]"
+                        "saql_filter_sc": "q = filter q by 'gCRM_Opportunity_Team_Role__c' in [\"Opportunity Leader\", \"Split Leader\",\"Split Manager\",\"Pursuit Primary\"] && 'gCRM_User__c' matches "
                     },
                     {
                         "Display": "Opportunity Leader",
                         "saql_filter": "q = filter q by 'OpportunityServices__c.OwnerId' == ",
-                        "qry_filter_field": "OpportunityServices__c.OwnerId",
-                        "qry_filter_compare": "matches",
-                        "qry_filter_value": "*"
+                        "saql_filter_sc": "q = filter q by 'gCRM_Opportunity_Team_Role__c' in [\"Opportunity Leader\"] && 'Opty.OwnerId' == "
                     }
                 ]
             },
@@ -879,7 +1060,7 @@
                 "groups": [],
                 "label": "winrate-percen-us-saql",
                 "numbers": [],
-                "query": "q = load \"Load_opty_services_acct_all\";\nq = filter q by 'OpportunityServices__c.StageName' in [\"Closed Lost\", \"Closed Won\"];\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = foreach q generate 'OpportunityServices__c.StageName' as 'OpportunityServices__c.StageName', unique(q.'OpportunityServices__c.gCRM_Opportunity_ID__c') as 'B', sum(q.'OpportunityServices__c.gCRM_Amount_USD__c') as 'C';\nq = group q by 'OpportunityServices__c.StageName';\nq = order q by 'OpportunityServices__c.StageName' desc;\nq = foreach q generate 'OpportunityServices__c.StageName', sum(B) as 'B', sum('C') as 'C', sum(B)/sum(sum(B)) over ([..] partition by all) as 'Win Rate Count', sum(C)/sum(sum(C)) over ([..] partition by all) as 'Win Rate Amount';\nq = limit q 10;",
+                "query": "q = load \"Load_opty_services_acct_all\";\nq = filter q by 'OpportunityServices__c.StageName' in [\"Closed Lost\", \"Closed Won\"];\nq = filter q by 'OpportunityServices__c.gCRM_Opportunity_ID__c' in {{coalesce(column(Clone_of_opty_list_v_1.result, [\"Opty.gCRM_Opportunity_ID__c\"]), \"[]\").asString()}};\n--{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"0050Y000002huSrQAI\";;\nq = group q by 'OpportunityServices__c.StageName';\nq = foreach q generate 'OpportunityServices__c.StageName' as 'OpportunityServices__c.StageName', unique(q.'OpportunityServices__c.gCRM_Opportunity_ID__c') as 'B', sum(q.'gCRM_Split_Amount_USD__c') as 'C';\nq = group q by 'OpportunityServices__c.StageName';\nq = order q by 'OpportunityServices__c.StageName' desc;\nq = foreach q generate 'OpportunityServices__c.StageName', sum(B) as 'B', sum('C') as 'C', sum(B)/sum(sum(B)) over ([..] partition by all) as 'Win Rate Count', sum(C)/sum(sum(C)) over ([..] partition by all) as 'Win Rate Amount';\nq = limit q 10;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -954,18 +1135,6 @@
                             "enable": false,
                             "type": "x",
                             "chartsPerLine": 4
-                        },
-                        "columnMap": {
-                            "trellis": [],
-                            "dimensionAxis": [
-                                "OpportunityServices__c.StageName"
-                            ],
-                            "plots": [
-                                "B",
-                                "C",
-                                "Win Rate Count",
-                                "Win Rate Amount"
-                            ]
                         },
                         "showActionMenu": true,
                         "measureAxis2": {
@@ -1011,15 +1180,8 @@
             "static_2": {
                 "broadcastFacet": true,
                 "columns": {
-                    "Measure2": {
-                        "aggregateFunction": "Measure2__func",
-                        "dataset": {
-                            "id": "0Fb7S00000119I5SAI",
-                            "name": "Load_opty_services_acct_all",
-                            "url": "/services/data/v61.0/wave/datasets/0Fb7S00000119I5SAI"
-                        },
-                        "field": "Measure2__field",
-                        "type": "aggregate"
+                    "Value1": {
+                        "type": "string"
                     },
                     "saql": {
                         "type": "string"
@@ -1032,7 +1194,7 @@
                 "selectMode": "singlerequired",
                 "start": {
                     "Display": [
-                        "$"
+                        "#"
                     ]
                 },
                 "type": "staticflex",
@@ -1040,29 +1202,20 @@
                     {
                         "Display": "#",
                         "saql": "q = foreach q generate 'OpportunityServices__c.StageName' as 'OpportunityServices__c.StageName', unique('OpportunityServices__c.gCRM_Opportunity_ID__c') as 'B'",
-                        "Measure2__field": "OpportunityServices__c.gCRM_Opportunity_ID__c",
-                        "Measure2__func": "unique"
+                        "Value1": "WinRate Count"
                     },
                     {
                         "Display": "$",
-                        "saql": "q = foreach q generate 'OpportunityServices__c.StageName' as 'OpportunityServices__c.StageName', sum('OpportunityServices__c.gCRM_Amount_USD__c') as 'B'",
-                        "Measure2__field": "OpportunityServices__c.gCRM_Amount_USD__c",
-                        "Measure2__func": "sum"
+                        "saql": "q = foreach q generate 'OpportunityServices__c.StageName' as 'OpportunityServices__c.StageName', sum('gCRM_Split_Amount_USD__c') as 'B'",
+                        "Value1": "WinRate Amount"
                     }
                 ]
             },
             "static_1": {
                 "broadcastFacet": true,
                 "columns": {
-                    "Measure2": {
-                        "aggregateFunction": "Measure2__func",
-                        "dataset": {
-                            "id": "0Fb7S00000119I5SAI",
-                            "name": "Load_opty_services_acct_all",
-                            "url": "/services/data/v61.0/wave/datasets/0Fb7S00000119I5SAI"
-                        },
-                        "field": "Measure2__field",
-                        "type": "aggregate"
+                    "Value1": {
+                        "type": "string"
                     },
                     "saql": {
                         "type": "string"
@@ -1075,37 +1228,31 @@
                 "selectMode": "singlerequired",
                 "start": {
                     "Display": [
-                        "#"
+                        "$"
                     ]
                 },
                 "type": "staticflex",
                 "values": [
                     {
                         "Display": "#",
-                        "saql": "q = foreach q generate q.'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'OpportunityServices__c.StageName' as 'OpportunityServices__c.StageName', unique('OpportunityServices__c.gCRM_Opportunity_ID__c') as 'A'",
-                        "Measure2__field": "OpportunityServices__c.gCRM_Opportunity_ID__c",
-                        "Measure2__func": "unique"
+                        "saql": "q = foreach q generate q.'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'OpportunityServices__c.StageName' as 'OpportunityServices__c.StageName', unique('OpportunityServices__c.gCRM_Opportunity_ID__c') as 'ClosedWon Count'",
+                        "Value1": "ClosedWon Count"
                     },
                     {
                         "Display": "$",
-                        "saql": "q = foreach q generate q.'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'OpportunityServices__c.StageName' as 'OpportunityServices__c.StageName', sum('OpportunityServices__c.gCRM_Amount_USD__c') as 'A'",
-                        "Measure2__field": "OpportunityServices__c.gCRM_Amount_USD__c",
-                        "Measure2__func": "sum"
+                        "saql": "q = foreach q generate q.'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'OpportunityServices__c.StageName' as 'OpportunityServices__c.StageName', sum('gCRM_Split_Amount_USD__c') as 'Amount'",
+                        "Value2": "Amount"
                     }
                 ]
             },
             "Lost_Abandoned_Toggl_1": {
                 "broadcastFacet": true,
                 "columns": {
-                    "Measure2": {
-                        "aggregateFunction": "Measure2__func",
-                        "dataset": {
-                            "id": "0Fb7S00000119I5SAI",
-                            "name": "Load_opty_services_acct_all",
-                            "url": "/services/data/v61.0/wave/datasets/0Fb7S00000119I5SAI"
-                        },
-                        "field": "Measure2__field",
-                        "type": "aggregate"
+                    "Value1": {
+                        "type": "string"
+                    },
+                    "saql": {
+                        "type": "string"
                     },
                     "Display": {
                         "type": "string"
@@ -1115,34 +1262,35 @@
                 "selectMode": "singlerequired",
                 "start": {
                     "Display": [
-                        "#"
+                        "$"
                     ]
                 },
                 "type": "staticflex",
                 "values": [
                     {
                         "Display": "#",
-                        "Measure2__field": "OpportunityServices__c.gCRM_Opportunity_ID__c",
-                        "Measure2__func": "unique"
+                        "saql": "q = foreach q generate q.'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'OpportunityServices__c.gCRM_GPS_Stage_US__c' as 'OpportunityServices__c.gCRM_GPS_Stage_US__c', unique('OpportunityServices__c.gCRM_Opportunity_ID__c') as 'ClosedLost Count'",
+                        "Value1": "ClosedLost Count"
                     },
                     {
                         "Display": "$",
-                        "Measure2__field": "OpportunityServices__c.gCRM_Amount_USD__c",
-                        "Measure2__func": "sum"
+                        "saql": "q = foreach q generate q.'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'OpportunityServices__c.gCRM_GPS_Stage_US__c' as 'OpportunityServices__c.gCRM_GPS_Stage_US__c', sum('gCRM_Split_Amount_USD__c') as 'Amount'",
+                        "Value1": "Amount"
                     }
                 ]
             },
-            "Closed_Won_Reason_qr_2": {
+            "ClosedLostAbandonedR_1": {
                 "broadcastFacet": true,
                 "groups": [],
-                "label": "Closed_Won_Reason_qry",
+                "label": "ClosedLostAbandonedReason_chart_saql",
                 "numbers": [],
-                "query": "q = load \"Load_opty_services_acct_all\";\nq = filter q by 'OpportunityServices__c.StageName' == \"Closed Won\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = group q by ('OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', 'OpportunityServices__c.StageName');\n{{cell(static_1.selection, 0, \"saql\").asString()}};\n--q = foreach q generate q.'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'OpportunityServices__c.StageName' as 'OpportunityServices__c.StageName', count(q) as 'A';\nq = order q by ('OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' asc, 'OpportunityServices__c.StageName' asc);\nq = limit q 2000;",
+                "query": "q = load \"Load_opty_services_acct_all\";\nq = filter q by 'OpportunityServices__c.gCRM_GPS_Stage_US__c' in [\"Closed Lost\",\"Closed Abandoned\"];\nq = filter q by 'OpportunityServices__c.gCRM_Opportunity_ID__c' in {{coalesce(column(Clone_of_opty_list_v_1.result, [\"Opty.gCRM_Opportunity_ID__c\"]), \"[]\").asString()}};\n--{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"0050Y000002huSrQAI\";;\nq = group q by ('OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', 'OpportunityServices__c.gCRM_GPS_Stage_US__c');\n{{cell(Lost_Abandoned_Toggl_1.selection, 0, \"saql\").asString()}};\nq = order q by ('OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' asc, 'OpportunityServices__c.gCRM_GPS_Stage_US__c' asc);\nq = limit q 2000;",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
                 },
                 "selectMode": "single",
+                "start": [],
                 "strings": [],
                 "type": "saql",
                 "useGlobal": true,
@@ -1213,19 +1361,131 @@
                             "type": "x",
                             "chartsPerLine": 4
                         },
-                        "columnMap": {
-                            "split": [
-                                "OpportunityServices__c.StageName"
-                            ],
-                            "trellis": [],
-                            "dimensionAxis": [
-                                "OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c"
-                            ],
-                            "plots": [
-                                "A"
-                            ]
+                        "showActionMenu": true,
+                        "measureAxis2": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
                         },
-                        "showActionMenu": false,
+                        "valueType": "compactNumber",
+                        "measureAxis1": {
+                            "sqrtScale": false,
+                            "showTitle": true,
+                            "showAxis": true,
+                            "title": "",
+                            "customDomain": {
+                                "showDomain": false
+                            }
+                        },
+                        "normalize": false,
+                        "theme": "wave",
+                        "compactDecimalDigits": -1,
+                        "dimensionAxis": {
+                            "showTitle": true,
+                            "customSize": "auto",
+                            "showAxis": true,
+                            "title": "",
+                            "icons": {
+                                "useIcons": false,
+                                "iconProps": {
+                                    "fit": "cover",
+                                    "column": "",
+                                    "type": "round"
+                                }
+                            }
+                        },
+                        "applyConditionalFormatting": true
+                    },
+                    "type": "chart"
+                }
+            },
+            "Closed_Won_Reason_qr_2": {
+                "broadcastFacet": true,
+                "groups": [],
+                "label": "Closed_Won_Reason_qry",
+                "numbers": [],
+                "query": "q = load \"Load_opty_services_acct_all\";\nq = filter q by 'OpportunityServices__c.StageName' == \"Closed Won\";\nq = filter q by 'OpportunityServices__c.gCRM_Opportunity_ID__c' in {{coalesce(column(Clone_of_opty_list_v_1.result, [\"Opty.gCRM_Opportunity_ID__c\"]), \"[]\").asString()}};\n--{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"0050Y000002huSrQAI\";;\nq = group q by ('OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', 'OpportunityServices__c.StageName');\n{{cell(static_1.selection, 0, \"saql\").asString()}};\n--q = foreach q generate q.'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c', q.'OpportunityServices__c.StageName' as 'OpportunityServices__c.StageName', count(q) as 'A';\nq = order q by ('OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' asc, 'OpportunityServices__c.StageName' asc);\nq = limit q 2000;",
+                "receiveFacetSource": {
+                    "mode": "all",
+                    "steps": []
+                },
+                "selectMode": "single",
+                "start": [],
+                "strings": [],
+                "type": "saql",
+                "useGlobal": true,
+                "visualizationParameters": {
+                    "parameters": {
+                        "autoFitMode": "keepLabels",
+                        "bins": {
+                            "breakpoints": {
+                                "high": 100,
+                                "low": 0
+                            },
+                            "bands": {
+                                "high": {
+                                    "color": "#008000",
+                                    "label": ""
+                                },
+                                "low": {
+                                    "color": "#B22222",
+                                    "label": ""
+                                },
+                                "medium": {
+                                    "color": "#ffa500",
+                                    "label": ""
+                                }
+                            }
+                        },
+                        "legend": {
+                            "descOrder": false,
+                            "showHeader": false,
+                            "show": true,
+                            "customSize": "auto",
+                            "position": "bottom-center",
+                            "inside": false
+                        },
+                        "axisMode": "sync",
+                        "totalSumMode": "none",
+                        "tooltip": {
+                            "content": {
+                                "legend": {
+                                    "showBinLabel": true,
+                                    "measures": [],
+                                    "showNullValues": true,
+                                    "customizeLegend": false,
+                                    "showPercentage": true,
+                                    "showDimensions": true,
+                                    "showMeasures": true,
+                                    "dimensions": []
+                                }
+                            }
+                        },
+                        "visualizationType": "stackhbar",
+                        "title": {
+                            "fontSize": 14,
+                            "subtitleFontSize": 11,
+                            "label": "",
+                            "align": "center",
+                            "subtitleLabel": ""
+                        },
+                        "binValues": false,
+                        "trellis": {
+                            "flipLabels": false,
+                            "showGridLines": true,
+                            "size": [
+                                100,
+                                100
+                            ],
+                            "enable": false,
+                            "type": "x",
+                            "chartsPerLine": 4
+                        },
+                        "showActionMenu": true,
                         "measureAxis2": {
                             "sqrtScale": false,
                             "showTitle": true,
@@ -1267,54 +1527,6 @@
                     "type": "chart"
                 }
             },
-            "opty_list_view_saql_1": {
-                "broadcastFacet": true,
-                "groups": [],
-                "label": "opty_list_view_saql",
-                "numbers": [],
-                "query": "q = load \"Load_opty_services_acct_all\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'OpportunityServices__c.StageName' in [\"Closed Lost\", \"Closed Won\",\"Closed Abandon\"];\nq = foreach q generate q.'OpportunityServices__c.Name' as 'Opportunity Name', q.'OpportunityServices__c.gCRM_Opportunity_ID__c' as 'Opportunity ID', q.'Account_Name_Computed' as 'English Account Name', q.'OpportunityServices__c.gCRM_Amount_USD__c' as 'TGOA (US)', q.'CustomTeams.gCRM_Sales_Credit_Amount__c' as 'Sales Credit Amount', q.'Actual_Close' as 'Actual Close Date', q.'OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c' as 'Closed Reason',  q.'OpportunityServices__c.StageName' as 'Stage';\nq = order q by 'Actual Close Date' desc;\nq = limit q 100;\n",
-                "receiveFacetSource": {
-                    "mode": "all",
-                    "steps": []
-                },
-                "selectMode": "single",
-                "strings": [],
-                "type": "saql",
-                "useGlobal": true,
-                "visualizationParameters": {
-                    "parameters": {
-                        "borderColor": "#e0e5ee",
-                        "borderWidth": 1,
-                        "cell": {
-                            "backgroundColor": "#ffffff",
-                            "fontColor": "#16325c",
-                            "fontSize": 12,
-                            "textWrap": true
-                        },
-                        "columnProperties": {},
-                        "columns": [],
-                        "customBulkActions": [],
-                        "header": {
-                            "backgroundColor": "#f4f6f9",
-                            "fontColor": "#16325c",
-                            "fontSize": 12,
-                            "textWrap": true
-                        },
-                        "innerMajorBorderColor": "#a8b7c7",
-                        "innerMinorBorderColor": "#e0e5ee",
-                        "interactions": [],
-                        "maxColumnWidth": 300,
-                        "minColumnWidth": 40,
-                        "mode": "variable",
-                        "numberOfLines": 1,
-                        "showActionMenu": true,
-                        "showRowIndexColumn": true,
-                        "totals": true,
-                        "verticalPadding": 8
-                    },
-                    "type": "table"
-                }
-            },
             "Actual_Close_1": {
                 "broadcastFacet": true,
                 "datasets": [
@@ -1322,7 +1534,7 @@
                         "id": "0Fb7S00000119I5SAI",
                         "label": "Load_opty_services_acct_all",
                         "name": "Load_opty_services_acct_all",
-                        "url": "/services/data/v61.0/wave/datasets/0Fb7S00000119I5SAI"
+                        "url": "/services/data/v62.0/wave/datasets/0Fb7S00000119I5SAI"
                     }
                 ],
                 "isGlobal": false,
@@ -1344,8 +1556,14 @@
                 "selectMode": "single",
                 "start": [
                     [
-                        1704067200000,
-                        1721779200000
+                        [
+                            "fiscal_year",
+                            0
+                        ],
+                        [
+                            "day",
+                            0
+                        ]
                     ]
                 ],
                 "type": "aggregateflex",
@@ -1357,7 +1575,7 @@
                 "groups": [],
                 "label": "Average time to close won in days",
                 "numbers": [],
-                "query": "q = load \"Load_opty_services_acct_all\";\n{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"{{cell(UserData.selection, 0, \"Id\").asString()}}\";\nq = filter q by 'OpportunityServices__c.StageName' == \"Closed Won\";\nq = filter q by 'Days_to_Close__c' != 0;\nq = group q by ('OpportunityServices__c.gCRM_Opportunity_ID__c');\nq = foreach q generate first(q.'Days_to_Close__c') as 'Days_to_Close__c',('OpportunityServices__c.gCRM_Opportunity_ID__c') as 'C';\nq = group q by all;\nq = foreach q generate sum('Days_to_Close__c') as 'Days_to_Close__c', unique('C') as 'C';\nq = foreach q generate round(coalesce((coalesce('Days_to_Close__c', 0)/coalesce('C', 0)), 0)) as 'Avg Days to Close';\n",
+                "query": "q = load \"Load_opty_services_acct_all\";\nq = filter q by 'OpportunityServices__c.gCRM_Opportunity_ID__c' in {{coalesce(column(Clone_of_opty_list_v_1.result, [\"Opty.gCRM_Opportunity_ID__c\"]), \"[]\").asString()}};\n--{{cell(OptyRoleToggle_1.selection, 0, \"saql_filter\").asString()}}\"0050Y000002huSrQAI\";;\nq = filter q by 'OpportunityServices__c.StageName' == \"Closed Won\";\nq = filter q by 'Days_to_Close__c' != 0;\nq = group q by ('OpportunityServices__c.gCRM_Opportunity_ID__c');\nq = foreach q generate first(q.'Days_to_Close__c') as 'Days_to_Close__c',('OpportunityServices__c.gCRM_Opportunity_ID__c') as 'C';\nq = group q by all;\nq = foreach q generate sum('Days_to_Close__c') as 'Days_to_Close__c', unique('C') as 'C';\nq = foreach q generate round(coalesce((coalesce('Days_to_Close__c', 0)/coalesce('C', 0)), 0)) as 'Avg Days to Close';\n",
                 "receiveFacetSource": {
                     "mode": "all",
                     "steps": []
@@ -1456,186 +1674,6 @@
                         "compactDecimalDigits": -1,
                         "dimensionAxis": {
                             "showTitle": true,
-                            "customSize": "auto",
-                            "showAxis": true,
-                            "title": "",
-                            "icons": {
-                                "useIcons": false,
-                                "iconProps": {
-                                    "fit": "cover",
-                                    "column": "",
-                                    "type": "round"
-                                }
-                            }
-                        },
-                        "applyConditionalFormatting": true
-                    },
-                    "type": "chart"
-                }
-            },
-            "lens_1": {
-                "broadcastFacet": true,
-                "datasets": [
-                    {
-                        "id": "0Fb7S00000119I5SAI",
-                        "label": "Load_opty_services_acct_all",
-                        "name": "Load_opty_services_acct_all",
-                        "url": "/services/data/v61.0/wave/datasets/0Fb7S00000119I5SAI"
-                    }
-                ],
-                "isGlobal": false,
-                "label": "closed lost abandoned breakdown",
-                "query": {
-                    "aggregateFilters": [],
-                    "columnGroups": [],
-                    "columnTotals": [],
-                    "limit": 2000,
-                    "orders": [
-                        {
-                            "name": "OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c",
-                            "filters": [],
-                            "ascending": true
-                        },
-                        {
-                            "name": "OpportunityServices__c.StageName",
-                            "filters": [],
-                            "ascending": true
-                        }
-                    ],
-                    "rowTotals": [],
-                    "sourceFilters": {
-                        "Load_opty_services_acct_all": {
-                            "filters": [
-                                [
-                                    "OpportunityServices__c.StageName",
-                                    [
-                                        "Closed Abandoned",
-                                        "Closed Lost"
-                                    ],
-                                    "in"
-                                ],
-                                [
-                                    "{{cell(OptyRoleToggle_1.selection, 0, \"qry_filter_field\").asString()}}",
-                                    [
-                                        "{{cell(UserData.selection, 0, \"Id\").asString()}}"
-                                    ],
-                                    "{{cell(OptyRoleToggle_1.selection, 0, \"qry_filter_compare\").asString()}}"
-                                ]
-                            ]
-                        }
-                    },
-                    "sources": [
-                        {
-                            "columns": [
-                                {
-                                    "field": [
-                                        "{{cell(Lost_Abandoned_Toggl_1.selection, 0, \"Measure2__func\").asString()}}",
-                                        "{{cell(Lost_Abandoned_Toggl_1.selection, 0, \"Measure2__field\").asString()}}"
-                                    ],
-                                    "name": "A"
-                                }
-                            ],
-                            "filters": [],
-                            "groups": [
-                                "OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c",
-                                "OpportunityServices__c.StageName"
-                            ],
-                            "joins": [],
-                            "name": "Load_opty_services_acct_all"
-                        }
-                    ]
-                },
-                "receiveFacetSource": {
-                    "mode": "all",
-                    "steps": []
-                },
-                "selectMode": "single",
-                "start": [],
-                "type": "aggregateflex",
-                "useGlobal": true,
-                "visualizationParameters": {
-                    "parameters": {
-                        "autoFitMode": "keepLabels",
-                        "legend": {
-                            "descOrder": false,
-                            "showHeader": false,
-                            "show": true,
-                            "customSize": "auto",
-                            "position": "bottom-center",
-                            "inside": false
-                        },
-                        "axisMode": "sync",
-                        "totalSumMode": "none",
-                        "tooltip": {
-                            "content": {
-                                "legend": {
-                                    "showBinLabel": true,
-                                    "measures": [],
-                                    "showNullValues": true,
-                                    "customizeLegend": false,
-                                    "showPercentage": true,
-                                    "showDimensions": true,
-                                    "showMeasures": true,
-                                    "dimensions": []
-                                }
-                            }
-                        },
-                        "visualizationType": "stackhbar",
-                        "title": {
-                            "fontSize": 14,
-                            "subtitleFontSize": 11,
-                            "label": "",
-                            "align": "center",
-                            "subtitleLabel": ""
-                        },
-                        "trellis": {
-                            "flipLabels": false,
-                            "showGridLines": true,
-                            "size": [
-                                100,
-                                100
-                            ],
-                            "enable": false,
-                            "type": "x",
-                            "chartsPerLine": 4
-                        },
-                        "columnMap": {
-                            "split": [
-                                "OpportunityServices__c.StageName"
-                            ],
-                            "trellis": [],
-                            "dimensionAxis": [
-                                "OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c"
-                            ],
-                            "plots": [
-                                "A"
-                            ]
-                        },
-                        "showActionMenu": false,
-                        "measureAxis2": {
-                            "sqrtScale": false,
-                            "showTitle": true,
-                            "showAxis": true,
-                            "title": "",
-                            "customDomain": {
-                                "showDomain": false
-                            }
-                        },
-                        "valueType": "compactNumber",
-                        "measureAxis1": {
-                            "sqrtScale": false,
-                            "showTitle": false,
-                            "showAxis": true,
-                            "title": "",
-                            "customDomain": {
-                                "showDomain": false
-                            }
-                        },
-                        "normalize": false,
-                        "theme": "wave",
-                        "compactDecimalDigits": -1,
-                        "dimensionAxis": {
-                            "showTitle": false,
                             "customSize": "auto",
                             "showAxis": true,
                             "title": "",
@@ -1729,16 +1767,46 @@
                     "exploreLink": true,
                     "interactions": [],
                     "measureField": "B",
+                    "numberBold": false,
                     "numberColor": "#091A3E",
+                    "numberItalic": false,
                     "numberSize": 32,
                     "showActionMenu": false,
                     "step": "SalesCreditAmount_1",
                     "textAlignment": "center",
                     "title": "My Sales Credit (US Audit/Tax)",
+                    "titleBold": false,
                     "titleColor": "#091A3E",
+                    "titleItalic": false,
                     "titleSize": 16,
                     "tooltip": {
-                        "customizeTooltip": false
+                        "customizeTooltip": false,
+                        "showTitleTooltip": true
+                    }
+                },
+                "type": "number"
+            },
+            "number_5": {
+                "parameters": {
+                    "compact": false,
+                    "exploreLink": true,
+                    "interactions": [],
+                    "measureField": "Avg Days to Close",
+                    "numberBold": false,
+                    "numberColor": "#091A3E",
+                    "numberItalic": false,
+                    "numberSize": 32,
+                    "showActionMenu": false,
+                    "step": "lens_4",
+                    "textAlignment": "center",
+                    "title": "My Average Days to Closed Won",
+                    "titleBold": false,
+                    "titleColor": "#091A3E",
+                    "titleItalic": false,
+                    "titleSize": 16,
+                    "tooltip": {
+                        "customizeTooltip": false,
+                        "showTitleTooltip": true
                     }
                 },
                 "type": "number"
@@ -1753,50 +1821,42 @@
                         "fontSize": 12,
                         "textWrap": true
                     },
-                    "columnProperties": {},
+                    "columnProperties": {
+                        "Opty.gCRM_Opportunity_ID__c": {
+                            "parameters": {
+                                "alignment": "left",
+                                "styles": {
+                                    "linkColor": "#1b96ff"
+                                }
+                            },
+                            "type": "text"
+                        }
+                    },
                     "columns": [],
                     "customBulkActions": [],
-                    "exploreLink": true,
+                    "exploreLink": false,
                     "header": {
+                        "alignment": "left",
                         "backgroundColor": "#f4f6f9",
                         "fontColor": "#16325c",
                         "fontSize": 12,
-                        "textWrap": true
+                        "italic": false,
+                        "textWrap": true,
+                        "underline": false
                     },
                     "innerMajorBorderColor": "#a8b7c7",
                     "innerMinorBorderColor": "#e0e5ee",
                     "interactions": [],
-                    "maxColumnWidth": 300,
-                    "minColumnWidth": 40,
-                    "mode": "variable",
+                    "mode": "fittocontainer",
                     "numberOfLines": 1,
+                    "pivoted": false,
                     "showActionMenu": false,
-                    "showRowIndexColumn": true,
-                    "step": "opty_list_view_saql_1",
+                    "showRowIndexColumn": false,
+                    "step": "Clone_of_opty_list_v_1",
                     "totals": true,
                     "verticalPadding": 8
                 },
                 "type": "table"
-            },
-            "number_5": {
-                "parameters": {
-                    "compact": false,
-                    "exploreLink": true,
-                    "interactions": [],
-                    "measureField": "Avg Days to Close",
-                    "numberColor": "#091A3E",
-                    "numberSize": 32,
-                    "showActionMenu": false,
-                    "step": "lens_4",
-                    "textAlignment": "center",
-                    "title": "My Average Time to Closed Won",
-                    "titleColor": "#091A3E",
-                    "titleSize": 16,
-                    "tooltip": {
-                        "customizeTooltip": false
-                    }
-                },
-                "type": "number"
             },
             "number_4": {
                 "parameters": {
@@ -1804,16 +1864,21 @@
                     "exploreLink": true,
                     "interactions": [],
                     "measureField": "Amount",
+                    "numberBold": false,
                     "numberColor": "#091A3E",
+                    "numberItalic": false,
                     "numberSize": 32,
                     "showActionMenu": false,
                     "step": "My_Average_Win_Size_1",
                     "textAlignment": "center",
                     "title": "My Average Win Size",
+                    "titleBold": false,
                     "titleColor": "#091A3E",
+                    "titleItalic": false,
                     "titleSize": 16,
                     "tooltip": {
-                        "customizeTooltip": false
+                        "customizeTooltip": false,
+                        "showTitleTooltip": true
                     }
                 },
                 "type": "number"
@@ -1823,17 +1888,22 @@
                     "compact": false,
                     "exploreLink": true,
                     "interactions": [],
-                    "measureField": "A",
+                    "measureField": "Amount",
+                    "numberBold": false,
                     "numberColor": "#091A3E",
+                    "numberItalic": false,
                     "numberSize": 32,
                     "showActionMenu": false,
                     "step": "My_Sales_Total_1",
                     "textAlignment": "center",
                     "title": "My Sales",
+                    "titleBold": false,
                     "titleColor": "#091A3E",
+                    "titleItalic": false,
                     "titleSize": 16,
                     "tooltip": {
-                        "customizeTooltip": false
+                        "customizeTooltip": false,
+                        "showTitleTooltip": true
                     }
                 },
                 "type": "number"
@@ -1844,16 +1914,21 @@
                     "exploreLink": true,
                     "interactions": [],
                     "measureField": "Win Rate Amount",
+                    "numberBold": false,
                     "numberColor": "#091A3E",
-                    "numberSize": 20,
-                    "showActionMenu": false,
+                    "numberItalic": false,
+                    "numberSize": 24,
+                    "showActionMenu": true,
                     "step": "winrate_percen_us_sa_1",
                     "textAlignment": "left",
-                    "title": "by Amount",
-                    "titleColor": "#7D98B3",
+                    "title": "By Amount:",
+                    "titleBold": false,
+                    "titleColor": "#020821",
+                    "titleItalic": false,
                     "titleSize": 16,
                     "tooltip": {
-                        "customizeTooltip": false
+                        "customizeTooltip": false,
+                        "showTitleTooltip": true
                     }
                 },
                 "type": "number"
@@ -1873,16 +1948,21 @@
                     "exploreLink": true,
                     "interactions": [],
                     "measureField": "Win Rate Count",
-                    "numberColor": "#091A3E",
+                    "numberBold": false,
+                    "numberColor": "#7D98B3",
+                    "numberItalic": false,
                     "numberSize": 20,
                     "showActionMenu": false,
                     "step": "winrate_percen_us_sa_1",
                     "textAlignment": "left",
-                    "title": "by Count:",
+                    "title": "By Count:",
+                    "titleBold": false,
                     "titleColor": "#7D98B3",
+                    "titleItalic": false,
                     "titleSize": 16,
                     "tooltip": {
-                        "customizeTooltip": false
+                        "customizeTooltip": false,
+                        "showTitleTooltip": true
                     }
                 },
                 "type": "number"
@@ -1955,7 +2035,7 @@
                             },
                             {
                                 "attributes": {
-                                    "align": "center"
+                                    "align": "left"
                                 },
                                 "insert": "\n"
                             }
@@ -1995,18 +2075,22 @@
                 "parameters": {
                     "absoluteModeEnabled": true,
                     "calendarTypeSwitchingAllowed": false,
+                    "customFilterPresets": [
+                        "currentFiscalYear",
+                        "currentFiscalYearToDate"
+                    ],
                     "defaultFiscalMode": false,
-                    "displayMode": "combo",
+                    "displayMode": "filter",
                     "filterStyle": {
-                        "titleColor": "#7D98B3",
-                        "valueColor": "#091A3E"
+                        "titleColor": "#747474",
+                        "valueColor": "#16325C"
                     },
                     "instant": true,
-                    "presetsEnabled": false,
+                    "presetsEnabled": true,
                     "relativeModeEnabled": false,
                     "showActionMenu": false,
                     "step": "Actual_Close_1",
-                    "title": "Actual Close Date"
+                    "title": ""
                 },
                 "type": "dateselector"
             },
@@ -2081,20 +2165,20 @@
                         "type": "x",
                         "chartsPerLine": 4
                     },
-                    "inner": 50,
+                    "inner": 60,
                     "columnMap": {
                         "trellis": [],
                         "dimension": [
                             "OpportunityServices__c.StageName"
                         ],
                         "plots": [
-                            "B"
+                            "{{cell(static_2.selection, 0, \"Value1\").asString()}}"
                         ]
                     },
-                    "showActionMenu": false,
+                    "showActionMenu": true,
                     "centerValueType": "number",
                     "valueType": "compactNumber",
-                    "theme": "wave",
+                    "theme": "colorblind",
                     "step": "winrate_us_saql_1",
                     "compactDecimalDigits": -1,
                     "applyConditionalFormatting": true
@@ -2110,9 +2194,53 @@
                 },
                 "type": "container"
             },
+            "text_4": {
+                "parameters": {
+                    "content": {
+                        "richTextContent": [
+                            {
+                                "attributes": {
+                                    "color": "#7d98b3",
+                                    "size": "14px"
+                                },
+                                "insert": "Actual Close Date"
+                            },
+                            {
+                                "attributes": {
+                                    "align": "left"
+                                },
+                                "insert": "\n"
+                            }
+                        ]
+                    },
+                    "interactions": [],
+                    "showActionMenu": false
+                },
+                "type": "text"
+            },
             "chart_2": {
                 "parameters": {
                     "autoFitMode": "keepLabels",
+                    "bins": {
+                        "breakpoints": {
+                            "high": 100,
+                            "low": 0
+                        },
+                        "bands": {
+                            "high": {
+                                "color": "#008000",
+                                "label": ""
+                            },
+                            "low": {
+                                "color": "#B22222",
+                                "label": ""
+                            },
+                            "medium": {
+                                "color": "#ffa500",
+                                "label": ""
+                            }
+                        }
+                    },
                     "legend": {
                         "descOrder": false,
                         "showHeader": false,
@@ -2146,6 +2274,7 @@
                         "align": "center",
                         "subtitleLabel": ""
                     },
+                    "binValues": false,
                     "trellis": {
                         "flipLabels": false,
                         "showGridLines": true,
@@ -2156,18 +2285,6 @@
                         "enable": false,
                         "type": "x",
                         "chartsPerLine": 4
-                    },
-                    "columnMap": {
-                        "split": [
-                            "OpportunityServices__c.StageName"
-                        ],
-                        "trellis": [],
-                        "dimensionAxis": [
-                            "OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c"
-                        ],
-                        "plots": [
-                            "A"
-                        ]
                     },
                     "showActionMenu": false,
                     "measureAxis2": {
@@ -2191,7 +2308,7 @@
                     },
                     "normalize": false,
                     "theme": "wave",
-                    "step": "lens_1",
+                    "step": "ClosedLostAbandonedR_1",
                     "compactDecimalDigits": -1,
                     "dimensionAxis": {
                         "showTitle": false,
@@ -2279,18 +2396,6 @@
                         "type": "x",
                         "chartsPerLine": 4
                     },
-                    "columnMap": {
-                        "split": [
-                            "OpportunityServices__c.StageName"
-                        ],
-                        "trellis": [],
-                        "dimensionAxis": [
-                            "OpportunityServices__c.gCRM_Reason_for_Won_Lost_Abandoned__c"
-                        ],
-                        "plots": [
-                            "A"
-                        ]
-                    },
                     "showActionMenu": false,
                     "measureAxis2": {
                         "sqrtScale": false,
@@ -2312,7 +2417,7 @@
                         }
                     },
                     "normalize": false,
-                    "theme": "wave",
+                    "theme": "colorblind",
                     "step": "Closed_Won_Reason_qr_2",
                     "compactDecimalDigits": -1,
                     "dimensionAxis": {
@@ -2340,7 +2445,13 @@
             "id": "0Fb7S00000119I5SAI",
             "label": "Load_opty_services_acct_all",
             "name": "Load_opty_services_acct_all",
-            "url": "/services/data/v61.0/wave/datasets/0Fb7S00000119I5SAI"
+            "url": "/services/data/v62.0/wave/datasets/0Fb7S00000119I5SAI"
+        },
+        {
+            "id": "0Fb9M000001CfWfSAK",
+            "label": "Load_CustomTeam_Opty",
+            "name": "Load_CustomTeam_Opty",
+            "url": "/services/data/v62.0/wave/datasets/0Fb9M000001CfWfSAK"
         }
     ]
 }
